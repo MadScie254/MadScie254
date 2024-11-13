@@ -36,7 +36,7 @@ Feel free to reach out, and let's embark on a data-driven adventure together! ğŸ
 
 ---
 
-## :hammer_and_wrench: Languages and Tools :
+## :hammer_and_wrench: Languages and Tools!! :
 
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/jupyter/jupyter-original-wordmark.svg" title="Jupyter"  alt="Jupyter" width="40" height="40"/>&nbsp;
