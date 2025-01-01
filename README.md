@@ -1,6 +1,6 @@
 # 🚀 Hey there, I'm Daniel Wanjala!!
 
-Welcome to my data-driven universe where we turn numbers into stories and insights into actions.
+Welcome to my data universe where we turn numbers into stories and analytics into use.
 
 ## 📚 About Me
 
@@ -13,6 +13,7 @@ Welcome to my data-driven universe where we turn numbers into stories and insigh
 
 - 🌱 I've recently emerged from the data cocoon with a shiny new Qualification in Data Science from Moringa School.
 - 🧙‍♂️ I'm on a mission to wield the magic of data for businesses to thrive and decision-makers to conquer.
+-📚 Currently pursuing Masters in Data Science at Cooperative University 
 
 ## 🤝 Let's Build Together
 
@@ -25,10 +26,10 @@ Welcome to my data-driven universe where we turn numbers into stories and insigh
 - ☎️ Reach me at 0742007277.
 - 💼 Let's connect on [LinkedIn](https://www.linkedin.com/in/daniel-wanjala-912b8b17b).
 
-Ready to transform data into gold? Let's embark on this adventure together!
+Ready to transform data into gold? Let's ve on this adventure together!
 
 
-Feel free to reach out, and let's embark on a data-driven adventure together! 📊🚀
+Feel free to reach out, and let's walk on a data-driven adventure together! 📊🚀
 
 <h3 align="center">My Stats📊</h3>
 
