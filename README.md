@@ -55,7 +55,7 @@ I am open to working together on challenging machine learning projects and devel
 
 - 📧 Email: dmwanjala254@gmail.com  
 - ☎️ Phone: +254 742 007 277  
-- 💼 LinkedIn: [Daniel Wanjala](https://www.linkedin.com/in/daniel-wanjala-91)  
+- 💼 LinkedIn: [Daniel Wanjala](https://www.linkedin.com/in/daniel-wanjala-912b8b17b)  
 
 Looking forward to connecting and exploring new possibilities!
 
