@@ -110,10 +110,8 @@ Let me know if you need any adjustments or additional sections!
 <h3 align="center">My Stats📊</h3>
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=MadScie254)](https://git.io/streak-stats)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Daniel-Wanjala&show_icons=true&theme=algolia)
 
-<div align="center" class="stats-container">
-  <img src="https://github-readme-stats.vercel.app/api?username=MadScie254&show_icons=true&theme=radical" alt="GitHub Stats"/>
-</div>
 
 ---
 
