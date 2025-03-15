@@ -45,6 +45,48 @@ I am also involved in the data science community by contributing to open-source 
 
 ---
 
+<!-- Technical Showcase -->
+<details>
+  <summary>
+    <h2>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg" width="25" style="vertical-align: middle"/>
+      Technical Expertise
+    </h2>
+  </summary>
+  
+  <div style="padding: 15px; background: #f5f5f5; border-radius: 10px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px">
+    
+      <!-- Tools Grid -->
+      <div class="tool-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="40"/>
+        <h4>Python</h4>
+        <p>Advanced proficiency in data manipulation (Pandas), ML (Scikit-learn), and deep learning (TensorFlow)</p>
+      </div>
+      
+      <div class="tool-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg" width="40"/>
+        <h4>Tableau</h4>
+        <p>Dashboard development with real-time data visualization for executive reporting</p>
+      </div>
+      
+      <div class="tool-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original-wordmark.svg" width="40"/>
+        <h4>AWS</h4>
+        <p>Cloud infrastructure management for scalable ML pipelines</p>
+      </div>
+      
+      <div class="tool-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original-wordmark.svg" width="40"/>
+        <h4>TensorFlow</h4>
+        <p>Developed NLP models achieving 92% accuracy in sentiment analysis</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</details>
+
 ## 🤝 Collaboration Opportunities
 
 I am open to working together on challenging machine learning projects and developing data solutions that make a difference. If you have a project in mind, need guidance, or want to explore ideas using data, feel free to reach out.
