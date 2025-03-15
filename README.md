@@ -38,14 +38,13 @@ I am also involved in the data science community by contributing to open-source 
 
 ### 🛠️ Tech Stack
 #### **Programming & Data Science:**  
-![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg) ![R](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg) ![SQL](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg) ![Pandas](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg) ![NumPy](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg) ![Scikit-Learn](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg)
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg" alt="Scikit-Learn" width="40" height="40"/>
 
 #### **Visualization & BI Tools:**  
-![Tableau](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg) ![Power BI](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg) ![Matplotlib](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg)
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg" alt="Tableau" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg" alt="Power BI" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" width="40" height="40"/>
 
 #### **Development & IT:**  
-![Git](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg) ![Linux](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg) ![Windows](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg) ![Frappe](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/frappe/frappe-original.svg)
-
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/frappe/frappe-original.svg" alt="Frappe" width="40" height="40"/>
 
 
 ## 🔧 Technologies and Tools
