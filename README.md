@@ -36,6 +36,18 @@ I am also involved in the data science community by contributing to open-source 
 
 ---
 
+### 🛠️ Tech Stack
+#### **Programming & Data Science:**  
+![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg) ![R](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg) ![SQL](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg) ![Pandas](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg) ![NumPy](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg) ![Scikit-Learn](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg)
+
+#### **Visualization & BI Tools:**  
+![Tableau](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg) ![Power BI](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg) ![Matplotlib](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg)
+
+#### **Development & IT:**  
+![Git](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg) ![Linux](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg) ![Windows](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg) ![Frappe](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/frappe/frappe-original.svg)
+
+
+
 ## 🔧 Technologies and Tools
 
 - **Programming Languages:** Python, SQL, JavaScript  
