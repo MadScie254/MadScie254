@@ -1,6 +1,6 @@
 # 🚀 Hello, I'm Daniel Wanjala!
 
-Welcome! I’m Daniel Wanjala Machimbo, a Data Analyst, IT Manager, and dedicated Data Scientist. I focus on using data to inspire innovative ideas and drive growth. My goal is to leverage data to solve challenges and open up new possibilities.
+Hi! I’m Daniel Wanjala Machimbo, a Data Analyst, IT Manager, and dedicated Data Scientist. I focus on using data to inspire innovative ideas and drive growth. My goal is to leverage data to solve challenges and open up new possibilities.
 
 ---
 
