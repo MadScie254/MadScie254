@@ -111,6 +111,11 @@ Let me know if you need any adjustments or additional sections!
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=MadScie254)](https://git.io/streak-stats)
 
+<div align="center" class="stats-container">
+  <img src="https://github-readme-stats.vercel.app/api?username=MadScie254&show_icons=true&theme=radical" alt="GitHub Stats"/>
+  <img src="https://streak-stats.demolab.com/?user=MadScie254&theme=dark" alt="Contribution Streak"/>
+</div>
+
 ---
 
 ## :hammer_and_wrench: Languages and Tools!! :
