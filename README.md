@@ -10,7 +10,7 @@ My interest in data started at Zetech University, where I earned a Bachelor’s 
 
 To pursue my passion, I joined Moringa School, where I earned a Certificate in Data Science and Machine Learning. This experience introduced me to predictive modeling, statistical analysis, and machine learning. It was here that I became skilled in Python, which has since been my preferred tool for data analysis.
 
-Currently, I am advancing my expertise by pursuing a Master’s degree in Data Science at Cooperative University Kenya. I am particularly interested in deep learning models and their potential to change various sectors, including healthcare and finance.
+Currently, I am advancing my expertise by pursuing a Master’s degree in Data Science at the Cooperative University of Kenya. I am particularly interested in deep learning models and their potential to change various sectors, including healthcare and finance.
 
 ---
 
