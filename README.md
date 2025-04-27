@@ -43,7 +43,6 @@ My career is characterized by a potent synergy between pragmatic data science ex
 
 ### 🌟 Project Spotlight: A Glimpse into Innovation 🌟
 
-_(**Tip:** Replace placeholder image URLs below with actual visuals/GIFs of your projects for maximum visual impact!)_
 
 <details>
 <summary><strong>Click to Explore Project Categories ▼</strong></summary>
@@ -249,7 +248,6 @@ The pursuit of knowledge within the dynamic landscape of technology is not merel
 
 * **Data Science Certified:** HackerRank ([View Profile](https://www.hackerrank.com/profile/MadScie254))
 * **Prime Code Champ Contest Winner:** Tech Gig (2023)
-* _(Space for additional relevant certifications or notable awards)_
 
 <p align="left">
     <a href="https://madscie254.github.io/MadScie254/" target="_blank"><img src="https://img.shields.io/badge/View-Resume%2FPortfolio_Site-blue?style=for-the-badge&logo=github&logoColor=white" alt="View Resume/Portfolio Site"/></a>
