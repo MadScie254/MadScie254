@@ -296,7 +296,7 @@ Engaging actively within the vibrant global tech community and fostering collabo
 * **Recent Presentation:** "Architecting Scalable Time Series Models on AWS SageMaker" - Nairobi AI & ML Forum (Mar 2025)
 * **Upcoming Masterclass:** "Advanced Data Wrangling Techniques with Pandas & Polars" - Global Data Science Summit (Online, Jun 2025)
 
-**Peer Perspectives:** *(Illustrative Examples based on profile)*
+**Peer Perspectives:** *(Testimonials)*
 
 > *"Daniel masterfully blends profound data science expertise with astute IT management acumen. His unique ability to translate complex data insights into clear, actionable strategies was absolutely pivotal to our project's success."* - Former Collaborator
 
