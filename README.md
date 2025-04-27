@@ -6,7 +6,7 @@
 
 A profoundly analytical and results-driven **Data Scientist**, **Data Analyst**, and **IT Manager**, adeptly navigating the complex intersection of technology, strategic foresight, and insightful discovery. [💡] My fundamental passion lies in the sophisticated alchemy of transmuting intricate, raw data into lucid narratives and potent, actionable intelligence. This transformative process not only elegantly resolves complex challenges but actively catalyzes groundbreaking innovation and fosters sustainable organizational advancement. I excel within dynamic ecosystems that demand the rigorous application of advanced analytical methodologies and state-of-the-art machine learning models to meticulously unravel complexity, discern subtle yet significant patterns, and unlock substantial opportunities previously concealed within the vast expanse of data.
 
---- <p align="center">✨ <strong>Embarking on the Data Odyssey</strong> ✨</p> ---
+<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
 ## 👨‍💻 My Journey: From Foundational Code to Advanced Algorithmic Insights
 
@@ -26,7 +26,7 @@ My professional trajectory into the vibrant, ever-evolving sphere of data scienc
 
 This evolutionary path highlights a deliberate commitment to cultivating comprehensive, cross-disciplinary expertise – progressing from core IT principles to the sophisticated, nuanced techniques essential for extracting maximum strategic value from the data-rich landscape of our modern technological era.
 
---- <p align="center">🚀 <strong>Engineering Impact: Highlights & Innovations</strong> 🚀</p> ---
+<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
 ## 🚀 Professional Highlights & Impactful Projects
 
@@ -155,13 +155,17 @@ _(**Tip:** Replace placeholder image URLs below with actual visuals/GIFs of your
 </table>
 </details>
 
-</details> --- <p align="center">🛠️ <strong>Architecting Solutions: The Digital Toolkit</strong> 🛠️</p> ---
+</details> <hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
 ## 🛠️ My Digital Toolkit: Technologies & Craftsmanship
 
 I command a versatile and potent arsenal of technologies, frameworks, and tools, strategically selected and expertly wielded to conquer the complex, multifaceted challenges inherent in modern data science and strategic IT management.
 
-**Core Programming & Data Science Proficiency:**
+<details>
+<summary><strong>Click to View Technical Skillset Details ▼</strong></summary>
+<br/>
+
+**Languages & Core Frameworks:**
 <p align="left">
   <a href="https://www.python.org" target="_blank" rel="noreferrer" title="Python: My primary language for everything data - versatile, powerful, and supported by an incredible ecosystem."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/></a>
   <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer" title="Pandas: Indispensable for data manipulation and analysis. Makes wrangling dataframes almost enjoyable!"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original-wordmark.svg" alt="pandas" width="40" height="40"/></a>
@@ -171,11 +175,12 @@ I command a versatile and potent arsenal of technologies, frameworks, and tools,
   <a href="https://keras.io/" target="_blank" rel="noreferrer" title="Keras: Love its high-level API for rapid prototyping and building neural networks with TensorFlow backend."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/keras/keras-original-wordmark.svg" alt="keras" width="40" height="40"/></a>
   <a href="https://www.mysql.com/" target="_blank" rel="noreferrer" title="MySQL: Reliable and widely-used relational database for structured data storage and querying."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/></a>
   <a href="https://www.postgresql.org" target="_blank" rel="noreferrer" title="PostgreSQL: Powerful open-source relational database, excellent for complex queries and data integrity."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/></a>
-  <a href="https://www.tableau.com/" target="_blank" rel="noreferrer" title="Tableau: Fantastic tool for creating interactive and insightful data visualizations and dashboards."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tableau/tableau-original.svg" alt="tableau" width="40" height="40"/></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" title="JavaScript: Essential for adding interactivity to web applications and dashboards."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>
+  <a href="https://www.php.net" target="_blank" rel="noreferrer" title="PHP: Utilized for specific web development projects requiring server-side scripting."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/></a>
+  <a href="https://spark.apache.org/" target="_blank" rel="noreferrer" title="PySpark: Leveraging Spark's power within Python for large-scale data processing."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apachespark/apachespark-original-wordmark.svg" alt="apachespark" width="40" height="40"/></a>
 </p>
 
-**Essential Platforms & Development Ecosystem:**
+**Platforms, Tools & Visualization:**
 <p align="left">
   <a href="https://aws.amazon.com" target="_blank" rel="noreferrer" title="AWS: Comprehensive cloud platform for scalable computing, storage, and deploying ML pipelines."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/></a>
   <a href="https://git-scm.com/" target="_blank" rel="noreferrer" title="Git: The cornerstone of version control. Collaboration and code management wouldn't be the same without it."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original-wordmark.svg" alt="git" width="40" height="40"/></a>
@@ -183,11 +188,14 @@ I command a versatile and potent arsenal of technologies, frameworks, and tools,
   <a href="https://jupyter.org/" target="_blank" rel="noreferrer" title="Jupyter: The interactive notebook standard for data exploration, analysis, and visualization."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="40" height="40"/></a>
   <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer" title="VS Code: My primary code editor - versatile, extensible, and a joy to use."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original-wordmark.svg" alt="vscode" width="40" height="40"/></a>
   <a href="https://www.kaggle.com/" target="_blank" rel="noreferrer" title="Kaggle: Great platform for learning, competing, and accessing diverse datasets."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kaggle/kaggle-original-wordmark.svg" alt="kaggle" width="40" height="40"/></a>
+  <a href="https://www.tableau.com/" target="_blank" rel="noreferrer" title="Tableau: Fantastic tool for creating interactive and insightful data visualizations and dashboards."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tableau/tableau-original.svg" alt="tableau" width="40" height="40"/></a>
+  <a href="https://matplotlib.org/" target="_blank" rel="noreferrer" title="Matplotlib: Foundational Python library for creating static, animated, and interactive visualizations."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original-wordmark.svg" alt="matplotlib" width="40" height="40"/></a>
+  <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer" title="Seaborn: High-level interface for drawing attractive and informative statistical graphics in Python."><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/seaborn/seaborn-original-wordmark.svg" alt="seaborn" width="40" height="40"/></a>
 </p>
 
-**IT Management & Infrastructure Acumen:** Deep expertise spanning Network Configuration & Security, Advanced System Administration (Linux/Windows), Virtualization Technologies, Cybersecurity Best Practices, and IT Service Management (ITSM) Frameworks.
+**IT Management & Infrastructure Acumen:** Deep expertise spanning Network Configuration & Security, Advanced System Administration (Linux/Windows), Virtualization Technologies, Cybersecurity Best Practices, ERP Systems (ERPNext), and IT Service Management (ITSM) Frameworks.
 
---- <p align="center">💻 <strong>My Digital Command Center: The Setup</strong> 💻</p> ---
+</details> <hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
 ## 💻 My Digital Command Center
 
@@ -219,7 +227,7 @@ Here’s an insight into the meticulously configured environment where I archite
 * **Network:** High-Speed Fiber Optic Connection [💨]
 </details>
 
---- <p align="center">🌱 <strong>Cultivating Knowledge: Growth & Exploration</strong> 🌱</p> ---
+<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
 ## 🌱 Continuous Growth & Current Explorations
 
@@ -247,23 +255,33 @@ The pursuit of knowledge within the dynamic landscape of technology is not merel
     <a href="https://madscie254.github.io/MadScie254/" target="_blank"><img src="https://img.shields.io/badge/View-Resume%2FPortfolio_Site-blue?style=for-the-badge&logo=github&logoColor=white" alt="View Resume/Portfolio Site"/></a>
 </p>
 
---- <p align="center">💡 <strong>Guiding Principles: Philosophy & Perspective</strong> 💡</p> ---
+<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
 ## 💡 Philosophy & Musings
 
 My professional methodology and problem-solving framework are meticulously shaped by core operational principles and perpetually inspired by the insights of visionary thinkers who have paved the way.
 
+**Contribution Philosophy:**
+> I believe in contributing thoughtfully and constructively. Whether it's improving documentation, fixing bugs, adding well-tested features, or sharing knowledge, my goal is to leave the codebase and the community slightly better than I found them. Open communication and respect for existing conventions are paramount. [🛠️]
+
 **Words That Resonate & Inspire:**
-
 > *"Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution."* - Albert Einstein
-
+>
 > *"The important thing is not to stop questioning. Curiosity has its own reason for existing."* - Albert Einstein
 
-**My Working Approach:** I champion and practice a **collaborative, iterative, and rigorously data-centric** methodology. Crystal-clear communication, meticulous attention to intricate details, and an unwavering commitment to delivering substantial, measurable value are the cornerstones of my process. My ultimate goal is to architect and construct solutions that are not only technically superior and robust but also eminently practical, user-friendly, and demonstrably impactful in their real-world application. [🤝]
+**My Working Approach:**
+> I champion and practice a **collaborative, iterative, and rigorously data-centric** methodology. Crystal-clear communication, meticulous attention to intricate details, and an unwavering commitment to delivering substantial, measurable value are the cornerstones of my process. My ultimate goal is to architect and construct solutions that are not only technically superior and robust but also eminently practical, user-friendly, and demonstrably impactful in their real-world application. [🤝]
 
-**Beyond the Binary:** [🥋] When momentarily detached from the intricate flows of data streams and the precise syntax of code, I often find myself deeply analyzing the complex artistry and strategic depth of classic martial arts cinema – discovering surprising algorithmic beauty and patterns even within the most dynamic and seemingly chaotic physical expressions!
+**Beyond the Binary:** [🥋]
+> When momentarily detached from the intricate flows of data streams and the precise syntax of code, I often find myself deeply analyzing the complex artistry and strategic depth of classic martial arts cinema – discovering surprising algorithmic beauty and patterns even within the most dynamic and seemingly chaotic physical expressions!
 
---- <p align="center">🌍 <strong>Connecting Globally: Community & Collaboration</strong> 🌍</p> ---
+**Quote of the Week:** *(Static - Update Manually)*
+> *"The science of today is the technology of tomorrow."* - Edward Teller
+
+**Random Tech Fact:** *(Static - Update Manually)*
+> Did you know? The first computer programmer was Ada Lovelace, an English mathematician who lived in the 1800s. She wrote the first algorithm intended to be carried out by a machine. [👩‍💻]
+
+<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
 ## 🌍 Community & Collaboration
 
@@ -271,10 +289,6 @@ Engaging actively within the vibrant global tech community and fostering collabo
 
 <p align="center">
   📍 Residing in Nairobi, Kenya 🇰🇪
-  <br/>
-  <img src="https://maps.googleapis.com/maps/api/staticmap?center=Nairobi,Kenya&zoom=10&size=600x200&maptype=roadmap&markers=color:purple%7Clabel:DW%7CNairobi,Kenya&style=feature:all|element:labels|visibility:off&style=feature:road|element:geometry|color:0xaaaaaa&style=feature:landscape|element:geometry|color:0xefefef&style=feature:water|element:geometry|color:0xaaccee&key=YOUR_GOOGLE_MAPS_API_KEY" alt="Map of Nairobi, Kenya"/>
-  <br/>
-  <em>(Requires a Google Maps Static API Key for the map image to display correctly)</em>
 </p>
 
 **Engagements & Knowledge Sharing:** *(Illustrative Examples)*
@@ -300,10 +314,11 @@ I enthusiastically welcome stimulating discussions and knowledge exchange! Feel 
 * Synergizing IT Operations with Data Science Initiatives [🌉]
 * Crafting Compelling Narratives through Data Visualization [📊]
 * Optimizing Cloud Strategies (AWS) for Demanding ML Workloads [☁️]
+* Building Automation Frameworks with LLMs [🤖]
 
---- <p align="center">📊 <strong>My Digital Footprint: GitHub Universe Stats</strong> 📊</p> ---
+<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
-## 📊 My GitHub Universe: Enhanced Stats & Activity
+## 📊 My Digital Footprint: GitHub Universe Stats
 
 A dynamic and detailed perspective on my contributions, coding patterns, and sustained activity within the vibrant GitHub ecosystem.
 
@@ -320,7 +335,7 @@ A dynamic and detailed perspective on my contributions, coding patterns, and sus
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=MadScie254&bg_color=f8f8f8&color=2e6ed9&line=2e6ed9&point=343a40&area=true&hide_border=true" alt="Contribution Graph" />
 </p>
 
---- <p align="center">☕ <strong>Connect, Collaborate, or Caffeinate!</strong> ☕</p> ---
+<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
 ## 📫 Let's Connect, Collaborate, or Caffeinate!
 
@@ -336,7 +351,8 @@ I am genuinely enthusiastic about engaging with fellow data professionals, poten
   <a href="https://stackoverflow.com/users/23281708/daniel-wanjala" target="_blank"><img src="https://img.shields.io/badge/-StackOverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" alt="Stack Overflow"/></a>
   <a href="https://tally.so/r/mR2xJd" target="_blank"><img src="https://img.shields.io/badge/Contact%20Form-Via_Tally-black?style=for-the-badge&logo=Tally&logoColor=white" alt="Contact Form"/></a>
   <a href="https://paypal.me/danieleinstein1998" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal"/></a>
-</p>
+  <a href="https://github.com/MadScie254?tab=followers" target="_blank"><img src="https://img.shields.io/github/followers/MadScie254?label=Followers&style=social" alt="GitHub Followers"/></a>
+  </p>
 
---- <p align="center">✨ *** ✨</p> ---
+<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
