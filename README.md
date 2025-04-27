@@ -4,7 +4,7 @@
 
 # 👋 Greetings! I'm Daniel Wanjala Machimbo
 
-A profoundly analytical and results-driven **Data Scientist**, **Data Analyst**, and **IT Manager**, adeptly navigating the complex intersection of technology, strategic foresight, and insightful discovery. [💡] My fundamental passion lies in the sophisticated alchemy of transmuting intricate, raw data into lucid narratives and potent, actionable intelligence. This transformative process not only elegantly resolves complex challenges but actively catalyzes groundbreaking innovation and fosters sustainable organizational advancement. I excel within dynamic ecosystems that demand the rigorous application of advanced analytical methodologies and state-of-the-art machine learning models to meticulously unravel complexity, discern subtle yet significant patterns, and unlock substantial opportunities previously concealed within the vast expanse of data.
+A profoundly analytical and results-driven **Data Scientist**, **Data Analyst**, and **IT Manager**, adeptly navigating the complex intersection of technology, strategic foresight, and insightful discovery. <img src="https://img.shields.io/badge/-💡-yellow?style=flat-square" alt="Idea" height="15"/> My fundamental passion lies in the sophisticated alchemy of transmuting intricate, raw data into lucid narratives and potent, actionable intelligence. This transformative process not only elegantly resolves complex challenges but actively catalyzes groundbreaking innovation and fosters sustainable organizational advancement. I excel within dynamic ecosystems that demand the rigorous application of advanced analytical methodologies and state-of-the-art machine learning models to meticulously unravel complexity, discern subtle yet significant patterns, and unlock substantial opportunities previously concealed within the vast expanse of data.
 
 <hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
@@ -32,12 +32,12 @@ This evolutionary path highlights a deliberate commitment to cultivating compreh
 
 My career is characterized by a potent synergy between pragmatic data science execution and visionary IT stewardship. This integrated viewpoint empowers me to architect, deploy, and manage sophisticated data-centric solutions that resonate powerfully and effectively with overarching organizational ambitions and strategic goals.
 
-* **Strategic IT Leadership & Healthcare Analytics | Kingdom Hospital:** [🏥]
+* **Strategic IT Leadership & Healthcare Analytics | Kingdom Hospital:** <img src="https://img.shields.io/badge/-🏥-lightgrey?style=flat-square" alt="Hospital" height="15"/>
     * Orchestrating and managing the hospital's mission-critical technology infrastructure, ensuring unparalleled system reliability, uncompromising security protocols, and peak operational performance.
     * Spearheading complex data integration initiatives to forge a unified, holistic patient information ecosystem, thereby significantly elevating the quality of care and optimizing intricate operational workflows.
     * Pioneering the development and strategic deployment of advanced machine learning models for predictive patient trend analysis, intelligent resource allocation, and quantifiable enhancements in service delivery efficiency and patient outcomes.
 
-* **Financial Forecasting Expertise | Central Bank of Kenya (CBK) Collaboration:** [📈]
+* **Financial Forecasting Expertise | Central Bank of Kenya (CBK) Collaboration:** <img src="https://img.shields.io/badge/-📈-green?style=flat-square" alt="Chart" height="15"/>
     * Conceptualizing and constructing a high-fidelity predictive model for forecasting Monthly Total Remittances, leveraging advanced time series analysis (ARIMA, Prophet) and robust machine learning algorithms.
     * Generating critical, data-validated forecasting insights that provided indispensable, actionable support for high-level strategic decision-making among financial analysts and key CBK policymakers.
 
@@ -205,26 +205,26 @@ I command a versatile and potent arsenal of technologies, frameworks, and tools,
 Here’s an insight into the meticulously configured environment where I architect sophisticated solutions and command complex datasets:
 
 * **Operating System:** Windows 11 Professional <img src="https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows" height="15"/>
-* **Primary Code Editor:** Visual Studio Code <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" height="15"/> - Extensively customized with extensions for peak productivity and workflow optimization. [🚀]
+* **Primary Code Editor:** Visual Studio Code <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" height="15"/> - Extensively customized with extensions for peak productivity and workflow optimization. <img src="https://img.shields.io/badge/-🚀-blueviolet?style=flat-square" alt="Rocket" height="15"/>
 * **Key Tools & Extensions:**
     * Python Ecosystem (IntelliSense, Linting, Debugging) <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" height="15"/>
     * Jupyter Notebook Integration (Interactive Exploration) <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" height="15"/>
     * GitLens (Git History Visualization & Code Archeology) <img src="https://img.shields.io/badge/GitLens-1F8AD6?style=flat-square&logo=git&logoColor=white" alt="GitLens" height="15"/>
-    * Prettier & Black (Automated, Consistent Code Formatting) [✨]
+    * Prettier & Black (Automated, Consistent Code Formatting) ✨
     * Docker Extension (Seamless Container Management) <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" height="15"/>
-    * SQLTools (Direct Database Interaction within VS Code) [🗄️]
+    * SQLTools (Direct Database Interaction within VS Code) 🗄️
     * Streamlit (Rapid ML Application Prototyping & Deployment) <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit" height="15"/>
     * Tableau Integration (Visualization Sharing) <img src="https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white" alt="Tableau" height="15"/>
-    * Remote Development Pack (SSH, Containers, WSL) [🌐]
+    * Remote Development Pack (SSH, Containers, WSL) 🌐
 * **Terminal:** Windows Terminal (PowerShell & WSL/Ubuntu) <img src="https://img.shields.io/badge/Terminal-4D4D4D?style=flat-square&logo=windowsterminal&logoColor=white" alt="Windows Terminal" height="15"/>
 * **Version Control:** Git & GitHub <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" height="15"/>
 * **Hardware:**
-    * **Device:** HP ZBook 15 G5 Mobile Workstation [💻]
+    * **Device:** HP ZBook 15 G5 Mobile Workstation 💻
     * **Memory:** 16GB DDR4 RAM
-    * **Storage:** 512GB NVMe SSD [⚡]
-    * **Graphics:** NVIDIA Quadro P2000 (4GB VRAM) [🎮]
-    * **Processor:** Intel Core i7 (8th Gen) [⚙️]
-* **Network:** High-Speed Fiber Optic Connection [💨]
+    * **Storage:** 512GB NVMe SSD ⚡
+    * **Graphics:** NVIDIA Quadro P2000 (4GB VRAM) 🎮
+    * **Processor:** Intel Core i7 (8th Gen) ⚙️
+* **Network:** High-Speed Fiber Optic Connection 💨
 </details>
 
 <hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
@@ -236,7 +236,7 @@ The pursuit of knowledge within the dynamic landscape of technology is not merel
 <details>
 <summary><strong>Click to View Current Learning Focus ▼</strong></summary>
 <br/>
-**Current Areas of Deep Dive & Intellectual Investment:** [🧠]
+**Current Areas of Deep Dive & Intellectual Investment:** 🧠
 
 * **MLOps Excellence:** Mastering sophisticated tools (Kubeflow, MLflow, DVC) and best practices for architecting robust, reproducible, and highly scalable machine learning pipelines, from initial development through to production deployment and monitoring.
 * **Advanced Deep Learning Architectures:** Intensely exploring the complex intricacies of Transformer models, Graph Neural Networks (GNNs), and their novel, potentially paradigm-shifting applications beyond traditional NLP into critical domains like advanced fraud detection and hyper-personalized recommendation systems.
@@ -245,7 +245,7 @@ The pursuit of knowledge within the dynamic landscape of technology is not merel
 * **Reinforcement Learning Fundamentals:** Systematically grasping the core theoretical concepts and identifying potential high-impact applications of Reinforcement Learning (RL) in complex optimization challenges and autonomous decision-making systems.
 </details>
 
-**Credentials & Validated Achievements:** [🏆]
+**Credentials & Validated Achievements:** 🏆
 
 * **Data Science Certified:** HackerRank ([View Profile](https://www.hackerrank.com/profile/MadScie254))
 * **Prime Code Champ Contest Winner:** Tech Gig (2023)
@@ -262,7 +262,7 @@ The pursuit of knowledge within the dynamic landscape of technology is not merel
 My professional methodology and problem-solving framework are meticulously shaped by core operational principles and perpetually inspired by the insights of visionary thinkers who have paved the way.
 
 **Contribution Philosophy:**
-> I believe in contributing thoughtfully and constructively. Whether it's improving documentation, fixing bugs, adding well-tested features, or sharing knowledge, my goal is to leave the codebase and the community slightly better than I found them. Open communication and respect for existing conventions are paramount. [🛠️]
+> I believe in contributing thoughtfully and constructively. Whether it's improving documentation, fixing bugs, adding well-tested features, or sharing knowledge, my goal is to leave the codebase and the community slightly better than I found them. Open communication and respect for existing conventions are paramount. <img src="https://img.shields.io/badge/-🛠️-grey?style=flat-square" alt="Tools" height="15"/>
 
 **Words That Resonate & Inspire:**
 > *"Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution."* - Albert Einstein
@@ -270,16 +270,16 @@ My professional methodology and problem-solving framework are meticulously shape
 > *"The important thing is not to stop questioning. Curiosity has its own reason for existing."* - Albert Einstein
 
 **My Working Approach:**
-> I champion and practice a **collaborative, iterative, and rigorously data-centric** methodology. Crystal-clear communication, meticulous attention to intricate details, and an unwavering commitment to delivering substantial, measurable value are the cornerstones of my process. My ultimate goal is to architect and construct solutions that are not only technically superior and robust but also eminently practical, user-friendly, and demonstrably impactful in their real-world application. [🤝]
+> I champion and practice a **collaborative, iterative, and rigorously data-centric** methodology. Crystal-clear communication, meticulous attention to intricate details, and an unwavering commitment to delivering substantial, measurable value are the cornerstones of my process. My ultimate goal is to architect and construct solutions that are not only technically superior and robust but also eminently practical, user-friendly, and demonstrably impactful in their real-world application. 🤝
 
-**Beyond the Binary:** [🥋]
+**Beyond the Binary:** 🥋
 > When momentarily detached from the intricate flows of data streams and the precise syntax of code, I often find myself deeply analyzing the complex artistry and strategic depth of classic martial arts cinema – discovering surprising algorithmic beauty and patterns even within the most dynamic and seemingly chaotic physical expressions!
 
 **Quote of the Week:** *(Static - Update Manually)*
 > *"The science of today is the technology of tomorrow."* - Edward Teller
 
 **Random Tech Fact:** *(Static - Update Manually)*
-> Did you know? The first computer programmer was Ada Lovelace, an English mathematician who lived in the 1800s. She wrote the first algorithm intended to be carried out by a machine. [👩‍💻]
+> Did you know? The first computer programmer was Ada Lovelace, an English mathematician who lived in the 1800s. She wrote the first algorithm intended to be carried out by a machine. 👩‍💻
 
 <hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
@@ -304,17 +304,17 @@ Engaging actively within the vibrant global tech community and fostering collabo
 
 > *"As our IT Manager, Daniel ensures our critical systems operate flawlessly and securely. His proactive, forward-thinking approach and comprehensive technical knowledge are truly exemplary."* - Valued Team Member, Kingdom Hospital
 
-**Let's Engage in Dialogue:** [💬]
+**Let's Engage in Dialogue:** 💬
 
 I enthusiastically welcome stimulating discussions and knowledge exchange! Feel free to engage me on topics including, but not limited to:
 
-* Applying Advanced Time Series Analysis (ARIMA, Prophet, LSTMs) [⏳]
-* Architecting & Deploying ML Solutions in Healthcare Settings [🩺]
-* Leveraging the Python Ecosystem for End-to-End Data Science [🐍]
-* Synergizing IT Operations with Data Science Initiatives [🌉]
-* Crafting Compelling Narratives through Data Visualization [📊]
-* Optimizing Cloud Strategies (AWS) for Demanding ML Workloads [☁️]
-* Building Automation Frameworks with LLMs [🤖]
+* Applying Advanced Time Series Analysis (ARIMA, Prophet, LSTMs) ⏳
+* Architecting & Deploying ML Solutions in Healthcare Settings 🩺
+* Leveraging the Python Ecosystem for End-to-End Data Science <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" height="15"/>
+* Synergizing IT Operations with Data Science Initiatives 🌉
+* Crafting Compelling Narratives through Data Visualization 📊
+* Optimizing Cloud Strategies (AWS) for Demanding ML Workloads <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS" height="15"/>
+* Building Automation Frameworks with LLMs 🤖
 
 <hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
@@ -349,11 +349,10 @@ I am genuinely enthusiastic about engaging with fellow data professionals, poten
   <a href="https://github.com/MadScie254" target="_blank"><img src="https://img.shields.io/badge/GitHub-Profile-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
   <a href="https://www.hackerrank.com/profile/MadScie254" target="_blank"><img src="https://img.shields.io/badge/-HackerRank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white" alt="HackerRank"/></a>
   <a href="https://stackoverflow.com/users/23281708/daniel-wanjala" target="_blank"><img src="https://img.shields.io/badge/-StackOverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" alt="Stack Overflow"/></a>
-  <a href="https://open.spotify.com/user/31gsxkcyyowv3uk7gh7sbs3vbfyu" target="_blank"><img src="https://img.shields.io/badge/-Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify"/></a>
   <a href="https://tally.so/r/mR2xJd" target="_blank"><img src="https://img.shields.io/badge/Contact%20Form-Via_Tally-black?style=for-the-badge&logo=Tally&logoColor=white" alt="Contact Form"/></a>
   <a href="https://paypal.me/danieleinstein1998" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal"/></a>
   <a href="https://github.com/MadScie254?tab=followers" target="_blank"><img src="https://img.shields.io/github/followers/MadScie254?label=Followers&style=social" alt="GitHub Followers"/></a>
-</p>
+  </p>
 
 <hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
