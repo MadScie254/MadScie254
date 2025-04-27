@@ -349,10 +349,11 @@ I am genuinely enthusiastic about engaging with fellow data professionals, poten
   <a href="https://github.com/MadScie254" target="_blank"><img src="https://img.shields.io/badge/GitHub-Profile-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
   <a href="https://www.hackerrank.com/profile/MadScie254" target="_blank"><img src="https://img.shields.io/badge/-HackerRank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white" alt="HackerRank"/></a>
   <a href="https://stackoverflow.com/users/23281708/daniel-wanjala" target="_blank"><img src="https://img.shields.io/badge/-StackOverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" alt="Stack Overflow"/></a>
+  <a href="https://open.spotify.com/user/31gsxkcyyowv3uk7gh7sbs3vbfyu" target="_blank"><img src="https://img.shields.io/badge/-Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" alt="Spotify"/></a>
   <a href="https://tally.so/r/mR2xJd" target="_blank"><img src="https://img.shields.io/badge/Contact%20Form-Via_Tally-black?style=for-the-badge&logo=Tally&logoColor=white" alt="Contact Form"/></a>
   <a href="https://paypal.me/danieleinstein1998" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate via PayPal"/></a>
   <a href="https://github.com/MadScie254?tab=followers" target="_blank"><img src="https://img.shields.io/github/followers/MadScie254?label=Followers&style=social" alt="GitHub Followers"/></a>
-  </p>
+</p>
 
 <hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
 
