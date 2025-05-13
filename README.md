@@ -10,7 +10,7 @@ A profoundly analytical and results **Data Scientist**, **Data Analyst**, and **
 
 ## 👨‍💻 My Journey: From Foundational Code to Advanced Algorithmic Insights
 
-My professional trajectory into the vibrant, ever-evolving sphere of data science is anchored by a robust, multifaceted foundation. Originating from intensive academic pursuits, it has been perpetually sculpted and refined through extensive hands-on application, strategic problem-solving, and an unyielding dedication to continuous learning and intellectual exploration in the digital frontier.
+My professional trajectory into the field of data science is anchored by a robust, multifaceted foundation. Originating from intensive academic pursuits, it has been perpetually sculpted and refined through extensive hands-on application, strategic problem-solving, and an unyielding dedication to continuous learning and intellectual exploration in the digital frontier.
 
 **Key Milestones on the Timeline:**
 
