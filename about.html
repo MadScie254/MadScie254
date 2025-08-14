@@ -27,53 +27,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Critical CSS - Inline for performance -->
-    <style>
-        :root {
-            --color-primary-bg: #F7F7F7;
-            --color-accent: #6C5CE7;
-            --color-primary-text: #0B0C10;
-            --header-height: clamp(3.5rem, 8vw, 4rem);
-            --transition-fast: 150ms ease-out;
-        }
-        
-        [data-theme="dark"] {
-            --color-primary-bg: #0B0C10;
-            --color-accent: #66FCF1;
-            --color-primary-text: #F9FAFB;
-        }
-        
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--color-primary-bg);
-            color: var(--color-primary-text);
-            line-height: 1.6;
-            overflow-x: hidden;
-            transition: background-color var(--transition-fast), color var(--transition-fast);
-        }
-        
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: var(--header-height);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            z-index: 100;
-            transition: all var(--transition-fast);
-        }
-    </style>
-    
-    <!-- Load CSS files -->
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/layout.css">`n    <link rel="stylesheet" href="assets/css/interactive-features.css">
-    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/interactive-features.css">
     
     <!-- Google Fonts - Load asynchronously -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -188,7 +147,7 @@
         </section>
 
         <!-- Timeline Section -->
-        <section class="section" id="timeline" aria-labelledby="timeline-title" style="background: var(--color-secondary-bg); opacity: 0.3;">
+        <section class="section timeline-section" id="timeline" aria-labelledby="timeline-title">
             <div class="container">
                 <div class="section-header reveal">
                     <h2 id="timeline-title" class="section-title">My Journey Timeline</h2>
@@ -361,7 +320,7 @@
         </section>
 
         <!-- Skills Highlight Section -->
-        <section class="section" id="skills-highlight" aria-labelledby="skills-highlight-title" style="background: var(--color-secondary-bg); opacity: 0.3;">
+        <section class="section skills-highlight-section" id="skills-highlight" aria-labelledby="skills-highlight-title">
             <div class="container">
                 <div class="section-header reveal">
                     <h2 id="skills-highlight-title" class="section-title">Core Expertise</h2>
@@ -635,7 +594,7 @@
     </style>
 
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main_simple.js"></script>
     
     <!-- Initialize -->
     <script>
