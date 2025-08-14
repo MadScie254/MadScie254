@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Contact Daniel Wanjala - Data Scientist & ML Engineer. Get in touch for collaborations, consultations, or data science projects. Let's connect and build something amazing.">
+    <meta name="keywords" content="Daniel Wanjala, Contact, Data Science, Collaboration, Consultation, Machine Learning Projects">
+    <meta name="author" content="Daniel Wanjala">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://danco-analytics.github.io/Portifolio/contact.html">
+    <meta property="og:title" content="Contact Daniel Wanjala - Let's Connect!">
+    <meta property="og:description" content="Ready to collaborate on your next data science project? Get in touch with Daniel Wanjala for consultations, partnerships, and innovative solutions.">
+    <meta property="og:image" content="https://danco-analytics.github.io/Portifolio/assets/images/og-image.jpg">
+
+    <title>Contact Daniel Wanjala - Let's Connect! | Data Science Collaboration</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS - Inline for performance -->
+    <style>
+        :root {
+            --color-primary-bg: #F7F7F7;
+            --color-accent: #6C5CE7;
+            --color-primary-text: #0B0C10;
+            --header-height: clamp(3.5rem, 8vw, 4rem);
+            --transition-fast: 150ms ease-out;
+        }
+        
+        [data-theme="dark"] {
+            --color-primary-bg: #0B0C10;
+            --color-accent: #66FCF1;
+            --color-primary-text: #F9FAFB;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--color-primary-bg);
+            color: var(--color-primary-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+            transition: all var(--transition-fast);
+        }
+    </style>
+    
+    <!-- Load CSS files -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    
+    <!-- Google Fonts - Load asynchronously -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700;800&display=swap"></noscript>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress"></div>
+    
+    <!-- Header -->
+    <header class="header" id="header" role="banner">
+        <div class="header__container">
+            <!-- Logo -->
+            <a href="index.html" class="header__logo" aria-label="Daniel Wanjala - Home">
+                <img src="assets/images/logo.png" alt="" class="header__logo-image" aria-hidden="true" 
+                     onerror="this.style.display='none'">
+                <span>Daniel Wanjala</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="about.html" class="nav__link">About</a>
+                <a href="skills.html" class="nav__link">Skills</a>
+                <a href="projects.html" class="nav__link">Projects</a>
+                <a href="contact.html" class="nav__link active">Contact</a>
+            </nav>
+            
+            <!-- Controls -->
+            <div class="flex items-center gap-md">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+            <div class="mobile-menu__list">
+                <a href="index.html" class="mobile-menu__link">Home</a>
+                <a href="about.html" class="mobile-menu__link">About</a>
+                <a href="skills.html" class="mobile-menu__link">Skills</a>
+                <a href="projects.html" class="mobile-menu__link">Projects</a>
+                <a href="contact.html" class="mobile-menu__link active">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero section" id="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__content reveal text-center">
+                    <h1 id="hero-title" class="hero__title">
+                        Let's <span class="text-accent">Connect</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Ready to collaborate on your next data science project? I'm always excited 
+                        to discuss new opportunities, share insights, and build innovative solutions together.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Methods Section -->
+        <section class="section" id="contact-methods" aria-labelledby="contact-methods-title">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container reveal-left">
+                        <h2 id="contact-methods-title" class="contact-form__title">Send a Message</h2>
+                        <p class="contact-form__subtitle">
+                            Drop me a line and I'll get back to you as soon as possible.
+                        </p>
+                        
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    class="form-input" 
+                                    required 
+                                    aria-describedby="name-error"
+                                    placeholder="Your full name"
+                                >
+                                <span class="form-error" id="name-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    required 
+                                    aria-describedby="email-error"
+                                    placeholder="your.email@example.com"
+                                >
+                                <span class="form-error" id="email-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select id="subject" name="subject" class="form-input" required aria-describedby="subject-error">
+                                    <option value="">Select a topic</option>
+                                    <option value="collaboration">Project Collaboration</option>
+                                    <option value="consultation">Data Science Consultation</option>
+                                    <option value="employment">Employment Opportunity</option>
+                                    <option value="speaking">Speaking Engagement</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="form-error" id="subject-error" role="alert"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    class="form-input form-textarea" 
+                                    required 
+                                    aria-describedby="message-error"
+                                    placeholder="Tell me about your project, ideas, or how we can work together..."
+                                    rows="6"
+                                ></textarea>
+                                <span class="form-error" id="message-error" role="alert"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--primary btn--lg btn--full" id="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" aria-hidden="true">
+                                    <svg class="animate-spin" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 12a9 9 0 11-6.219-8.56"/>
+                                    </svg>
+                                    Sending...
+                                </span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </button>
+                        </form>
+                        
+                        <div class="form-success" id="form-success" role="alert" aria-live="polite">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <div>
+                                <h3>Message sent successfully!</h3>
+                                <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="contact-info reveal-right">
+                        <h3 class="contact-info__title">Get in Touch</h3>
+                        <p class="contact-info__subtitle">
+                            Prefer to reach out directly? Here are the best ways to connect with me.
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-method__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-method__content">
+                                    <h4>Email</h4>
+                                    <a href="mailto:daniel.wanjala@example.com" class="contact-link">
+                                        daniel.wanjala@example.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-method__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                        <rect width="4" height="12" x="2" y="9"/>
+                                        <circle cx="4" cy="4" r="2"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-method__content">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://linkedin.com/in/daniel-wanjala" class="contact-link" target="_blank" rel="noopener noreferrer">
+                                        Connect professionally
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-method__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                                        <path d="M9 18c-4.51 2-5-2-7-2"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-method__content">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/MadScie254" class="contact-link" target="_blank" rel="noopener noreferrer">
+                                        View my code
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-method__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                        <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-method__content">
+                                    <h4>Location</h4>
+                                    <span class="contact-text">Near Nairobi, Kenya</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="availability-status">
+                            <div class="status-indicator available" aria-label="Available for new projects"></div>
+                            <span class="status-text">Available for new projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="faq-title" class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">
+                        Common questions about working together and my services
+                    </p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                            <span>What types of projects do you work on?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-1">
+                            <p>
+                                I specialize in healthcare analytics, predictive modeling, machine learning applications, 
+                                and business intelligence solutions. My experience spans from hospital operations optimization 
+                                to supply chain analytics and customer behavior prediction.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                            <span>What's your typical project timeline?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-2">
+                            <p>
+                                Project timelines vary based on complexity and scope. Simple analytics dashboards can be 
+                                completed in 2-4 weeks, while comprehensive ML solutions may take 2-6 months. I always 
+                                provide detailed timelines during our initial consultation.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                            <span>Do you offer ongoing support and maintenance?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-3">
+                            <p>
+                                Absolutely! I provide ongoing support, model monitoring, and system maintenance services. 
+                                This ensures your data science solutions continue to perform optimally and adapt to 
+                                changing business needs.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item reveal">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                            <span>Can you work with existing data infrastructure?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer" id="faq-4">
+                            <p>
+                                Yes, I'm experienced in integrating with various data systems, databases, and cloud platforms. 
+                                Whether you're using AWS, Google Cloud, on-premises servers, or hybrid solutions, I can work 
+                                with your existing infrastructure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaboration Section -->
+        <section class="section" id="collaboration" aria-labelledby="collaboration-title">
+            <div class="container">
+                <div class="collaboration-card reveal">
+                    <div class="collaboration-content">
+                        <h2 id="collaboration-title" class="collaboration-title">Ready to Start Something Great?</h2>
+                        <p class="collaboration-description">
+                            Whether you're looking to optimize operations, unlock insights from your data, 
+                            or build intelligent systems, I'm here to help turn your vision into reality.
+                        </p>
+                        
+                        <div class="collaboration-features">
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                <span>Free initial consultation</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                <span>Flexible engagement models</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                <span>Proven track record</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                <span>Ongoing support available</span>
+                            </div>
+                        </div>
+                        
+                        <div class="collaboration-actions">
+                            <a href="#contact-form" class="btn btn--primary btn--lg">
+                                Send a Message
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:daniel.wanjala@example.com" class="btn btn--ghost btn--lg">
+                                Email Directly
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__content">
+            <div class="footer__social">
+                <a href="https://linkedin.com/in/daniel-wanjala" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect width="4" height="12" x="2" y="9"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/MadScie254" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                        <path d="M9 18c-4.51 2-5-2-7-2"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/danielwanjala" class="footer__social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer__text">
+                © <span id="current-year">2024</span> Daniel Wanjala. Built with passion for data and innovation.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Contact Page Specific Styles -->
+    <style>
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            gap: var(--space-4xl);
+            align-items: start;
+        }
+
+        @media (min-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Contact Form */
+        .contact-form-container {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-medium);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+        }
+
+        .contact-form__title {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--color-primary-text);
+        }
+
+        .contact-form__subtitle {
+            color: var(--color-secondary-text);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-xl);
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--color-primary-text);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            background: var(--color-primary-bg);
+            color: var(--color-primary-text);
+            font-size: var(--text-base);
+            transition: all var(--transition-fast);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-error {
+            display: block;
+            color: #EF4444;
+            font-size: var(--text-sm);
+            margin-top: var(--space-xs);
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .form-error.visible {
+            opacity: 1;
+        }
+
+        .form-input.error {
+            border-color: #EF4444;
+        }
+
+        .btn--full {
+            width: 100%;
+        }
+
+        .btn-loading {
+            display: none;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .btn.loading .btn-text {
+            display: none;
+        }
+
+        .btn.loading .btn-loading {
+            display: flex;
+        }
+
+        .form-success {
+            display: none;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-lg);
+            background: #10B981;
+            color: white;
+            border-radius: var(--radius-md);
+            margin-top: var(--space-lg);
+        }
+
+        .form-success.visible {
+            display: flex;
+        }
+
+        .form-success h3 {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-medium);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+        }
+
+        .contact-info__title {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--color-primary-text);
+        }
+
+        .contact-info__subtitle {
+            color: var(--color-secondary-text);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .contact-methods {
+            margin-bottom: var(--space-2xl);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-fast);
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-method:hover {
+            background: var(--glass-medium);
+        }
+
+        .contact-method__icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--color-accent);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .contact-method__content h4 {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            color: var(--color-primary-text);
+        }
+
+        .contact-link {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .contact-link:hover {
+            color: var(--color-accent-hover);
+        }
+
+        .contact-text {
+            color: var(--color-secondary-text);
+        }
+
+        .availability-status {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-lg);
+            background: var(--glass-medium);
+            border-radius: var(--radius-lg);
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: var(--radius-full);
+            background: #10B981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .status-text {
+            font-weight: 500;
+            color: var(--color-primary-text);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-medium);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-md);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: var(--space-xl);
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--color-primary-text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            background: var(--glass-medium);
+        }
+
+        .faq-icon {
+            transition: transform var(--transition-fast);
+        }
+
+        .faq-question[aria-expanded="true"] .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-smooth);
+        }
+
+        .faq-answer.open {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding: 0 var(--space-xl) var(--space-xl);
+            color: var(--color-secondary-text);
+            line-height: 1.6;
+        }
+
+        /* Collaboration Card */
+        .collaboration-card {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-medium);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-4xl) var(--space-2xl);
+            text-align: center;
+        }
+
+        .collaboration-title {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: var(--color-primary-text);
+        }
+
+        .collaboration-description {
+            font-size: var(--text-lg);
+            color: var(--color-secondary-text);
+            margin-bottom: var(--space-2xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .collaboration-features {
+            display: grid;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-2xl);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 640px) {
+            .collaboration-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            color: var(--color-primary-text);
+            font-weight: 500;
+        }
+
+        .feature-item svg {
+            color: var(--color-accent);
+        }
+
+        .collaboration-actions {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        @media (min-width: 640px) {
+            .collaboration-actions {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Contact Page Specific JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            // Set current year
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            // Form validation and submission
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formSuccess = document.getElementById('form-success');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                if (validateForm()) {
+                    // Show loading state
+                    submitBtn.classList.add('loading');
+                    
+                    // Simulate form submission (replace with actual endpoint)
+                    setTimeout(() => {
+                        submitBtn.classList.remove('loading');
+                        form.style.display = 'none';
+                        formSuccess.classList.add('visible');
+                    }, 2000);
+                }
+            });
+
+            function validateForm() {
+                let isValid = true;
+                const requiredFields = ['name', 'email', 'subject', 'message'];
+                
+                requiredFields.forEach(fieldName => {
+                    const field = document.getElementById(fieldName);
+                    const error = document.getElementById(`${fieldName}-error`);
+                    
+                    if (!field.value.trim()) {
+                        showError(field, error, `${fieldName.charAt(0).toUpperCase() + fieldName.slice(1)} is required`);
+                        isValid = false;
+                    } else if (fieldName === 'email' && !isValidEmail(field.value)) {
+                        showError(field, error, 'Please enter a valid email address');
+                        isValid = false;
+                    } else {
+                        hideError(field, error);
+                    }
+                });
+                
+                return isValid;
+            }
+
+            function showError(field, errorElement, message) {
+                field.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.classList.add('visible');
+            }
+
+            function hideError(field, errorElement) {
+                field.classList.remove('error');
+                errorElement.classList.remove('visible');
+            }
+
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const isExpanded = question.getAttribute('aria-expanded') === 'true';
+                    const answer = question.nextElementSibling;
+                    
+                    // Close all other FAQ items
+                    faqQuestions.forEach(q => {
+                        if (q !== question) {
+                            q.setAttribute('aria-expanded', 'false');
+                            q.nextElementSibling.classList.remove('open');
+                        }
+                    });
+                    
+                    // Toggle current FAQ item
+                    question.setAttribute('aria-expanded', !isExpanded);
+                    answer.classList.toggle('open');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

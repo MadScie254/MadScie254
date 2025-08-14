@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="About Daniel Wanjala - Data Scientist & ML Engineer. My journey from IT management to advanced data science, education, and professional experience.">
+    <meta name="keywords" content="Daniel Wanjala, Data Scientist, Machine Learning Engineer, About, Career, Education, Experience">
+    <meta name="author" content="Daniel Wanjala">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://danco-analytics.github.io/Portifolio/about.html">
+    <meta property="og:title" content="About Daniel Wanjala - Data Scientist & ML Engineer">
+    <meta property="og:description" content="Discover my journey from IT management to advanced data science. Learn about my education, experience, and passion for data-driven solutions.">
+    <meta property="og:image" content="https://danco-analytics.github.io/Portifolio/assets/images/og-image.jpg">
+
+    <title>About Daniel Wanjala - My Journey in Data Science | Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS - Inline for performance -->
+    <style>
+        :root {
+            --color-primary-bg: #F7F7F7;
+            --color-accent: #6C5CE7;
+            --color-primary-text: #0B0C10;
+            --header-height: clamp(3.5rem, 8vw, 4rem);
+            --transition-fast: 150ms ease-out;
+        }
+        
+        [data-theme="dark"] {
+            --color-primary-bg: #0B0C10;
+            --color-accent: #66FCF1;
+            --color-primary-text: #F9FAFB;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--color-primary-bg);
+            color: var(--color-primary-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color var(--transition-fast), color var(--transition-fast);
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 100;
+            transition: all var(--transition-fast);
+        }
+    </style>
+    
+    <!-- Load CSS files -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    
+    <!-- Google Fonts - Load asynchronously -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700;800&display=swap"></noscript>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress"></div>
+    
+    <!-- Header -->
+    <header class="header" id="header" role="banner">
+        <div class="header__container">
+            <!-- Logo -->
+            <a href="index.html" class="header__logo" aria-label="Daniel Wanjala - Home">
+                <img src="assets/images/logo.png" alt="" class="header__logo-image" aria-hidden="true" 
+                     onerror="this.style.display='none'">
+                <span>Daniel Wanjala</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="about.html" class="nav__link active">About</a>
+                <a href="skills.html" class="nav__link">Skills</a>
+                <a href="projects.html" class="nav__link">Projects</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </nav>
+            
+            <!-- Controls -->
+            <div class="flex items-center gap-md">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+            <div class="mobile-menu__list">
+                <a href="index.html" class="mobile-menu__link">Home</a>
+                <a href="about.html" class="mobile-menu__link active">About</a>
+                <a href="skills.html" class="mobile-menu__link">Skills</a>
+                <a href="projects.html" class="mobile-menu__link">Projects</a>
+                <a href="contact.html" class="mobile-menu__link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero section" id="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__content reveal text-center">
+                    <h1 id="hero-title" class="hero__title">
+                        My Journey in <span class="text-accent">Data Science</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        From IT management to advanced analytics - discover the path that led me to 
+                        become a passionate data scientist and machine learning engineer.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bio Section -->
+        <section class="section" id="bio" aria-labelledby="bio-title">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__image-container reveal-left">
+                        <img src="assets/images/profile.jpg" alt="Daniel Wanjala - Data Scientist" 
+                             class="about__image" loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face'">
+                        <div class="about__image-overlay" aria-hidden="true"></div>
+                    </div>
+                    
+                    <div class="about__content reveal-right">
+                        <h2 id="bio-title" class="section-title text-left">Who I Am</h2>
+                        <div class="about__text">
+                            <p>
+                                I'm Daniel Wanjala, a Senior IT Manager turned Data Scientist, based near Nairobi, Kenya. 
+                                My unique journey combines <strong>hands-on IT leadership</strong> with advanced 
+                                <strong>data science expertise</strong>, giving me a rare perspective on how technology 
+                                can transform organizations from the ground up.
+                            </p>
+                            <p>
+                                At Kingdom Hospital, I wear multiple hats - managing IT infrastructure while pioneering 
+                                data-driven solutions as a volunteer Data Scientist. This dual role has taught me that 
+                                the most impactful insights come from understanding both the technical foundation and 
+                                the business challenges that data can solve.
+                            </p>
+                            <p>
+                                My passion lies in <strong>predictive analytics</strong> and <strong>machine learning</strong> 
+                                applications that create tangible value. Whether it's optimizing hospital operations, 
+                                forecasting demand, or building intelligent systems, I thrive on turning complex data 
+                                into actionable solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="section" id="timeline" aria-labelledby="timeline-title" style="background: var(--color-secondary-bg); opacity: 0.3;">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="timeline-title" class="section-title">My Journey Timeline</h2>
+                    <p class="section-subtitle">
+                        Key milestones that shaped my career in technology and data science
+                    </p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline__item reveal-left">
+                        <div class="timeline__marker">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2024 - Present</span>
+                            <h3 class="timeline__title">Master of Science in Data Science</h3>
+                            <p class="timeline__subtitle">Cooperative University of Kenya</p>
+                            <p class="timeline__description">
+                                Pursuing advanced training in machine learning, statistical modeling, and data-driven 
+                                research methodologies. Admitted with special approval based on prior experience and 
+                                proven competencies in Data Science.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline__item reveal-right">
+                        <div class="timeline__marker">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 3.94-3.04Z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2023 - Present</span>
+                            <h3 class="timeline__title">Volunteer Data Scientist</h3>
+                            <p class="timeline__subtitle">Kingdom Hospital, Webuye</p>
+                            <p class="timeline__description">
+                                Developing predictive analytics solutions for healthcare operations, patient flow 
+                                optimization, and resource allocation. Building dashboards and automated reporting 
+                                systems that directly impact patient care quality.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline__item reveal-left">
+                        <div class="timeline__marker">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                            </svg>
+                        </div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">Apr 2023 - Nov 2023</span>
+                            <h3 class="timeline__title">Certificate in Data Science & Machine Learning</h3>
+                            <p class="timeline__subtitle">Moringa School, Nairobi</p>
+                            <p class="timeline__description">
+                                Intensive, project-based program focusing on predictive analytics, neural networks, 
+                                data wrangling, model deployment, and real-world applications in healthcare and 
+                                business intelligence.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline__item reveal-right">
+                        <div class="timeline__marker">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            </svg>
+                        </div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2022 - Present</span>
+                            <h3 class="timeline__title">Senior IT Manager</h3>
+                            <p class="timeline__subtitle">Kingdom Hospital, Webuye</p>
+                            <p class="timeline__description">
+                                Leading IT infrastructure, system integration, and digital transformation initiatives. 
+                                Overseeing ERP implementation, network security, and technology strategy that supports 
+                                hospital operations and patient care delivery.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline__item reveal-left">
+                        <div class="timeline__marker">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">May 2019 - Nov 2022</span>
+                            <h3 class="timeline__title">Bachelor of Science in Information Technology</h3>
+                            <p class="timeline__subtitle">Zetech University, Kenya</p>
+                            <p class="timeline__description">
+                                Specialized in software development, data structures, networking, and system integration. 
+                                Graduated with a strong foundation in IT infrastructure, system design, and technical leadership.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values & Philosophy Section -->
+        <section class="section" id="values" aria-labelledby="values-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="values-title" class="section-title">My Philosophy & Values</h2>
+                    <p class="section-subtitle">
+                        The principles that guide my approach to data science and technology
+                    </p>
+                </div>
+                
+                <div class="grid grid-responsive gap-xl">
+                    <div class="card reveal">
+                        <div class="card__header">
+                            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 12l3-3 3 3"/>
+                                <path d="M22 12L19 9l-3 3"/>
+                                <path d="M5 12h14"/>
+                            </svg>
+                            <h3 class="card__title">Impact-Driven Solutions</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>
+                                Every model I build, every dashboard I create, must solve a real problem. 
+                                Data science isn't about complexity - it's about creating tangible value 
+                                that improves lives and business outcomes.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card reveal">
+                        <div class="card__header">
+                            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            <h3 class="card__title">Continuous Learning</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>
+                                The field of data science evolves rapidly. I'm committed to staying at the 
+                                forefront through continuous education, hands-on projects, and active 
+                                participation in the data science community.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card reveal">
+                        <div class="card__header">
+                            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <h3 class="card__title">Ethical Data Practices</h3>
+                        </div>
+                        <div class="card__content">
+                            <p>
+                                With great data comes great responsibility. I prioritize privacy, fairness, 
+                                and transparency in all my work, ensuring that AI and ML solutions benefit 
+                                everyone equitably.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Highlight Section -->
+        <section class="section" id="skills-highlight" aria-labelledby="skills-highlight-title" style="background: var(--color-secondary-bg); opacity: 0.3;">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="skills-highlight-title" class="section-title">Core Expertise</h2>
+                    <p class="section-subtitle">
+                        The technical skills and domain knowledge that drive my success
+                    </p>
+                </div>
+                
+                <div class="skills-overview">
+                    <div class="skills-overview__category reveal-left">
+                        <h3 class="skills-overview__title">Technical Skills</h3>
+                        <div class="skills-overview__items">
+                            <span class="skills-overview__item">Python & R Programming</span>
+                            <span class="skills-overview__item">Machine Learning & AI</span>
+                            <span class="skills-overview__item">Data Visualization</span>
+                            <span class="skills-overview__item">SQL & Database Management</span>
+                            <span class="skills-overview__item">Cloud Platforms (AWS, GCP)</span>
+                            <span class="skills-overview__item">Statistical Analysis</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-overview__category reveal-right">
+                        <h3 class="skills-overview__title">Domain Expertise</h3>
+                        <div class="skills-overview__items">
+                            <span class="skills-overview__item">Healthcare Analytics</span>
+                            <span class="skills-overview__item">Predictive Modeling</span>
+                            <span class="skills-overview__item">Time Series Forecasting</span>
+                            <span class="skills-overview__item">Business Intelligence</span>
+                            <span class="skills-overview__item">IT Infrastructure</span>
+                            <span class="skills-overview__item">Digital Transformation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center reveal">
+                    <a href="skills.html" class="btn btn--primary">
+                        Explore My Complete Skill Set
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="section" id="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <div class="cta-banner__content">
+                        <h2 id="cta-title" class="cta-banner__title">Let's Work Together</h2>
+                        <p class="cta-banner__description">
+                            Ready to transform your data into actionable insights? I'd love to discuss 
+                            how my unique blend of IT leadership and data science expertise can help 
+                            drive your next project.
+                        </p>
+                        <div class="cta-banner__actions">
+                            <a href="contact.html" class="btn btn--primary btn--lg">
+                                Get In Touch
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                            <a href="projects.html" class="btn btn--ghost btn--lg">
+                                View My Projects
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__content">
+            <div class="footer__social">
+                <a href="https://linkedin.com/in/daniel-wanjala" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect width="4" height="12" x="2" y="9"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/MadScie254" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                        <path d="M9 18c-4.51 2-5-2-7-2"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/danielwanjala" class="footer__social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer__text">
+                © <span id="current-year">2024</span> Daniel Wanjala. Built with passion for data and innovation.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Additional Styles for About Page -->
+    <style>
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--color-accent);
+        }
+
+        .timeline__item {
+            position: relative;
+            margin-bottom: var(--space-4xl);
+            padding-left: 6rem;
+        }
+
+        .timeline__marker {
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            width: 3rem;
+            height: 3rem;
+            background: var(--color-accent);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .timeline__date {
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .timeline__title {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+            color: var(--color-primary-text);
+        }
+
+        .timeline__subtitle {
+            font-size: var(--text-base);
+            font-weight: 500;
+            color: var(--color-accent);
+            margin-bottom: var(--space-md);
+        }
+
+        .timeline__description {
+            color: var(--color-secondary-text);
+            line-height: 1.6;
+        }
+
+        /* Skills Overview */
+        .skills-overview {
+            display: grid;
+            gap: var(--space-4xl);
+            margin-bottom: var(--space-4xl);
+        }
+
+        @media (min-width: 768px) {
+            .skills-overview {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .skills-overview__title {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: var(--color-primary-text);
+        }
+
+        .skills-overview__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .skills-overview__item {
+            padding: var(--space-sm) var(--space-md);
+            background: var(--glass-light);
+            border: 1px solid var(--glass-medium);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            color: var(--color-primary-text);
+            transition: all var(--transition-fast);
+        }
+
+        .skills-overview__item:hover {
+            background: var(--color-accent);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            text-align: center;
+            padding: var(--space-4xl) var(--space-2xl);
+            background: var(--glass-light);
+            border: 1px solid var(--glass-medium);
+            border-radius: var(--radius-2xl);
+        }
+
+        .cta-banner__title {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: var(--color-primary-text);
+        }
+
+        .cta-banner__description {
+            font-size: var(--text-lg);
+            color: var(--color-secondary-text);
+            margin-bottom: var(--space-2xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-banner__actions {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-banner__actions {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* Mobile Timeline Adjustments */
+        @media (max-width: 767px) {
+            .timeline::before {
+                left: 1.5rem;
+            }
+
+            .timeline__item {
+                padding-left: 4rem;
+            }
+
+            .timeline__marker {
+                left: 0.5rem;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Initialize -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            // Set current year
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

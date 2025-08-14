@@ -1,0 +1,145 @@
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES (VARIABLES) - DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* ===== SPACING SYSTEM ===== */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+  --space-4xl: 6rem;      /* 96px */
+  --space-5xl: 8rem;      /* 128px */
+
+  /* ===== FLUID SPACING (clamp for responsive) ===== */
+  --section-padding: clamp(2rem, 5vw, 4rem);
+  --container-padding: clamp(1rem, 4vw, 2rem);
+  --header-height: clamp(3.5rem, 8vw, 4rem);
+
+  /* ===== FONT SYSTEM ===== */
+  --font-heading: 'Satoshi', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ===== RESPONSIVE FONT SIZES ===== */
+  --text-xs: clamp(0.75rem, 1.5vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 2vw, 1rem);
+  --text-base: clamp(1rem, 2.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 3vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 3.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 4vw, 2rem);
+  --text-3xl: clamp(2rem, 5vw, 3rem);
+  --text-4xl: clamp(2.5rem, 6vw, 4rem);
+  --text-5xl: clamp(3rem, 8vw, 5rem);
+  --text-6xl: clamp(3.5rem, 10vw, 6rem);
+
+  /* ===== LIGHT THEME COLORS ===== */
+  --color-primary-bg: #F7F7F7;
+  --color-secondary-bg: #E5E9F2;
+  --color-tertiary-bg: #D8DDE7;
+  --color-primary-text: #0B0C10;
+  --color-secondary-text: #1F2937;
+  --color-accent: #6C5CE7;
+  --color-accent-secondary: #A29BFE;
+  --color-accent-tertiary: #74B9FF;
+  --color-emerald: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-success: #10B981;
+
+  /* ===== GLASS MORPHISM ===== */
+  --glass-light: rgba(255, 255, 255, 0.1);
+  --glass-medium: rgba(255, 255, 255, 0.2);
+  --glass-dark: rgba(0, 0, 0, 0.1);
+
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-accent: 0 10px 25px -5px rgba(108, 92, 231, 0.3);
+
+  /* ===== BORDERS & RADIUS ===== */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ===== TRANSITIONS ===== */
+  --transition-fast: 150ms ease-out;
+  --transition-normal: 300ms ease-out;
+  --transition-slow: 500ms ease-out;
+  --transition-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ===== Z-INDEX SCALE ===== */
+  --z-negative: -1;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-floating: 100;
+  --z-overlay: 1000;
+  --z-modal: 5000;
+  --z-popover: 6000;
+  --z-tooltip: 7000;
+  --z-toast: 8000;
+  --z-maximum: 9999;
+
+  /* ===== GRID SYSTEM ===== */
+  --grid-cols-1: repeat(1, minmax(0, 1fr));
+  --grid-cols-2: repeat(2, minmax(0, 1fr));
+  --grid-cols-3: repeat(3, minmax(0, 1fr));
+  --grid-cols-auto: repeat(auto-fit, minmax(300px, 1fr));
+  --grid-cols-responsive: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+
+  /* ===== BREAKPOINT CONTAINERS ===== */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+}
+
+/* ===== DARK THEME ===== */
+[data-theme="dark"] {
+  --color-primary-bg: #0B0C10;
+  --color-secondary-bg: #1F2937;
+  --color-tertiary-bg: #374151;
+  --color-primary-text: #F9FAFB;
+  --color-secondary-text: #D1D5DB;
+  --color-accent: #66FCF1;
+  --color-accent-secondary: #45A29E;
+  --color-accent-tertiary: #C5C6C7;
+  
+  --glass-light: rgba(0, 0, 0, 0.2);
+  --glass-medium: rgba(0, 0, 0, 0.3);
+  --glass-dark: rgba(255, 255, 255, 0.05);
+  
+  --shadow-accent: 0 10px 25px -5px rgba(102, 252, 241, 0.3);
+}
+
+/* ===== SYSTEM PREFERENCE DETECTION ===== */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary-bg: #0B0C10;
+    --color-secondary-bg: #1F2937;
+    --color-tertiary-bg: #374151;
+    --color-primary-text: #F9FAFB;
+    --color-secondary-text: #D1D5DB;
+    --color-accent: #66FCF1;
+    --color-accent-secondary: #45A29E;
+    --color-accent-tertiary: #C5C6C7;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+    --transition-slow: 0ms;
+  }
+}
