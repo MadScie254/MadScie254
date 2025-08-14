@@ -2,611 +2,242 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Daniel Wanjala - Data Scientist & ML Engineer. Building predictive systems and data-driven solutions. Portfolio showcasing machine learning projects, analytics, and innovation.">
-    <meta name="keywords" content="Data Science, Machine Learning, Python, Analytics, Predictive Modeling, AI, Kenya, Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daniel Wanjala - Data Scientist & ML Engineer. Building predictive systems and data-driven solutions.">
     <meta name="author" content="Daniel Wanjala">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://danco-analytics.github.io/Portifolio/">
-    <meta property="og:title" content="Daniel Wanjala - Data Scientist & ML Engineer">
-    <meta property="og:description" content="Building predictive systems and data-driven solutions. Portfolio showcasing machine learning projects and analytics innovation.">
-    <meta property="og:image" content="https://danco-analytics.github.io/Portifolio/assets/images/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://danco-analytics.github.io/Portifolio/">
-    <meta property="twitter:title" content="Daniel Wanjala - Data Scientist & ML Engineer">
-    <meta property="twitter:description" content="Building predictive systems and data-driven solutions. Portfolio showcasing machine learning projects and analytics innovation.">
-    <meta property="twitter:image" content="https://danco-analytics.github.io/Portifolio/assets/images/og-image.jpg">
-
-    <title>Daniel Wanjala - Data Scientist & ML Engineer | Portfolio</title>
+    <title>Daniel Wanjala - Data Scientist & ML Engineer</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     
-    <!-- Preconnect to external domains -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/clean.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    
-    <!-- Load CSS files -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/interactive-features.css">
-    
-    <!-- Google Fonts - Load asynchronously -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700;800&display=swap"></noscript>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Daniel Wanjala",
-        "jobTitle": "Data Scientist & ML Engineer",
-        "description": "Data Scientist and Machine Learning Engineer specializing in predictive analytics and data-driven solutions",
-        "url": "https://danco-analytics.github.io/Portifolio/",
-        "sameAs": [
-            "https://linkedin.com/in/daniel-wanjala",
-            "https://github.com/MadScie254"
-        ],
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Kingdom Hospital"
-        },
-        "alumniOf": {
-            "@type": "Organization",
-            "name": "Zetech University"
-        }
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Progress Bar -->
-    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress"></div>
-    
     <!-- Header -->
-    <header class="header" id="header" role="banner">
+    <header class="header">
         <div class="header__container">
-            <!-- Logo -->
-            <a href="#hero" class="header__logo" aria-label="Daniel Wanjala - Home">
-                <img src="assets/images/logo.png" alt="" class="header__logo-image" aria-hidden="true" 
-                     onerror="this.style.display='none'">
-                <span>Daniel Wanjala</span>
-            </a>
+            <a href="#" class="header__logo">Daniel Wanjala</a>
             
             <!-- Desktop Navigation -->
-            <nav class="nav" role="navigation" aria-label="Main navigation">
-                <a href="#about" class="nav__link">About</a>
-                <a href="#skills" class="nav__link">Skills</a>
-                <a href="#projects" class="nav__link">Projects</a>
-                <a href="#contact" class="nav__link">Contact</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#skills" class="nav__link">Skills</a></li>
+                    <li><a href="#projects" class="nav__link">Projects</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
             </nav>
             
-            <!-- Controls -->
-            <div class="flex items-center gap-md">
-                <!-- Mobile Menu Button -->
-                <button class="mobile-menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="6" x2="21" y2="6"/>
-                        <line x1="3" y1="12" x2="21" y2="12"/>
-                        <line x1="3" y1="18" x2="21" y2="18"/>
-                    </svg>
-                </button>
-            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
-            <ul class="mobile-menu__list" role="menu">
-                <li><a href="#about" class="mobile-menu__link" role="menuitem">About</a></li>
-                <li><a href="#skills" class="mobile-menu__link" role="menuitem">Skills</a></li>
-                <li><a href="#projects" class="mobile-menu__link" role="menuitem">Projects</a></li>
-                <li><a href="#contact" class="mobile-menu__link" role="menuitem">Contact</a></li>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-menu">
+            <ul class="mobile-menu__list">
+                <li><a href="#about" class="mobile-menu__link">About</a></li>
+                <li><a href="#skills" class="mobile-menu__link">Skills</a></li>
+                <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+                <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero" id="hero" aria-labelledby="hero-title">
-            <div class="hero__background" aria-hidden="true"></div>
-            <div class="hero__content reveal">
-                <h1 id="hero-title" class="hero__title gradient-text typewriter-effect" data-typewriter data-typewriter-speed="100">
-                    I build data systems that 
-                    <span class="text-accent pulse-glow">transform</span> insights
-                </h1>
-                <p class="hero__subtitle">
-                    Machine learning meets real-world outcomes. From predictive insights to automated solutions, 
-                    I create data-driven systems that deliver tangible business value.
-                </p>
-                <div class="hero__actions">
-                    <a href="#projects" class="btn btn--primary btn--lg ripple magnetic sound-effect glow-on-hover">
-                        🚀 View My Work
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"/>
-                        </svg>
-                    </a>
-                    <a href="assets/documents/Daniel_Wanjala_Resume.pdf" download class="btn btn--gradient btn--lg ripple magnetic breathe">
-                        📄 Download Resume
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="7,10 12,15 17,10"/>
-                            <line x1="12" y1="15" x2="12" y2="3"/>
-                        </svg>
-                    </a>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero__title">Data Scientist & ML Engineer</h1>
+            <p class="hero__subtitle">Building predictive systems and data-driven solutions that transform businesses through the power of analytics and machine learning.</p>
+            <div>
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn--secondary">Get In Touch</a>
             </div>
-            <div class="hero__scroll-indicator" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m7 13 5 5 5-5"/>
-                    <path d="m7 6 5 5 5-5"/>
-                </svg>
-            </div>
-        </section>
-
-        <!-- Floating Interactive Elements -->
-        <div class="floating-shapes">
-            <div class="floating-shape floating-shape-1"></div>
-            <div class="floating-shape floating-shape-2"></div>
-            <div class="floating-shape floating-shape-3"></div>
         </div>
+    </section>
 
-        <!-- About Section -->
-        <section class="about section" id="about" aria-labelledby="about-title">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2 id="about-title" class="section-title">About Me: Data With A Pulse</h2>
-                    <p class="section-subtitle">
-                        Transforming complex data into actionable insights and robust applications
-                    </p>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="grid grid--2">
+                <div class="reveal">
+                    <img src="assets/images/My_Profile_Photo.jpg" alt="Daniel Wanjala" class="profile-image">
+                </div>
+                <div class="reveal">
+                    <h3>Passionate About Data Science</h3>
+                    <p>I'm a dedicated Data Scientist and Machine Learning Engineer with a passion for transforming complex data into actionable insights. With expertise in Python, R, and advanced analytics, I help organizations make data-driven decisions.</p>
+                    <p>My journey spans from IT management to cutting-edge machine learning, where I've developed predictive models, automated analytics pipelines, and delivered solutions that drive real business value.</p>
+                    <a href="#contact" class="btn">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section--gray">
+        <div class="container">
+            <h2 class="text-center mb-4">Core Skills</h2>
+            <div class="grid grid--3">
+                <div class="card skill-card reveal">
+                    <div class="skill-card__icon">
+                        <span>🐍</span>
+                    </div>
+                    <h3 class="skill-card__title">Python & R</h3>
+                    <p>Advanced programming in Python and R for data analysis, machine learning, and statistical modeling.</p>
                 </div>
                 
-                <div class="about__grid">
-                    <div class="about__image-container reveal-left">
-                        <img src="assets/images/My_Profile_Photo.jpg" alt="Daniel Wanjala - Data Scientist" 
-                             class="about__image floating" loading="lazy">
+                <div class="card skill-card reveal">
+                    <div class="skill-card__icon">
+                        <span>🧠</span>
                     </div>
-                    
-                    <div class="about__content reveal-right">
-                        <div class="about__text">
-                            <p>
-                                Hi, I'm Daniel Wanjala, a passionate <strong>Data Scientist and ML Engineer</strong> 
-                                based near Nairobi, Kenya. My journey spans IT management and deep dives into data, 
-                                driven by a belief in technology's power to solve real-world problems.
-                            </p>
-                            <p>
-                                Whether optimizing hospital operations with predictive analytics or building 
-                                forecasting models, I focus on creating <strong>data systems that deliver tangible outcomes</strong>. 
-                                I thrive on transforming complex data into actionable insights and robust applications.
-                            </p>
-                        </div>
-                        
-                        <div class="about__badges">
-                            <div class="about__badge">
-                                <svg class="about__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
-                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                                </svg>
-                                Senior IT Manager
-                            </div>
-                            <div class="about__badge">
-                                <svg class="about__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 3.94-3.04Z"/>
-                                </svg>
-                                Data Scientist
-                            </div>
-                            <div class="about__badge">
-                                <svg class="about__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                                </svg>
-                                MSc Student
-                            </div>
-                        </div>
-                        
-                        <div class="about__actions reveal">
-                            <a href="about.html" class="btn btn--ghost">
-                                Learn More About Me
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m9 18 6-6-6-6"/>
-                                </svg>
-                            </a>
-                        </div>
+                    <h3 class="skill-card__title">Machine Learning</h3>
+                    <p>Building predictive models using scikit-learn, TensorFlow, and PyTorch for classification and regression tasks.</p>
+                </div>
+                
+                <div class="card skill-card reveal">
+                    <div class="skill-card__icon">
+                        <span>📊</span>
+                    </div>
+                    <h3 class="skill-card__title">Data Visualization</h3>
+                    <p>Creating compelling visualizations with Matplotlib, Seaborn, Plotly, and Tableau to communicate insights.</p>
+                </div>
+                
+                <div class="card skill-card reveal">
+                    <div class="skill-card__icon">
+                        <span>🗄️</span>
+                    </div>
+                    <h3 class="skill-card__title">Database Management</h3>
+                    <p>Working with SQL, NoSQL databases, and big data technologies for efficient data storage and retrieval.</p>
+                </div>
+                
+                <div class="card skill-card reveal">
+                    <div class="skill-card__icon">
+                        <span>☁️</span>
+                    </div>
+                    <h3 class="skill-card__title">Cloud Platforms</h3>
+                    <p>Deploying ML models on AWS, Azure, and Google Cloud Platform for scalable analytics solutions.</p>
+                </div>
+                
+                <div class="card skill-card reveal">
+                    <div class="skill-card__icon">
+                        <span>📈</span>
+                    </div>
+                    <h3 class="skill-card__title">Statistical Analysis</h3>
+                    <p>Advanced statistical methods, hypothesis testing, and experimental design for robust data insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">Featured Projects</h2>
+            <div class="grid grid--2">
+                <div class="card project-card reveal">
+                    <img src="assets/images/project1.jpg" alt="Healthcare Analytics Dashboard" class="project-card__image" onerror="this.style.display='none'">
+                    <h3 class="project-card__title">Healthcare Analytics Dashboard</h3>
+                    <p>Developed a comprehensive analytics dashboard for healthcare KPI monitoring, reducing patient wait times by 35% through predictive modeling and resource optimization.</p>
+                    <div class="project-card__tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Dash</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+                
+                <div class="card project-card reveal">
+                    <img src="assets/images/project2.jpg" alt="Customer Segmentation ML" class="project-card__image" onerror="this.style.display='none'">
+                    <h3 class="project-card__title">Customer Segmentation ML</h3>
+                    <p>Built machine learning models for customer segmentation using clustering algorithms, improving marketing campaign effectiveness by 45%.</p>
+                    <div class="project-card__tech">
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">K-Means</span>
+                        <span class="tech-tag">Plotly</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                </div>
+                
+                <div class="card project-card reveal">
+                    <img src="assets/images/project3.jpg" alt="Predictive Maintenance System" class="project-card__image" onerror="this.style.display='none'">
+                    <h3 class="project-card__title">Predictive Maintenance System</h3>
+                    <p>Implemented IoT-based predictive maintenance using time series analysis and anomaly detection, reducing equipment downtime by 60%.</p>
+                    <div class="project-card__tech">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">LSTM</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+                
+                <div class="card project-card reveal">
+                    <img src="assets/images/project4.jpg" alt="Financial Risk Assessment" class="project-card__image" onerror="this.style.display='none'">
+                    <h3 class="project-card__title">Financial Risk Assessment</h3>
+                    <p>Created automated risk assessment models for loan approvals using ensemble methods and feature engineering, improving accuracy by 25%.</p>
+                    <div class="project-card__tech">
+                        <span class="tech-tag">Random Forest</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">Feature Engineering</span>
+                        <span class="tech-tag">Flask</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section class="skills section" id="skills" aria-labelledby="skills-title">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2 id="skills-title" class="section-title">Core Competencies</h2>
-                    <p class="section-subtitle">
-                        Cutting-edge technologies and methodologies for data-driven solutions
-                    </p>
-                </div>
-                
-                <div class="skills__grid">
-                    <div class="card skill-card reveal">
-                        <div class="card__header">
-                            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="16 18 22 12 16 6"/>
-                                <polyline points="8 6 2 12 8 18"/>
-                            </svg>
-                            <h3 class="card__title">Programming & Data</h3>
-                        </div>
-                        <div class="card__content">
-                            <ul class="skill-card__list">
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Python (Pandas, NumPy, Scikit-learn)
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    SQL & Database Management
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Data Wrangling & ETL Pipelines
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    API Integration & Development
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Git & Version Control
-                                </li>
-                            </ul>
-                        </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section section--gray">
+        <div class="container">
+            <h2 class="text-center mb-4">Get In Touch</h2>
+            <div class="contact-form reveal">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
                     </div>
-                    
-                    <div class="card skill-card reveal skill-card-1">
-                        <div class="card__header">
-                            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 3.94-3.04Z"/>
-                            </svg>
-                            <h3 class="card__title">Machine Learning & AI</h3>
-                        </div>
-                        <div class="card__content">
-                            <ul class="skill-card__list">
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Predictive Modeling (Regression, Classification)
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Time Series Forecasting (ARIMA, Prophet)
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Neural Networks (TensorFlow/Keras)
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Computer Vision (OpenCV)
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Model Deployment & MLOps
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
                     </div>
-                    
-                    <div class="card skill-card reveal skill-card-2">
-                        <div class="card__header">
-                            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 3v5h5"/>
-                                <path d="M3 21v-5h5"/>
-                                <path d="M21 3v5h-5"/>
-                                <path d="M21 21v-5h-5"/>
-                                <path d="M12 7v10"/>
-                                <path d="M7 12h10"/>
-                            </svg>
-                            <h3 class="card__title">Visualization & Tools</h3>
-                        </div>
-                        <div class="card__content">
-                            <ul class="skill-card__list">
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Matplotlib, Seaborn & Plotly
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Tableau & Power BI
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Jupyter & Google Colab
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Cloud Platforms (AWS, GCP)
-                                </li>
-                                <li class="skill-card__item">
-                                    <svg class="skill-card__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Docker & Containerization
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input">
                     </div>
-                </div>
-                
-                <div class="text-center reveal">
-                    <a href="skills.html" class="btn btn--ghost">
-                        Explore My Complete Skillset
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"/>
-                        </svg>
-                    </a>
-                </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects section" id="projects" aria-labelledby="projects-title">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2 id="projects-title" class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">
-                        Real-world applications of data science solving complex business challenges
-                    </p>
-                </div>
-                
-                <div class="projects__grid">
-                    <article class="card project-card reveal">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
-                             alt="Hospital Analytics Dashboard" class="project-card__image" loading="lazy">
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Hospital Analytics Platform</h3>
-                            <p class="project-card__description">
-                                Real-time analytics dashboard for hospital operations, featuring patient flow optimization, 
-                                resource allocation predictions, and automated reporting systems.
-                            </p>
-                            <div class="project-card__tags">
-                                <span class="project-card__tag">Python</span>
-                                <span class="project-card__tag">Streamlit</span>
-                                <span class="project-card__tag">PostgreSQL</span>
-                                <span class="project-card__tag">Time Series</span>
-                            </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn btn--sm btn--primary">View Project</a>
-                                <a href="#" class="btn btn--sm btn--ghost">Live Demo</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="card project-card reveal project-card-1">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
-                             alt="Predictive Sales Model" class="project-card__image" loading="lazy">
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Predictive Sales Forecasting</h3>
-                            <p class="project-card__description">
-                                Machine learning model for sales prediction using ensemble methods, achieving 94% accuracy 
-                                in quarterly forecasts with automated model retraining pipeline.
-                            </p>
-                            <div class="project-card__tags">
-                                <span class="project-card__tag">Python</span>
-                                <span class="project-card__tag">XGBoost</span>
-                                <span class="project-card__tag">MLflow</span>
-                                <span class="project-card__tag">AWS</span>
-                            </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn btn--sm btn--primary">View Project</a>
-                                <a href="#" class="btn btn--sm btn--ghost">GitHub</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="card project-card reveal project-card-2">
-                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&h=400&fit=crop" 
-                             alt="Customer Segmentation Analysis" class="project-card__image" loading="lazy">
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Customer Segmentation AI</h3>
-                            <p class="project-card__description">
-                                Advanced clustering analysis using unsupervised learning to identify customer segments, 
-                                resulting in 23% increase in marketing campaign effectiveness.
-                            </p>
-                            <div class="project-card__tags">
-                                <span class="project-card__tag">Python</span>
-                                <span class="project-card__tag">K-Means</span>
-                                <span class="project-card__tag">PCA</span>
-                                <span class="project-card__tag">Plotly</span>
-                            </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn btn--sm btn--primary">View Project</a>
-                                <a href="#" class="btn btn--sm btn--ghost">Case Study</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="text-center reveal">
-                    <a href="projects.html" class="btn btn--primary btn--lg">
-                        View All Projects
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"/>
-                        </svg>
-                    </a>
-                </div>
+            
+            <!-- Contact Info -->
+            <div class="text-center mt-4">
+                <p><strong>Email:</strong> daniel.wanjala@example.com</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/daniel-wanjala</p>
+                <p><strong>GitHub:</strong> github.com/MadScie254</p>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact section" id="contact" aria-labelledby="contact-title">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2 id="contact-title" class="section-title">Let's Build Something Amazing</h2>
-                    <p class="section-subtitle">
-                        Ready to transform your data into actionable insights? Let's discuss your next project.
-                    </p>
-                </div>
-                
-                <div class="contact__grid">
-                    <div class="contact__info reveal-left">
-                        <div class="contact__card">
-                            <svg class="contact__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                            <div class="contact__card-content">
-                                <h3>Email</h3>
-                                <p>daniel.wanjala@example.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact__card">
-                            <svg class="contact__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            <div class="contact__card-content">
-                                <h3>Phone</h3>
-                                <p>+254 XXX XXX XXX</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact__card">
-                            <svg class="contact__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <div class="contact__card-content">
-                                <h3>Location</h3>
-                                <p>Nairobi, Kenya</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <form class="form reveal-right" action="#" method="POST" aria-label="Contact form">
-                        <div class="form__group">
-                            <label for="name" class="form__label">Full Name</label>
-                            <input type="text" id="name" name="name" class="form__input" required>
-                        </div>
-                        
-                        <div class="form__group">
-                            <label for="email" class="form__label">Email Address</label>
-                            <input type="email" id="email" name="email" class="form__input" required>
-                        </div>
-                        
-                        <div class="form__group">
-                            <label for="subject" class="form__label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form__input" required>
-                        </div>
-                        
-                        <div class="form__group">
-                            <label for="message" class="form__label">Message</label>
-                            <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn--primary form__button">
-                            Send Message
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M2 12l3-3 3 3"/>
-                                <path d="M22 12L19 9l-3 3"/>
-                                <path d="M5 12h14"/>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="footer__content">
-            <div class="footer__social">
-                <a href="https://linkedin.com/in/daniel-wanjala" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                        <rect width="4" height="12" x="2" y="9"/>
-                        <circle cx="4" cy="4" r="2"/>
-                    </svg>
-                </a>
-                <a href="https://github.com/MadScie254" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-                        <path d="M9 18c-4.51 2-5-2-7-2"/>
-                    </svg>
-                </a>
-                <a href="https://twitter.com/danielwanjala" class="footer__social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
-                    </svg>
-                </a>
-            </div>
-            <p class="footer__text">
-                © <span id="current-year">2024</span> Daniel Wanjala. Built with passion for data and innovation.
-            </p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Daniel Wanjala. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="assets/js/main_simple.js"></script>
-    
-    <!-- Initialize Lucide Icons -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-            
-            // Set current year
-            const yearElement = document.getElementById('current-year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-        });
-    </script>
+    <script src="assets/js/clean.js"></script>
 </body>
 </html>
