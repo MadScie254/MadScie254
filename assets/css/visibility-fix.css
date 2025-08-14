@@ -1,0 +1,308 @@
+/* ==========================================================================
+   VISIBILITY FIX & MOBILE RESPONSIVENESS
+   Ensuring all text is visible and site works on ALL devices
+   ========================================================================== */
+
+/* Force visible text colors for ALL content */
+body {
+    color: #1a202c !important;
+    background-color: #ffffff !important;
+}
+
+/* Fix all paragraph text */
+p, .reveal p, .section p, .card p, .skill-card p {
+    color: #374151 !important;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Fix all headings */
+h1, h2, h3, h4, h5, h6,
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6,
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6,
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+    color: #1a202c !important;
+    font-weight: 600;
+}
+
+/* Fix skill card content */
+.skill-card h3, .skill-card__title {
+    color: #1a202c !important;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p, .skill-card__description {
+    color: #4a5568 !important;
+    font-size: 0.95rem;
+}
+
+/* Fix timeline and card content */
+.timeline-content h3, .card h3 {
+    color: #1a202c !important;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p, .card .description {
+    color: #4a5568 !important;
+}
+
+.institution {
+    color: #3b82f6 !important;
+    font-weight: 500;
+}
+
+/* Fix about page content */
+.about-section p, .personal-story p, .journey p {
+    color: #374151 !important;
+    margin-bottom: 1rem;
+}
+
+/* Ensure buttons have proper contrast */
+.btn {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+    color: white !important;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS - EXQUISITE ON ALL DEVICES
+   ========================================================================== */
+
+/* Mobile First Approach */
+@media (max-width: 768px) {
+    /* Typography adjustments */
+    body {
+        font-size: 14px;
+    }
+    
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.75rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    h4 { font-size: 1.25rem !important; }
+    
+    /* Container adjustments */
+    .container {
+        padding: 0 1rem !important;
+        max-width: 100% !important;
+    }
+    
+    /* Grid system for mobile */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .grid--2 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .grid--3 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .grid--4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+    
+    /* Section spacing */
+    .section {
+        padding: 2rem 0 !important;
+    }
+    
+    /* Cards mobile optimization */
+    .card, .skill-card, .project-card {
+        margin-bottom: 1rem;
+        padding: 1.5rem !important;
+    }
+    
+    /* Navigation mobile */
+    .nav-menu {
+        background: rgba(255, 255, 255, 0.98) !important;
+        backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .nav-menu a {
+        color: #1a202c !important;
+        padding: 1rem !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Hero section mobile */
+    .hero {
+        padding: 4rem 0 2rem 0 !important;
+        text-align: center;
+    }
+    
+    .hero__title, .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero__subtitle, .hero-subtitle {
+        font-size: 1.1rem !important;
+        color: #4a5568 !important;
+    }
+    
+    /* Profile image responsive */
+    .profile-image {
+        max-width: 250px !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 2rem auto !important;
+        display: block !important;
+    }
+    
+    /* Form mobile optimization */
+    .contact-form, .form-group {
+        width: 100% !important;
+    }
+    
+    input, textarea, select {
+        width: 100% !important;
+        padding: 0.75rem !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Timeline mobile */
+    .timeline-item {
+        padding-left: 2rem !important;
+    }
+    
+    .timeline-year {
+        position: relative !important;
+        left: 0 !important;
+        margin-bottom: 0.5rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 750px;
+        padding: 0 2rem;
+    }
+    
+    .grid--3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .grid--4 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    h1 { font-size: 2.25rem !important; }
+    h2 { font-size: 1.875rem !important; }
+}
+
+/* Large screen optimization */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero__title, .hero-title {
+        font-size: 3rem !important;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+}
+
+/* ==========================================================================
+   ENHANCED ANIMATIONS & INTERACTIONS
+   ========================================================================== */
+
+/* Smooth reveal animations */
+.reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: all 0.6s ease-out;
+}
+
+/* Card hover effects */
+.card:hover, .skill-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Button interactions */
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Focus states for accessibility */
+input:focus, textarea:focus, button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+    .header, .nav, .nav-toggle {
+        display: none !important;
+    }
+    
+    .main {
+        padding-top: 0 !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000 !important;
+        background: white !important;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+        padding: 1rem 0;
+    }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ========================================================================== */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body {
+        color: #000 !important;
+        background: #fff !important;
+    }
+    
+    .btn {
+        background: #000 !important;
+        color: #fff !important;
+        border: 2px solid #000 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode preparation (if needed later) */
+@media (prefers-color-scheme: dark) {
+    /* Keep light theme for now, but structure is ready */
+}

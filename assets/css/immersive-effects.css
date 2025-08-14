@@ -1,0 +1,350 @@
+/* ==========================================================================
+   IMMERSIVE TRANSITIONS & CUTTING-EDGE EFFECTS
+   Breathing life into the portfolio with cinema-quality animations
+   ========================================================================== */
+
+/* Global smooth transitions */
+* {
+    transition-property: transform, opacity, background-color, color, border-color, box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   ICON ENHANCEMENTS - PROFESSIONAL FONT AWESOME STYLING
+   ========================================================================== */
+
+.skill-card__icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-card__icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.skill-card:hover .skill-card__icon::before {
+    left: 100%;
+}
+
+.skill-card__icon i {
+    font-size: 2.5rem;
+    color: white;
+    z-index: 2;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-card__icon {
+    transform: scale(1.1) rotateY(15deg);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+}
+
+.skill-card:hover .skill-card__icon i {
+    transform: scale(1.1);
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Specific icon colors for different technologies */
+.skill-card:nth-child(1) .skill-card__icon { background: linear-gradient(135deg, #306998 0%, #FFD43B 100%); } /* Python */
+.skill-card:nth-child(2) .skill-card__icon { background: linear-gradient(135deg, #276DC3 0%, #165CAA 100%); } /* R */
+.skill-card:nth-child(3) .skill-card__icon { background: linear-gradient(135deg, #336791 0%, #1F4E79 100%); } /* Database */
+.skill-card:nth-child(4) .skill-card__icon { background: linear-gradient(135deg, #FF6B6B 0%, #EE5A52 100%); } /* ML/AI */
+.skill-card:nth-child(5) .skill-card__icon { background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%); } /* Visualization */
+.skill-card:nth-child(6) .skill-card__icon { background: linear-gradient(135deg, #45B7D1 0%, #3498DB 100%); } /* Cloud */
+
+/* ==========================================================================
+   CINEMATIC CARD ANIMATIONS
+   ========================================================================== */
+
+.card, .skill-card, .project-card {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card::before, .skill-card::before, .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before, .skill-card:hover::before, .project-card:hover::before {
+    opacity: 1;
+}
+
+.card:hover, .skill-card:hover, .project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 12px 24px rgba(102, 126, 234, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   MAGNETIC BUTTON EFFECTS
+   ========================================================================== */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 15px 35px rgba(102, 126, 234, 0.4),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* ==========================================================================
+   PARALLAX & SCROLL EFFECTS
+   ========================================================================== */
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-element {
+    transform: translateZ(0);
+    transition: transform 0.1s ease-out;
+}
+
+/* Floating animation for icons */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.skill-card__icon {
+    animation: float 6s ease-in-out infinite;
+}
+
+.skill-card:nth-child(1) .skill-card__icon { animation-delay: 0s; }
+.skill-card:nth-child(2) .skill-card__icon { animation-delay: 1s; }
+.skill-card:nth-child(3) .skill-card__icon { animation-delay: 2s; }
+.skill-card:nth-child(4) .skill-card__icon { animation-delay: 3s; }
+.skill-card:nth-child(5) .skill-card__icon { animation-delay: 4s; }
+.skill-card:nth-child(6) .skill-card__icon { animation-delay: 5s; }
+
+/* ==========================================================================
+   REVEAL ANIMATIONS - CINEMATIC ENTRANCE
+   ========================================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px) rotateX(15deg);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+}
+
+/* Staggered reveal animation */
+.reveal:nth-child(1) { transition-delay: 0.1s; }
+.reveal:nth-child(2) { transition-delay: 0.2s; }
+.reveal:nth-child(3) { transition-delay: 0.3s; }
+.reveal:nth-child(4) { transition-delay: 0.4s; }
+.reveal:nth-child(5) { transition-delay: 0.5s; }
+.reveal:nth-child(6) { transition-delay: 0.6s; }
+
+/* ==========================================================================
+   ADVANCED HOVER EFFECTS
+   ========================================================================== */
+
+/* Ripple effect for clickable elements */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.ripple:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Glow effect for important elements */
+.glow-on-hover {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 
+        0 0 30px rgba(102, 126, 234, 0.3),
+        0 0 60px rgba(102, 126, 234, 0.2),
+        0 0 90px rgba(102, 126, 234, 0.1);
+}
+
+/* ==========================================================================
+   TYPING ANIMATION FOR HERO TEXT
+   ========================================================================== */
+
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid #667eea;
+    white-space: nowrap;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #667eea; }
+}
+
+/* ==========================================================================
+   GRADIENT ANIMATIONS
+   ========================================================================== */
+
+.gradient-shift {
+    background: linear-gradient(-45deg, #667eea, #764ba2, #667eea, #764ba2);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================================================================
+   LOADING ANIMATIONS
+   ========================================================================== */
+
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ==========================================================================
+   MOBILE OPTIMIZATIONS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .skill-card__icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .skill-card__icon i {
+        font-size: 2rem;
+    }
+    
+    .card:hover, .skill-card:hover, .project-card:hover {
+        transform: translateY(-6px) scale(1.01);
+    }
+    
+    /* Reduce motion for mobile performance */
+    .skill-card__icon {
+        animation: none;
+    }
+    
+    .parallax-element {
+        transform: none !important;
+    }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .skill-card__icon {
+        animation: none;
+    }
+}
