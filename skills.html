@@ -21,39 +21,30 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="header__container">
-            <a href="index.html" class="header__logo">Daniel Wanjala</a>
-            
-            <!-- Desktop Navigation -->
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="nav__link">Home</a></li>
-                    <li><a href="about.html" class="nav__link">About</a></li>
-                    <li><a href="skills.html" class="nav__link">Skills</a></li>
-                    <li><a href="projects.html" class="nav__link">Projects</a></li>
-                    <li><a href="contact.html" class="nav__link">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <!-- Mobile Menu Toggle -->
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        
-        <!-- Mobile Navigation -->
-        <nav class="mobile-menu">
-            <ul class="mobile-menu__list">
-                <li><a href="index.html" class="mobile-menu__link">Home</a></li>
-                <li><a href="about.html" class="mobile-menu__link">About</a></li>
-                <li><a href="skills.html" class="mobile-menu__link">Skills</a></li>
-                <li><a href="projects.html" class="mobile-menu__link">Projects</a></li>
-                <li><a href="contact.html" class="mobile-menu__link">Contact</a></li>
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Daniel Wanjala</h1>
+                <span>Data Architect & Digital Innovator</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="skills.html" class="active"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+        <div class="reading-progress"></div>
     </header>
+
+    <!-- Main Content -->
+    <main class="main">
 
     <!-- Hero Section -->
     <section class="hero">

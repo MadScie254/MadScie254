@@ -49,10 +49,13 @@ class EnhancedPortfolio {
                 const menuItems = mobileMenu.querySelectorAll('a');
                 menuItems.forEach((item, index) => {
                     setTimeout(() => {
-                        item.style.transform = mobileMenu.classList.contains('active') 
-                            ? 'translateX(0) scale(1)' 
-                            : 'translateX(-20px) scale(0.9)';
-                        item.style.opacity = mobileMenu.classList.contains('active') ? '1' : '0';
+                        if (mobileMenu.classList.contains('active')) {
+                            item.style.transform = 'translateX(0)';
+                            item.style.opacity = '1';
+                        } else {
+                            item.style.transform = 'translateX(-20px)';
+                            item.style.opacity = '0.7';
+                        }
                     }, index * 50);
                 });
             });
@@ -69,35 +72,61 @@ class EnhancedPortfolio {
         // Active link highlighting
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
+                // Don't prevent default for actual navigation
                 navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
+                
+                // Add active class to clicked link
+                const href = link.getAttribute('href');
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                
+                if (href === currentPage || (href === 'index.html' && currentPage === '')) {
+                    link.classList.add('active');
+                }
                 
                 // Ripple effect
                 this.createRippleEffect(e, link);
             });
         });
 
+        // Set active link based on current page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (href === 'index.html' && currentPage === '')) {
+                link.classList.add('active');
+            }
+        });
+
         // Header scroll effect
         let lastScrollTop = 0;
+        let ticking = false;
+        
         window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (header) {
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    header.style.transform = 'translateY(-100%)';
-                } else {
-                    header.style.transform = 'translateY(0)';
-                }
-                
-                // Add glass effect on scroll
-                if (scrollTop > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (header) {
+                        // Add scrolled class for styling
+                        if (scrollTop > 50) {
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+                        
+                        // Hide/show header on scroll
+                        if (scrollTop > lastScrollTop && scrollTop > 100) {
+                            header.style.transform = 'translateY(-100%)';
+                        } else {
+                            header.style.transform = 'translateY(0)';
+                        }
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                    ticking = false;
+                });
+                ticking = true;
             }
-            
-            lastScrollTop = scrollTop;
         });
     }
 
