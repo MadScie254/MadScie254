@@ -7,9 +7,7 @@ class EnhancedPortfolio {
         this.init();
         this.progressNotification = null;
         this.readingProgress = null;
-        this.animationQueue = [];
-        this.isScrolling = false;
-        this.scrollTimeout = null;
+        this.reachedMilestones = [];
     }
 
     init() {
@@ -36,10 +34,10 @@ class EnhancedPortfolio {
 
     // Enhanced Navigation with smooth animations
     setupNavigation() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuToggle = document.querySelector('.nav-toggle');
+        const mobileMenu = document.querySelector('.nav-menu');
         const header = document.querySelector('.header');
-        const navLinks = document.querySelectorAll('.nav a');
+        const navLinks = document.querySelectorAll('.nav-menu a');
 
         // Mobile menu toggle with animation
         if (menuToggle && mobileMenu) {
@@ -212,7 +210,7 @@ class EnhancedPortfolio {
         projectCards.forEach(card => {
             card.classList.add('fade-in-on-scroll');
             
-            // Add hover sound effect (optional)
+            // Add hover effects
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-10px) rotateX(2deg) scale(1.02)';
             });
@@ -270,92 +268,74 @@ class EnhancedPortfolio {
         }
     }
 
-        // Header scroll effect
-        if (header) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.style.background = 'rgba(255, 255, 255, 0.98)';
-                    header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-                } else {
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
-                    header.style.boxShadow = 'none';
-                }
-            });
-        }
-    }
-
-    // Reading progress bar
+    // Enhanced reading progress
     setupReadingProgress() {
-        // Create reading progress bar
-        this.readingProgress = document.createElement('div');
-        this.readingProgress.className = 'reading-progress';
-        document.body.appendChild(this.readingProgress);
-
-        // Update progress on scroll
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            
-            this.readingProgress.style.width = scrollPercent + '%';
-        });
-    }
-
-    // Small progress notifications
-    setupProgressNotifications() {
-        let lastNotificationTime = 0;
-        const notificationCooldown = 10000; // 10 seconds
-
-        window.addEventListener('scroll', () => {
-            const scrollPercent = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            const now = Date.now();
-
-            // Show notifications at certain milestones
-            if (scrollPercent > 25 && scrollPercent < 30 && now - lastNotificationTime > notificationCooldown) {
-                this.showProgressNotification('📖 25% read - Keep going!');
-                lastNotificationTime = now;
-            } else if (scrollPercent > 50 && scrollPercent < 55 && now - lastNotificationTime > notificationCooldown) {
-                this.showProgressNotification('🔥 Halfway there!');
-                lastNotificationTime = now;
-            } else if (scrollPercent > 75 && scrollPercent < 80 && now - lastNotificationTime > notificationCooldown) {
-                this.showProgressNotification('⭐ Almost done!');
-                lastNotificationTime = now;
-            } else if (scrollPercent > 95 && now - lastNotificationTime > notificationCooldown) {
-                this.showProgressNotification('🎉 Page complete!');
-                lastNotificationTime = now;
-            }
-        });
-    }
-
-    showProgressNotification(message) {
-        // Remove existing notification
-        if (this.progressNotification) {
-            this.progressNotification.remove();
+        this.readingProgress = document.querySelector('.reading-progress');
+        if (!this.readingProgress) {
+            this.readingProgress = document.createElement('div');
+            this.readingProgress.className = 'reading-progress';
+            document.body.appendChild(this.readingProgress);
         }
 
-        // Create new notification
-        this.progressNotification = document.createElement('div');
-        this.progressNotification.className = 'progress-notification';
-        this.progressNotification.textContent = message;
-        document.body.appendChild(this.progressNotification);
+        window.addEventListener('scroll', () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+            
+            this.readingProgress.style.width = Math.min(progress, 100) + '%';
+            
+            // Show milestone notifications
+            this.checkReadingMilestones(progress);
+        });
+    }
 
-        // Show notification
-        setTimeout(() => {
-            this.progressNotification.classList.add('show');
-        }, 100);
+    // Progress notifications
+    setupProgressNotifications() {
+        // Create notification container if it doesn't exist
+        if (!document.querySelector('.notification-container')) {
+            const container = document.createElement('div');
+            container.className = 'notification-container';
+            document.body.appendChild(container);
+        }
+    }
 
-        // Hide notification after 3 seconds
+    showProgressNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `progress-notification ${type}`;
+        notification.textContent = message;
+        
+        const container = document.querySelector('.notification-container') || document.body;
+        container.appendChild(notification);
+        
+        // Trigger animation
+        setTimeout(() => notification.classList.add('show'), 100);
+        
+        // Auto remove
         setTimeout(() => {
-            if (this.progressNotification) {
-                this.progressNotification.classList.add('hide');
-                setTimeout(() => {
-                    if (this.progressNotification) {
-                        this.progressNotification.remove();
-                        this.progressNotification = null;
-                    }
-                }, 300);
-            }
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
         }, 3000);
+    }
+
+    checkReadingMilestones(progress) {
+        const milestones = [25, 50, 75, 100];
+        const currentMilestone = milestones.find(m => 
+            progress >= m && !this.reachedMilestones.includes(m)
+        );
+        
+        if (currentMilestone) {
+            this.reachedMilestones.push(currentMilestone);
+            
+            const messages = {
+                25: "Great start! Keep reading...",
+                50: "Halfway there! You're doing great!",
+                75: "Almost done! Final stretch!",
+                100: "Excellent! You've read everything!"
+            };
+            
+            this.showProgressNotification(messages[currentMilestone], 'success');
+        }
     }
 
     // Smooth scrolling
@@ -365,12 +345,9 @@ class EnhancedPortfolio {
                 e.preventDefault();
                 const target = document.querySelector(anchor.getAttribute('href'));
                 if (target) {
-                    const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
-                    const targetPosition = target.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             });
@@ -379,48 +356,46 @@ class EnhancedPortfolio {
 
     // Scroll animations
     setupScrollAnimations() {
+        const animatedElements = document.querySelectorAll('[data-animate]');
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+                    entry.target.classList.add('animate');
                 }
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
         });
 
-        document.querySelectorAll('.reveal').forEach(el => {
-            observer.observe(el);
-        });
+        animatedElements.forEach(el => observer.observe(el));
     }
 
     // Form handling
     setupForms() {
-        const contactForm = document.querySelector('#contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                this.handleFormSubmit(contactForm);
-            });
-        }
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => this.handleFormSubmit(e));
+        });
     }
 
-    handleFormSubmit(form) {
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
+    handleFormSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
         
-        // Simple form validation
-        if (!data.name || !data.email || !data.message) {
-            this.showProgressNotification('❌ Please fill in all required fields');
-            return;
-        }
-
-        // Show success message
-        this.showProgressNotification('✅ Message sent! Thank you!');
-        form.reset();
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+            this.showProgressNotification('Message sent successfully!', 'success');
+            form.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
     }
 }
 
-// Initialize
-new CleanPortfolio();
+// Initialize the enhanced portfolio
+const portfolio = new EnhancedPortfolio();
