@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/visibility-fix.css">
     <link rel="stylesheet" href="assets/css/mobile-enhancements.css">
     <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/react-level-cinematics.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -43,22 +44,28 @@
 
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero-enhanced">
+        <section class="hero-enhanced parallax-container">
+            <div class="parallax-layer parallax-back"></div>
             <div class="container">
-                <div class="hero-content fade-in-on-scroll">
-                    <h1 class="hero-title-enhanced">Transforming Data Into Intelligence</h1>
-                    <p class="hero-subtitle-enhanced typewriter-text">Senior Data Scientist & IT Manager with 4+ years of experience architecting sophisticated analytical solutions that bridge the gap between complex data challenges and strategic business outcomes</p>
-                    <div class="hero-buttons">
-                        <a href="projects.html" class="nav-button ripple">
+                <div class="hero-content reveal">
+                    <h1 class="hero-title-enhanced magnetic">Transforming Data Into Intelligence</h1>
+                    <p class="hero-subtitle-enhanced typewriter-text reveal">Senior Data Scientist & IT Manager with 4+ years of experience architecting sophisticated analytical solutions that bridge the gap between complex data challenges and strategic business outcomes</p>
+                    <div class="hero-buttons reveal">
+                        <a href="projects.html" class="btn magnetic">
                             <i class="fas fa-rocket"></i> Explore My Work
                         </a>
-                        <a href="contact.html" class="nav-button ripple">
+                        <a href="contact.html" class="btn magnetic">
                             <i class="fas fa-handshake"></i> Let's Collaborate
                         </a>
-                        <a href="https://github.com/MadScie254" class="nav-button ripple">
+                        <a href="https://github.com/MadScie254" class="btn magnetic">
                             <i class="fab fa-github"></i> View GitHub
                         </a>
                     </div>
+                    
+                    <!-- Dynamic Stats Widget -->
+                    <div id="github-stats" class="stats-container reveal"></div>
+                    <div id="weather-widget" class="weather-container reveal"></div>
+                    <div id="daily-quote" class="quote-container reveal"></div>
                 </div>
             </div>
         </section>
@@ -546,5 +553,6 @@
 
     <script src="assets/js/enhanced.js"></script>
     <script src="assets/js/advanced-apis.js"></script>
+    <script src="assets/js/cinematic-engine.js"></script>
 </body>
 </html>

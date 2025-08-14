@@ -1,4 +1,35 @@
 /* ==========================================================================
+   FOOTER VISIBILITY FIX
+   ========================================================================== */
+
+.footer, .footer * {
+    color: #ffffff !important;
+    background-color: #1a202c !important;
+}
+
+.footer h4 {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.footer p, .footer a, .footer li {
+    color: #e2e8f0 !important;
+}
+
+.footer a:hover {
+    color: #3b82f6 !important;
+}
+
+.footer-bottom {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+}
+
+.footer-bottom p {
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
    VISIBILITY FIX & MOBILE RESPONSIVENESS
    Ensuring all text is visible and site works on ALL devices
    ========================================================================== */
