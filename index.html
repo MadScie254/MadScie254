@@ -90,6 +90,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/interactive-features.css">
     
     <!-- Google Fonts - Load asynchronously -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Satoshi:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -149,14 +150,6 @@
             
             <!-- Controls -->
             <div class="flex items-center gap-md">
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"/>
-                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-                    </svg>
-                </button>
-                
                 <!-- Mobile Menu Button -->
                 <button class="mobile-menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -185,23 +178,23 @@
         <section class="hero" id="hero" aria-labelledby="hero-title">
             <div class="hero__background" aria-hidden="true"></div>
             <div class="hero__content reveal">
-                <h1 id="hero-title" class="hero__title">
+                <h1 id="hero-title" class="hero__title gradient-text typewriter-effect" data-typewriter data-typewriter-speed="100">
                     I build data systems that 
-                    <span class="text-accent">transform</span> insights
+                    <span class="text-accent pulse-glow">transform</span> insights
                 </h1>
                 <p class="hero__subtitle">
                     Machine learning meets real-world outcomes. From predictive insights to automated solutions, 
                     I create data-driven systems that deliver tangible business value.
                 </p>
                 <div class="hero__actions">
-                    <a href="#projects" class="btn btn--primary">
-                        View My Work
+                    <a href="#projects" class="btn btn--primary btn--lg ripple magnetic sound-effect glow-on-hover">
+                        🚀 View My Work
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m9 18 6-6-6-6"/>
                         </svg>
                     </a>
-                    <a href="assets/documents/Daniel_Wanjala_Resume.pdf" download class="btn btn--secondary">
-                        Download Resume
+                    <a href="assets/documents/Daniel_Wanjala_Resume.pdf" download class="btn btn--gradient btn--lg ripple magnetic breathe">
+                        📄 Download Resume
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                             <polyline points="7,10 12,15 17,10"/>
@@ -218,6 +211,13 @@
             </div>
         </section>
 
+        <!-- Floating Interactive Elements -->
+        <div class="floating-shapes">
+            <div class="floating-shape" style="left: 10%; width: 40px; height: 40px; background: linear-gradient(45deg, #3B82F6, #8B5CF6); border-radius: 10px;"></div>
+            <div class="floating-shape" style="left: 50%; width: 20px; height: 20px; background: linear-gradient(45deg, #06B6D4, #10B981); border-radius: 50%;"></div>
+            <div class="floating-shape" style="left: 80%; width: 30px; height: 30px; background: linear-gradient(45deg, #8B5CF6, #EC4899); border-radius: 5px;"></div>
+        </div>
+
         <!-- About Section -->
         <section class="about section" id="about" aria-labelledby="about-title">
             <div class="container">
@@ -230,9 +230,8 @@
                 
                 <div class="about__grid">
                     <div class="about__image-container reveal-left">
-                        <img src="assets/images/profile.jpg" alt="Daniel Wanjala - Data Scientist" 
-                             class="about__image" loading="lazy"
-                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face'">
+                        <img src="assets/images/My_Profile_Photo.jpg" alt="Daniel Wanjala - Data Scientist" 
+                             class="about__image floating" loading="lazy">
                     </div>
                     
                     <div class="about__content reveal-right">
