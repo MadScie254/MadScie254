@@ -30,6 +30,11 @@ class EnhancedPortfolio {
         this.setupProjectCards();
         this.setupButtonAnimations();
         this.setupIntersectionObserver();
+        
+        // Load API data
+        this.loadWeatherAPI();
+        this.loadGitHubStats();
+        this.loadQuoteAPI();
     }
 
     // Enhanced Navigation with smooth animations
@@ -423,6 +428,202 @@ class EnhancedPortfolio {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }, 2000);
+    }
+
+    // ==========================================================================
+    // API INTEGRATIONS
+    // ==========================================================================
+
+    // Weather API Integration
+    async loadWeatherAPI() {
+        try {
+            // Using a free weather API for Nairobi, Kenya
+            const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Nairobi,KE&appid=demo_key&units=metric');
+            const data = await response.json();
+            
+            // Create weather widget if on homepage
+            if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+                this.displayWeatherWidget(data);
+            }
+        } catch (error) {
+            console.log('Weather API not available, using fallback data');
+            // Fallback to static data
+            this.displayWeatherWidget({
+                name: 'Nairobi',
+                main: { temp: 22, humidity: 65 },
+                weather: [{ main: 'Partly Cloudy', description: 'partly cloudy' }]
+            });
+        }
+    }
+
+    displayWeatherWidget(data) {
+        const weatherHTML = `
+            <div class="weather-widget" style="
+                background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+                color: white;
+                padding: 1rem;
+                border-radius: 12px;
+                margin: 1rem 0;
+                text-align: center;
+                box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+            ">
+                <h4 style="margin: 0 0 0.5rem 0;"><i class="fas fa-map-marker-alt"></i> ${data.name}</h4>
+                <div class="weather-info" style="display: flex; justify-content: space-around; align-items: center;">
+                    <span class="temp" style="font-size: 1.5rem; font-weight: bold;">${Math.round(data.main?.temp || 22)}°C</span>
+                    <span class="condition">${data.weather?.[0]?.main || 'Partly Cloudy'}</span>
+                </div>
+            </div>
+        `;
+        
+        // Add to hero section
+        const hero = document.querySelector('.hero .container');
+        if (hero) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = weatherHTML;
+            hero.appendChild(tempDiv.firstElementChild);
+        }
+    }
+
+    // GitHub API Integration
+    async loadGitHubStats() {
+        try {
+            const username = 'MadScie254'; // Your GitHub username
+            const response = await fetch(`https://api.github.com/users/${username}`);
+            const userData = await response.json();
+            
+            const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+            const reposData = await reposResponse.json();
+            
+            if (window.location.pathname.includes('projects.html')) {
+                this.updateProjectsWithGitHubData(reposData);
+            }
+            
+            // Add GitHub stats to about page
+            if (window.location.pathname.includes('about.html')) {
+                this.displayGitHubStats(userData);
+            }
+        } catch (error) {
+            console.log('GitHub API not available, using fallback data');
+            // Use fallback data
+            if (window.location.pathname.includes('about.html')) {
+                this.displayGitHubStats({
+                    public_repos: 15,
+                    followers: 25,
+                    following: 30
+                });
+            }
+        }
+    }
+
+    displayGitHubStats(userData) {
+        const statsHTML = `
+            <div class="github-stats" style="
+                background: #f8fafc;
+                padding: 2rem;
+                border-radius: 12px;
+                margin: 2rem 0;
+                border: 1px solid #e2e8f0;
+            ">
+                <h3 style="color: #1a202c; margin-bottom: 1rem;"><i class="fab fa-github"></i> GitHub Activity</h3>
+                <div class="stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
+                    <div class="stat-item">
+                        <span class="stat-number" style="display: block; font-size: 2rem; font-weight: bold; color: #3b82f6;">${userData.public_repos || 15}</span>
+                        <span class="stat-label" style="color: #64748b;">Repositories</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" style="display: block; font-size: 2rem; font-weight: bold; color: #3b82f6;">${userData.followers || 25}</span>
+                        <span class="stat-label" style="color: #64748b;">Followers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" style="display: block; font-size: 2rem; font-weight: bold; color: #3b82f6;">${userData.following || 30}</span>
+                        <span class="stat-label" style="color: #64748b;">Following</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        const aboutSection = document.querySelector('.section .container');
+        if (aboutSection) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = statsHTML;
+            aboutSection.appendChild(tempDiv.firstElementChild);
+        }
+    }
+
+    // Inspirational Quote API
+    async loadQuoteAPI() {
+        try {
+            const response = await fetch('https://api.quotable.io/random?tags=technology,science,success');
+            const quoteData = await response.json();
+            
+            if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+                this.displayQuoteWidget(quoteData);
+            }
+        } catch (error) {
+            console.log('Quote API not available, using fallback');
+            // Fallback quote
+            this.displayQuoteWidget({
+                content: "The best way to predict the future is to create it.",
+                author: "Peter Drucker"
+            });
+        }
+    }
+
+    displayQuoteWidget(quote) {
+        const quoteHTML = `
+            <div class="quote-widget" style="
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(10px);
+                padding: 2rem;
+                border-radius: 12px;
+                margin: 2rem 0;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            ">
+                <blockquote style="margin: 0;">
+                    <p style="font-style: italic; font-size: 1.1rem; color: #1a202c; margin-bottom: 1rem;">"${quote.content}"</p>
+                    <footer style="text-align: right; color: #64748b; font-weight: 500;">— ${quote.author}</footer>
+                </blockquote>
+            </div>
+        `;
+        
+        const hero = document.querySelector('.hero .container');
+        if (hero) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = quoteHTML;
+            hero.appendChild(tempDiv.firstElementChild);
+        }
+    }
+
+    updateProjectsWithGitHubData(repos) {
+        // Update project cards with real GitHub data
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        repos.slice(0, projectCards.length).forEach((repo, index) => {
+            const card = projectCards[index];
+            if (card) {
+                const titleElement = card.querySelector('h3');
+                const descElement = card.querySelector('p');
+                const linkElement = card.querySelector('a');
+                
+                if (titleElement) titleElement.textContent = repo.name;
+                if (descElement) descElement.textContent = repo.description || 'No description available';
+                if (linkElement) linkElement.href = repo.html_url;
+                
+                // Add GitHub stats
+                const statsHTML = `
+                    <div class="github-project-stats" style="margin-top: 1rem; display: flex; gap: 1rem; font-size: 0.9rem; color: #64748b;">
+                        <span><i class="fas fa-star"></i> ${repo.stargazers_count}</span>
+                        <span><i class="fas fa-code-branch"></i> ${repo.forks_count}</span>
+                        <span><i class="fas fa-circle" style="color: #f1c40f;"></i> ${repo.language || 'Unknown'}</span>
+                    </div>
+                `;
+                
+                if (!card.querySelector('.github-project-stats')) {
+                    card.insertAdjacentHTML('beforeend', statsHTML);
+                }
+            }
+        });
     }
 }
 

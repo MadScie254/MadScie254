@@ -1,0 +1,49 @@
+/* ==========================================================================
+   API WIDGETS & INTEGRATIONS
+   ========================================================================== */
+
+.weather-widget {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.quote-widget {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.github-stats {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.stat-item {
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.github-project-stats {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.github-project-stats:hover {
+    opacity: 1;
+}
+
+/* Mobile responsiveness for API widgets */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    .weather-widget {
+        margin: 1rem 0;
+    }
+    
+    .quote-widget {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+}
