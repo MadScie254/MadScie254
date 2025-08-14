@@ -5,6 +5,8 @@
 class CleanPortfolio {
     constructor() {
         this.init();
+        this.progressNotification = null;
+        this.readingProgress = null;
     }
 
     init() {
@@ -20,6 +22,8 @@ class CleanPortfolio {
         this.setupScrollAnimations();
         this.setupSmoothScrolling();
         this.setupForms();
+        this.setupReadingProgress();
+        this.setupProgressNotifications();
     }
 
     // Navigation
@@ -56,6 +60,80 @@ class CleanPortfolio {
                 }
             });
         }
+    }
+
+    // Reading progress bar
+    setupReadingProgress() {
+        // Create reading progress bar
+        this.readingProgress = document.createElement('div');
+        this.readingProgress.className = 'reading-progress';
+        document.body.appendChild(this.readingProgress);
+
+        // Update progress on scroll
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            
+            this.readingProgress.style.width = scrollPercent + '%';
+        });
+    }
+
+    // Small progress notifications
+    setupProgressNotifications() {
+        let lastNotificationTime = 0;
+        const notificationCooldown = 10000; // 10 seconds
+
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            const now = Date.now();
+
+            // Show notifications at certain milestones
+            if (scrollPercent > 25 && scrollPercent < 30 && now - lastNotificationTime > notificationCooldown) {
+                this.showProgressNotification('📖 25% read - Keep going!');
+                lastNotificationTime = now;
+            } else if (scrollPercent > 50 && scrollPercent < 55 && now - lastNotificationTime > notificationCooldown) {
+                this.showProgressNotification('🔥 Halfway there!');
+                lastNotificationTime = now;
+            } else if (scrollPercent > 75 && scrollPercent < 80 && now - lastNotificationTime > notificationCooldown) {
+                this.showProgressNotification('⭐ Almost done!');
+                lastNotificationTime = now;
+            } else if (scrollPercent > 95 && now - lastNotificationTime > notificationCooldown) {
+                this.showProgressNotification('🎉 Page complete!');
+                lastNotificationTime = now;
+            }
+        });
+    }
+
+    showProgressNotification(message) {
+        // Remove existing notification
+        if (this.progressNotification) {
+            this.progressNotification.remove();
+        }
+
+        // Create new notification
+        this.progressNotification = document.createElement('div');
+        this.progressNotification.className = 'progress-notification';
+        this.progressNotification.textContent = message;
+        document.body.appendChild(this.progressNotification);
+
+        // Show notification
+        setTimeout(() => {
+            this.progressNotification.classList.add('show');
+        }, 100);
+
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+            if (this.progressNotification) {
+                this.progressNotification.classList.add('hide');
+                setTimeout(() => {
+                    if (this.progressNotification) {
+                        this.progressNotification.remove();
+                        this.progressNotification = null;
+                    }
+                }, 300);
+            }
+        }, 3000);
     }
 
     // Smooth scrolling
@@ -112,12 +190,12 @@ class CleanPortfolio {
         
         // Simple form validation
         if (!data.name || !data.email || !data.message) {
-            alert('Please fill in all required fields.');
+            this.showProgressNotification('❌ Please fill in all required fields');
             return;
         }
 
         // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
+        this.showProgressNotification('✅ Message sent! Thank you!');
         form.reset();
     }
 }
