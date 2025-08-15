@@ -1797,6 +1797,174 @@ footer p {
     font-style: italic;
 }
 
+/* WhatsApp API Notifications */
+.whatsapp-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transform: translateX(400px);
+    animation: slideInNotification 0.5s ease-out forwards;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.whatsapp-notification.success {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.9), rgba(18, 140, 126, 0.9));
+    color: white;
+}
+
+.whatsapp-notification.error {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.9), rgba(211, 47, 47, 0.9));
+    color: white;
+}
+
+.whatsapp-notification.info {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.9), rgba(25, 118, 210, 0.9));
+    color: white;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.notification-content i {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+@keyframes slideInNotification {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* WhatsApp API Status Indicator */
+.whatsapp-api-status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    color: #25D366;
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.api-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #25D366;
+    animation: pulse 2s infinite;
+}
+
+/* Message Queue Indicator */
+.message-queue-indicator {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #FF6B6B;
+    color: white;
+    font-size: 0.6rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 10px;
+    min-width: 16px;
+    text-align: center;
+    animation: bounce 1s infinite;
+}
+
+/* Enhanced WhatsApp Direct Button */
+.whatsapp-direct-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.whatsapp-direct-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-direct-btn:active {
+    transform: translateY(0);
+}
+
+.whatsapp-direct-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.whatsapp-direct-btn:hover::before {
+    left: 100%;
+}
+
+/* Multi-API Send Status */
+.multi-api-status {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.api-attempt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    font-size: 0.7rem;
+}
+
+.api-attempt.success {
+    color: #4CAF50;
+}
+
+.api-attempt.failed {
+    color: #FF6B6B;
+}
+
+.api-attempt.pending {
+    color: #FFC107;
+}
+
 /* Responsive Design for WhatsApp Bot */
 @media (max-width: 768px) {
     #whatsapp-chat-window {

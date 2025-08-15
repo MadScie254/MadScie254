@@ -7,6 +7,7 @@ class WhatsAppBot {
         this.userName = '';
         this.userEmail = '';
         this.selectedService = '';
+        this.conversationStartTime = Date.now();
         this.init();
     }
 
@@ -324,10 +325,36 @@ class WhatsAppBot {
             this.userMessages = this.userMessages || [];
             this.userMessages.push(message);
             
+            // Send message via WhatsApp API if available
+            if (window.whatsappAPI) {
+                const fullMessage = `📱 New message from portfolio visitor:
+
+"${message}"
+
+👤 Visitor Details:
+• Name: ${this.userName || 'Anonymous Visitor'}
+• Email: ${this.userEmail || 'Not provided'}
+• Page: ${window.location.pathname}
+• Time: ${new Date().toLocaleString()}
+
+Please respond via WhatsApp! 🚀`;
+
+                window.whatsappAPI.sendMessage(fullMessage, {
+                    name: this.userName || 'Website Visitor',
+                    email: this.userEmail || 'visitor@portfolio.com'
+                }).then(result => {
+                    if (result.success) {
+                        this.addBotMessage("✅ Message sent successfully! Daniel will respond via WhatsApp soon.");
+                    } else {
+                        this.addBotMessage("📱 Redirecting to WhatsApp for direct messaging...");
+                    }
+                });
+            }
+            
             // Simulate bot response based on message content
             setTimeout(() => {
                 this.generateBotResponse(message);
-            }, 1000);
+            }, 1500);
         }
     }
 
@@ -389,20 +416,84 @@ class WhatsAppBot {
         quickActionsContainer.innerHTML = `
             <div class="final-whatsapp-section">
                 <div class="conversation-summary">
-                    <small style="color: #666; margin-bottom: 0.5rem; display: block;">📝 Your conversation will be shared with Daniel</small>
+                    <h4>📋 Conversation Summary</h4>
+                    <p>Your conversation will be shared with Daniel for personalized assistance.</p>
                 </div>
-                <button class="whatsapp-direct-btn final-btn" onclick="window.open('https://wa.me/254742007277?text=${encodeURIComponent(conversation)}', '_blank')">
+                
+                <div class="whatsapp-api-status">
+                    <div class="api-status-dot"></div>
+                    <span>API Ready</span>
+                </div>
+                
+                <button class="whatsapp-direct-btn final-btn" onclick="whatsappBot.sendConversationToWhatsApp()">
                     <i class="fab fa-whatsapp"></i>
-                    Continue Conversation on WhatsApp
+                    Send Full Conversation
+                    <div class="message-queue-indicator">1</div>
                 </button>
+                
                 <div class="chat-actions">
-                    <button class="continue-chat-btn" onclick="document.getElementById('user-message-input').focus()">
-                        💬 Ask more questions first
+                    <button class="continue-chat-btn" onclick="whatsappBot.continueConversation()">
+                        💬 Continue Chatting Here
                     </button>
                 </div>
             </div>
         `;
         quickActionsContainer.style.display = 'block';
+    }
+
+    sendConversationToWhatsApp() {
+        const conversationText = this.getAllConversationText();
+        const fullMessage = `📱 Complete Conversation from Portfolio:
+
+${conversationText}
+
+👤 Visitor Information:
+• Name: ${this.userName || 'Anonymous Visitor'}
+• Email: ${this.userEmail || 'Not provided'}
+• Page: ${window.location.pathname}
+• Duration: ${this.getConversationDuration()}
+• Time: ${new Date().toLocaleString()}
+
+🚀 Please respond via WhatsApp for continued assistance!`;
+
+        if (window.whatsappAPI) {
+            window.whatsappAPI.sendMessage(fullMessage, {
+                name: this.userName || 'Website Visitor',
+                email: this.userEmail || 'visitor@portfolio.com',
+                conversation: conversationText
+            }).then(result => {
+                if (result.success) {
+                    this.addBotMessage("✅ Complete conversation sent to Daniel! He'll respond via WhatsApp shortly.");
+                    this.addBotMessage("📱 You can also message him directly at: +254 742 007 277");
+                } else {
+                    // Fallback to direct WhatsApp
+                    const whatsappURL = `https://wa.me/254742007277?text=${encodeURIComponent(fullMessage)}`;
+                    window.open(whatsappURL, '_blank');
+                    this.addBotMessage("📱 Opening WhatsApp for direct messaging...");
+                }
+            });
+        } else {
+            // Fallback method
+            const whatsappURL = `https://wa.me/254742007277?text=${encodeURIComponent(fullMessage)}`;
+            window.open(whatsappURL, '_blank');
+            this.addBotMessage("📱 Opening WhatsApp for direct messaging...");
+        }
+    }
+
+    continueConversation() {
+        document.getElementById('quick-actions').style.display = 'none';
+        document.getElementById('message-input-area').style.display = 'flex';
+        document.getElementById('user-message-input').focus();
+        this.addBotMessage("💬 Great! Please continue with your questions. I'm here to help!");
+    }
+
+    getConversationDuration() {
+        if (this.conversationStartTime) {
+            const duration = Date.now() - this.conversationStartTime;
+            const minutes = Math.floor(duration / 60000);
+            return minutes > 0 ? `${minutes} minutes` : 'Less than a minute';
+        }
+        return 'Unknown';
     }
 
     getAllConversationText() {
