@@ -165,6 +165,8 @@ class WhatsAppBot {
 
     handleQuickAction(action, text) {
         this.addUserMessage(text);
+        document.getElementById('quick-actions').style.display = 'none';
+        this.showMessageInput();
         
         setTimeout(() => {
             switch(action) {
@@ -191,8 +193,8 @@ class WhatsAppBot {
         }, 1000);
         
         setTimeout(() => {
-            this.addBotMessage("What type of data science project are you interested in? Click below to start a WhatsApp conversation with Daniel!");
-            this.showWhatsAppButton("Hi Daniel! I'm interested in discussing a data science project. Could we schedule a time to chat about my requirements?");
+            this.addBotMessage("What specific project do you have in mind? Feel free to describe your requirements in detail below, and I'll make sure Daniel gets your message!");
+            this.enableChatMode();
         }, 2500);
     }
 
@@ -203,8 +205,8 @@ class WhatsAppBot {
         }, 1000);
         
         setTimeout(() => {
-            this.addBotMessage("Would you like to discuss Daniel's experience for a specific role?");
-            this.showWhatsAppButton("Hi Daniel! I've reviewed your portfolio and would like to discuss your experience for a potential opportunity.");
+            this.addBotMessage("Would you like to discuss Daniel's experience for a specific role? Please share more details below:");
+            this.enableChatMode();
         }, 2000);
     }
 
@@ -215,8 +217,8 @@ class WhatsAppBot {
         }, 1000);
         
         setTimeout(() => {
-            this.addBotMessage("Click below to message Daniel directly and schedule your meeting!");
-            this.showWhatsAppButton("Hi Daniel! I'd like to schedule a meeting to discuss potential collaboration. When would be a good time for you?");
+            this.addBotMessage("When would you prefer to meet? Please let me know your availability and preferred meeting format:");
+            this.enableChatMode();
         }, 2000);
     }
 
@@ -227,8 +229,8 @@ class WhatsAppBot {
         }, 1000);
         
         setTimeout(() => {
-            this.addBotMessage("What specific information would you like to know?");
-            this.showWhatsAppButton("Hi Daniel! I have some questions about your background and would love to chat.");
+            this.addBotMessage("What would you like to know more about? Feel free to ask any questions:");
+            this.enableChatMode();
         }, 2000);
     }
 
@@ -240,6 +242,40 @@ class WhatsAppBot {
                 Continue on WhatsApp
             </button>
         `;
+        quickActionsContainer.style.display = 'flex';
+    }
+
+    enableChatMode() {
+        document.getElementById('message-input-area').style.display = 'flex';
+        document.getElementById('user-message-input').focus();
+        
+        // Add helpful suggestions
+        setTimeout(() => {
+            this.showChatSuggestions();
+        }, 1000);
+    }
+
+    showChatSuggestions() {
+        const quickActionsContainer = document.getElementById('quick-actions');
+        quickActionsContainer.innerHTML = `
+            <div class="chat-suggestions">
+                <small style="color: #666; margin-bottom: 0.5rem; display: block;">💡 Quick suggestions:</small>
+                <button class="suggestion-btn" onclick="document.getElementById('user-message-input').value = 'I need help with data analysis for my healthcare project'">
+                    🏥 Healthcare project
+                </button>
+                <button class="suggestion-btn" onclick="document.getElementById('user-message-input').value = 'Can we schedule a 30-minute consultation call?'">
+                    📞 Schedule consultation
+                </button>
+                <button class="suggestion-btn" onclick="document.getElementById('user-message-input').value = 'What are your rates for machine learning projects?'">
+                    💰 Pricing inquiry
+                </button>
+            </div>
+        `;
+        quickActionsContainer.style.display = 'block';
+    }
+
+    showMessageInput() {
+        document.getElementById('message-input-area').style.display = 'flex';
     }
 
     addBotMessage(message) {
@@ -281,12 +317,107 @@ class WhatsAppBot {
             this.addUserMessage(message);
             input.value = '';
             
-            // Simulate bot response
+            // Hide suggestions when user starts typing
+            document.getElementById('quick-actions').style.display = 'none';
+            
+            // Store the conversation for WhatsApp
+            this.userMessages = this.userMessages || [];
+            this.userMessages.push(message);
+            
+            // Simulate bot response based on message content
             setTimeout(() => {
-                this.addBotMessage("Thanks for your message! For the fastest response, please continue our conversation on WhatsApp where Daniel can assist you personally.");
-                this.showWhatsAppButton(`Hi Daniel! ${message}`);
+                this.generateBotResponse(message);
             }, 1000);
         }
+    }
+
+    generateBotResponse(userMessage) {
+        const message = userMessage.toLowerCase();
+        
+        if (message.includes('price') || message.includes('cost') || message.includes('rate') || message.includes('budget')) {
+            this.addBotMessage("💰 Great question! Daniel's pricing varies based on project scope and complexity. Here's a general overview:");
+            setTimeout(() => {
+                this.addBotMessage("• Consultation: Free initial 30-min call\n• Hourly rate: Competitive market rates\n• Project-based: Custom quotes available\n• Long-term contracts: Discounted rates");
+            }, 1000);
+            setTimeout(() => {
+                this.addBotMessage("Would you like to discuss your specific requirements? I can connect you with Daniel for a detailed quote!");
+                this.showFinalWhatsAppButton();
+            }, 2000);
+        }
+        else if (message.includes('time') || message.includes('schedule') || message.includes('meet') || message.includes('call')) {
+            this.addBotMessage("📅 Daniel is quite flexible with scheduling! He typically works:");
+            setTimeout(() => {
+                this.addBotMessage("🕘 Monday-Friday: 8 AM - 6 PM (EAT)\n🕘 Weekends: By appointment\n🌍 Available for international calls\n⚡ Quick response on WhatsApp");
+            }, 1000);
+            setTimeout(() => {
+                this.addBotMessage("Let me connect you directly so you can coordinate the perfect time!");
+                this.showFinalWhatsAppButton();
+            }, 2000);
+        }
+        else if (message.includes('project') || message.includes('help') || message.includes('need')) {
+            this.addBotMessage("🚀 Excellent! Daniel loves working on challenging data science projects. Based on what you've shared, here's how he can help:");
+            setTimeout(() => {
+                this.addBotMessage("✅ Project scoping and planning\n✅ Technical feasibility analysis\n✅ Implementation roadmap\n✅ Ongoing support and maintenance");
+            }, 1000);
+            setTimeout(() => {
+                this.addBotMessage("Ready to dive deeper into your project details? Let's get you connected!");
+                this.showFinalWhatsAppButton();
+            }, 2000);
+        }
+        else if (message.includes('experience') || message.includes('background') || message.includes('qualification')) {
+            this.addBotMessage("🏆 Daniel brings impressive credentials to every project:");
+            setTimeout(() => {
+                this.addBotMessage("🎓 Master's in Computer Science (AI/ML)\n🏥 Healthcare analytics specialist\n💼 5+ years IT management\n🏆 Award-winning data scientist\n📊 Proven track record with real impact");
+            }, 1000);
+            setTimeout(() => {
+                this.addBotMessage("Want to see specific examples of his work? Let's continue the conversation!");
+                this.showFinalWhatsAppButton();
+            }, 2000);
+        }
+        else {
+            this.addBotMessage("Thank you for sharing that! I've noted your message and Daniel will be able to give you a detailed response.");
+            setTimeout(() => {
+                this.addBotMessage("To ensure you get the most comprehensive answer to your specific question, let me connect you directly with Daniel on WhatsApp!");
+                this.showFinalWhatsAppButton();
+            }, 1500);
+        }
+    }
+
+    showFinalWhatsAppButton() {
+        const conversation = this.getAllConversationText();
+        const quickActionsContainer = document.getElementById('quick-actions');
+        quickActionsContainer.innerHTML = `
+            <div class="final-whatsapp-section">
+                <div class="conversation-summary">
+                    <small style="color: #666; margin-bottom: 0.5rem; display: block;">📝 Your conversation will be shared with Daniel</small>
+                </div>
+                <button class="whatsapp-direct-btn final-btn" onclick="window.open('https://wa.me/254742007277?text=${encodeURIComponent(conversation)}', '_blank')">
+                    <i class="fab fa-whatsapp"></i>
+                    Continue Conversation on WhatsApp
+                </button>
+                <div class="chat-actions">
+                    <button class="continue-chat-btn" onclick="document.getElementById('user-message-input').focus()">
+                        💬 Ask more questions first
+                    </button>
+                </div>
+            </div>
+        `;
+        quickActionsContainer.style.display = 'block';
+    }
+
+    getAllConversationText() {
+        const messages = document.querySelectorAll('.message');
+        let conversation = "Hi Daniel! I had a conversation with your AI assistant. Here's our discussion:\n\n";
+        
+        messages.forEach(message => {
+            const isBot = message.classList.contains('bot-message');
+            const text = message.querySelector('.message-text').textContent;
+            const prefix = isBot ? "🤖 Assistant: " : "👤 Visitor: ";
+            conversation += prefix + text + "\n\n";
+        });
+        
+        conversation += "I'd like to continue our conversation with you directly. Looking forward to hearing from you!";
+        return conversation;
     }
 
     getCurrentTime() {
