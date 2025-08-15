@@ -622,7 +622,7 @@ const EnhancedPortfolioApp = (() => {
           <h3>Let's Connect! 🚀</h3>
           <p>Ready to start something amazing together?</p>
           <div class="quick-contact-buttons">
-            <a href="mailto:daniel.wanjala@example.com" class="btn btn--primary">
+            <a href="mailto:dmwanjala254@gmail.com" class="btn btn--primary">
               📧 Email Me
             </a>
             <a href="tel:+254700000000" class="btn btn--secondary">
