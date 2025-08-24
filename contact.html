@@ -48,7 +48,8 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <video class="hero__bg" autoplay muted loop playsinline preload="auto" poster="">
+            <!-- playsinline is required for iOS Safari, Firefox will safely ignore it -->
+            <video class="hero__bg" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="" aria-label="Background video showing professional communication and networking">
                 <source src="" type="video/mp4"/>
             </video>
             <div class="hero__overlay"></div>
@@ -182,7 +183,7 @@
 
     <!-- WhatsApp Floater Button -->
     <div class="whatsapp-floater" id="whatsappFloater">
-        <a href="https://wa.me/254706228085" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/254742007277" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>

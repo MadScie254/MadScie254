@@ -5,7 +5,7 @@
 
 class PortfolioGlobal {
     constructor() {
-        this.whatsappNumber = '254706228085';
+        this.whatsappNumber = '254742007277';
         this.emailjsServiceId = 'service_madscie254';
         this.emailjsTemplateId = 'template_contact';
         this.emailjsPublicKey = 'user_madscie254';
@@ -166,7 +166,7 @@ class PortfolioGlobal {
                 <div class="whatsapp-body">
                     <div class="whatsapp-messages" id="whatsapp-messages">
                         <div class="whatsapp-message bot-message">
-                            <p>👋 Hi! I'm Daniel. Since WhatsApp isn't available right now, you can send me a message here and I'll get back to you via email.</p>
+                            <p>👋 Hi! I'm Daniel. Type your message below and I'll take you to WhatsApp to continue our conversation!</p>
                             <span class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
                         </div>
                     </div>
@@ -243,19 +243,24 @@ class PortfolioGlobal {
         // Scroll to bottom
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
-        // Send via mailto (fallback)
-        this.sendEmailFallback(message);
-
+        // Redirect to WhatsApp with the user's message
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+        
         // Add confirmation message
+        const botMessageDiv = document.createElement('div');
+        botMessageDiv.className = 'whatsapp-message bot-message';
+        botMessageDiv.innerHTML = `
+            <p>✅ Redirecting to WhatsApp now...</p>
+            <span class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+        `;
+        messagesContainer.appendChild(botMessageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        // Open WhatsApp after a brief delay
         setTimeout(() => {
-            const botMessageDiv = document.createElement('div');
-            botMessageDiv.className = 'whatsapp-message bot-message';
-            botMessageDiv.innerHTML = `
-                <p>✅ Thanks! Your message has been sent to my email. I'll respond as soon as possible.</p>
-                <span class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
-            `;
-            messagesContainer.appendChild(botMessageDiv);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            window.open(whatsappUrl, '_blank');
+            this.hideWhatsAppModal();
         }, 1000);
     }
 
