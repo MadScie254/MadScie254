@@ -22,7 +22,9 @@ class HeroManager {
   
   async init() {
     try {
+      console.log(`Initializing hero for page: ${this.currentPage}`);
       await this.loadHeroConfig();
+      console.log('Hero config loaded:', this.heroConfig);
       this.setupHero();
       this.setupIntersectionObserver();
     } catch (error) {
@@ -65,6 +67,15 @@ class HeroManager {
     this.videoElement.src = pageConfig.video;
     this.videoElement.poster = pageConfig.fallback;
     
+    // Also update the source element if it exists
+    const sourceElement = this.videoElement.querySelector('source');
+    if (sourceElement) {
+      sourceElement.src = pageConfig.video;
+    }
+    
+    // Force video to reload with new source
+    this.videoElement.load();
+    
     // Handle video load errors
     this.videoElement.addEventListener('error', () => {
       console.warn('Video failed to load, falling back to image');
@@ -73,7 +84,7 @@ class HeroManager {
     
     // Handle successful video load
     this.videoElement.addEventListener('loadeddata', () => {
-      console.log('Hero video loaded successfully');
+      console.log(`Hero video loaded successfully for ${this.currentPage}: ${pageConfig.video}`);
     });
     
     // Check if on mobile/narrow screen and use fallback
