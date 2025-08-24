@@ -67,6 +67,11 @@ class HeroManager {
     this.videoElement.src = pageConfig.video;
     this.videoElement.poster = pageConfig.fallback;
     
+    // Make sure video is visible
+    this.videoElement.style.display = 'block';
+    this.videoElement.style.opacity = '1';
+    this.videoElement.style.zIndex = '1';
+    
     // Also update the source element if it exists
     const sourceElement = this.videoElement.querySelector('source');
     if (sourceElement) {
@@ -75,6 +80,9 @@ class HeroManager {
     
     // Force video to reload with new source
     this.videoElement.load();
+    
+    console.log(`Setting video source: ${pageConfig.video}`);
+    console.log('Video element:', this.videoElement);
     
     // Handle video load errors
     this.videoElement.addEventListener('error', () => {

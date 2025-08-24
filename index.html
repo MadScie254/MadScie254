@@ -8,6 +8,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/award-winning.css">
     <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/immersive-navigation.css">
     <link rel="stylesheet" href="assets/css/enhanced-whatsapp.css">
     
     <!-- Fonts -->
@@ -94,16 +95,16 @@
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
     
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <i class="fas fa-moon" id="themeIcon"></i>
-    </button>
-    
-    <nav>
+    <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
                 <h1>Daniel Wanjala</h1>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -119,7 +120,8 @@
     <main id="main">
         <!-- Hero Section -->
         <section class="hero">
-            <video class="hero__bg" autoplay muted loop playsinline preload="auto" poster="" aria-label="Background video showing data science and analytics visuals">
+            <video class="hero__bg" autoplay muted loop playsinline preload="auto" aria-label="Background video showing data science and analytics visuals">
+                <source src="assets/images/3130284-uhd_3840_2160_30fps.mp4" type="video/mp4">
             </video>
             <div class="hero__overlay"></div>
             <div class="hero__content">
@@ -310,6 +312,7 @@
     </script>
     
     <!-- Scripts -->
+    <script src="assets/js/immersive-navigation.js"></script>
     <script src="assets/js/global.js"></script>
     <script src="assets/js/hero.js"></script>
     <script src="assets/js/enhanced-ui.js"></script>
