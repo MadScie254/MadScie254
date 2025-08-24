@@ -117,56 +117,24 @@
     </nav>
 
     <main id="main">
-        <!-- Enhanced Hero Section with Video Background -->
-        <section class="hero hero-enhanced">
-            <div class="hero-video-container">
-                <video class="hero-video" autoplay muted loop playsinline>
-                    <source src="assets/images/3130284-uhd_3840_2160_30fps.mp4" type="video/mp4">
-                    <source src="assets/images/hero-analysis-index.mp4" type="video/mp4">
-                </video>
-                <img src="assets/images/chris-yang-1tnS_BVy9Jk-unsplash.jpg" 
-                     alt="Data analysis workspace" 
-                     class="hero-image-fallback">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Daniel Wanjala Machimbo</h1>
-                    <h2 class="hero-subtitle">Award-Winning Data Scientist & IT Manager</h2>
-                    <p class="hero-description">Transforming complex data into strategic business intelligence with 4+ years of innovation-driven experience</p>
-                    <div class="hero-buttons">
-                        <a href="projects.html" class="btn btn-primary btn-large">
-                            <i class="fas fa-rocket"></i> Explore My Projects
-                        </a>
-                        <a href="contact.html" class="btn btn-outline btn-large">
-                            <i class="fas fa-envelope"></i> Get In Touch
-                        </a>
-                        <a href="news.html" class="btn btn-secondary btn-large">
-                            <i class="fas fa-chart-trending-up"></i> FinTech News
-                        </a>
-                    </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <video class="hero__bg" autoplay muted loop playsinline preload="auto" poster="">
+                <source src="" type="video/mp4"/>
+            </video>
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1>Daniel Wanjala Machimbo</h1>
+                <h2>Award-Winning Data Scientist & IT Manager</h2>
+                <p>Transforming complex data into strategic business intelligence with 4+ years of innovation-driven experience</p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Explore My Projects
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="4">0</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="50">0</span>
-                        <span class="stat-label">Projects Completed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="89">0</span>
-                        <span class="stat-label">ML Model Accuracy %</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="12">0</span>
-                        <span class="stat-label">Certifications</span>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <i class="fas fa-chevron-down"></i>
             </div>
         </section>
 
@@ -342,10 +310,9 @@
         }
     </script>
     
-    <!-- Global JavaScript -->
+    <!-- Scripts -->
     <script src="assets/js/global.js"></script>
-    
-    <!-- Enhanced UI/UX Scripts -->
+    <script src="assets/js/hero.js"></script>
     <script src="assets/js/enhanced-ui.js"></script>
     <script src="assets/js/enhanced-whatsapp.js"></script>
 </body>

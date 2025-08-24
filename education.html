@@ -8,6 +8,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/award-winning.css">
     <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/hero-clean.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +23,6 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="assets/images/logo.png" alt="DW Logo" class="logo-img">
                 <h1>Daniel Wanjala</h1>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -48,20 +48,13 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-video-container">
-                <video class="hero-video" autoplay muted loop playsinline>
-                    <source src="assets/videos/education-hero.mp4" type="video/mp4">
-                </video>
-                <div class="hero-image-fallback" data-bg="assets/images/education-hero.jpg"></div>
-            </div>
-            <div class="hero-content">
-                <div class="container">
-                    <h1>Educational Excellence</h1>
-                    <p>A continuous journey of academic achievement, professional certifications, and lifelong learning in cutting-edge technologies</p>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <i class="fas fa-chevron-down"></i>
+            <video class="hero__bg" autoplay muted loop playsinline preload="auto" poster="">
+                <source src="" type="video/mp4"/>
+            </video>
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1>Educational Excellence</h1>
+                <p>A continuous journey of academic achievement, professional certifications, and lifelong learning in cutting-edge technologies</p>
             </div>
         </section>
 
@@ -244,6 +237,7 @@
     
     <!-- Scripts -->
     <script src="assets/js/global.js"></script>
+    <script src="assets/js/hero.js"></script>
     <script src="assets/js/award-winning-animations.js"></script>
     <script src="assets/js/whatsapp-api-integration.js"></script>
     <script src="assets/js/whatsapp-bot.js"></script>

@@ -1,6 +1,5 @@
 /**
- * FinTech News & Market Data JavaScript
- * Handles real-time market data, news feeds, and API integrations
+ * FinTech News & Market Data JavaScript - Direct Publisher Links
  * Author: Daniel Wanjala Machimbo
  */
 
@@ -24,6 +23,9 @@ class FinTechNewsApp {
 
     async loadAllData() {
         try {
+            // Load news cards first for immediate user value
+            this.loadNewsCards();
+            
             // Load data in parallel for better performance
             await Promise.allSettled([
                 this.loadCryptoData(),
@@ -35,6 +37,72 @@ class FinTechNewsApp {
             ]);
         } catch (error) {
             console.error('Error loading news data:', error);
+        }
+    }
+
+    // ===============================================
+    // NEWS HEADLINES WITH DIRECT PUBLISHER LINKS
+    // ===============================================
+    async loadNewsHeadlines() {
+        try {
+            const container = document.getElementById('newsContainer');
+            if (!container) return;
+
+            // Load from local news.json file
+            const response = await fetch('assets/news/news.json');
+            if (!response.ok) throw new Error('Failed to load news');
+            
+            const newsData = await response.json();
+            this.renderNewsCards(newsData.articles, container);
+        } catch (error) {
+            console.error('Error loading news headlines:', error);
+            this.showError(document.getElementById('newsContainer'), 'Failed to load news headlines');
+        }
+    }
+
+    renderNewsCards(articles, container) {
+        if (!articles || articles.length === 0) {
+            container.innerHTML = '<div class="error">No news articles available</div>';
+            return;
+        }
+
+        const newsHTML = articles.map(article => {
+            const timeAgo = this.getTimeAgo(article.pubDate);
+            const categoryClass = article.category.toLowerCase().replace(/\s+/g, '-');
+            
+            return `
+                <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="news-card-link">
+                    <div class="news-card" data-category="${categoryClass}">
+                        <div class="news-header">
+                            <span class="news-category ${categoryClass}">${article.category}</span>
+                            <span class="news-source">${article.source}</span>
+                        </div>
+                        <h3 class="news-title">${article.title}</h3>
+                        <p class="news-description">${article.description}</p>
+                        <div class="news-footer">
+                            <span class="news-time">${timeAgo}</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }).join('');
+
+        container.innerHTML = newsHTML;
+    }
+
+    getTimeAgo(dateString) {
+        const now = new Date();
+        const publishedDate = new Date(dateString);
+        const diffInHours = Math.floor((now - publishedDate) / (1000 * 60 * 60));
+        
+        if (diffInHours < 1) {
+            return 'Just now';
+        } else if (diffInHours < 24) {
+            return `${diffInHours}h ago`;
+        } else {
+            const diffInDays = Math.floor(diffInHours / 24);
+            return `${diffInDays}d ago`;
         }
     }
 
@@ -480,6 +548,122 @@ class FinTechNewsApp {
         if (container) {
             container.innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle"></i> ${message}</div>`;
         }
+    }
+
+    loadNewsCards() {
+        const newsContainer = document.getElementById('newsContainer');
+        if (!newsContainer) return;
+
+        const newsCards = [
+            {
+                title: "Central Bank Digital Currencies: Global Implementation Roadmap 2024",
+                description: "Comprehensive analysis of CBDC adoption strategies across major economies, regulatory frameworks, and technological implementations.",
+                category: "cbdc",
+                source: "Federal Reserve",
+                url: "https://www.federalreserve.gov/publications/money-and-payments.htm",
+                time: "2 hours ago"
+            },
+            {
+                title: "AI-Powered Risk Assessment in Digital Banking",
+                description: "How machine learning algorithms are revolutionizing credit scoring and fraud detection in the fintech ecosystem.",
+                category: "ai",
+                source: "MIT Technology Review",
+                url: "https://www.technologyreview.com/topic/artificial-intelligence/",
+                time: "4 hours ago"
+            },
+            {
+                title: "Blockchain Infrastructure for Financial Inclusion",
+                description: "Exploring decentralized finance solutions for underbanked populations in emerging markets.",
+                category: "blockchain",
+                source: "World Bank",
+                url: "https://www.worldbank.org/en/topic/financialinclusion",
+                time: "6 hours ago"
+            },
+            {
+                title: "RegTech Solutions for Compliance Automation",
+                description: "Latest developments in regulatory technology for automated compliance monitoring and reporting.",
+                category: "regtech",
+                source: "Bank for International Settlements",
+                url: "https://www.bis.org/bcbs/publ/",
+                time: "8 hours ago"
+            },
+            {
+                title: "Digital Banking Transformation in Africa",
+                description: "Case studies of successful mobile banking implementations across sub-Saharan Africa.",
+                category: "digital-banking",
+                source: "African Development Bank",
+                url: "https://www.afdb.org/en/topics-and-sectors/sectors/financial-sector-development",
+                time: "10 hours ago"
+            },
+            {
+                title: "DeFi Protocols and Traditional Finance Integration",
+                description: "Analysis of how decentralized finance is being integrated into traditional banking systems.",
+                category: "defi",
+                source: "Ethereum Foundation",
+                url: "https://ethereum.org/en/defi/",
+                time: "12 hours ago"
+            },
+            {
+                title: "Cybersecurity in Financial Technology",
+                description: "Advanced threat detection and prevention strategies for digital financial services.",
+                category: "security",
+                source: "NIST",
+                url: "https://www.nist.gov/cybersecurity",
+                time: "14 hours ago"
+            },
+            {
+                title: "Sustainable Finance and ESG Technology",
+                description: "Technology solutions for environmental, social, and governance compliance in finance.",
+                category: "sustainability",
+                source: "UN Environment Programme",
+                url: "https://www.unep.org/explore-topics/green-economy/what-we-do/sustainable-finance",
+                time: "16 hours ago"
+            }
+        ];
+
+        this.renderNewsCards(newsCards, newsContainer);
+    }
+
+    renderNewsCards(cards, container) {
+        const cardsHTML = cards.map(card => this.createNewsCard(card)).join('');
+        container.innerHTML = `
+            <div class="news-cards-grid">
+                ${cardsHTML}
+            </div>
+        `;
+    }
+
+    createNewsCard(card) {
+        return `
+            <a href="${card.url}" target="_blank" rel="noopener noreferrer" class="news-card-link">
+                <article class="news-card">
+                    <header class="news-header">
+                        <span class="news-category ${card.category}">${this.getCategoryLabel(card.category)}</span>
+                        <span class="news-source">${card.source}</span>
+                    </header>
+                    <h3 class="news-title">${card.title}</h3>
+                    <p class="news-description">${card.description}</p>
+                    <footer class="news-footer">
+                        <span class="news-time">${card.time}</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </footer>
+                </article>
+            </a>
+        `;
+    }
+
+    getCategoryLabel(category) {
+        const labels = {
+            'cbdc': 'CBDC',
+            'ai': 'AI & ML',
+            'blockchain': 'Blockchain',
+            'regtech': 'RegTech',
+            'digital-banking': 'Digital Banking',
+            'defi': 'DeFi',
+            'security': 'Security',
+            'sustainability': 'ESG'
+        };
+        return labels[category] || category.toUpperCase();
     }
 }
 

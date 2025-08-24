@@ -239,6 +239,114 @@
             overflow-y: auto;
         }
         
+        /* News Cards for Direct Publisher Links */
+        .news-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-md);
+        }
+        
+        .news-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .news-card-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .news-card {
+            background: var(--color-surface-primary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border-primary);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--brand-purple);
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .news-category {
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .news-category.cbdc { background: rgba(106, 0, 255, 0.1); color: var(--brand-purple); }
+        .news-category.ai { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+        .news-category.blockchain { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+        .news-category.regtech { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+        .news-category.digital-banking { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
+        .news-category.defi { background: rgba(34, 197, 94, 0.1); color: #22c55e; }
+        .news-category.security { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+        .news-category.sustainability { background: rgba(34, 197, 94, 0.1); color: #22c55e; }
+
+        .news-source {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+
+        .news-title {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            line-height: var(--line-height-tight);
+            color: var(--color-text-primary);
+        }
+
+        .news-description {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--space-lg);
+            flex-grow: 1;
+        }
+
+        .news-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--color-border-primary);
+        }
+
+        .news-time {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-muted);
+        }
+
+        .news-footer i {
+            color: var(--brand-purple);
+            font-size: var(--font-size-sm);
+        }
+        
+        @media (max-width: 768px) {
+            .news-cards-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+        }
+        
         .filing-item {
             display: flex;
             justify-content: space-between;
@@ -316,23 +424,15 @@
     </nav>
 
     <main id="main">
-        <!-- Enhanced Hero Section with Video Background -->
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-video-container">
-                <video class="hero-video" autoplay muted loop playsinline>
-                    <source src="assets/images/3141210-uhd_3840_2160_25fps.mp4" type="video/mp4">
-                </video>
-                <img src="assets/images/chris-yang-1tnS_BVy9Jk-unsplash.jpg" 
-                     alt="Financial data analysis" 
-                     class="hero-image-fallback">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
-                <h1 style="font-size: var(--font-size-4xl); margin-bottom: var(--space-lg);"><i class="fas fa-chart-line"></i> FinTech News & Watch</h1>
-                <p style="font-size: var(--font-size-lg); max-width: 700px; margin: 0 auto; line-height: var(--line-height-relaxed);">Real-time market data, cryptocurrency insights, and curated financial technology news to keep you informed about the digital finance revolution</p>
-            </div>
-            <div class="scroll-indicator">
-                <i class="fas fa-chevron-down"></i>
+            <video class="hero__bg" autoplay muted loop playsinline preload="auto" poster="">
+                <source src="" type="video/mp4"/>
+            </video>
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1><i class="fas fa-chart-line"></i> FinTech News & Watch</h1>
+                <p>Real-time market data, cryptocurrency insights, and curated financial technology news to keep you informed about the digital finance revolution</p>
             </div>
         </section>
 
@@ -387,9 +487,9 @@
                     </div>
 
                     <!-- Latest Headlines -->
-                    <div class="news-section">
-                        <h3><i class="fas fa-newspaper"></i> Latest Headlines</h3>
-                        <div id="newsHeadlines" class="news-list">
+                    <div class="news-section" style="grid-column: 1 / -1;">
+                        <h3><i class="fas fa-newspaper"></i> Latest FinTech Headlines</h3>
+                        <div id="newsContainer" class="news-cards-grid">
                             <div class="loading">
                                 <i class="fas fa-spinner fa-spin"></i> Loading headlines...
                             </div>
@@ -454,5 +554,10 @@
             });
         }
     </script>
+    
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/hero.js"></script>
+    <script src="assets/js/news.js"></script>
 </body>
 </html>

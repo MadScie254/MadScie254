@@ -1,0 +1,30 @@
+{
+  "index": {
+    "video": "assets/images/3130284-uhd_3840_2160_30fps.mp4",
+    "fallback": "assets/images/chris-yang-1tnS_BVy9Jk-unsplash.jpg"
+  },
+  "about": {
+    "video": "assets/images/hero-analysis-index.mp4",
+    "fallback": "assets/images/thisisengineering-0jTZTMyGym8-unsplash.jpg"
+  },
+  "projects": {
+    "video": "assets/images/3141210-uhd_3840_2160_25fps.mp4",
+    "fallback": "assets/images/pexels-tima-miroshnichenko-5380621.jpg"
+  },
+  "skills": {
+    "video": "assets/images/3191572-uhd_3840_2160_25fps.mp4",
+    "fallback": "assets/images/maxim-berg-kE8-rUKjtQU-unsplash.jpg"
+  },
+  "education": {
+    "video": "assets/images/3130284-uhd_3840_2160_30fps.mp4",
+    "fallback": "assets/images/pexels-energepic-com-27411-159888.jpg"
+  },
+  "contact": {
+    "video": "assets/images/hero-analysis-index.mp4",
+    "fallback": "assets/images/sharad-bhat-TzWuSdXMWuk-unsplash.jpg"
+  },
+  "news": {
+    "video": "assets/images/3141210-uhd_3840_2160_25fps.mp4",
+    "fallback": "assets/images/chris-yang-1tnS_BVy9Jk-unsplash.jpg"
+  }
+}
