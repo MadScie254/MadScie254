@@ -39,11 +39,20 @@
     </nav>
 
     <main id="main">
-        <!-- Hero Section -->
+        <!-- Enhanced Hero Section with Video Background -->
         <section class="hero">
-            <div class="container">
-                <h1>About Me</h1>
-                <p>Passionate data scientist transforming complex datasets into strategic business solutions with award-winning expertise</p>
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="assets/images/pexels-tima-miroshnichenko-5380621.jpg" type="video/mp4">
+                </video>
+                <img src="assets/images/pexels-tima-miroshnichenko-5380621.jpg" 
+                     alt="Professional workspace" 
+                     class="hero-image-fallback">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
+                <h1 style="font-size: var(--font-size-4xl); margin-bottom: var(--space-lg);">About Me</h1>
+                <p style="font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto var(--space-xl) auto;">Passionate data scientist transforming complex datasets into strategic business solutions with award-winning expertise</p>
             </div>
             <div class="scroll-indicator">
                 <i class="fas fa-chevron-down"></i>
@@ -63,7 +72,8 @@
                                  class="profile-image"
                                  loading="lazy"
                                  width="400" 
-                                 height="400">
+                                 height="400"
+                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjNjY2NjY2Ii8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE2MCIgcj0iODAiIGZpbGw9IiNmZmYiLz4KPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjM0MCIgcng9IjEyMCIgcnk9IjgwIiBmaWxsPSIjZmZmIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMzgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiPkRhbmllbCBXYW5qYWxhPC90ZXh0Pgo8L3N2Zz4=';">
                         </picture>
                         <div class="image-overlay">
                             <div class="overlay-content">
@@ -278,6 +288,9 @@
             });
         }
     </script>
+    
+    <!-- Global JavaScript -->
+    <script src="assets/js/global.js"></script>
     
     <!-- Enhanced UI/UX Scripts -->
     <script src="assets/js/enhanced-ui.js"></script>

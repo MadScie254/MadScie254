@@ -309,18 +309,27 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
-                <li><a href="news.html" class="active">FinTech News</a></li>
+                <li><a href="news.html" class="active">News</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <main id="main">
-        <!-- Hero Section -->
+        <!-- Enhanced Hero Section with Video Background -->
         <section class="hero">
-            <div class="container">
-                <h1><i class="fas fa-chart-line"></i> FinTech News & Watch</h1>
-                <p>Real-time market data, cryptocurrency insights, and curated financial technology news to keep you informed about the digital finance revolution</p>
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="assets/images/3141210-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                </video>
+                <img src="assets/images/chris-yang-1tnS_BVy9Jk-unsplash.jpg" 
+                     alt="Financial data analysis" 
+                     class="hero-image-fallback">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
+                <h1 style="font-size: var(--font-size-4xl); margin-bottom: var(--space-lg);"><i class="fas fa-chart-line"></i> FinTech News & Watch</h1>
+                <p style="font-size: var(--font-size-lg); max-width: 700px; margin: 0 auto; line-height: var(--line-height-relaxed);">Real-time market data, cryptocurrency insights, and curated financial technology news to keep you informed about the digital finance revolution</p>
             </div>
             <div class="scroll-indicator">
                 <i class="fas fa-chevron-down"></i>

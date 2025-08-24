@@ -110,7 +110,7 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
-                <li><a href="news.html">FinTech News</a></li>
+                <li><a href="news.html">News</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -119,11 +119,14 @@
     <main id="main">
         <!-- Enhanced Hero Section with Video Background -->
         <section class="hero hero-enhanced">
-            <div class="hero-video-bg">
-                <video autoplay muted loop playsinline>
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline>
                     <source src="assets/images/3130284-uhd_3840_2160_30fps.mp4" type="video/mp4">
                     <source src="assets/images/hero-analysis-index.mp4" type="video/mp4">
                 </video>
+                <img src="assets/images/chris-yang-1tnS_BVy9Jk-unsplash.jpg" 
+                     alt="Data analysis workspace" 
+                     class="hero-image-fallback">
                 <div class="hero-overlay"></div>
             </div>
             <div class="container hero-content">
@@ -338,6 +341,9 @@
             });
         }
     </script>
+    
+    <!-- Global JavaScript -->
+    <script src="assets/js/global.js"></script>
     
     <!-- Enhanced UI/UX Scripts -->
     <script src="assets/js/enhanced-ui.js"></script>

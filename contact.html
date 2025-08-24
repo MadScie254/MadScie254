@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Daniel Wanjala Machimbo | Award-Winning Data Scientist</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/award-winning.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Meta Tags -->
     <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
+                <img src="assets/images/logo.png" alt="DW Logo" class="logo-img">
                 <h1>Daniel Wanjala</h1>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -25,6 +38,9 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="news.html">FinTech News</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button></li>
             </ul>
         </div>
     </nav>
@@ -32,9 +48,17 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="container">
-                <h1>Get In Touch</h1>
-                <p>Let's discuss how award-winning data science can transform your business and drive unprecedented growth</p>
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="assets/videos/contact-hero.mp4" type="video/mp4">
+                </video>
+                <div class="hero-image-fallback" data-bg="assets/images/contact-hero.jpg"></div>
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1>Get In Touch</h1>
+                    <p>Let's discuss how award-winning data science can transform your business and drive unprecedented growth</p>
+                </div>
             </div>
             <div class="scroll-indicator">
                 <i class="fas fa-chevron-down"></i>
@@ -163,12 +187,50 @@
         </section>
     </main>
 
+    <!-- WhatsApp Floater Button -->
+    <div class="whatsapp-floater" id="whatsappFloater">
+        <a href="https://wa.me/254706228085" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- WhatsApp Modal -->
+    <div class="whatsapp-modal" id="whatsappModal">
+        <div class="whatsapp-modal-content">
+            <div class="whatsapp-header">
+                <img src="assets/images/My_Profile_Photo.jpg" alt="Daniel Wanjala" class="whatsapp-avatar">
+                <div class="whatsapp-info">
+                    <h3>Daniel Wanjala</h3>
+                    <span class="whatsapp-status">Online</span>
+                </div>
+                <button class="whatsapp-close" id="whatsappClose" aria-label="Close chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="whatsapp-body">
+                <div class="whatsapp-message">
+                    <p>Hi! 👋 I'm Daniel Wanjala, an award-winning data scientist.</p>
+                    <p>How can I help you today?</p>
+                    <span class="whatsapp-time">Just now</span>
+                </div>
+            </div>
+            <div class="whatsapp-footer">
+                <input type="text" placeholder="Type a message..." class="whatsapp-input" id="whatsappInput">
+                <button class="whatsapp-send" id="whatsappSend" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Daniel Wanjala Machimbo. All rights reserved. | Award-Winning Data Scientist & IT Manager | Nairobi, Kenya</p>
         </div>
     </footer>
     
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
     <script src="assets/js/award-winning-animations.js"></script>
     <script src="assets/js/whatsapp-api-integration.js"></script>
     <script src="assets/js/whatsapp-bot.js"></script>
