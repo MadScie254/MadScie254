@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTech News & Watch - Daniel Wanjala Machimbo</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/award-winning.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Meta Tags -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <meta name="description" content="Stay updated with the latest FinTech news, market data, crypto insights, and financial analysis. Real-time market data and curated financial content.">
+    <meta name="keywords" content="fintech, cryptocurrency, financial news, market data, blockchain, payments, banking">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FinTech News & Watch - Daniel Wanjala Machimbo">
+    <meta property="og:description" content="Real-time financial market data, crypto insights, and curated FinTech news">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://madscie254.github.io/MadScie254/news.html">
+    <meta property="og:image" content="https://madscie254.github.io/MadScie254/assets/images/logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FinTech News & Watch">
+    <meta name="twitter:description" content="Real-time financial market data and curated FinTech news">
+    <meta name="twitter:image" content="https://madscie254.github.io/MadScie254/assets/images/logo.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "FinTech News & Watch",
+      "description": "Real-time financial market data, cryptocurrency insights, and curated FinTech news",
+      "url": "https://madscie254.github.io/MadScie254/news.html",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Wanjala Machimbo",
+        "jobTitle": "Senior Data Scientist & IT Manager",
+        "url": "https://madscie254.github.io/MadScie254/"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://madscie254.github.io/MadScie254/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FinTech News & Watch",
+            "item": "https://madscie254.github.io/MadScie254/news.html"
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .news-section {
+            background: var(--color-surface-primary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+        
+        .news-section:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+        
+        .news-section h3 {
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .market-ticker {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+        
+        .ticker-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--color-bg-tertiary);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .ticker-symbol {
+            font-weight: 600;
+            color: var(--color-text-primary);
+            font-size: var(--font-size-sm);
+        }
+        
+        .ticker-price {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            margin: var(--space-xs) 0;
+        }
+        
+        .ticker-change {
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+        }
+        
+        .ticker-change.positive {
+            color: var(--color-success);
+        }
+        
+        .ticker-change.negative {
+            color: var(--color-error);
+        }
+        
+        .news-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .news-item {
+            display: flex;
+            gap: var(--space-sm);
+            padding: var(--space-sm);
+            border-bottom: 1px solid var(--color-border-primary);
+            transition: background-color var(--transition-fast);
+        }
+        
+        .news-item:hover {
+            background: var(--color-bg-secondary);
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .news-meta {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-xs);
+            min-width: 60px;
+        }
+        
+        .news-score {
+            background: var(--color-primary);
+            color: white;
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            font-size: 10px;
+            font-weight: 600;
+        }
+        
+        .news-age {
+            font-size: 10px;
+            color: var(--color-text-muted);
+        }
+        
+        .news-content h4 {
+            margin: 0 0 var(--space-xs) 0;
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-tight);
+        }
+        
+        .news-content a {
+            color: var(--color-text-primary);
+            text-decoration: none;
+        }
+        
+        .news-content a:hover {
+            color: var(--color-primary);
+        }
+        
+        .youtube-embed {
+            position: relative;
+            width: 100%;
+            height: 315px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .youtube-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .micro-chart {
+            width: 100%;
+            height: 60px;
+            margin: var(--space-sm) 0;
+        }
+        
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            color: var(--color-text-muted);
+        }
+        
+        .error {
+            color: var(--color-error);
+            text-align: center;
+            padding: var(--space-md);
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: var(--radius-md);
+            margin: var(--space-sm) 0;
+        }
+        
+        .filings-list {
+            max-height: 350px;
+            overflow-y: auto;
+        }
+        
+        .filing-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: var(--space-sm);
+            border-bottom: 1px solid var(--color-border-primary);
+        }
+        
+        .filing-item:last-child {
+            border-bottom: none;
+        }
+        
+        .filing-info h5 {
+            margin: 0 0 var(--space-xs) 0;
+            font-size: var(--font-size-sm);
+            color: var(--color-text-primary);
+        }
+        
+        .filing-meta {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-muted);
+        }
+        
+        .filing-date {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-muted);
+            white-space: nowrap;
+        }
+        
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .market-ticker {
+                justify-content: center;
+            }
+            
+            .ticker-item {
+                min-width: 100px;
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .news-section:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Daniel Wanjala</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="news.html" class="active">FinTech News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1><i class="fas fa-chart-line"></i> FinTech News & Watch</h1>
+                <p>Real-time market data, cryptocurrency insights, and curated financial technology news to keep you informed about the digital finance revolution</p>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- News Grid -->
+        <section class="animate-on-scroll">
+            <div class="container">
+                <div class="news-grid">
+                    <!-- Top Videos Section -->
+                    <div class="news-section" style="grid-column: 1 / -1;">
+                        <h3><i class="fab fa-youtube"></i> Top FinTech Videos</h3>
+                        <div class="youtube-embed">
+                            <iframe 
+                                src="https://www.youtube.com/embed/videoseries?list=PLrAXtmRdnEQy1OIQX0r7FkbgkVj5F1gJN" 
+                                title="FinTech News Playlist"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Market Snapshot -->
+                    <div class="news-section">
+                        <h3><i class="fas fa-coins"></i> Market Snapshot</h3>
+                        <div id="cryptoTickers" class="market-ticker">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i> Loading market data...
+                            </div>
+                        </div>
+                        <div id="forexTickers" class="market-ticker">
+                            <!-- Forex data will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Macro Pulse -->
+                    <div class="news-section">
+                        <h3><i class="fas fa-globe"></i> Macro Pulse</h3>
+                        <div id="macroIndicators">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i> Loading macro data...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filings Radar -->
+                    <div class="news-section">
+                        <h3><i class="fas fa-file-alt"></i> SEC Filings Radar</h3>
+                        <div id="secFilings" class="filings-list">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i> Loading SEC filings...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Latest Headlines -->
+                    <div class="news-section">
+                        <h3><i class="fas fa-newspaper"></i> Latest Headlines</h3>
+                        <div id="newsHeadlines" class="news-list">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i> Loading headlines...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HN FinTech -->
+                    <div class="news-section">
+                        <h3><i class="fab fa-hacker-news"></i> HN FinTech</h3>
+                        <div id="hnFintech" class="news-list">
+                            <div class="loading">
+                                <i class="fas fa-spinner fa-spin"></i> Loading HN stories...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Daniel Wanjala Machimbo. All rights reserved. | FinTech News & Market Data</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main_simple.js"></script>
+    <script src="assets/js/news.js"></script>
+    <script>
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            });
+        });
+        
+        // View Transitions API support
+        if ('startViewTransition' in document) {
+            const links = document.querySelectorAll('a[href]');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (link.href && link.href !== window.location.href && link.target !== '_blank') {
+                        e.preventDefault();
+                        document.startViewTransition(() => {
+                            window.location.href = link.href;
+                        });
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

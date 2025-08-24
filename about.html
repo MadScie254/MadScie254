@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Daniel Wanjala Machimbo | Award-Winning Data Scientist</title>
     <link rel="stylesheet" href="assets/css/award-winning.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,6 +13,13 @@
     <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+    
     <nav>
         <div class="nav-container">
             <div class="logo">
@@ -23,12 +31,13 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="education.html">Education</a></li>
+                <li><a href="news.html">FinTech News</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <main id="main">
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
@@ -196,9 +205,46 @@
             <p>&copy; 2024 Daniel Wanjala Machimbo. All rights reserved. | Award-Winning Data Scientist & IT Manager | Nairobi, Kenya</p>
         </div>
     </footer>
+    
+    <!-- Scripts -->
     <script src="assets/js/award-winning-animations.js"></script>
     <script src="assets/js/api-integrations.js"></script>
     <script src="assets/js/whatsapp-api-integration.js"></script>
     <script src="assets/js/whatsapp-bot.js"></script>
+    <script>
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            });
+        });
+        
+        // View Transitions API support
+        if ('startViewTransition' in document) {
+            const links = document.querySelectorAll('a[href]');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (link.href && link.href !== window.location.href && link.target !== '_blank') {
+                        e.preventDefault();
+                        document.startViewTransition(() => {
+                            window.location.href = link.href;
+                        });
+                    }
+                });
+            });
+        }
+    </script>
 </body>
 </html>

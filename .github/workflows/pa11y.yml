@@ -1,0 +1,277 @@
+name: Pa11y Accessibility Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run weekly on Sundays at 2:00 AM UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: read
+
+jobs:
+  pa11y:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install Pa11y CI
+      run: |
+        npm install -g pa11y-ci@3.1.0
+
+    - name: Create Pa11y config
+      run: |
+        cat > .pa11yci.json << 'EOF'
+        {
+          "defaults": {
+            "standard": "WCAG2AA",
+            "ignore": [
+              "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+              "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId"
+            ],
+            "chromeLaunchConfig": {
+              "args": ["--no-sandbox", "--disable-setuid-sandbox", "--headless", "--disable-gpu"]
+            },
+            "timeout": 30000,
+            "wait": 2000,
+            "viewport": {
+              "width": 1280,
+              "height": 1024
+            }
+          },
+          "urls": [
+            {
+              "url": "https://madscie254.github.io/MadScie254/",
+              "actions": [
+                "wait for element .hero to be visible"
+              ]
+            },
+            {
+              "url": "https://madscie254.github.io/MadScie254/about.html",
+              "actions": [
+                "wait for element .hero to be visible"
+              ]
+            },
+            {
+              "url": "https://madscie254.github.io/MadScie254/projects.html",
+              "actions": [
+                "wait for element .hero to be visible"
+              ]
+            },
+            {
+              "url": "https://madscie254.github.io/MadScie254/skills.html",
+              "actions": [
+                "wait for element .hero to be visible"
+              ]
+            },
+            {
+              "url": "https://madscie254.github.io/MadScie254/education.html",
+              "actions": [
+                "wait for element .hero to be visible"
+              ]
+            },
+            {
+              "url": "https://madscie254.github.io/MadScie254/news.html",
+              "actions": [
+                "wait for element .hero to be visible"
+              ]
+            },
+            {
+              "url": "https://madscie254.github.io/MadScie254/contact.html",
+              "actions": [
+                "wait for element .hero to be visible"
+              ]
+            }
+          ]
+        }
+        EOF
+
+    - name: Wait for deployment
+      run: |
+        echo "Waiting for GitHub Pages deployment to be ready..."
+        sleep 60
+        
+        # Test if the site is accessible
+        for i in {1..10}; do
+          if curl -s -o /dev/null -w "%{http_code}" https://madscie254.github.io/MadScie254/ | grep -q "200"; then
+            echo "Site is accessible"
+            break
+          else
+            echo "Attempt $i: Site not yet accessible, waiting..."
+            sleep 30
+          fi
+        done
+
+    - name: Run Pa11y CI
+      id: pa11y
+      run: |
+        echo "Running Pa11y accessibility tests..."
+        
+        # Create output directory
+        mkdir -p pa11y-results
+        
+        # Run Pa11y with JSON output
+        pa11y-ci --json > pa11y-results/results.json || echo "FAILED=true" >> $GITHUB_OUTPUT
+        
+        # Also create a human-readable report
+        pa11y-ci --reporter cli > pa11y-results/report.txt || true
+        
+        echo "Pa11y tests completed"
+
+    - name: Process results
+      if: always()
+      run: |
+        if [ -f "pa11y-results/results.json" ]; then
+          echo "Processing Pa11y results..."
+          
+          # Count issues by severity
+          node -e "
+            const fs = require('fs');
+            try {
+              const results = JSON.parse(fs.readFileSync('pa11y-results/results.json', 'utf8'));
+              let errorCount = 0;
+              let warningCount = 0;
+              let noticeCount = 0;
+              
+              if (Array.isArray(results)) {
+                results.forEach(result => {
+                  if (result.issues) {
+                    result.issues.forEach(issue => {
+                      switch(issue.type) {
+                        case 'error': errorCount++; break;
+                        case 'warning': warningCount++; break;
+                        case 'notice': noticeCount++; break;
+                      }
+                    });
+                  }
+                });
+              }
+              
+              console.log(\`Errors: \${errorCount}\`);
+              console.log(\`Warnings: \${warningCount}\`);
+              console.log(\`Notices: \${noticeCount}\`);
+              
+              // Write summary
+              fs.writeFileSync('pa11y-results/summary.txt', 
+                \`ERRORS=\${errorCount}\\nWARNINGS=\${warningCount}\\nNOTICES=\${noticeCount}\`);
+              
+              // Exit with error if there are serious accessibility issues
+              if (errorCount > 0) {
+                console.log('❌ Accessibility errors found!');
+                process.exit(1);
+              } else {
+                console.log('✅ No critical accessibility errors found!');
+              }
+            } catch (e) {
+              console.log('Error processing results:', e.message);
+              process.exit(1);
+            }
+          "
+        else
+          echo "No results file found"
+          exit 1
+        fi
+
+    - name: Upload Pa11y results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: pa11y-results
+        path: pa11y-results/
+        retention-days: 30
+
+    - name: Comment on PR with results
+      if: github.event_name == 'pull_request' && always()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          
+          let comment = `## ♿ Pa11y Accessibility Test Results\n\n`;
+          
+          try {
+            if (fs.existsSync('pa11y-results/summary.txt')) {
+              const summary = fs.readFileSync('pa11y-results/summary.txt', 'utf8');
+              const lines = summary.split('\n');
+              const errors = lines.find(l => l.startsWith('ERRORS='))?.split('=')[1] || '0';
+              const warnings = lines.find(l => l.startsWith('WARNINGS='))?.split('=')[1] || '0';
+              const notices = lines.find(l => l.startsWith('NOTICES='))?.split('=')[1] || '0';
+              
+              if (parseInt(errors) === 0) {
+                comment += `✅ **No critical accessibility errors found!**\n\n`;
+              } else {
+                comment += `❌ **${errors} accessibility errors found**\n\n`;
+              }
+              
+              comment += `### Summary\n`;
+              comment += `- **Errors**: ${errors} (must be 0 to pass)\n`;
+              comment += `- **Warnings**: ${warnings}\n`;
+              comment += `- **Notices**: ${notices}\n\n`;
+            } else {
+              comment += `⚠️ Unable to read test results\n\n`;
+            }
+          } catch (e) {
+            comment += `❌ Error processing results: ${e.message}\n\n`;
+          }
+          
+          comment += `### Standards\n`;
+          comment += `- **Standard**: WCAG 2.1 AA\n`;
+          comment += `- **Threshold**: Zero errors required\n\n`;
+          comment += `📊 [View detailed results in the uploaded artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})`;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });
+
+    - name: Generate accessibility summary
+      if: always()
+      run: |
+        echo "## Pa11y Accessibility Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "pa11y-results/summary.txt" ]; then
+          source pa11y-results/summary.txt
+          echo "### Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "- **Errors**: $ERRORS" >> $GITHUB_STEP_SUMMARY
+          echo "- **Warnings**: $WARNINGS" >> $GITHUB_STEP_SUMMARY
+          echo "- **Notices**: $NOTICES" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "$ERRORS" -eq 0 ]; then
+            echo "✅ **All tests passed!** No critical accessibility errors found." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Tests failed!** Critical accessibility errors must be fixed." >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "⚠️ Unable to generate summary - results file not found" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Standards" >> $GITHUB_STEP_SUMMARY
+        echo "- **Standard**: WCAG 2.1 AA" >> $GITHUB_STEP_SUMMARY
+        echo "- **Threshold**: Zero errors required" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Pages Tested" >> $GITHUB_STEP_SUMMARY
+        echo "- Homepage" >> $GITHUB_STEP_SUMMARY
+        echo "- About" >> $GITHUB_STEP_SUMMARY
+        echo "- Projects" >> $GITHUB_STEP_SUMMARY
+        echo "- Skills" >> $GITHUB_STEP_SUMMARY
+        echo "- Education" >> $GITHUB_STEP_SUMMARY
+        echo "- FinTech News" >> $GITHUB_STEP_SUMMARY
+        echo "- Contact" >> $GITHUB_STEP_SUMMARY

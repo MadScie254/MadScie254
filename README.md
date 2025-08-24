@@ -1,12 +1,164 @@
-<p align="center">
-  <img src="https://placehold.co/1200x300/6A0DAD/FFFFFF?text=Daniel+Wanjala+Machimbo+%7C+Data+Architect+%26+Digital+Innovator" alt="Daniel Wanjala Machimbo - Data Scientist Banner" width="90%"/>
-</p>
+# Daniel Wanjala Machimbo - Portfolio
 
-# Holla Amigo! Greetings! I'm Daniel Wanjala Machimbo
+A profoundly analytical and results-oriented **Data Scientist**, **Data Analyst**, and **IT Manager**, adeptly navigating the complex intersection of technology, strategic foresight, and insightful discovery. My main passion lies in the sophisticated alchemy of transmuting intricate, raw data into lucid narratives and potent, actionable intelligence.
 
-A profoundly analytical and results-oriented **Data Scientist**, **Data Analyst**, and **IT Manager**, adeptly navigating the complex intersection of technology, strategic foresight, and insightful discovery. <img src="https://img.shields.io/badge/-💡-yellow?style=flat-square" alt="Idea" height="15"/> My main passion lies in the sophisticated alchemy of transmuting intricate, raw data into lucid narratives and potent, actionable intelligence. This transformative process not only elegantly resolves complex challenges but actively catalyzes groundbreaking innovation and fosters sustainable organizational advancement. I excel within dynamic ecosystems that demand the rigorous application of advanced analytical methodologies and state-of-the-art machine learning models to meticulously unravel complexity, discern subtle yet significant patterns, and unlock substantial opportunities previously concealed within the vast expanse of data.
+## 🌟 New Features
 
-<hr style="border: none; height: 1px; background-color: #dddddd; margin-top: 2em; margin-bottom: 2em;">
+### FinTech News & Market Data
+This portfolio now includes a comprehensive **FinTech News & Watch** page that provides:
+
+- **Real-time Market Data**: Live cryptocurrency prices from CoinPaprika and forex rates via exchangerate.host
+- **Macro Economic Indicators**: World Bank data with micro-charts for Kenya's GDP, inflation, and unemployment
+- **SEC Filings Radar**: Latest regulatory filings from major fintech companies
+- **Curated News Feed**: Automated RSS aggregation from top financial news sources
+- **Hacker News FinTech**: Real-time fintech stories from Hacker News community
+
+### Live Now Panel
+The homepage features a dynamic **Live Now** panel that shows:
+
+- **Location-based Greeting**: Personalized welcome based on visitor's location
+- **Local Weather**: Current conditions and temperature from Open-Meteo
+- **Next Public Holiday**: Upcoming holidays for your country via Nager.Date API
+
+### Enhanced User Experience
+- **Dark/Light Theme Toggle**: Persistent theme switching with system preference detection
+- **View Transitions API**: Smooth page transitions (where supported)
+- **Fluid Typography**: Responsive text scaling across all screen sizes
+- **Enhanced Accessibility**: WCAG 2.1 AA compliance with comprehensive focus management
+- **Reduced Motion Support**: Respects user's motion preferences
+
+## 📰 Automated News Feed System
+
+The portfolio includes an automated news aggregation system that runs daily via GitHub Actions.
+
+### How It Works
+
+1. **Scheduled Execution**: GitHub Actions runs daily at 6:00 AM UTC
+2. **RSS Parsing**: Fetches content from curated financial news sources
+3. **Content Filtering**: Uses AI-powered keyword filtering for FinTech relevance
+4. **Data Processing**: Removes duplicates, normalizes data, and sorts by recency
+5. **JSON Generation**: Updates `/assets/news/news.json` with fresh content
+6. **Automatic Deployment**: Changes are committed and deployed to GitHub Pages
+
+### News Sources
+
+The system currently aggregates from:
+
+- **CoinDesk**: Leading cryptocurrency and blockchain news
+- **CoinTelegraph**: Global crypto and blockchain technology coverage
+- **CNBC Finance**: Business and financial market news
+- **Reuters Business**: International business and financial updates
+
+### Customizing News Sources
+
+To modify news sources, update the `sources` array in `.github/workflows/fetch-feeds.yml`:
+
+```javascript
+const sources = [
+  {
+    name: 'Source Name',
+    url: 'https://example.com/rss',
+    category: 'Category'
+  }
+];
+```
+
+### Content Filtering
+
+The system uses intelligent keyword filtering to ensure relevance:
+
+**Included Keywords**: fintech, cryptocurrency, blockchain, digital payments, CBDC, DeFi, RegTech, InsurTech, WealthTech, neobank, mobile payments
+
+**Excluded Keywords**: gambling, ponzi, scam, fraud
+
+### Configuration Files
+
+- `/assets/news/news.json`: Generated news articles
+- `/assets/news/sources.json`: Source configuration and metadata
+- `.github/workflows/fetch-feeds.yml`: Automation workflow
+
+### Manual Updates
+
+You can manually trigger the news feed update:
+
+1. Go to the **Actions** tab in your GitHub repository
+2. Select **Fetch News Feeds** workflow
+3. Click **Run workflow**
+
+## 🔍 Quality Assurance
+
+### Lighthouse CI
+Automated performance monitoring ensures:
+- **Performance**: ≥ 90% score
+- **Accessibility**: ≥ 98% score  
+- **SEO**: ≥ 95% score
+- **Best Practices**: ≥ 90% score
+
+### Pa11y Accessibility Testing
+Comprehensive accessibility testing using:
+- **Standard**: WCAG 2.1 AA compliance
+- **Threshold**: Zero critical errors
+- **Coverage**: All portfolio pages
+
+### GitHub Actions Workflows
+
+1. **fetch-feeds.yml**: Daily news aggregation
+2. **lighthouse.yml**: Performance and quality auditing
+3. **pa11y.yml**: Accessibility compliance testing
+
+## 🛠️ Technical Architecture
+
+### Frontend Stack
+- **HTML5**: Semantic markup with structured data
+- **CSS3**: Custom properties, fluid typography, CSS Grid/Flexbox
+- **JavaScript**: Vanilla ES6+, Web APIs, Progressive Enhancement
+- **APIs**: Token-free integrations for real-time data
+
+### Performance Optimizations
+- **Bundle Size**: < 45KB gzipped for all JS
+- **Image Optimization**: Responsive images with lazy loading
+- **Caching Strategy**: Intelligent API response caching
+- **Progressive Enhancement**: Core functionality without JavaScript
+
+### Browser Support
+- **Modern Browsers**: Full feature support
+- **Legacy Browsers**: Graceful degradation
+- **Mobile**: Responsive design with touch optimization
+- **Accessibility**: Screen reader and keyboard navigation support
+
+## 🚀 Getting Started
+
+### Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/MadScie254/MadScie254.git
+cd MadScie254
+```
+
+2. Serve locally (Python example):
+```bash
+python -m http.server 8000
+```
+
+3. Open `http://localhost:8000` in your browser
+
+### Testing with Act (GitHub Actions locally)
+
+Install [act](https://github.com/nektos/act) and run:
+
+```bash
+# Test news feed workflow
+act workflow_dispatch -W .github/workflows/fetch-feeds.yml
+
+# Test Lighthouse CI
+act push -W .github/workflows/lighthouse.yml
+
+# Test Pa11y accessibility
+act push -W .github/workflows/pa11y.yml
+```
+
+---
 
 ## 👨‍💻 My Journey: From Foundational Code to Advanced Algorithmic Insights
 
