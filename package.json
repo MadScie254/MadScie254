@@ -1,0 +1,39 @@
+{
+  "name": "daniel-wanjala-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Daniel Wanjala Machimbo - Award-winning Data Scientist & IT Manager",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "test": "echo 'No tests specified' && exit 0",
+    "lint": "echo 'No linting configured' && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadScie254/MadScie254.git"
+  },
+  "keywords": [
+    "portfolio",
+    "data-science",
+    "it-manager",
+    "machine-learning",
+    "analytics",
+    "python",
+    "r-programming",
+    "sql",
+    "tensorflow"
+  ],
+  "author": "Daniel Wanjala Machimbo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MadScie254/MadScie254/issues"
+  },
+  "homepage": "https://madscie254.github.io/MadScie254/",
+  "devDependencies": {
+    "@lhci/cli": "^0.12.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -6,8 +6,7 @@
     <title>FinTech News & Watch - Daniel Wanjala Machimbo</title>
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/award-winning.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/clean.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -512,47 +511,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main_simple.js"></script>
-    <script src="assets/js/news.js"></script>
-    <script>
-        // Initialize theme
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.getElementById('themeToggle');
-            const themeIcon = document.getElementById('themeIcon');
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-            
-            themeToggle.addEventListener('click', function() {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                
-                document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-            });
-        });
-        
-        // View Transitions API support
-        if ('startViewTransition' in document) {
-            const links = document.querySelectorAll('a[href]');
-            links.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    if (link.href && link.href !== window.location.href && link.target !== '_blank') {
-                        e.preventDefault();
-                        document.startViewTransition(() => {
-                            window.location.href = link.href;
-                        });
-                    }
-                });
-            });
-        }
-    </script>
-    
-    <!-- Scripts -->
     <script src="assets/js/global.js"></script>
-    <script src="assets/js/hero.js"></script>
     <script src="assets/js/news.js"></script>
 </body>
 </html>
