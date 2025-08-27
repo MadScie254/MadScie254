@@ -45,36 +45,33 @@
     <main id="main">
         <!-- Hero Section -->
         <section class="hero">
-            <video class="hero__bg" autoplay muted loop playsinline preload="auto" aria-label="Background video displaying technical skills and programming concepts">
-                <source src="assets/images/3191572-uhd_3840_2160_25fps.mp4" type="video/mp4">
-            </video>
-            <div class="hero__overlay"></div>
-            <div class="hero__content">
+            
+            <div class="container">
                 <h1>Technical Skills</h1>
                 <p>Comprehensive expertise in data science, machine learning, and modern technology stack for award-winning solutions</p>
             </div>
         </section>
 
         <!-- Programming Languages -->
-        <section class="animate-on-scroll">
+        <section class="">
             <div class="container">
                 <h2>Programming Languages</h2>
                 <div class="grid grid-3">
-                    <div class="card animate-on-scroll delay-1">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fab fa-python"></i>
                         </div>
                         <h3>Python</h3>
                         <p>Advanced proficiency in Python for data science, machine learning, and web development with extensive library knowledge.</p>
                     </div>
-                    <div class="card animate-on-scroll delay-2">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fab fa-r-project"></i>
                         </div>
                         <h3>R</h3>
                         <p>Statistical computing and graphics with R for advanced data analysis, visualization, and statistical modeling.</p>
                     </div>
-                    <div class="card animate-on-scroll delay-3">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fas fa-database"></i>
                         </div>
@@ -86,7 +83,7 @@
         </section>
 
         <!-- Data Science Tools -->
-        <section class="animate-on-scroll delay-1">
+        <section class="">
             <div class="container">
                 <h2>Data Science & Machine Learning</h2>
                 <div class="grid grid-2">
@@ -115,25 +112,25 @@
         </section>
 
         <!-- Visualization Tools -->
-        <section class="animate-on-scroll delay-2">
+        <section class="">
             <div class="container">
                 <h2>Data Visualization & Business Intelligence</h2>
                 <div class="grid grid-3">
-                    <div class="card animate-on-scroll delay-1">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fas fa-chart-bar"></i>
                         </div>
                         <h3>Tableau</h3>
                         <p>Advanced dashboard creation, data storytelling, and interactive visualization development.</p>
                     </div>
-                    <div class="card animate-on-scroll delay-2">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fab fa-microsoft"></i>
                         </div>
                         <h3>Power BI</h3>
                         <p>Enterprise-level business intelligence solutions and automated reporting systems.</p>
                     </div>
-                    <div class="card animate-on-scroll delay-3">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
@@ -145,11 +142,11 @@
         </section>
 
         <!-- Databases -->
-        <section class="animate-on-scroll delay-3">
+        <section class="">
             <div class="container">
                 <h2>Database Technologies</h2>
                 <div class="grid grid-3">
-                    <div class="card animate-on-scroll delay-1">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fas fa-database"></i>
                         </div>
@@ -161,7 +158,7 @@
                             <li>SQLite</li>
                         </ul>
                     </div>
-                    <div class="card animate-on-scroll delay-2">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fas fa-leaf"></i>
                         </div>
@@ -173,7 +170,7 @@
                             <li>DynamoDB</li>
                         </ul>
                     </div>
-                    <div class="card animate-on-scroll delay-3">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fas fa-server"></i>
                         </div>
@@ -190,7 +187,7 @@
         </section>
 
         <!-- Cloud & DevOps -->
-        <section class="animate-on-scroll delay-1">
+        <section class="">
             <div class="container">
                 <h2>Cloud Platforms & DevOps</h2>
                 <div class="grid grid-2">
@@ -217,18 +214,18 @@
         </section>
 
         <!-- Specializations -->
-        <section class="animate-on-scroll delay-2">
+        <section class="">
             <div class="container">
                 <h2>Domain Specializations</h2>
                 <div class="grid grid-2">
-                    <div class="card animate-on-scroll delay-1">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fas fa-heartbeat"></i>
                         </div>
                         <h3>Healthcare Analytics</h3>
                         <p>Electronic Health Records (EHR) analysis, clinical data mining, patient outcome prediction, and medical imaging analytics using deep learning.</p>
                     </div>
-                    <div class="card animate-on-scroll delay-2">
+                    <div class="card ">
                         <div class="card-icon">
                             <i class="fas fa-chart-trending-up"></i>
                         </div>
@@ -240,7 +237,7 @@
         </section>
 
         <!-- Tech News & Updates -->
-        <section class="animate-on-scroll delay-4">
+        <section class="">
             <div class="container">
                 <h2>Latest in Tech</h2>
                 <div class="api-widgets-grid">
@@ -266,6 +263,36 @@
     </footer>
     
     <!-- Scripts -->
-    <script src="assets/js/global.js"></script>
+    
+    <!-- Simple Navigation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mobile menu toggle
+            const navToggle = document.querySelector(".nav-toggle");
+            const navMenu = document.querySelector(".nav-menu");
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener("click", function() {
+                    navMenu.classList.toggle("active");
+                    navToggle.classList.toggle("active");
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            const links = document.querySelectorAll("a[href^=\"#\"]");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
