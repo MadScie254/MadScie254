@@ -1,0 +1,104 @@
+{
+  "name": "Daniel Wanjala Machimbo - Data Scientist Portfolio",
+  "short_name": "Daniel Wanjala",
+  "description": "Award-winning Data Scientist & IT Manager portfolio showcasing innovative data science solutions and business intelligence expertise.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0ea5e9",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["portfolio", "data-science", "business", "technology"],
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/screenshot-desktop.jpg",
+      "sizes": "1280x800",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Desktop view of the portfolio"
+    },
+    {
+      "src": "assets/images/screenshot-mobile.jpg",
+      "sizes": "320x640",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Mobile view of the portfolio"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "Browse my data science and technology projects",
+      "url": "/projects.html",
+      "icons": [
+        {
+          "src": "assets/images/icon-projects.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact Me",
+      "short_name": "Contact",
+      "description": "Get in touch for collaborations",
+      "url": "/contact.html",
+      "icons": [
+        {
+          "src": "assets/images/icon-contact.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Blog & Insights",
+      "short_name": "Blog",
+      "description": "Read latest insights and industry news",
+      "url": "/blog.html",
+      "icons": [
+        {
+          "src": "assets/images/icon-blog.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://madscie254.github.io/MadScie254/"
+    }
+  ],
+  "prefer_related_applications": false,
+  "dir": "ltr",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui", "browser"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+  "protocol_handlers": [
+    {
+      "protocol": "mailto",
+      "url": "/contact.html?email=%s"
+    }
+  ]
+}

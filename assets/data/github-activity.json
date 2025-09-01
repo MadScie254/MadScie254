@@ -1,0 +1,147 @@
+{
+  "user": {
+    "login": "MadScie254",
+    "name": "Daniel Wanjala Machimbo",
+    "bio": "Data Scientist & IT Manager | Transforming data into strategic intelligence",
+    "public_repos": 28,
+    "followers": 245,
+    "following": 89,
+    "created_at": "2020-03-15T10:30:00Z",
+    "updated_at": "2025-01-15T08:45:00Z",
+    "location": "Nairobi, Kenya",
+    "blog": "https://blog.danielwanjala.com",
+    "twitter_username": "MadScie254",
+    "company": "Freelance Data Scientist"
+  },
+  "repositories": [
+    {
+      "name": "customer-analytics-dashboard",
+      "description": "Real-time customer analytics platform with ML insights",
+      "language": "Python",
+      "stars": 89,
+      "forks": 23,
+      "created_at": "2024-06-15T09:00:00Z",
+      "updated_at": "2025-01-10T14:30:00Z",
+      "topics": ["data-science", "machine-learning", "analytics", "dashboard", "python"]
+    },
+    {
+      "name": "ml-risk-assessment",
+      "description": "Machine learning system for financial risk assessment",
+      "language": "Python",
+      "stars": 156,
+      "forks": 34,
+      "created_at": "2024-03-20T11:15:00Z",
+      "updated_at": "2025-01-12T16:20:00Z",
+      "topics": ["machine-learning", "fintech", "risk-assessment", "tensorflow", "python"]
+    },
+    {
+      "name": "bi-platform",
+      "description": "Comprehensive business intelligence platform",
+      "language": "TypeScript",
+      "stars": 67,
+      "forks": 18,
+      "created_at": "2024-08-10T13:45:00Z",
+      "updated_at": "2025-01-08T10:15:00Z",
+      "topics": ["business-intelligence", "power-bi", "sql", "azure", "typescript"]
+    },
+    {
+      "name": "fraud-detection-engine",
+      "description": "Real-time fraud detection using ensemble methods",
+      "language": "Python",
+      "stars": 203,
+      "forks": 45,
+      "created_at": "2024-01-18T15:30:00Z",
+      "updated_at": "2025-01-14T12:00:00Z",
+      "topics": ["fraud-detection", "real-time", "kafka", "machine-learning", "ensemble"]
+    },
+    {
+      "name": "nlp-sentiment-analyzer",
+      "description": "Multi-language sentiment analysis pipeline",
+      "language": "Python",
+      "stars": 124,
+      "forks": 28,
+      "created_at": "2024-05-05T08:20:00Z",
+      "updated_at": "2025-01-11T09:45:00Z",
+      "topics": ["nlp", "sentiment-analysis", "transformers", "spacy", "multilingual"]
+    }
+  ],
+  "contributions": {
+    "total_commits_last_year": 1247,
+    "longest_streak": 45,
+    "current_streak": 12,
+    "most_active_day": "Tuesday",
+    "languages": {
+      "Python": 68.5,
+      "TypeScript": 12.3,
+      "SQL": 8.7,
+      "R": 5.2,
+      "JavaScript": 3.8,
+      "Other": 1.5
+    }
+  },
+  "activity": [
+    {
+      "type": "PushEvent",
+      "repo": "MadScie254/customer-analytics-dashboard",
+      "created_at": "2025-01-15T08:30:00Z",
+      "message": "Add real-time customer segmentation features"
+    },
+    {
+      "type": "CreateEvent",
+      "repo": "MadScie254/supply-chain-optimization",
+      "created_at": "2025-01-14T16:45:00Z",
+      "message": "Created new repository for supply chain optimization project"
+    },
+    {
+      "type": "PullRequestEvent",
+      "repo": "MadScie254/ml-risk-assessment",
+      "created_at": "2025-01-13T14:20:00Z",
+      "message": "Merged feature: Enhanced model explainability"
+    },
+    {
+      "type": "IssuesEvent",
+      "repo": "MadScie254/fraud-detection-engine",
+      "created_at": "2025-01-12T11:15:00Z",
+      "message": "Closed issue: Improve latency for real-time predictions"
+    },
+    {
+      "type": "PushEvent",
+      "repo": "MadScie254/bi-platform",
+      "created_at": "2025-01-11T09:30:00Z",
+      "message": "Update dashboard performance optimizations"
+    }
+  ],
+  "skills_demonstrated": [
+    {
+      "skill": "Machine Learning",
+      "repos": 15,
+      "commits": 456,
+      "languages": ["Python", "R"]
+    },
+    {
+      "skill": "Data Engineering",
+      "repos": 8,
+      "commits": 234,
+      "languages": ["Python", "SQL", "TypeScript"]
+    },
+    {
+      "skill": "Business Intelligence",
+      "repos": 5,
+      "commits": 167,
+      "languages": ["SQL", "TypeScript", "Python"]
+    },
+    {
+      "skill": "Web Development",
+      "repos": 6,
+      "commits": 189,
+      "languages": ["TypeScript", "JavaScript", "Python"]
+    }
+  ],
+  "metadata": {
+    "last_updated": "2025-01-15T08:45:00Z",
+    "total_repos": 28,
+    "total_stars": 892,
+    "total_forks": 201,
+    "profile_views_last_month": 1547
+  }
+}

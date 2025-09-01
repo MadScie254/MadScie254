@@ -1,0 +1,112 @@
+{
+  "articles": [
+    {
+      "title": "The Future of Data Science in African Fintech: Opportunities and Challenges",
+      "description": "Exploring how machine learning and AI are revolutionizing financial services across Africa, creating new opportunities for innovation while addressing unique challenges in emerging markets.",
+      "content": "Africa's fintech revolution is being powered by advanced data science techniques that are uniquely suited to the continent's challenges and opportunities. From mobile money innovations to credit scoring for the unbanked, data scientists are at the forefront of financial inclusion efforts.",
+      "image": "assets/images/pexels-tima-miroshnichenko-5380621.jpg",
+      "author": "Daniel Wanjala Machimbo",
+      "publishedAt": "2025-01-15T10:00:00Z",
+      "category": "Fintech",
+      "tags": ["Machine Learning", "Fintech", "Africa", "Financial Inclusion"],
+      "readTime": "8 min read",
+      "url": "blog/future-data-science-african-fintech.html",
+      "featured": true,
+      "source": {
+        "name": "Personal Blog",
+        "url": "https://blog.danielwanjala.com"
+      }
+    },
+    {
+      "title": "Building Scalable Analytics Pipelines: Lessons from Production",
+      "description": "Best practices for designing and implementing data pipelines that can handle massive volumes of real-time data while maintaining reliability and performance.",
+      "content": "In this comprehensive guide, we explore the architectural patterns and technologies that enable data teams to build robust, scalable analytics pipelines. Drawing from real-world production experience, we cover everything from data ingestion to processing and storage.",
+      "image": "assets/images/maxim-berg-kE8-rUKjtQU-unsplash.jpg",
+      "author": "Daniel Wanjala Machimbo",
+      "publishedAt": "2025-01-10T14:30:00Z",
+      "category": "Data Engineering",
+      "tags": ["Data Pipelines", "Apache Kafka", "Real-time Analytics", "Architecture"],
+      "readTime": "12 min read",
+      "url": "blog/scalable-analytics-pipelines.html",
+      "featured": true,
+      "source": {
+        "name": "Personal Blog",
+        "url": "https://blog.danielwanjala.com"
+      }
+    },
+    {
+      "title": "AI Ethics in Business Intelligence: Responsible Data Science",
+      "description": "Discussing the importance of ethical AI practices in business intelligence, addressing bias, fairness, and transparency in data-driven decision making.",
+      "content": "As AI becomes more prevalent in business intelligence, it's crucial to consider the ethical implications of our models and decisions. This article explores frameworks for responsible AI development and implementation.",
+      "image": "assets/images/sharad-bhat-TzWuSdXMWuk-unsplash.jpg",
+      "author": "Daniel Wanjala Machimbo",
+      "publishedAt": "2025-01-05T09:15:00Z",
+      "category": "AI Ethics",
+      "tags": ["AI Ethics", "Business Intelligence", "Bias", "Fairness"],
+      "readTime": "10 min read",
+      "url": "blog/ai-ethics-business-intelligence.html",
+      "featured": true,
+      "source": {
+        "name": "Personal Blog",
+        "url": "https://blog.danielwanjala.com"
+      }
+    },
+    {
+      "title": "Machine Learning Model Deployment at Scale: A Practical Guide",
+      "description": "A comprehensive walkthrough of deploying machine learning models in production environments, covering containerization, monitoring, and continuous integration.",
+      "content": "Moving from prototype to production is one of the biggest challenges in machine learning. This guide provides practical strategies for deploying and maintaining ML models at scale.",
+      "image": "assets/images/thisisengineering-0jTZTMyGym8-unsplash.jpg",
+      "author": "Daniel Wanjala Machimbo",
+      "publishedAt": "2024-12-28T16:45:00Z",
+      "category": "MLOps",
+      "tags": ["MLOps", "Docker", "Kubernetes", "Model Deployment"],
+      "readTime": "15 min read",
+      "url": "blog/ml-model-deployment-scale.html",
+      "featured": false,
+      "source": {
+        "name": "Personal Blog",
+        "url": "https://blog.danielwanjala.com"
+      }
+    },
+    {
+      "title": "The Rise of Real-time Analytics in E-commerce",
+      "description": "How real-time data processing is transforming e-commerce experiences, from personalized recommendations to dynamic pricing strategies.",
+      "content": "E-commerce platforms are increasingly relying on real-time analytics to deliver personalized experiences. We explore the technologies and strategies that make this possible.",
+      "image": "assets/images/chris-yang-1tnS_BVy9Jk-unsplash.jpg",
+      "author": "Daniel Wanjala Machimbo",
+      "publishedAt": "2024-12-20T11:20:00Z",
+      "category": "E-commerce",
+      "tags": ["Real-time Analytics", "E-commerce", "Personalization", "Streaming"],
+      "readTime": "9 min read",
+      "url": "blog/real-time-analytics-ecommerce.html",
+      "featured": false,
+      "source": {
+        "name": "Personal Blog",
+        "url": "https://blog.danielwanjala.com"
+      }
+    },
+    {
+      "title": "Data Visualization Best Practices for Executive Dashboards",
+      "description": "Creating compelling and actionable visualizations for executive decision-making, focusing on clarity, insight, and business impact.",
+      "content": "Executive dashboards require a different approach to data visualization. Learn how to create dashboards that drive decision-making at the highest levels of an organization.",
+      "image": "assets/images/pexels-energepic-com-27411-159888.jpg",
+      "author": "Daniel Wanjala Machimbo",
+      "publishedAt": "2024-12-15T13:00:00Z",
+      "category": "Data Visualization",
+      "tags": ["Data Visualization", "Dashboards", "Executive Reporting", "Power BI"],
+      "readTime": "7 min read",
+      "url": "blog/data-visualization-executive-dashboards.html",
+      "featured": false,
+      "source": {
+        "name": "Personal Blog",
+        "url": "https://blog.danielwanjala.com"
+      }
+    }
+  ],
+  "metadata": {
+    "total": 6,
+    "lastUpdated": "2025-01-15T10:00:00Z",
+    "categories": ["Fintech", "Data Engineering", "AI Ethics", "MLOps", "E-commerce", "Data Visualization"],
+    "source": "Personal blog and industry insights"
+  }
+}
