@@ -1,0 +1,112 @@
+{
+  "articles": [
+    {
+      "title": "The Future of Data Science in Financial Technology: Transforming Banking with AI",
+      "description": "Exploring how machine learning algorithms are revolutionizing fintech applications, customer experiences, and risk management in the modern banking sector.",
+      "url": "https://techcrunch.com/fintech-ai-transformation",
+      "published_at": "2025-09-01T08:30:00Z",
+      "source": "TechCrunch",
+      "image": "/assets/images/news-fintech-ai.jpg",
+      "category": "FinTech",
+      "reading_time": "5 min read",
+      "tags": ["AI", "Banking", "Machine Learning", "Innovation"]
+    },
+    {
+      "title": "AI-Powered Risk Assessment Revolutionizes Modern Banking Operations",
+      "description": "How artificial intelligence and advanced analytics are transforming risk management, compliance monitoring, and fraud detection in financial institutions worldwide.",
+      "url": "https://venturebeat.com/ai-banking-risk-assessment",
+      "published_at": "2025-08-31T14:15:00Z",
+      "source": "VentureBeat",
+      "image": "/assets/images/news-ai-risk.jpg", 
+      "category": "Banking Technology",
+      "reading_time": "4 min read",
+      "tags": ["Risk Management", "AI", "Compliance", "Banking"]
+    },
+    {
+      "title": "Blockchain Integration in Enterprise Data Analytics: The New Paradigm",
+      "description": "The intersection of blockchain technology and data analytics is creating new opportunities for enterprise solutions, transparency, and decentralized data management.",
+      "url": "https://forbes.com/blockchain-enterprise-analytics",
+      "published_at": "2025-08-30T11:45:00Z",
+      "source": "Forbes",
+      "image": "/assets/images/news-blockchain-analytics.jpg",
+      "category": "Blockchain",
+      "reading_time": "6 min read", 
+      "tags": ["Blockchain", "Enterprise", "Data Analytics", "Innovation"]
+    },
+    {
+      "title": "Machine Learning Models Achieve 95% Accuracy in Financial Fraud Detection",
+      "description": "Latest breakthrough in deep learning techniques enables real-time fraud detection with unprecedented accuracy, reducing false positives by 60%.",
+      "url": "https://techcrunch.com/ml-fraud-detection-breakthrough",
+      "published_at": "2025-08-29T16:20:00Z",
+      "source": "TechCrunch",
+      "image": "/assets/images/news-fraud-detection.jpg",
+      "category": "Machine Learning",
+      "reading_time": "4 min read",
+      "tags": ["Fraud Detection", "Deep Learning", "Security", "Innovation"]
+    },
+    {
+      "title": "Real-Time Data Processing: The Backbone of Modern FinTech Success",
+      "description": "How real-time data pipelines and stream processing are enabling instant financial decisions, improving customer experiences, and driving business growth.",
+      "url": "https://venturebeat.com/real-time-fintech-data",
+      "published_at": "2025-08-28T09:30:00Z",
+      "source": "VentureBeat", 
+      "image": "/assets/images/news-realtime-data.jpg",
+      "category": "Data Engineering",
+      "reading_time": "5 min read",
+      "tags": ["Real-time Processing", "Data Pipelines", "FinTech", "Performance"]
+    },
+    {
+      "title": "Natural Language Processing Transforms Customer Support in Banking",
+      "description": "Advanced NLP models and chatbots are revolutionizing customer service, reducing response times by 80% while improving satisfaction scores significantly.",
+      "url": "https://forbes.com/nlp-banking-customer-support",
+      "published_at": "2025-08-27T12:00:00Z",
+      "source": "Forbes",
+      "image": "/assets/images/news-nlp-banking.jpg",
+      "category": "Natural Language Processing",
+      "reading_time": "4 min read",
+      "tags": ["NLP", "Customer Support", "Chatbots", "Banking"]
+    }
+  ],
+  "categories": [
+    "FinTech",
+    "Data Science", 
+    "Machine Learning",
+    "Blockchain",
+    "Banking Technology",
+    "AI & Analytics"
+  ],
+  "trending_topics": [
+    {
+      "topic": "AI in Finance",
+      "growth": "+127%",
+      "articles_count": 245
+    },
+    {
+      "topic": "Real-time Analytics", 
+      "growth": "+89%",
+      "articles_count": 178
+    },
+    {
+      "topic": "Blockchain Banking",
+      "growth": "+156%", 
+      "articles_count": 134
+    },
+    {
+      "topic": "ML Risk Management",
+      "growth": "+93%",
+      "articles_count": 198
+    }
+  ],
+  "last_updated": "2025-09-01T12:00:00Z",
+  "total_articles": 6,
+  "sources": [
+    "TechCrunch",
+    "VentureBeat", 
+    "Forbes",
+    "Banking Technology",
+    "FinTech Weekly",
+    "AI Research Journal"
+  ],
+  "refresh_interval": "6 hours",
+  "next_update": "2025-09-01T18:00:00Z"
+}

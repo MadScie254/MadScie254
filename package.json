@@ -4,9 +4,11 @@
   "description": "Professional portfolio website for Daniel Wanjala Machimbo - Award-winning Data Scientist & IT Manager",
   "main": "index.html",
   "scripts": {
+    "build": "tailwindcss -i ./assets/css/award-winning-tailwind.css -o ./assets/css/tailwind-built.css --minify",
+    "watch": "tailwindcss -i ./assets/css/award-winning-tailwind.css -o ./assets/css/tailwind-built.css --watch",
     "start": "python -m http.server 8000",
     "serve": "python -m http.server 8000",
-    "test": "echo 'No tests specified' && exit 0",
+    "test": "lighthouse http://localhost:8000 && pa11y http://localhost:8000",
     "lint": "echo 'No linting configured' && exit 0"
   },
   "repository": {
