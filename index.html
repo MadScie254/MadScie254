@@ -559,63 +559,488 @@
             <p class="text-center text-[var(--text-secondary)] mb-12 max-w-[70ch] mx-auto animate-on-scroll">
                 My work is a testament to the synthesis of deep technical expertise and strategic business insight. These featured projects demonstrate how I approach complex, real-world problems by building robust, data-centric solutions. Each one represents a unique challenge solved with analytical rigor and meticulous engineering.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
-                <!-- Project Card 1 (Mock Data) -->
+
+            <!-- GitHub Stats Summary -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16 animate-on-scroll">
+                <div class="card glassmorphism p-6 text-center glow-effect">
+                    <div class="text-3xl font-bold mb-2 text-[var(--accent)]" data-github-stat="repos">117</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Repositories</p>
+                </div>
+                <div class="card glassmorphism p-6 text-center glow-effect">
+                    <div class="text-3xl font-bold mb-2 text-[var(--accent)]" data-github-languages="python">75%</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Python/ML Focus</p>
+                </div>
+                <div class="card glassmorphism p-6 text-center glow-effect">
+                    <div class="text-3xl font-bold mb-2 text-[var(--accent)]" data-github-contributions="2025">250+</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">2025 Contributions</p>
+                </div>
+                <div class="card glassmorphism p-6 text-center glow-effect">
+                    <div class="text-3xl font-bold mb-2 text-[var(--accent)]">Open Source</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">MIT Licensed</p>
+                </div>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll" id="featured-projects">
+                <!-- Project Card 1: Sentiment Analysis Dashboard -->
                 <div class="card morphing-card glow-effect">
-                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+1" alt="Screenshot of a project dashboard with charts and data visualizations" loading="lazy" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-gradient">Automated Fraud Detection for Fintech</h3>
+                    <div class="relative mb-4">
+                        <img src="https://madscie254.github.io/MadScie254/assets/project-sentiment.jpg" alt="Sentiment Analysis Dashboard Interface" loading="lazy" class="rounded-lg w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/2D3748/A0AEC0?text=Sentiment+Analysis'">
+                        <div class="absolute top-3 right-3 bg-[var(--surface-1)]/90 rounded-full px-3 py-1 text-xs font-medium">
+                            Live Demo
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gradient">Sentiment Analysis Dashboard</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
-                        A machine learning model and backend system to identify fraudulent transactions in real-time with high precision and recall.
+                        Real-time sentiment analysis system processing social media streams with advanced NLP models. Features comprehensive metadata extraction and interactive visualization dashboard.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">ML/AI</span>
                         <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Python</span>
-                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">AWS</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">NLP</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Dashboard</span>
                     </div>
-                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
-                        Read the deep dive
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
+                    <a href="https://github.com/MadScie254/sentiment_analysis" target="_blank" rel="noopener" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
+                        View on GitHub
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link transition-transform group-hover:translate-x-1"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                     </a>
                 </div>
 
-                <!-- Project Card 2 (Mock Data) -->
+                <!-- Project Card 2: Investment Predictor -->
                 <div class="card morphing-card glow-effect">
-                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+2" alt="Screenshot of a patient analytics dashboard for healthcare operations" loading="lazy" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-gradient">Patient Lifetime Value Prediction</h3>
+                    <div class="relative mb-4">
+                        <img src="https://madscie254.github.io/MadScie254/assets/project-invest.jpg" alt="Investment Prediction Analytics Platform" loading="lazy" class="rounded-lg w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/2D3748/A0AEC0?text=InvestWise+AI'">
+                        <div class="absolute top-3 right-3 bg-[var(--surface-1)]/90 rounded-full px-3 py-1 text-xs font-medium">
+                            ML Model
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gradient">InvestWise AI Predictor</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
-                        Developed a predictive model to forecast patient retention and lifetime value, enabling targeted marketing and resource allocation.
+                        Neural network-powered investment advisory system analyzing market patterns and regional business opportunities. Provides data-driven recommendations for venture capital decisions.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Healthcare</span>
-                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Data Viz</span>
-                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Python</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">TensorFlow</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">FinTech</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">API</span>
                     </div>
-                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
-                        Read the deep dive
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
+                    <a href="https://github.com/MadScie254/InvestWise-Predictor" target="_blank" rel="noopener" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
+                        View on GitHub
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link transition-transform group-hover:translate-x-1"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                     </a>
                 </div>
 
-                <!-- Project Card 3 (Mock Data) -->
+                <!-- Project Card 3: EconoNet -->
                 <div class="card morphing-card glow-effect">
-                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+3" alt="Screenshot of an IT infrastructure diagram with multiple servers" loading="lazy" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-gradient">Automated CI/CD Pipeline for ML Ops</h3>
+                    <div class="relative mb-4">
+                        <img src="https://madscie254.github.io/MadScie254/assets/project-econet.jpg" alt="Economic Network Analysis Visualization" loading="lazy" class="rounded-lg w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/2D3748/A0AEC0?text=EconoNet'">
+                        <div class="absolute top-3 right-3 bg-[var(--surface-1)]/90 rounded-full px-3 py-1 text-xs font-medium">
+                            Research
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gradient">EconoNet Analysis Platform</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
-                        Engineered a fully automated CI/CD pipeline to streamline the deployment of machine learning models into production environments.
+                        Comprehensive economic network analysis toolkit for modeling complex financial relationships and market dynamics using advanced graph theory and machine learning.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">DevOps</span>
-                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Cloud</span>
-                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Terraform</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Network Analysis</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Economics</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Jupyter</span>
                     </div>
-                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
-                        Read the deep dive
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
+                    <a href="https://github.com/MadScie254/EconoNet" target="_blank" rel="noopener" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
+                        View on GitHub
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link transition-transform group-hover:translate-x-1"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional Projects -->
+            <div class="mt-12 text-center animate-on-scroll">
+                <h3 class="text-xl font-semibold mb-6 text-gradient">More Projects</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="additional-projects">
+                    <!-- These will be populated by JavaScript from GitHub API -->
+                </div>
+                <div class="mt-8">
+                    <a href="https://github.com/MadScie254?tab=repositories" target="_blank" rel="noopener" class="btn btn-secondary magnetic-hover glow-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        View All Repositories
                     </a>
                 </div>
             </div>
         </section>
-        
+        <!-- Nlog Section -->
+        <section id="nlog" class="container">
+            <h2 class="text-3xl font-bold mb-10 text-center animate-on-scroll text-gradient">Nlog</h2>
+            <p class="text-center text-[var(--text-secondary)] mb-12 max-w-[70ch] mx-auto animate-on-scroll">
+                A curated synthesis of emerging patterns in data science, fintech innovation, and technical infrastructure. Each article represents deep analysis of market trends, technical breakthroughs, and strategic insights from the intersection of technology and business.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 animate-on-scroll">
+                <!-- Main Articles Feed -->
+                <div class="lg:col-span-2">
+                    <div class="space-y-8" id="nlog-articles">
+                        <!-- Dynamic content loaded from DEV.to API -->
+                        <div class="card glassmorphism p-6 glow-effect">
+                            <div class="animate-pulse">
+                                <div class="h-4 bg-[var(--surface-2)] rounded w-3/4 mb-4"></div>
+                                <div class="h-3 bg-[var(--surface-2)] rounded w-full mb-2"></div>
+                                <div class="h-3 bg-[var(--surface-2)] rounded w-5/6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <a href="https://dev.to/madscie254" target="_blank" rel="noopener" class="btn btn-secondary magnetic-hover glow-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                            Read More Articles
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sidebar with Market Insights -->
+                <div class="space-y-8">
+                    <!-- Market Pulse -->
+                    <div class="card glassmorphism p-6 glow-effect">
+                        <h3 class="text-lg font-semibold mb-4 text-gradient flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 2.52l-1.35 4.87a1 1 0 0 1-1.93-.01L9.35 9.85a1 1 0 0 0-1.93.01L5.96 14H2"/></svg>
+                            Market Pulse
+                        </h3>
+                        <div id="market-data" class="space-y-3">
+                            <!-- Dynamic market data -->
+                            <div class="animate-pulse">
+                                <div class="h-3 bg-[var(--surface-2)] rounded w-full mb-2"></div>
+                                <div class="h-3 bg-[var(--surface-2)] rounded w-3/4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Trends -->
+                    <div class="card glassmorphism p-6 glow-effect">
+                        <h3 class="text-lg font-semibold mb-4 text-gradient flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/></svg>
+                            Tech Trends
+                        </h3>
+                        <div id="tech-news" class="space-y-3">
+                            <!-- Dynamic tech news from Hacker News -->
+                            <div class="animate-pulse">
+                                <div class="h-3 bg-[var(--surface-2)] rounded w-full mb-2"></div>
+                                <div class="h-3 bg-[var(--surface-2)] rounded w-2/3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reading List -->
+                    <div class="card glassmorphism p-6 glow-effect">
+                        <h3 class="text-lg font-semibold mb-4 text-gradient flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                            Current Reading
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="border-l-2 border-[var(--accent)] pl-3">
+                                <p class="font-medium text-[var(--text-primary)]">Deep Learning Patterns</p>
+                                <p class="text-[var(--text-secondary)]">Advanced architectural patterns for production ML systems</p>
+                            </div>
+                            <div class="border-l-2 border-[var(--surface-2)] pl-3">
+                                <p class="font-medium text-[var(--text-primary)]">Distributed Systems Design</p>
+                                <p class="text-[var(--text-secondary)]">Scalability patterns for high-throughput data processing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Portfolio Section -->
+        <section id="innovation" class="container">
+            <h2 class="text-3xl font-bold mb-10 text-center animate-on-scroll text-gradient">Innovation Portfolio</h2>
+            <p class="text-center text-[var(--text-secondary)] mb-12 max-w-[70ch] mx-auto animate-on-scroll">
+                A systematic approach to innovation through rapid prototyping, experimental methodologies, and strategic technology adoption. These initiatives demonstrate my commitment to pushing the boundaries of what's possible at the intersection of data science and business strategy.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate-on-scroll">
+                <!-- Research & Development -->
+                <div class="card glassmorphism p-8 glow-effect">
+                    <div class="w-16 h-16 rounded-full bg-[var(--accent)]/20 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flask-conical"><path d="M10 2v7.31a2 2 0 0 1-.6 1.44L4 16h16l-5.4-5.25A2 2 0 0 1 14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10l-1 3H8l-1-3z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gradient">R&D Initiatives</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-2 border-[var(--accent)] pl-4">
+                            <h4 class="font-medium text-[var(--text-primary)] mb-1">Autonomous Investment Advisory</h4>
+                            <p class="text-sm text-[var(--text-secondary)]">Neural network ensemble for real-time market analysis and investment recommendations</p>
+                        </div>
+                        <div class="border-l-2 border-[var(--surface-2)] pl-4">
+                            <h4 class="font-medium text-[var(--text-primary)] mb-1">Predictive Healthcare Analytics</h4>
+                            <p class="text-sm text-[var(--text-secondary)]">ML models for patient outcome prediction and resource optimization</p>
+                        </div>
+                        <div class="border-l-2 border-[var(--surface-2)] pl-4">
+                            <h4 class="font-medium text-[var(--text-primary)] mb-1">Infrastructure Auto-scaling</h4>
+                            <p class="text-sm text-[var(--text-secondary)]">Intelligent cloud resource management using predictive algorithms</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Stack Innovation -->
+                <div class="card glassmorphism p-8 glow-effect">
+                    <div class="w-16 h-16 rounded-full bg-[var(--accent)]/20 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gradient">Technology Integration</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-2 border-[var(--accent)] pl-4">
+                            <h4 class="font-medium text-[var(--text-primary)] mb-1">Edge Computing ML</h4>
+                            <p class="text-sm text-[var(--text-secondary)]">Deploying lightweight ML models for real-time inference at edge nodes</p>
+                        </div>
+                        <div class="border-l-2 border-[var(--surface-2)] pl-4">
+                            <h4 class="font-medium text-[var(--text-primary)] mb-1">Federated Learning Systems</h4>
+                            <p class="text-sm text-[var(--text-secondary)]">Privacy-preserving distributed machine learning architectures</p>
+                        </div>
+                        <div class="border-l-2 border-[var(--surface-2)] pl-4">
+                            <h4 class="font-medium text-[var(--text-primary)] mb-1">Quantum-Ready Algorithms</h4>
+                            <p class="text-sm text-[var(--text-secondary)]">Preparing optimization algorithms for quantum computing integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Mastery Section -->
+        <section id="technical-mastery" class="container">
+            <h2 class="text-3xl font-bold mb-10 text-center animate-on-scroll text-gradient">Technical Mastery</h2>
+            <p class="text-center text-[var(--text-secondary)] mb-12 max-w-[70ch] mx-auto animate-on-scroll">
+                A comprehensive foundation built through rigorous application of engineering principles, continuous learning, and deep specialization across the full technology stack. My expertise spans from theoretical foundations to production-scale implementation.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 animate-on-scroll">
+                <!-- Technical Skills Matrix -->
+                <div class="space-y-8">
+                    <div class="card glassmorphism p-6 glow-effect">
+                        <h3 class="text-xl font-semibold mb-6 text-gradient">Data Science & ML Stack</h3>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Python Ecosystem</span>
+                                    <span class="text-sm text-[var(--text-secondary)]">Expert</span>
+                                </div>
+                                <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
+                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">TensorFlow/PyTorch</span>
+                                    <span class="text-sm text-[var(--text-secondary)]">Advanced</span>
+                                </div>
+                                <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
+                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Statistical Modeling</span>
+                                    <span class="text-sm text-[var(--text-secondary)]">Expert</span>
+                                </div>
+                                <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
+                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">MLOps & Deployment</span>
+                                    <span class="text-sm text-[var(--text-secondary)]">Advanced</span>
+                                </div>
+                                <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
+                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card glassmorphism p-6 glow-effect">
+                        <h3 class="text-xl font-semibold mb-6 text-gradient">Infrastructure & DevOps</h3>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Cloud Platforms (AWS/Azure)</span>
+                                    <span class="text-sm text-[var(--text-secondary)]">Expert</span>
+                                </div>
+                                <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
+                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Docker/Kubernetes</span>
+                                    <span class="text-sm text-[var(--text-secondary)]">Advanced</span>
+                                </div>
+                                <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
+                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">CI/CD Pipelines</span>
+                                    <span class="text-sm text-[var(--text-secondary)]">Expert</span>
+                                </div>
+                                <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
+                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Infrastructure as Code</span>
+                                    <span class="text-sm text-[var(--text-secondary)]">Advanced</span>
+                                </div>
+                                <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
+                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 86%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements & Certifications -->
+                <div class="space-y-8">
+                    <div class="card glassmorphism p-6 glow-effect">
+                        <h3 class="text-xl font-semibold mb-6 text-gradient">GitHub Achievements</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-[var(--surface-1)] rounded-lg">
+                                <div class="text-2xl mb-2">🎯</div>
+                                <div class="text-sm font-medium">Pair Extraordinaire</div>
+                            </div>
+                            <div class="text-center p-4 bg-[var(--surface-1)] rounded-lg">
+                                <div class="text-2xl mb-2">🚀</div>
+                                <div class="text-sm font-medium">YOLO</div>
+                            </div>
+                            <div class="text-center p-4 bg-[var(--surface-1)] rounded-lg">
+                                <div class="text-2xl mb-2">🦈</div>
+                                <div class="text-sm font-medium">Pull Shark x2</div>
+                            </div>
+                            <div class="text-center p-4 bg-[var(--surface-1)] rounded-lg">
+                                <div class="text-2xl mb-2">⚡</div>
+                                <div class="text-sm font-medium">Quickdraw</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card glassmorphism p-6 glow-effect">
+                        <h3 class="text-xl font-semibold mb-6 text-gradient">Professional Credentials</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3 p-3 bg-[var(--surface-1)] rounded-lg">
+                                <div class="w-10 h-10 rounded-full bg-[var(--accent)]/20 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium">GitHub Developer Program</div>
+                                    <div class="text-sm text-[var(--text-secondary)]">Member • PRO Level</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-[var(--surface-1)] rounded-lg">
+                                <div class="w-10 h-10 rounded-full bg-[var(--accent)]/20 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Data Science Specialization</div>
+                                    <div class="text-sm text-[var(--text-secondary)]">Advanced Analytics & ML</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-[var(--surface-1)] rounded-lg">
+                                <div class="w-10 h-10 rounded-full bg-[var(--accent)]/20 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium">@Danco-Analytics</div>
+                                    <div class="text-sm text-[var(--text-secondary)]">Technical Analyst • 4+ Years</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect & Collaborate Section -->
+        <section id="connect" class="container">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-10 animate-on-scroll text-gradient">Connect & Collaborate</h2>
+                <p class="text-[var(--text-secondary)] mb-12 max-w-[70ch] mx-auto animate-on-scroll">
+                    Ready to build something exceptional? I'm always interested in discussing complex technical challenges, exploring innovative solutions, and collaborating with forward-thinking organizations that value analytical rigor and strategic impact.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 animate-on-scroll">
+                    <!-- Contact Options -->
+                    <div class="card glassmorphism p-8 glow-effect">
+                        <h3 class="text-xl font-semibold mb-6 text-gradient">Professional Channels</h3>
+                        <div class="space-y-4">
+                            <a href="https://www.linkedin.com/in/daniel-wanjala-912b8b17b" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 bg-[var(--surface-1)] rounded-lg hover:bg-[var(--surface-2)] transition-colors magnetic-hover">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                <div class="text-left">
+                                    <div class="font-medium">LinkedIn</div>
+                                    <div class="text-sm text-[var(--text-secondary)]">Professional networking</div>
+                                </div>
+                            </a>
+                            <a href="https://github.com/MadScie254" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 bg-[var(--surface-1)] rounded-lg hover:bg-[var(--surface-2)] transition-colors magnetic-hover">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                <div class="text-left">
+                                    <div class="font-medium">GitHub</div>
+                                    <div class="text-sm text-[var(--text-secondary)]">Code repositories & projects</div>
+                                </div>
+                            </a>
+                            <a href="https://orcid.org/0009-0005-1979-8555" target="_blank" rel="noopener" class="flex items-center gap-3 p-3 bg-[var(--surface-1)] rounded-lg hover:bg-[var(--surface-2)] transition-colors magnetic-hover">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-check"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16,11 18,13 22,9"/></svg>
+                                <div class="text-left">
+                                    <div class="font-medium">ORCID</div>
+                                    <div class="text-sm text-[var(--text-secondary)]">Research & publications</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Collaboration Interests -->
+                    <div class="card glassmorphism p-8 glow-effect">
+                        <h3 class="text-xl font-semibold mb-6 text-gradient">Collaboration Interests</h3>
+                        <div class="space-y-4 text-left">
+                            <div class="border-l-2 border-[var(--accent)] pl-4">
+                                <h4 class="font-medium text-[var(--text-primary)] mb-1">Data Strategy Consulting</h4>
+                                <p class="text-sm text-[var(--text-secondary)]">Strategic data architecture and analytics roadmap development</p>
+                            </div>
+                            <div class="border-l-2 border-[var(--surface-2)] pl-4">
+                                <h4 class="font-medium text-[var(--text-primary)] mb-1">ML System Design</h4>
+                                <p class="text-sm text-[var(--text-secondary)]">End-to-end machine learning pipeline development and deployment</p>
+                            </div>
+                            <div class="border-l-2 border-[var(--surface-2)] pl-4">
+                                <h4 class="font-medium text-[var(--text-primary)] mb-1">Research Partnerships</h4>
+                                <p class="text-sm text-[var(--text-secondary)]">Applied research in fintech, healthcare analytics, and infrastructure optimization</p>
+                            </div>
+                            <div class="border-l-2 border-[var(--surface-2)] pl-4">
+                                <h4 class="font-medium text-[var(--text-primary)] mb-1">Technical Leadership</h4>
+                                <p class="text-sm text-[var(--text-secondary)]">Leading cross-functional teams on complex technical initiatives</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <div class="card glassmorphism p-8 glow-effect">
+                        <p class="text-lg text-[var(--text-secondary)] mb-6 italic">
+                            "Excellence is not a destination; it is a continuous journey that never ends."
+                        </p>
+                        <p class="text-[var(--text-secondary)] mb-8">
+                            Based in Nairobi, Kenya • Available for remote collaboration worldwide
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="mailto:contact@madscie254.dev" class="btn btn-primary magnetic-hover glow-effect ripple-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+                                Start a Conversation
+                            </a>
+                            <a href="https://madscie254.github.io/MadScie254/assets/cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary magnetic-hover glow-effect ripple-effect">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                                Download Full CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Manifesto/Principles Section -->
         <section id="principles" class="container">
             <div class="card glassmorphism p-12 text-center max-w-4xl mx-auto animate-on-scroll glow-effect floating-element">
@@ -640,24 +1065,28 @@
             <div>
                 <h4 class="font-bold text-[var(--text-primary)] mb-4">Sitemap</h4>
                 <ul class="text-sm space-y-2">
-                    <li><a href="index.html" class="hover:text-[var(--accent)]">Home</a></li>
-                    <li><a href="about.html" class="hover:text-[var(--accent)]">About</a></li>
-                    <li><a href="projects.html" class="hover:text-[var(--accent)]">Projects</a></li>
-                    <li><a href="nlog.html" class="hover:text-[var(--accent)]">Nlog</a></li>
+                    <li><a href="#home" class="hover:text-[var(--accent)]">Home</a></li>
+                    <li><a href="#about" class="hover:text-[var(--accent)]">About</a></li>
+                    <li><a href="#projects" class="hover:text-[var(--accent)]">Projects</a></li>
+                    <li><a href="#nlog" class="hover:text-[var(--accent)]">Nlog</a></li>
+                    <li><a href="#innovation" class="hover:text-[var(--accent)]">Innovation Portfolio</a></li>
+                    <li><a href="#technical-mastery" class="hover:text-[var(--accent)]">Technical Mastery</a></li>
+                    <li><a href="#connect" class="hover:text-[var(--accent)]">Connect & Collaborate</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="font-bold text-[var(--text-primary)] mb-4">Links</h4>
                 <ul class="text-sm space-y-2">
-                    <li><a href="#" class="hover:text-[var(--accent)]">GitHub</a></li>
-                    <li><a href="#" class="hover:text-[var(--accent)]">LinkedIn</a></li>
-                    <li><a href="#" class="hover:text-[var(--accent)]">Twitter</a></li>
+                    <li><a href="https://github.com/MadScie254" target="_blank" rel="noopener" class="hover:text-[var(--accent)]">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/daniel-wanjala-912b8b17b" target="_blank" rel="noopener" class="hover:text-[var(--accent)]">LinkedIn</a></li>
+                    <li><a href="https://orcid.org/0009-0005-1979-8555" target="_blank" rel="noopener" class="hover:text-[var(--accent)]">ORCID</a></li>
+                    <li><a href="https://dev.to/madscie254" target="_blank" rel="noopener" class="hover:text-[var(--accent)]">DEV Community</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="font-bold text-[var(--text-primary)] mb-4">Connect</h4>
                 <p class="text-sm mb-4">Ready to build something impactful? Let's connect and collaborate.</p>
-                <a href="connect.html" class="btn btn-primary text-sm">
+                <a href="#connect" class="btn btn-primary text-sm">
                     Connect & Collaborate
                 </a>
             </div>
