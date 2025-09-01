@@ -508,9 +508,20 @@
     <!-- Sticky Nav Bar -->
     <header class="sticky top-0 z-50 py-4 glassmorphism border-b border-[var(--surface-2)]">
         <nav class="container flex justify-between items-center">
-            <a href="index.html" class="font-bold text-xl text-[var(--accent)] magnetic-hover">
-                MadScie254
+            <a href="index.html" class="font-bold text-xl text-[var(--accent)] magnetic-hover flex items-center gap-2">
+                <img src="https://madscie254.github.io/MadScie254/assets/logo.png" alt="MadScie254 Logo" class="h-8 w-auto" onerror="this.style.display='none';">
+                <span>MadScie254</span>
             </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-[var(--surface-2)] transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </button>
+            
             <div class="hidden md:flex items-center gap-8 text-[var(--text-secondary)]">
                 <a href="#home" class="nav-item relative font-medium text-[var(--accent)] before:scale-x-100 magnetic-hover">Home</a>
                 <a href="#about" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors magnetic-hover">About</a>
@@ -530,6 +541,19 @@
                 </svg>
             </button>
         </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-[var(--surface-1)] border-t border-[var(--surface-2)] mt-4 pt-4">
+            <div class="container flex flex-col space-y-4">
+                <a href="#home" class="nav-item text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors py-2">Home</a>
+                <a href="#about" class="nav-item text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors py-2">About</a>
+                <a href="#projects" class="nav-item text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors py-2">Projects</a>
+                <a href="#nlog" class="nav-item text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors py-2">Nlog</a>
+                <a href="#innovation" class="nav-item text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors py-2">Innovation</a>
+                <a href="#technical-mastery" class="nav-item text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors py-2">Technical</a>
+                <a href="#connect" class="nav-item text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors py-2">Connect</a>
+            </div>
+        </div>
     </header>
 
     <main id="main-content" class="space-y-32 py-16">
@@ -559,7 +583,7 @@
             </div>
             <div class="relative flex justify-center items-center p-4 sm:p-8 hero-image-wrap floating-element">
                 <div class="hero-image w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden glow-effect">
-                    <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="A profile photo of MadScie254, a data scientist and IT manager" loading="eager" class="w-full h-full object-cover">
+                    <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="Daniel Wanjala (MadScie254) - Data Scientist and IT Manager" loading="eager" class="w-full h-full object-cover">
                 </div>
             </div>
             
@@ -834,14 +858,113 @@
                 <!-- Main Articles Feed -->
                 <div class="lg:col-span-2">
                     <div class="space-y-8" id="nlog-articles">
-                        <!-- Dynamic content loaded from DEV.to API -->
-                        <div class="card glassmorphism p-6 glow-effect">
-                            <div class="animate-pulse">
-                                <div class="h-4 bg-[var(--surface-2)] rounded w-3/4 mb-4"></div>
-                                <div class="h-3 bg-[var(--surface-2)] rounded w-full mb-2"></div>
-                                <div class="h-3 bg-[var(--surface-2)] rounded w-5/6"></div>
+                        <!-- Featured LinkedIn Articles -->
+                        <article class="card glassmorphism p-6 glow-effect">
+                            <div class="flex items-start gap-4">
+                                <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="Daniel Wanjala" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-lg mb-2 text-gradient">
+                                        <a href="https://www.linkedin.com/pulse/kenyas-future-might-written-code-right-now-were-our-downfall-wanjala-gzaef/" target="_blank" rel="noopener" class="hover:text-[var(--accent-400)] transition-colors">
+                                            Kenya's Future Might Be Written in Code, But Right Now, We're Our Own Downfall
+                                        </a>
+                                    </h3>
+                                    <p class="text-[var(--text-secondary)] text-sm mb-3">
+                                        A critical analysis of Kenya's digital transformation journey, examining the challenges and opportunities in our technology adoption landscape. Exploring how policy, infrastructure, and mindset shape our digital future.
+                                    </p>
+                                    <div class="flex items-center gap-4 text-xs text-[var(--text-secondary)]">
+                                        <span>By Daniel Wanjala</span>
+                                        <span>LinkedIn Article</span>
+                                        <span class="flex items-center gap-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart">
+                                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
+                                            </svg>
+                                            Policy & Tech
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mt-3">
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#DigitalTransformation</span>
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#Kenya</span>
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#TechPolicy</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </article>
+
+                        <article class="card glassmorphism p-6 glow-effect">
+                            <div class="flex items-start gap-4">
+                                <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="Daniel Wanjala" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-lg mb-2 text-gradient">
+                                        <a href="https://www.linkedin.com/pulse/logarithms-algorithms-invisible-engines-ai-data-science-wanjala-u9qgf/" target="_blank" rel="noopener" class="hover:text-[var(--accent-400)] transition-colors">
+                                            Logarithms to Algorithms: The Invisible Engines of AI and Data Science
+                                        </a>
+                                    </h3>
+                                    <p class="text-[var(--text-secondary)] text-sm mb-3">
+                                        Deep dive into the mathematical foundations that power modern AI systems. From basic logarithmic principles to complex algorithmic implementations in machine learning and data science.
+                                    </p>
+                                    <div class="flex items-center gap-4 text-xs text-[var(--text-secondary)]">
+                                        <span>By Daniel Wanjala</span>
+                                        <span>LinkedIn Article</span>
+                                        <span class="flex items-center gap-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit">
+                                                <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+                                                <path d="M9 13a4.5 4.5 0 0 0 3-4"/>
+                                                <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/>
+                                                <path d="M3.477 10.896a4 4 0 0 1 .585-.396"/>
+                                                <path d="M6 18a4 4 0 0 1-1.967-.516"/>
+                                                <path d="M12 13h4"/>
+                                                <path d="M12 18h6a2 2 0 0 1 2 2v1"/>
+                                                <path d="M12 8h8"/>
+                                                <path d="M16 8V5a2 2 0 0 1 2-2"/>
+                                                <circle cx="16" cy="13" r=".5"/>
+                                                <circle cx="18" cy="3" r=".5"/>
+                                                <circle cx="20" cy="21" r=".5"/>
+                                                <circle cx="20" cy="8" r=".5"/>
+                                            </svg>
+                                            AI Fundamentals
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mt-3">
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#Mathematics</span>
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#AI</span>
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#DataScience</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card glassmorphism p-6 glow-effect">
+                            <div class="flex items-start gap-4">
+                                <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="Daniel Wanjala" class="w-12 h-12 rounded-full object-cover">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-lg mb-2 text-gradient">
+                                        <a href="https://www.linkedin.com/pulse/from-excel-neural-networks-my-journey-data-science-daniel-wanjala-s6vjf/" target="_blank" rel="noopener" class="hover:text-[var(--accent-400)] transition-colors">
+                                            From Excel to Neural Networks: My Journey into Data Science
+                                        </a>
+                                    </h3>
+                                    <p class="text-[var(--text-secondary)] text-sm mb-3">
+                                        A personal journey through the evolution of data analysis tools and methodologies. From spreadsheet formulas to sophisticated neural network architectures, exploring the transformation of data science.
+                                    </p>
+                                    <div class="flex items-center gap-4 text-xs text-[var(--text-secondary)]">
+                                        <span>By Daniel Wanjala</span>
+                                        <span>LinkedIn Article</span>
+                                        <span class="flex items-center gap-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-route">
+                                                <circle cx="6" cy="19" r="3"/>
+                                                <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+                                                <circle cx="18" cy="5" r="3"/>
+                                            </svg>
+                                            Career Journey
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mt-3">
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#CareerJourney</span>
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#DataScience</span>
+                                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#MachineLearning</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                     
                     <div class="mt-8 text-center">
@@ -931,14 +1054,38 @@
                         <div class="border-l-2 border-[var(--accent)] pl-4">
                             <h4 class="font-medium text-[var(--text-primary)] mb-1">Autonomous Investment Advisory</h4>
                             <p class="text-sm text-[var(--text-secondary)]">Neural network ensemble for real-time market analysis and investment recommendations</p>
+                            <a href="https://www.linkedin.com/pulse/fintech-revolution-how-ai-machine-learning-transforming-wanjala-jtyqf/" target="_blank" rel="noopener" class="text-xs text-[var(--accent-400)] hover:text-[var(--accent-500)] flex items-center gap-1 mt-2 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14 21 3"/>
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                </svg>
+                                FinTech AI Revolution
+                            </a>
                         </div>
                         <div class="border-l-2 border-[var(--surface-2)] pl-4">
                             <h4 class="font-medium text-[var(--text-primary)] mb-1">Predictive Healthcare Analytics</h4>
                             <p class="text-sm text-[var(--text-secondary)]">ML models for patient outcome prediction and resource optimization</p>
+                            <a href="https://www.linkedin.com/pulse/mental-health-data-how-ai-machine-learning-unlocking-wanjala-cksof/" target="_blank" rel="noopener" class="text-xs text-[var(--accent-400)] hover:text-[var(--accent-500)] flex items-center gap-1 mt-2 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14 21 3"/>
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                </svg>
+                                AI for Mental Health
+                            </a>
                         </div>
                         <div class="border-l-2 border-[var(--surface-2)] pl-4">
                             <h4 class="font-medium text-[var(--text-primary)] mb-1">Infrastructure Auto-scaling</h4>
                             <p class="text-sm text-[var(--text-secondary)]">Intelligent cloud resource management using predictive algorithms</p>
+                            <a href="https://www.linkedin.com/pulse/algorithms-everywhere-how-machine-learning-quietly-running-wanjala-sxz5f/" target="_blank" rel="noopener" class="text-xs text-[var(--accent-400)] hover:text-[var(--accent-500)] flex items-center gap-1 mt-2 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14 21 3"/>
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                </svg>
+                                ML Everywhere
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -953,16 +1100,106 @@
                         <div class="border-l-2 border-[var(--accent)] pl-4">
                             <h4 class="font-medium text-[var(--text-primary)] mb-1">Edge Computing ML</h4>
                             <p class="text-sm text-[var(--text-secondary)]">Deploying lightweight ML models for real-time inference at edge nodes</p>
+                            <a href="https://www.linkedin.com/pulse/edge-computing-game-changer-why-processing-moving-closer-wanjala-oe6nf/" target="_blank" rel="noopener" class="text-xs text-[var(--accent-400)] hover:text-[var(--accent-500)] flex items-center gap-1 mt-2 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14 21 3"/>
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                </svg>
+                                Edge Computing Revolution
+                            </a>
                         </div>
                         <div class="border-l-2 border-[var(--surface-2)] pl-4">
                             <h4 class="font-medium text-[var(--text-primary)] mb-1">Federated Learning Systems</h4>
                             <p class="text-sm text-[var(--text-secondary)]">Privacy-preserving distributed machine learning architectures</p>
+                            <a href="https://www.linkedin.com/pulse/data-privacy-paradox-how-federated-learning-solving-wanjala-ijeef/" target="_blank" rel="noopener" class="text-xs text-[var(--accent-400)] hover:text-[var(--accent-500)] flex items-center gap-1 mt-2 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14 21 3"/>
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                </svg>
+                                Privacy & Federated Learning
+                            </a>
                         </div>
                         <div class="border-l-2 border-[var(--surface-2)] pl-4">
                             <h4 class="font-medium text-[var(--text-primary)] mb-1">Quantum-Ready Algorithms</h4>
                             <p class="text-sm text-[var(--text-secondary)]">Preparing optimization algorithms for quantum computing integration</p>
+                            <a href="https://www.linkedin.com/pulse/quantum-computing-closer-than-you-think-what-means-future-wanjala-l2azf/" target="_blank" rel="noopener" class="text-xs text-[var(--accent-400)] hover:text-[var(--accent-500)] flex items-center gap-1 mt-2 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link">
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14 21 3"/>
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                </svg>
+                                Quantum Computing Future
+                            </a>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Featured Innovation Articles -->
+            <div class="mt-16 animate-on-scroll">
+                <h3 class="text-2xl font-bold mb-8 text-center text-gradient">Innovation Insights</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="card glassmorphism p-6 glow-effect">
+                        <div class="flex items-start gap-4">
+                            <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="Daniel Wanjala" class="w-12 h-12 rounded-full object-cover">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2">
+                                    <a href="https://www.linkedin.com/pulse/virtual-reality-from-gaming-gimmick-serious-business-tool-wanjala-jwsnf/" target="_blank" rel="noopener" class="hover:text-[var(--accent-400)] transition-colors">
+                                        Virtual Reality: From Gaming Gimmick to Serious Business Tool
+                                    </a>
+                                </h4>
+                                <p class="text-[var(--text-secondary)] text-sm mb-3">
+                                    Exploring VR's transformation from entertainment to enterprise applications, training, and collaboration.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#VR</span>
+                                    <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#Enterprise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card glassmorphism p-6 glow-effect">
+                        <div class="flex items-start gap-4">
+                            <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="Daniel Wanjala" class="w-12 h-12 rounded-full object-cover">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2">
+                                    <a href="https://www.linkedin.com/pulse/blockchain-beyond-crypto-how-distributed-ledgers-fixing-wanjala-7pcqf/" target="_blank" rel="noopener" class="hover:text-[var(--accent-400)] transition-colors">
+                                        Blockchain Beyond Crypto: How Distributed Ledgers Are Fixing Real Problems
+                                    </a>
+                                </h4>
+                                <p class="text-[var(--text-secondary)] text-sm mb-3">
+                                    Examining practical blockchain applications beyond cryptocurrency in supply chain, healthcare, and governance.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#Blockchain</span>
+                                    <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#Innovation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card glassmorphism p-6 glow-effect">
+                        <div class="flex items-start gap-4">
+                            <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="Daniel Wanjala" class="w-12 h-12 rounded-full object-cover">
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2">
+                                    <a href="https://www.linkedin.com/pulse/cloud-computing-revolution-why-your-business-still-running-wanjala-ddeef/" target="_blank" rel="noopener" class="hover:text-[var(--accent-400)] transition-colors">
+                                        The Cloud Computing Revolution: Why Your Business Is Still Running Behind
+                                    </a>
+                                </h4>
+                                <p class="text-[var(--text-secondary)] text-sm mb-3">
+                                    Analyzing why many businesses lag in cloud adoption and the competitive advantages they're missing.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#CloudComputing</span>
+                                    <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">#Business</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
             
@@ -1076,19 +1313,45 @@
                         <h3 class="text-xl font-semibold mb-6 text-gradient">GitHub Achievements</h3>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="text-center p-4 bg-[var(--surface-1)] rounded-lg">
-                                <div class="text-2xl mb-2">🎯</div>
+                                <div class="w-8 h-8 mx-auto mb-2 text-[var(--accent)]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <circle cx="12" cy="12" r="6"/>
+                                        <circle cx="12" cy="12" r="2"/>
+                                    </svg>
+                                </div>
                                 <div class="text-sm font-medium">Pair Extraordinaire</div>
                             </div>
                             <div class="text-center p-4 bg-[var(--surface-1)] rounded-lg">
-                                <div class="text-2xl mb-2">🚀</div>
+                                <div class="w-8 h-8 mx-auto mb-2 text-[var(--accent)]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket">
+                                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                                    </svg>
+                                </div>
                                 <div class="text-sm font-medium">YOLO</div>
                             </div>
                             <div class="text-center p-4 bg-[var(--surface-1)] rounded-lg">
-                                <div class="text-2xl mb-2">🦈</div>
+                                <div class="w-8 h-8 mx-auto mb-2 text-[var(--accent)]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fish">
+                                        <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/>
+                                        <path d="M18 12v.5"/>
+                                        <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"/>
+                                        <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1.13-.18-1.13.32 0 .5C5.58 6.53 7 8.56 7 11.33"/>
+                                        <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"/>
+                                        <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H8c1.17-1.24 2.2-2.88 2.46-4.26"/>
+                                    </svg>
+                                </div>
                                 <div class="text-sm font-medium">Pull Shark x2</div>
                             </div>
                             <div class="text-center p-4 bg-[var(--surface-1)] rounded-lg">
-                                <div class="text-2xl mb-2">⚡</div>
+                                <div class="w-8 h-8 mx-auto mb-2 text-[var(--accent)]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap">
+                                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+                                    </svg>
+                                </div>
                                 <div class="text-sm font-medium">Quickdraw</div>
                             </div>
                         </div>
@@ -1310,6 +1573,64 @@
                     }
                 });
             });
+
+            // --- Mobile Menu Toggle ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    const isOpen = mobileMenu.classList.contains('open');
+                    
+                    if (isOpen) {
+                        mobileMenu.classList.remove('open');
+                        mobileMenuBtn.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                                <line x1="4" x2="20" y1="6" y2="6"/>
+                                <line x1="4" x2="20" y1="12" y2="12"/>
+                                <line x1="4" x2="20" y1="18" y2="18"/>
+                            </svg>
+                        `;
+                    } else {
+                        mobileMenu.classList.add('open');
+                        mobileMenuBtn.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+                                <path d="m18 6-12 12"/>
+                                <path d="m6 6 12 12"/>
+                            </svg>
+                        `;
+                    }
+                });
+
+                // Close mobile menu when clicking on a link
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('open');
+                        mobileMenuBtn.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                                <line x1="4" x2="20" y1="6" y2="6"/>
+                                <line x1="4" x2="20" y1="12" y2="12"/>
+                                <line x1="4" x2="20" y1="18" y2="18"/>
+                            </svg>
+                        `;
+                    });
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        mobileMenu.classList.remove('open');
+                        mobileMenuBtn.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                                <line x1="4" x2="20" y1="6" y2="6"/>
+                                <line x1="4" x2="20" y1="12" y2="12"/>
+                                <line x1="4" x2="20" y1="18" y2="18"/>
+                            </svg>
+                        `;
+                    }
+                });
+            }
 
             // --- API Integration Functions ---
             const timeout = (ms) => new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), ms));
