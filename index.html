@@ -1,674 +1,532 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-dark">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daniel Wanjala - Data Analyst & Technical Innovation Specialist. Comprehensive portfolio showcasing 117+ repositories, advanced FinTech solutions, and cutting-edge web development expertise across JavaScript, Python, and modern frameworks.">
-    <meta name="keywords" content="Daniel Wanjala, Data Analyst, Technical Analyst, FinTech Developer, Web Development, JavaScript Expert, Python Developer, GitHub Portfolio, Nairobi Developer">
-    <meta name="author" content="Daniel Wanjala">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://madscie254.github.io/MadScie254/">
-    <meta property="og:title" content="Daniel Wanjala - Award-Winning Data Analyst & FinTech Innovation Specialist">
-    <meta property="og:description" content="Explore the comprehensive digital portfolio of Daniel Wanjala, featuring 117+ cutting-edge repositories, revolutionary FinTech solutions, and industry-leading technical analysis expertise.">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/134260642?v=4">
+    <title>MadScie254 | Data Scientist & IT Manager</title>
+    <link rel="icon" href="https://madscie254.github.io/MadScie254/assets/logo.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Design System Tokens */
+        :root {
+            /* WCAG AA contrast for dark mode */
+            --bg: hsl(230 15% 9%);
+            --surface-1: hsl(230 15% 12%);
+            --surface-2: hsl(230 15% 15%);
+            --text-primary: hsl(220 14% 97%);
+            --text-secondary: hsl(220 10% 70%);
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://madscie254.github.io/MadScie254/">
-    <meta property="twitter:title" content="Daniel Wanjala - Data Analyst & FinTech Innovation Specialist">
-    <meta property="twitter:description" content="Discover the revolutionary work of Daniel Wanjala in data analytics, technical analysis, and FinTech innovation.">
-    <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/134260642?v=4">
+            --accent: oklch(64% 0.10 210);
+            --accent-600: oklch(50% 0.10 210);
+            --accent-500: oklch(60% 0.10 210);
+            --accent-400: oklch(70% 0.10 210);
+            --accent-contrast: oklch(100% 0.05 310);
 
-    <title>Daniel Wanjala - Award-Winning Data Analyst & FinTech Innovation Specialist | Portfolio 2025</title>
-    
-    <!-- Comprehensive Stylesheet Integration -->
-    <link rel="stylesheet" href="assets/css/theme-system.css">
-    <link rel="stylesheet" href="assets/css/icons.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/immersive-effects.css">
-    <link rel="stylesheet" href="assets/css/award-winning.css">
-    
-    <!-- Progressive Web App -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0F1724">
-    
-    <!-- Favicon Suite -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-    
-    <!-- Performance & SEO -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="assets/js/api-data-manager.js" as="script">
-    <link rel="preload" href="assets/api-snapshots/github-profile.json" as="fetch" crossorigin>
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Daniel Wanjala",
-        "jobTitle": "Data Analyst & Technical Innovation Specialist",
-        "description": "Award-winning data analyst with 4+ years of experience enhancing operations for organizations through information systems, specializing in FinTech innovation and technical analysis.",
-        "url": "https://madscie254.github.io/MadScie254/",
-        "image": "https://avatars.githubusercontent.com/u/134260642?v=4",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Nairobi",
-            "addressCountry": "Kenya"
-        },
-        "alumniOf": "Technical University",
-        "knowsAbout": ["Data Analysis", "Technical Analysis", "FinTech Development", "Web Development", "JavaScript", "Python", "Machine Learning"],
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Danco Analytics"
-        },
-        "sameAs": [
-            "https://github.com/MadScie254",
-            "https://madscie254.github.io/MadScie254/"
-        ]
-    }
-    </script>
+            --success: oklch(60% 0.14 140);
+            --warning: oklch(75% 0.17 80);
+            --danger: oklch(65% 0.15 10);
+
+            --shadow-1: 0 4px 6px -1px hsl(230 15% 5% / 0.1), 0 2px 4px -2px hsl(230 15% 5% / 0.1);
+            --shadow-2: 0 10px 15px -3px hsl(230 15% 5% / 0.2), 0 4px 6px -4px hsl(230 15% 5% / 0.2);
+
+            /* Spacing (8pt rhythm) */
+            --space-8: 8px;
+            --space-16: 16px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --space-48: 48px;
+
+            /* Motion (cubic-bezier) */
+            --ease-in-out-expo: cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        /* WCAG AA contrast for light mode */
+        html.light {
+            --bg: hsl(220 14% 97%);
+            --surface-1: hsl(220 14% 94%);
+            --surface-2: hsl(220 14% 90%);
+            --text-primary: hsl(230 15% 9%);
+            --text-secondary: hsl(230 10% 30%);
+            --shadow-1: 0 4px 6px -1px hsl(220 14% 90% / 0.1), 0 2px 4px -2px hsl(220 14% 90% / 0.1);
+            --shadow-2: 0 10px 15px -3px hsl(220 14% 90% / 0.2), 0 4px 6px -4px hsl(220 14% 90% / 0.2);
+        }
+
+        /* Fluid Typography */
+        html {
+            --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem); /* 16px -> 18px */
+            --step-1: clamp(1.125rem, 1.07rem + 0.27vw, 1.25rem);
+            --step-2: clamp(1.25rem, 1.16rem + 0.47vw, 1.5rem);
+            --step-3: clamp(1.5rem, 1.34rem + 0.8vw, 2rem);
+            --step-4: clamp(1.875rem, 1.57rem + 1.5vw, 2.81rem);
+            --step-5: clamp(2.25rem, 1.83rem + 2.1vw, 3.56rem);
+            --step-6: clamp(3rem, 2.3rem + 3.5vw, 5rem);
+            --step-7: clamp(3.75rem, 2.76rem + 4.9vw, 6.5rem);
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif, system-ui;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', 'Sora', sans-serif;
+            color: var(--accent);
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        a:hover {
+            color: var(--accent-400);
+            transform: translateY(-2px);
+        }
+        
+        /* Utility classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-24);
+        }
+        
+        .card {
+            background-color: var(--surface-1);
+            border-radius: var(--space-8);
+            box-shadow: var(--shadow-1);
+            padding: var(--space-24);
+            border: 1px solid var(--surface-2);
+            transition: transform 0.3s var(--ease-in-out-expo), box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-2);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-8);
+            border-radius: var(--space-8);
+            padding: var(--space-16) var(--space-24);
+            font-weight: 600;
+            transition: transform 0.3s var(--ease-in-out-expo), box-shadow 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-1);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--accent-contrast);
+        }
+        .btn-secondary {
+            background-color: var(--surface-2);
+            color: var(--text-primary);
+            border: 1px solid var(--text-secondary);
+        }
+
+        /* View Transitions API */
+        ::view-transition-old,
+        ::view-transition-new {
+          animation-duration: 0.5s;
+          animation-timing-function: var(--ease-in-out-expo);
+        }
+
+        @media (prefers-reduced-motion) {
+            ::view-transition-old,
+            ::view-transition-new {
+                animation-duration: 0.001s;
+                animation-timing-function: linear;
+            }
+        }
+
+        /* Custom GSAP animations */
+        .hero-image {
+            box-shadow: var(--shadow-2);
+            border-radius: 50%;
+            transition: transform 0.8s var(--ease-in-out-expo), box-shadow 0.8s;
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Sora:wght@500;700&family=JetBrains+Mono:wght@400&display=swap');
+    </style>
 </head>
-<body class="immersive-layout award-winning-design">
-    <!-- Advanced Theme Toggle System -->
-    <div class="theme-controls">
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-            <svg class="icon theme-icon-light" viewBox="0 0 24 24">
-                <use href="assets/icons/icons.svg#sun"></use>
-            </svg>
-            <svg class="icon theme-icon-dark" viewBox="0 0 24 24">
-                <use href="assets/icons/icons.svg#moon"></use>
-            </svg>
-        </button>
-    </div>
+<body class="bg-[var(--bg)] text-[var(--text-primary)]">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="absolute -top-96 left-0 focus:top-0 bg-[var(--surface-1)] p-4 rounded-b-lg z-[100]">Skip to main content</a>
 
-    <!-- Immersive Navigation with Real-Time Data Integration -->
-    <nav class="navbar immersive-nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="#home" class="brand-link" aria-label="Daniel Wanjala - Home">
-                    <svg class="icon brand-icon" viewBox="0 0 24 24">
-                        <use href="assets/icons/icons.svg#code"></use>
-                    </svg>
-                    <span class="brand-text">Daniel Wanjala</span>
-                    <span class="brand-subtitle">Data Innovation Specialist</span>
-                </a>
+    <!-- Sticky Nav Bar -->
+    <header class="sticky top-0 z-50 py-4 bg-[var(--bg)]/90 backdrop-blur-sm border-b border-[var(--surface-2)]">
+        <nav class="container flex justify-between items-center">
+            <a href="#home" class="font-bold text-xl text-[var(--accent)]">
+                MadScie254
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-[var(--text-secondary)]">
+                <a href="index.html" class="nav-item relative font-medium text-[var(--accent)] before:scale-x-100">Home</a>
+                <a href="about.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">About</a>
+                <a href="projects.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Projects</a>
+                <a href="nlog.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Nlog</a>
+                <a href="innovation.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Innovation Portfolio</a>
+                <a href="technical-mastery.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Technical Mastery</a>
+                <a href="connect.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Connect & Collaborate</a>
             </div>
-            
-            <ul class="nav-menu" role="menubar">
-                <li class="nav-item" role="none">
-                    <a href="#about" class="nav-link" role="menuitem">
-                        <svg class="icon nav-icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#user"></use>
-                        </svg>
-                        <span>About Excellence</span>
-                    </a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#experience" class="nav-link" role="menuitem">
-                        <svg class="icon nav-icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#briefcase"></use>
-                        </svg>
-                        <span>Professional Journey</span>
-                    </a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#projects" class="nav-link" role="menuitem">
-                        <svg class="icon nav-icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#folder"></use>
-                        </svg>
-                        <span>Innovation Portfolio</span>
-                    </a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#skills" class="nav-link" role="menuitem">
-                        <svg class="icon nav-icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#cpu"></use>
-                        </svg>
-                        <span>Technical Mastery</span>
-                    </a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#contact" class="nav-link" role="menuitem">
-                        <svg class="icon nav-icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#mail"></use>
-                        </svg>
-                        <span>Connect & Collaborate</span>
-                    </a>
-                </li>
-            </ul>
-            
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <svg class="icon" viewBox="0 0 24 24">
-                    <use href="assets/icons/icons.svg#menu"></use>
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-[var(--surface-2)] transition-colors">
+                <svg id="sun-icon" class="w-6 h-6 text-[var(--text-secondary)] hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-6.364l-.707-.707M6.343 17.657l-.707.707M16.95 6.343l.707-.707M7.05 16.95l-.707.707M12 7a5 5 0 100 10a5 5 0 000-10z"></path>
+                </svg>
+                <svg id="moon-icon" class="w-6 h-6 text-[var(--text-secondary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                 </svg>
             </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Revolutionary Hero Section with Live API Data Integration -->
-    <section id="home" class="hero-section immersive-hero" role="banner">
-        <div class="hero-background">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="assets/images/hero-analysis-index.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay"></div>
-        </div>
-        
-        <div class="hero-container">
-            <div class="hero-content">
-                <!-- Real-Time GitHub Integration Display -->
-                <div class="github-live-stats">
-                    <div class="live-indicator">
-                        <div class="pulse-dot"></div>
-                        <span>Live GitHub Data</span>
-                    </div>
-                    <div class="github-stats" id="live-github-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="117">117</span>
-                            <span class="stat-label">Active Repositories</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="9">9</span>
-                            <span class="stat-label">Professional Followers</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-count="4">4+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                    </div>
-                </div>
+    <main id="main-content" class="space-y-32 py-16">
 
-                <!-- Immersive Hero Text -->
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="title-primary">Daniel Wanjala</span>
-                        <span class="title-secondary">Data Analyst & Technical Innovation Specialist</span>
-                        <span class="title-tertiary">Transforming Organizations Through Advanced Information Systems</span>
-                    </h1>
-                    
-                    <div class="hero-bio">
-                        <p class="bio-primary">
-                            Award-winning data analyst and rational technical analyst with over 4 years of comprehensive experience 
-                            enhancing operational excellence for organizations through sophisticated information systems architecture. 
-                            Specializing in cutting-edge FinTech innovations, advanced data analytics methodologies, and revolutionary 
-                            web development solutions that drive measurable business transformation.
-                        </p>
-                        
-                        <p class="bio-secondary">
-                            Currently pioneering breakthrough analytical solutions at <strong>Danco Analytics</strong>, where I leverage 
-                            advanced statistical modeling, machine learning algorithms, and comprehensive data visualization techniques 
-                            to unlock actionable insights that propel organizations toward unprecedented growth and operational efficiency.
-                        </p>
-                    </div>
-                    
-                    <!-- Dynamic Quote Integration -->
-                    <div class="hero-quote" id="dynamic-quote">
-                        <blockquote>
-                            "Innovation distinguishes between a leader and a follower. In the realm of data analytics and technical innovation, 
-                            the ability to transform complex information into strategic advantages defines the future of organizational success."
-                        </blockquote>
-                        <cite>— Professional Philosophy</cite>
-                    </div>
-                </div>
-
-                <!-- Comprehensive Action Center -->
-                <div class="hero-actions">
-                    <a href="#projects" class="cta-primary">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#eye"></use>
-                        </svg>
-                        <span>Explore Innovation Portfolio</span>
+        <!-- Hero Section -->
+        <section id="hero" class="container grid grid-cols-1 md:grid-cols-2 gap-16 items-center view-transition-name-hero">
+            <div class="animate-on-scroll">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    Data-Driven Strategy, Engineering Rigor.
+                </h1>
+                <p class="text-[var(--text-secondary)] text-lg leading-relaxed max-w-[70ch] mb-8">
+                    I am a polymathic technologist blending data science, IT management, and software engineering. I apply analytical rigor to complex problems, building robust, scalable systems that translate raw data into strategic advantage. From predictive models in healthcare to optimized infrastructure in finance, I bridge the gap between business objectives and technical execution with a quiet, confident precision.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="projects.html" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-kanban"><path d="M15 15.5V11m0 0V8m0 3l-4 4m4-4l4 4"/><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M10 4v16"/><path d="M17 4v16"/></svg>
+                        Explore Projects
                     </a>
-                    
-                    <a href="https://github.com/MadScie254" target="_blank" class="cta-secondary">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#github"></use>
-                        </svg>
-                        <span>View GitHub Excellence</span>
-                    </a>
-                    
-                    <a href="#contact" class="cta-tertiary">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#message-circle"></use>
-                        </svg>
-                        <span>Initiate Collaboration</span>
+                    <a href="https://madscie254.github.io/MadScie254/assets/cv.pdf" target="_blank" class="btn btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                        Download CV
                     </a>
                 </div>
             </div>
-            
-            <!-- Advanced Floating Widgets -->
-            <div class="floating-widgets">
-                <!-- Real-Time Weather Widget -->
-                <div class="widget weather-widget" id="weather-widget">
-                    <h3>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#cloud"></use>
-                        </svg>
-                        Nairobi Conditions
-                    </h3>
-                    <div class="weather-info">
-                        <div class="temperature">22°C</div>
-                        <div class="condition">Partly Cloudy</div>
-                    </div>
-                </div>
-                
-                <!-- Tech News Widget -->
-                <div class="widget news-widget" id="news-widget">
-                    <h3>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#globe"></use>
-                        </svg>
-                        Tech Insights
-                    </h3>
-                    <div class="news-content">
-                        <p>Loading latest technology developments...</p>
-                    </div>
-                </div>
-                
-                <!-- Time Zone Widget -->
-                <div class="widget time-widget" id="time-widget">
-                    <h3>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#clock"></use>
-                        </svg>
-                        Global Time
-                    </h3>
-                    <div class="time-zones">
-                        <div class="time-zone">
-                            <span class="tz-label">Nairobi</span>
-                            <span class="tz-time" id="nairobi-time">--:--</span>
-                        </div>
-                        <div class="time-zone">
-                            <span class="tz-label">New York</span>
-                            <span class="tz-time" id="newyork-time">--:--</span>
-                        </div>
-                    </div>
+            <div class="relative flex justify-center items-center p-8">
+                <div class="hero-image w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden">
+                    <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="A profile photo of MadScie254, a data scientist and IT manager" loading="eager" class="w-full h-full object-cover">
                 </div>
             </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-mouse">
-                <div class="scroll-wheel"></div>
-            </div>
-            <span>Discover More</span>
-        </div>
-    </section>
+        </section>
 
-    <!-- Comprehensive About Section with Enhanced Storytelling -->
-    <section id="about" class="about-section immersive-section" role="main">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-accent">About</span>
-                    <span class="title-main">Professional Excellence</span>
-                </h2>
-                <div class="section-subtitle">
-                    <p>Comprehensive overview of expertise, achievements, and professional philosophy</p>
+        <!-- Live Now Panel -->
+        <section id="live-now" class="container">
+            <div class="card grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm sm:text-base">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-10 w-6 h-6 text-[var(--accent)] mb-2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l2 2"/></svg>
+                    <span id="live-time">Loading local time...</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-sun w-6 h-6 text-[var(--accent)] mb-2"><path d="M12 2a4 4 0 0 1 4 4v4m-2-2h4"/><path d="M8 10a4 4 0 0 1 4-4"/><path d="M10 12h2"/><path d="M10.25 10.25l-.75-.75m-3 3l-.75-.75"/><path d="M10.25 13.75l-.75.75m-3-3l-.75.75"/><path d="M16 16.5a4.5 4.5 0 0 1-9 0c0-1.2 1.5-2 3-2.5s3-1.5 3-2.5"/></svg>
+                    <span id="live-weather">Loading weather...</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days w-6 h-6 text-[var(--accent)] mb-2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+                    <span id="next-holiday">Loading next holiday...</span>
                 </div>
             </div>
-            
-            <div class="about-content">
-                <div class="about-narrative">
-                    <div class="narrative-section">
-                        <h3>Professional Genesis & Evolution</h3>
-                        <p>
-                            My professional journey in data analytics and technical innovation began with a fundamental belief that 
-                            information systems possess the transformative power to revolutionize organizational operations. Over the 
-                            past four years, I have evolved from an analytical enthusiast to a seasoned specialist, consistently 
-                            delivering measurable results through sophisticated data-driven methodologies and cutting-edge technical solutions.
-                        </p>
-                        
-                        <p>
-                            At <strong>Danco Analytics</strong>, I spearhead comprehensive analytical initiatives that bridge the gap 
-                            between complex data landscapes and actionable business intelligence. My approach combines traditional 
-                            analytical rigor with innovative technological implementation, ensuring that every project delivers both 
-                            immediate value and long-term strategic advantages.
-                        </p>
-                    </div>
-                    
-                    <div class="narrative-section">
-                        <h3>Technical Philosophy & Approach</h3>
-                        <p>
-                            My technical philosophy centers on the principle that exceptional software solutions emerge from the 
-                            intersection of analytical precision, creative problem-solving, and user-centric design. With 117 active 
-                            repositories on GitHub, each project represents a commitment to excellence, innovation, and continuous 
-                            learning in the rapidly evolving landscape of technology.
-                        </p>
-                        
-                        <p>
-                            Whether developing sophisticated FinTech applications, implementing advanced data visualization dashboards, 
-                            or architecting scalable web solutions, I maintain an unwavering focus on code quality, performance optimization, 
-                            and future-proof architecture that adapts to changing business requirements and technological advances.
-                        </p>
-                    </div>
-                    
-                    <div class="narrative-section">
-                        <h3>Innovation & Impact</h3>
-                        <p>
-                            The impact of my work extends beyond individual projects to encompass organizational transformation and 
-                            industry advancement. Through careful analysis of business processes, identification of optimization 
-                            opportunities, and implementation of tailored technical solutions, I have consistently delivered results 
-                            that exceed expectations and drive sustainable growth.
-                        </p>
-                        
-                        <p>
-                            My expertise in rational technical analysis enables organizations to make informed decisions based on 
-                            comprehensive data interpretation, trend analysis, and predictive modeling. This analytical foundation, 
-                            combined with practical implementation skills, ensures that theoretical insights translate into tangible 
-                            business value and competitive advantages.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Enhanced Statistics Display -->
-                <div class="stats-showcase">
-                    <h3>Professional Metrics & Achievements</h3>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <svg class="icon" viewBox="0 0 24 24">
-                                    <use href="assets/icons/icons.svg#folder"></use>
-                                </svg>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number" data-count="117">117</span>
-                                <span class="stat-label">Active Repositories</span>
-                                <span class="stat-description">Comprehensive portfolio of innovative projects</span>
-                            </div>
-                        </div>
-                        
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <svg class="icon" viewBox="0 0 24 24">
-                                    <use href="assets/icons/icons.svg#calendar"></use>
-                                </svg>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number" data-count="4">4+</span>
-                                <span class="stat-label">Years Experience</span>
-                                <span class="stat-description">Continuous growth and professional development</span>
-                            </div>
-                        </div>
-                        
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <svg class="icon" viewBox="0 0 24 24">
-                                    <use href="assets/icons/icons.svg#users"></use>
-                                </svg>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number" data-count="9">9</span>
-                                <span class="stat-label">Professional Network</span>
-                                <span class="stat-description">Growing community of collaborators</span>
-                            </div>
-                        </div>
-                        
-                        <div class="stat-card">
-                            <div class="stat-icon">
-                                <svg class="icon" viewBox="0 0 24 24">
-                                    <use href="assets/icons/icons.svg#award"></use>
-                                </svg>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number" data-count="100">100%</span>
-                                <span class="stat-label">Client Satisfaction</span>
-                                <span class="stat-description">Commitment to excellence in every project</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Dynamic Projects Section with Real GitHub Data -->
-    <section id="projects" class="projects-section immersive-section" role="main">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-accent">Innovation</span>
-                    <span class="title-main">Portfolio</span>
-                </h2>
-                <div class="section-subtitle">
-                    <p>Comprehensive showcase of cutting-edge projects, technical innovations, and breakthrough solutions</p>
+        <!-- Impact Metrics -->
+        <section id="metrics" class="container">
+            <h2 class="text-3xl font-bold mb-10 text-center">Measured Impact</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center animate-on-scroll">
+                <div class="card p-8">
+                    <div class="text-5xl font-bold mb-2 text-[var(--accent)]"><span data-count="9">0</span>+</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Years Experience</p>
+                </div>
+                <div class="card p-8">
+                    <div class="text-5xl font-bold mb-2 text-[var(--accent)]"><span data-count="30">0</span>+</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Projects Shipped</p>
+                </div>
+                <div class="card p-8">
+                    <div class="text-5xl font-bold mb-2 text-[var(--accent)]"><span data-count="2">0</span></div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Major Contest Wins</p>
+                </div>
+                <div class="card p-8">
+                    <div class="text-5xl font-bold mb-2 text-[var(--accent)]"><span data-count="2">0</span></div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Key Domains</p>
                 </div>
             </div>
-            
-            <!-- GitHub Integration Display -->
-            <div class="github-integration">
-                <div class="integration-header">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <use href="assets/icons/icons.svg#github"></use>
-                    </svg>
-                    <h3>Live GitHub Portfolio Integration</h3>
-                    <span class="sync-indicator">Real-time synchronization active</span>
-                </div>
-                
-                <div class="projects-list" id="dynamic-projects-list">
-                    <!-- Projects will be populated by API Data Manager -->
-                    <div class="project-loading">
-                        <div class="loading-spinner"></div>
-                        <p>Loading innovative projects from GitHub...</p>
-                    </div>
-                </div>
-                
-                <div class="projects-actions">
-                    <a href="https://github.com/MadScie254" target="_blank" class="view-all-btn">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#external-link"></use>
-                        </svg>
-                        <span>View Complete GitHub Portfolio</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Advanced Skills Visualization -->
-    <section id="skills" class="skills-section immersive-section" role="main">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-accent">Technical</span>
-                    <span class="title-main">Mastery</span>
-                </h2>
-                <div class="section-subtitle">
-                    <p>Comprehensive technical expertise spanning data analytics, web development, and innovation technologies</p>
-                </div>
-            </div>
-            
-            <div class="skills-showcase">
-                <!-- Core Technologies -->
-                <div class="skill-category">
-                    <h3>Data Analytics & Analysis</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item expert">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#bar-chart"></use>
-                            </svg>
-                            <span>Statistical Analysis</span>
-                            <div class="skill-level">Expert</div>
-                        </div>
-                        <div class="skill-item expert">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#trending-up"></use>
-                            </svg>
-                            <span>Technical Analysis</span>
-                            <div class="skill-level">Expert</div>
-                        </div>
-                        <div class="skill-item advanced">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#database"></use>
-                            </svg>
-                            <span>Data Visualization</span>
-                            <div class="skill-level">Advanced</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Programming Languages -->
-                <div class="skill-category">
-                    <h3>Programming & Development</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item expert">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#code"></use>
-                            </svg>
-                            <span>JavaScript/TypeScript</span>
-                            <div class="skill-level">Expert</div>
-                        </div>
-                        <div class="skill-item advanced">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#terminal"></use>
-                            </svg>
-                            <span>Python</span>
-                            <div class="skill-level">Advanced</div>
-                        </div>
-                        <div class="skill-item expert">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#globe"></use>
-                            </svg>
-                            <span>Web Development</span>
-                            <div class="skill-level">Expert</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Specialized Technologies -->
-                <div class="skill-category">
-                    <h3>FinTech & Innovation</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item expert">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#dollar-sign"></use>
-                            </svg>
-                            <span>Financial Systems</span>
-                            <div class="skill-level">Expert</div>
-                        </div>
-                        <div class="skill-item advanced">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#shield"></use>
-                            </svg>
-                            <span>Risk Analysis</span>
-                            <div class="skill-level">Advanced</div>
-                        </div>
-                        <div class="skill-item expert">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#cpu"></use>
-                            </svg>
-                            <span>System Architecture</span>
-                            <div class="skill-level">Expert</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comprehensive Contact Section -->
-    <section id="contact" class="contact-section immersive-section" role="main">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-accent">Connect &</span>
-                    <span class="title-main">Collaborate</span>
-                </h2>
-                <div class="section-subtitle">
-                    <p>Initiate professional collaboration and explore opportunities for innovation partnerships</p>
-                </div>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Professional Contact Information</h3>
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#mail"></use>
-                            </svg>
-                            <div class="contact-details">
-                                <span class="contact-label">Professional Email</span>
-                                <a href="mailto:daniel@dancoanalytics.com" class="contact-value">daniel@dancoanalytics.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#map-pin"></use>
-                            </svg>
-                            <div class="contact-details">
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Nairobi, Kenya</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <use href="assets/icons/icons.svg#github"></use>
-                            </svg>
-                            <div class="contact-details">
-                                <span class="contact-label">GitHub Portfolio</span>
-                                <a href="https://github.com/MadScie254" target="_blank" class="contact-value">github.com/MadScie254</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="collaboration-cta">
-                    <h3>Ready to Innovate Together?</h3>
-                    <p>
-                        Whether you're seeking comprehensive data analytics solutions, innovative FinTech development, 
-                        or cutting-edge web applications, I'm ready to transform your vision into exceptional reality.
+        <!-- Featured Case Studies -->
+        <section id="projects" class="container">
+            <h2 class="text-3xl font-bold mb-10 text-center">Featured Case Studies</h2>
+            <p class="text-center text-[var(--text-secondary)] mb-12 max-w-[70ch] mx-auto">
+                My work is a testament to the synthesis of deep technical expertise and strategic business insight. These featured projects demonstrate how I approach complex, real-world problems by building robust, data-centric solutions. Each one represents a unique challenge solved with analytical rigor and meticulous engineering.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
+                <!-- Project Card 1 (Mock Data) -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+1" alt="Screenshot of a project dashboard with charts and data visualizations" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Automated Fraud Detection for Fintech</h3>
+                    <p class="text-[var(--text-secondary)] text-sm mb-4">
+                        A machine learning model and backend system to identify fraudulent transactions in real-time with high precision and recall.
                     </p>
-                    <a href="mailto:daniel@dancoanalytics.com" class="contact-cta">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use href="assets/icons/icons.svg#send"></use>
-                        </svg>
-                        <span>Initiate Project Discussion</span>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">ML/AI</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Python</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">AWS</span>
+                    </div>
+                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group">
+                        Read the deep dive
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project Card 2 (Mock Data) -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+2" alt="Screenshot of a patient analytics dashboard for healthcare operations" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Patient Lifetime Value Prediction</h3>
+                    <p class="text-[var(--text-secondary)] text-sm mb-4">
+                        Developed a predictive model to forecast patient retention and lifetime value, enabling targeted marketing and resource allocation.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Healthcare</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Data Viz</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Python</span>
+                    </div>
+                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group">
+                        Read the deep dive
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project Card 3 (Mock Data) -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+3" alt="Screenshot of an IT infrastructure diagram with multiple servers" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Automated CI/CD Pipeline for ML Ops</h3>
+                    <p class="text-[var(--text-secondary)] text-sm mb-4">
+                        Engineered a fully automated CI/CD pipeline to streamline the deployment of machine learning models into production environments.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">DevOps</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Cloud</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Terraform</span>
+                    </div>
+                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group">
+                        Read the deep dive
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <!-- Manifesto/Principles Section -->
+        <section id="principles" class="container">
+            <div class="card p-12 text-center max-w-4xl mx-auto animate-on-scroll">
+                <h2 class="text-2xl font-bold mb-4">The Discipline of Data</h2>
+                <p class="text-[var(--text-secondary)] leading-relaxed max-w-[75ch] mx-auto">
+                    Data isn't just numbers; it's a narrative waiting to be told. My approach is rooted in the belief that true insight comes from a relentless pursuit of clarity, a respect for statistical rigor, and an uncompromising commitment to the integrity of the process. I believe in systems that are not only intelligent but also reliable, auditable, and transparent. Every model, every dashboard, every line of infrastructure code is an artifact of this philosophy.
+                </p>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="footer-container">
-            <div class="footer-content">
-                <p>&copy; 2025 Daniel Wanjala. All rights reserved. | Data Analyst & Technical Innovation Specialist</p>
-                <p>Powered by advanced API integration and real-time data synchronization</p>
+    <footer class="py-12 border-t border-[var(--surface-2)] text-[var(--text-secondary)]">
+        <div class="container grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="font-bold text-[var(--text-primary)] mb-4">MadScie254</h4>
+                <p class="text-sm max-w-[50ch]">
+                    A polymathic technologist at the intersection of data science, IT management, and software engineering, building systems that matter.
+                </p>
             </div>
+            <div>
+                <h4 class="font-bold text-[var(--text-primary)] mb-4">Sitemap</h4>
+                <ul class="text-sm space-y-2">
+                    <li><a href="index.html" class="hover:text-[var(--accent)]">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[var(--accent)]">About</a></li>
+                    <li><a href="projects.html" class="hover:text-[var(--accent)]">Projects</a></li>
+                    <li><a href="nlog.html" class="hover:text-[var(--accent)]">Nlog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-[var(--text-primary)] mb-4">Links</h4>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:text-[var(--accent)]">GitHub</a></li>
+                    <li><a href="#" class="hover:text-[var(--accent)]">LinkedIn</a></li>
+                    <li><a href="#" class="hover:text-[var(--accent)]">Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-[var(--text-primary)] mb-4">Connect</h4>
+                <p class="text-sm mb-4">Ready to build something impactful? Let's connect and collaborate.</p>
+                <a href="connect.html" class="btn btn-primary text-sm">
+                    Connect & Collaborate
+                </a>
+            </div>
+        </div>
+        <div class="container text-center text-xs mt-12">
+            &copy; <span id="current-year"></span> MadScie254. All rights reserved.
         </div>
     </footer>
 
-    <!-- Essential Scripts -->
-    <script src="assets/js/theme.js"></script>
-    <script src="assets/js/api-data-manager.js"></script>
-    <script src="assets/js/immersive-navigation.js"></script>
-    <script src="assets/js/enhanced-ui.js"></script>
-    
-    <!-- Performance Analytics -->
     <script>
-        // Initialize performance monitoring
-        window.addEventListener('load', () => {
-            // Report page load performance
-            const loadTime = performance.now();
-            console.log(`Portfolio loaded in ${loadTime.toFixed(2)}ms`);
+        document.addEventListener('DOMContentLoaded', () => {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // --- Theme Toggle Logic ---
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const sunIcon = document.getElementById('sun-icon');
+            const moonIcon = document.getElementById('moon-icon');
             
-            // Initialize API health monitoring
-            if (window.APIDataManager) {
-                window.APIDataManager.healthCheck().then(status => {
-                    console.log('API Health Status:', status);
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.className = savedTheme;
+            if (savedTheme === 'light') {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+
+            themeToggleBtn.addEventListener('click', () => {
+                let currentTheme = document.documentElement.className;
+                if (currentTheme === 'dark') {
+                    document.documentElement.className = 'light';
+                    localStorage.setItem('theme', 'light');
+                    sunIcon.style.display = 'block';
+                    moonIcon.style.display = 'none';
+                } else {
+                    document.documentElement.className = 'dark';
+                    localStorage.setItem('theme', 'dark');
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                }
+            });
+
+            // --- View Transitions (Fallback if not supported) ---
+            if (!document.startViewTransition) {
+                document.querySelectorAll('a[href]').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        const targetUrl = link.href;
+                        if (targetUrl.startsWith(window.location.origin)) {
+                            e.preventDefault();
+                            window.location.href = targetUrl;
+                        }
+                    });
                 });
             }
+
+            // --- GSAP Animations & Intersection Observer for staggered reveals ---
+            if (!prefersReducedMotion) {
+                gsap.registerPlugin(ScrollTrigger);
+
+                // Hero Image Parallax & Float
+                gsap.to(".hero-image", {
+                    y: (i, target) => -1 * target.offsetHeight * 0.1,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".hero-image",
+                        start: "top center",
+                        end: "bottom top",
+                        scrub: true,
+                    }
+                });
+                
+                // Staggered fade-in on sections
+                const sections = document.querySelectorAll('.animate-on-scroll');
+                sections.forEach(section => {
+                    gsap.from(section.children, {
+                        opacity: 0,
+                        y: 20,
+                        stagger: 0.2,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top 80%",
+                            toggleActions: "play none none reverse",
+                        }
+                    });
+                });
+
+                // Animated Counters
+                const counters = document.querySelectorAll('[data-count]');
+                counters.forEach(counter => {
+                    gsap.from(counter, {
+                        textContent: 0,
+                        duration: 2,
+                        ease: "power2.out",
+                        snap: { textContent: 1 },
+                        scrollTrigger: {
+                            trigger: counter,
+                            start: "top 90%",
+                            toggleActions: "play none none none"
+                        },
+                        onUpdate: () => counter.textContent = Math.ceil(counter._gsap.vars.textContent),
+                    });
+                });
+            }
+
+            // --- Client-side API Calls (with mock data & fallbacks) ---
+            // AbortController for timeouts
+            const timeout = (ms) => new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), ms));
+            const controller = new AbortController();
+            const signal = controller.signal;
+            setTimeout(() => controller.abort(), 6000); // 6 second timeout
+
+            // Live Now Panel
+            const updateLiveNow = async () => {
+                const liveTimeEl = document.getElementById('live-time');
+                const liveWeatherEl = document.getElementById('live-weather');
+                const nextHolidayEl = document.getElementById('next-holiday');
+                
+                // Local Time
+                const options = { timeZone: 'Africa/Nairobi', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+                liveTimeEl.textContent = new Date().toLocaleString('en-US', options) + ' EAT';
+
+                // Open-Meteo Weather
+                try {
+                    const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-1.2921&longitude=36.8219&current_weather=true', { signal });
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const data = await response.json();
+                    liveWeatherEl.textContent = `${data.current_weather.temperature}°C, ${data.current_weather.weathercode}`;
+                } catch (error) {
+                    console.error('Failed to fetch weather:', error);
+                    liveWeatherEl.textContent = 'Weather data unavailable';
+                }
+
+                // Nager.Date Public Holiday
+                try {
+                    const year = new Date().getFullYear();
+                    const response = await fetch(`https://date.nager.date/api/v3/NextPublicHolidays/KE`, { signal });
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const data = await response.json();
+                    if (data && data.length > 0) {
+                        const nextHoliday = data[0];
+                        const date = new Date(nextHoliday.date);
+                        nextHolidayEl.textContent = `${nextHoliday.name} on ${date.toLocaleDateString()}`;
+                    } else {
+                        nextHolidayEl.textContent = 'No upcoming holidays';
+                    }
+                } catch (error) {
+                    console.error('Failed to fetch holiday:', error);
+                    nextHolidayEl.textContent = 'Holiday data unavailable';
+                }
+            };
+
+            updateLiveNow();
+            setInterval(updateLiveNow, 60000); // Update every minute
+
+            // --- Footer Year ---
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // --- Initial Icon Replacement from Lucide library ---
+            lucide.createIcons();
         });
     </script>
 </body>
-</html>
