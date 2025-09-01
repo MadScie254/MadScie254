@@ -12,7 +12,6 @@
     <style>
         /* Design System Tokens */
         :root {
-            /* WCAG AA contrast for dark mode */
             --bg: hsl(230 15% 9%);
             --surface-1: hsl(230 15% 12%);
             --surface-2: hsl(230 15% 15%);
@@ -32,17 +31,16 @@
             --shadow-1: 0 4px 6px -1px hsl(230 15% 5% / 0.1), 0 2px 4px -2px hsl(230 15% 5% / 0.1);
             --shadow-2: 0 10px 15px -3px hsl(230 15% 5% / 0.2), 0 4px 6px -4px hsl(230 15% 5% / 0.2);
 
-            /* Spacing (8pt rhythm) */
             --space-8: 8px;
             --space-16: 16px;
             --space-24: 24px;
             --space-32: 32px;
             --space-48: 48px;
 
-            /* Motion (cubic-bezier) */
+            /* New: Motion Tokens */
             --ease-in-out-expo: cubic-bezier(0.2, 0.8, 0.2, 1);
+            --ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
         }
-        /* WCAG AA contrast for light mode */
         html.light {
             --bg: hsl(220 14% 97%);
             --surface-1: hsl(220 14% 94%);
@@ -55,7 +53,7 @@
 
         /* Fluid Typography */
         html {
-            --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem); /* 16px -> 18px */
+            --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
             --step-1: clamp(1.125rem, 1.07rem + 0.27vw, 1.25rem);
             --step-2: clamp(1.25rem, 1.16rem + 0.47vw, 1.5rem);
             --step-3: clamp(1.5rem, 1.34rem + 0.8vw, 2rem);
@@ -73,6 +71,7 @@
             margin: 0;
             padding: 0;
             transition: background-color 0.3s, color 0.3s;
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -121,10 +120,22 @@
             padding: var(--space-16) var(--space-24);
             font-weight: 600;
             transition: transform 0.3s var(--ease-in-out-expo), box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
         }
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-1);
+        .btn::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s var(--ease-in-out-expo);
+        }
+        .btn:hover::after {
+            transform: translateX(0);
         }
 
         .btn-primary {
@@ -135,6 +146,47 @@
             background-color: var(--surface-2);
             color: var(--text-primary);
             border: 1px solid var(--text-secondary);
+        }
+        
+        /* New: Cinematic GSAP classes for text reveal */
+        .hero-headline-word {
+            display: inline-block;
+            overflow: hidden;
+            will-change: transform, opacity;
+        }
+        .hero-headline-word span {
+            display: inline-block;
+        }
+
+        /* Hero Image with 3D Parallax */
+        .hero-image-wrap {
+            perspective: 1000px;
+        }
+        .hero-image {
+            box-shadow: var(--shadow-2);
+            border-radius: 50%;
+            will-change: transform;
+            transition: transform 0.8s var(--ease-in-out-expo), box-shadow 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Particle Background for Live Now */
+        .live-now-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.2;
+        }
+        .particle {
+            position: absolute;
+            background-color: var(--accent);
+            border-radius: 50%;
+            opacity: 0;
         }
 
         /* View Transitions API */
@@ -151,13 +203,6 @@
                 animation-timing-function: linear;
             }
         }
-
-        /* Custom GSAP animations */
-        .hero-image {
-            box-shadow: var(--shadow-2);
-            border-radius: 50%;
-            transition: transform 0.8s var(--ease-in-out-expo), box-shadow 0.8s;
-        }
     </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Sora:wght@500;700&family=JetBrains+Mono:wght@400&display=swap');
@@ -170,7 +215,7 @@
     <!-- Sticky Nav Bar -->
     <header class="sticky top-0 z-50 py-4 bg-[var(--bg)]/90 backdrop-blur-sm border-b border-[var(--surface-2)]">
         <nav class="container flex justify-between items-center">
-            <a href="#home" class="font-bold text-xl text-[var(--accent)]">
+            <a href="index.html" class="font-bold text-xl text-[var(--accent)]">
                 MadScie254
             </a>
             <div class="hidden md:flex items-center gap-8 text-[var(--text-secondary)]">
@@ -200,12 +245,15 @@
         <section id="hero" class="container grid grid-cols-1 md:grid-cols-2 gap-16 items-center view-transition-name-hero">
             <div class="animate-on-scroll">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                    Data-Driven Strategy, Engineering Rigor.
+                    <span class="hero-headline-word">Data-Driven</span>
+                    <span class="hero-headline-word">Strategy,</span>
+                    <span class="hero-headline-word">Engineering</span>
+                    <span class="hero-headline-word">Rigor.</span>
                 </h1>
-                <p class="text-[var(--text-secondary)] text-lg leading-relaxed max-w-[70ch] mb-8">
+                <p class="text-[var(--text-secondary)] text-lg leading-relaxed max-w-[70ch] mb-8 hero-text-animate">
                     I am a polymathic technologist blending data science, IT management, and software engineering. I apply analytical rigor to complex problems, building robust, scalable systems that translate raw data into strategic advantage. From predictive models in healthcare to optimized infrastructure in finance, I bridge the gap between business objectives and technical execution with a quiet, confident precision.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-4 hero-cta-animate">
                     <a href="projects.html" class="btn btn-primary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-kanban"><path d="M15 15.5V11m0 0V8m0 3l-4 4m4-4l4 4"/><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M10 4v16"/><path d="M17 4v16"/></svg>
                         Explore Projects
@@ -216,7 +264,7 @@
                     </a>
                 </div>
             </div>
-            <div class="relative flex justify-center items-center p-8">
+            <div class="relative flex justify-center items-center p-8 hero-image-wrap">
                 <div class="hero-image w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden">
                     <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="A profile photo of MadScie254, a data scientist and IT manager" loading="eager" class="w-full h-full object-cover">
                 </div>
@@ -224,8 +272,10 @@
         </section>
 
         <!-- Live Now Panel -->
-        <section id="live-now" class="container">
-            <div class="card grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm sm:text-base">
+        <section id="live-now" class="container relative">
+            <div class="card grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm sm:text-base animate-on-scroll relative z-10">
+                <!-- Particle background -->
+                <div class="live-now-bg"></div>
                 <div class="flex flex-col items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-10 w-6 h-6 text-[var(--accent)] mb-2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l2 2"/></svg>
                     <span id="live-time">Loading local time...</span>
@@ -243,7 +293,7 @@
 
         <!-- Impact Metrics -->
         <section id="metrics" class="container">
-            <h2 class="text-3xl font-bold mb-10 text-center">Measured Impact</h2>
+            <h2 class="text-3xl font-bold mb-10 text-center animate-on-scroll">Measured Impact</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center animate-on-scroll">
                 <div class="card p-8">
                     <div class="text-5xl font-bold mb-2 text-[var(--accent)]"><span data-count="9">0</span>+</div>
@@ -266,14 +316,14 @@
 
         <!-- Featured Case Studies -->
         <section id="projects" class="container">
-            <h2 class="text-3xl font-bold mb-10 text-center">Featured Case Studies</h2>
-            <p class="text-center text-[var(--text-secondary)] mb-12 max-w-[70ch] mx-auto">
+            <h2 class="text-3xl font-bold mb-10 text-center animate-on-scroll">Featured Case Studies</h2>
+            <p class="text-center text-[var(--text-secondary)] mb-12 max-w-[70ch] mx-auto animate-on-scroll">
                 My work is a testament to the synthesis of deep technical expertise and strategic business insight. These featured projects demonstrate how I approach complex, real-world problems by building robust, data-centric solutions. Each one represents a unique challenge solved with analytical rigor and meticulous engineering.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
                 <!-- Project Card 1 (Mock Data) -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+1" alt="Screenshot of a project dashboard with charts and data visualizations" class="rounded-lg mb-4">
+                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+1" alt="Screenshot of a project dashboard with charts and data visualizations" loading="lazy" class="rounded-lg mb-4">
                     <h3 class="text-xl font-semibold mb-2">Automated Fraud Detection for Fintech</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
                         A machine learning model and backend system to identify fraudulent transactions in real-time with high precision and recall.
@@ -291,7 +341,7 @@
 
                 <!-- Project Card 2 (Mock Data) -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+2" alt="Screenshot of a patient analytics dashboard for healthcare operations" class="rounded-lg mb-4">
+                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+2" alt="Screenshot of a patient analytics dashboard for healthcare operations" loading="lazy" class="rounded-lg mb-4">
                     <h3 class="text-xl font-semibold mb-2">Patient Lifetime Value Prediction</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
                         Developed a predictive model to forecast patient retention and lifetime value, enabling targeted marketing and resource allocation.
@@ -309,7 +359,7 @@
 
                 <!-- Project Card 3 (Mock Data) -->
                 <div class="card">
-                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+3" alt="Screenshot of an IT infrastructure diagram with multiple servers" class="rounded-lg mb-4">
+                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+3" alt="Screenshot of an IT infrastructure diagram with multiple servers" loading="lazy" class="rounded-lg mb-4">
                     <h3 class="text-xl font-semibold mb-2">Automated CI/CD Pipeline for ML Ops</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
                         Engineered a fully automated CI/CD pipeline to streamline the deployment of machine learning models into production environments.
@@ -426,24 +476,47 @@
             if (!prefersReducedMotion) {
                 gsap.registerPlugin(ScrollTrigger);
 
-                // Hero Image Parallax & Float
-                gsap.to(".hero-image", {
-                    y: (i, target) => -1 * target.offsetHeight * 0.1,
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: ".hero-image",
-                        start: "top center",
-                        end: "bottom top",
-                        scrub: true,
-                    }
+                // Cinematic Hero Text Reveal
+                const heroWords = document.querySelectorAll('.hero-headline-word');
+                gsap.from(heroWords, {
+                    opacity: 0,
+                    y: 20,
+                    stagger: 0.1,
+                    ease: "power2.out"
                 });
-                
-                // Staggered fade-in on sections
+                gsap.from('.hero-text-animate', { opacity: 0, y: 20, delay: 0.5, ease: "power2.out" });
+                gsap.from('.hero-cta-animate', { opacity: 0, y: 20, delay: 0.7, ease: "power2.out" });
+                gsap.from('.hero-image-wrap', { opacity: 0, scale: 0.95, delay: 0.8, ease: "back.out(1.7)" });
+
+
+                // Hero Image Parallax & Float
+                const heroImageWrap = document.querySelector('.hero-image-wrap');
+                const heroImage = document.querySelector('.hero-image');
+
+                document.addEventListener('mousemove', (e) => {
+                    const rect = heroImageWrap.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+                    const mouseX = e.clientX - centerX;
+                    const mouseY = e.clientY - centerY;
+                    
+                    const rotateX = (-mouseY / centerY) * 10;
+                    const rotateY = (mouseX / centerX) * 10;
+                    
+                    gsap.to(heroImage, {
+                        duration: 0.5,
+                        rotateX: rotateX,
+                        rotateY: rotateY,
+                        ease: "power1.out"
+                    });
+                });
+
+                // Scroll-triggered animations for all sections
                 const sections = document.querySelectorAll('.animate-on-scroll');
                 sections.forEach(section => {
                     gsap.from(section.children, {
                         opacity: 0,
-                        y: 20,
+                        y: 30,
                         stagger: 0.2,
                         ease: "power2.out",
                         scrollTrigger: {
@@ -454,11 +527,11 @@
                     });
                 });
 
-                // Animated Counters
+                // Animated Counters with smooth incrementing
                 const counters = document.querySelectorAll('[data-count]');
                 counters.forEach(counter => {
-                    gsap.from(counter, {
-                        textContent: 0,
+                    gsap.to(counter, {
+                        textContent: counter.dataset.count,
                         duration: 2,
                         ease: "power2.out",
                         snap: { textContent: 1 },
@@ -470,16 +543,39 @@
                         onUpdate: () => counter.textContent = Math.ceil(counter._gsap.vars.textContent),
                     });
                 });
-            }
 
+                // Particle System for Live Now Panel
+                const particleContainer = document.querySelector('.live-now-bg');
+                const numParticles = 30;
+                for (let i = 0; i < numParticles; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    const size = Math.random() * 3 + 1;
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    particle.style.left = `${Math.random() * 100}%`;
+                    particle.style.top = `${Math.random() * 100}%`;
+                    particleContainer.appendChild(particle);
+
+                    gsap.to(particle, {
+                        x: () => Math.random() * 200 - 100,
+                        y: () => Math.random() * 200 - 100,
+                        opacity: 1,
+                        scale: 1,
+                        duration: 5 + Math.random() * 5,
+                        ease: 'sine.inOut',
+                        repeat: -1,
+                        yoyo: true,
+                    });
+                }
+            }
+            
             // --- Client-side API Calls (with mock data & fallbacks) ---
-            // AbortController for timeouts
             const timeout = (ms) => new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), ms));
             const controller = new AbortController();
             const signal = controller.signal;
-            setTimeout(() => controller.abort(), 6000); // 6 second timeout
+            setTimeout(() => controller.abort(), 6000);
 
-            // Live Now Panel
             const updateLiveNow = async () => {
                 const liveTimeEl = document.getElementById('live-time');
                 const liveWeatherEl = document.getElementById('live-weather');
@@ -520,7 +616,7 @@
             };
 
             updateLiveNow();
-            setInterval(updateLiveNow, 60000); // Update every minute
+            setInterval(updateLiveNow, 60000);
 
             // --- Footer Year ---
             document.getElementById('current-year').textContent = new Date().getFullYear();
