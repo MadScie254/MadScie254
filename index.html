@@ -189,6 +189,166 @@
             opacity: 0;
         }
 
+        /* Advanced Immersive Effects */
+        .immersive-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.2) 0%, transparent 50%);
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(2deg); }
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        .glow-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .glow-effect::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(var(--accent), 0.1), transparent);
+            transform: rotate(-45deg);
+            transition: transform 0.6s;
+            pointer-events: none;
+        }
+        .glow-effect:hover::before {
+            animation: glowSweep 1.5s ease-in-out;
+        }
+
+        @keyframes glowSweep {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(-45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(-45deg); }
+        }
+
+        .magnetic-hover {
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent), var(--accent-400), var(--accent-600));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .parallax-element {
+            will-change: transform;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent), transparent);
+            pointer-events: none;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.3s;
+        }
+
+        .interactive-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(var(--accent), 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(var(--accent), 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -2;
+            animation: gridPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+
+        .hero-gradient-text {
+            background: linear-gradient(
+                135deg, 
+                var(--accent) 0%, 
+                var(--accent-400) 25%, 
+                var(--accent-600) 50%, 
+                var(--accent) 100%
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .morphing-card {
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+            transform-style: preserve-3d;
+        }
+
+        .morphing-card:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 0 50px rgba(var(--accent), 0.2);
+        }
+
+        .ripple-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(var(--accent), 0.6);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
         /* View Transitions API */
         ::view-transition-old,
         ::view-transition-new {
@@ -202,6 +362,9 @@
                 animation-duration: 0.001s;
                 animation-timing-function: linear;
             }
+            .immersive-bg, .floating-element, .interactive-grid {
+                animation: none;
+            }
         }
     </style>
     <style>
@@ -209,26 +372,31 @@
     </style>
 </head>
 <body class="bg-[var(--bg)] text-[var(--text-primary)]">
+    <!-- Immersive Background Elements -->
+    <div class="immersive-bg"></div>
+    <div class="interactive-grid"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+    
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="absolute -top-96 left-0 focus:top-0 bg-[var(--surface-1)] p-4 rounded-b-lg z-[100]">Skip to main content</a>
 
     <!-- Sticky Nav Bar -->
-    <header class="sticky top-0 z-50 py-4 bg-[var(--bg)]/90 backdrop-blur-sm border-b border-[var(--surface-2)]">
+    <header class="sticky top-0 z-50 py-4 glassmorphism border-b border-[var(--surface-2)]">
         <nav class="container flex justify-between items-center">
-            <a href="index.html" class="font-bold text-xl text-[var(--accent)]">
+            <a href="index.html" class="font-bold text-xl text-[var(--accent)] magnetic-hover">
                 MadScie254
             </a>
             <div class="hidden md:flex items-center gap-8 text-[var(--text-secondary)]">
-                <a href="index.html" class="nav-item relative font-medium text-[var(--accent)] before:scale-x-100">Home</a>
-                <a href="about.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">About</a>
-                <a href="projects.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Projects</a>
-                <a href="nlog.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Nlog</a>
-                <a href="innovation.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Innovation Portfolio</a>
-                <a href="technical-mastery.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Technical Mastery</a>
-                <a href="connect.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors">Connect & Collaborate</a>
+                <a href="index.html" class="nav-item relative font-medium text-[var(--accent)] before:scale-x-100 magnetic-hover">Home</a>
+                <a href="about.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors magnetic-hover">About</a>
+                <a href="projects.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors magnetic-hover">Projects</a>
+                <a href="nlog.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors magnetic-hover">Nlog</a>
+                <a href="innovation.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors magnetic-hover">Innovation Portfolio</a>
+                <a href="technical-mastery.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors magnetic-hover">Technical Mastery</a>
+                <a href="connect.html" class="nav-item relative font-medium hover:text-[var(--text-primary)] transition-colors magnetic-hover">Connect & Collaborate</a>
             </div>
             <!-- Theme Toggle -->
-            <button id="theme-toggle" class="p-2 rounded-full hover:bg-[var(--surface-2)] transition-colors">
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-[var(--surface-2)] transition-colors magnetic-hover" title="Toggle theme" aria-label="Toggle between light and dark theme">
                 <svg id="sun-icon" class="w-6 h-6 text-[var(--text-secondary)] hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-6.364l-.707-.707M6.343 17.657l-.707.707M16.95 6.343l.707-.707M7.05 16.95l-.707.707M12 7a5 5 0 100 10a5 5 0 000-10z"></path>
                 </svg>
@@ -245,27 +413,27 @@
         <section id="hero" class="container grid grid-cols-1 md:grid-cols-2 gap-16 items-center view-transition-name-hero">
             <div class="animate-on-scroll">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                    <span class="hero-headline-word">Data-Driven</span>
-                    <span class="hero-headline-word">Strategy,</span>
-                    <span class="hero-headline-word">Engineering</span>
-                    <span class="hero-headline-word">Rigor.</span>
+                    <span class="hero-headline-word hero-gradient-text">Data-Driven</span>
+                    <span class="hero-headline-word hero-gradient-text">Strategy,</span>
+                    <span class="hero-headline-word hero-gradient-text">Engineering</span>
+                    <span class="hero-headline-word hero-gradient-text">Rigor.</span>
                 </h1>
                 <p class="text-[var(--text-secondary)] text-lg leading-relaxed max-w-[70ch] mb-8 hero-text-animate">
                     I am a polymathic technologist blending data science, IT management, and software engineering. I apply analytical rigor to complex problems, building robust, scalable systems that translate raw data into strategic advantage. From predictive models in healthcare to optimized infrastructure in finance, I bridge the gap between business objectives and technical execution with a quiet, confident precision.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 hero-cta-animate">
-                    <a href="projects.html" class="btn btn-primary">
+                    <a href="projects.html" class="btn btn-primary glow-effect magnetic-hover ripple-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-kanban"><path d="M15 15.5V11m0 0V8m0 3l-4 4m4-4l4 4"/><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M10 4v16"/><path d="M17 4v16"/></svg>
                         Explore Projects
                     </a>
-                    <a href="https://madscie254.github.io/MadScie254/assets/cv.pdf" target="_blank" class="btn btn-secondary">
+                    <a href="https://madscie254.github.io/MadScie254/assets/cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary glow-effect magnetic-hover ripple-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                         Download CV
                     </a>
                 </div>
             </div>
-            <div class="relative flex justify-center items-center p-8 hero-image-wrap">
-                <div class="hero-image w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden">
+            <div class="relative flex justify-center items-center p-8 hero-image-wrap floating-element">
+                <div class="hero-image w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden glow-effect">
                     <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="A profile photo of MadScie254, a data scientist and IT manager" loading="eager" class="w-full h-full object-cover">
                 </div>
             </div>
@@ -273,7 +441,7 @@
 
         <!-- Live Now Panel -->
         <section id="live-now" class="container relative">
-            <div class="card grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm sm:text-base animate-on-scroll relative z-10">
+            <div class="card glassmorphism grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm sm:text-base animate-on-scroll relative z-10 glow-effect">
                 <!-- Particle background -->
                 <div class="live-now-bg"></div>
                 <div class="flex flex-col items-center">
@@ -322,9 +490,9 @@
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
                 <!-- Project Card 1 (Mock Data) -->
-                <div class="card">
+                <div class="card morphing-card glow-effect">
                     <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+1" alt="Screenshot of a project dashboard with charts and data visualizations" loading="lazy" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Automated Fraud Detection for Fintech</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-gradient">Automated Fraud Detection for Fintech</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
                         A machine learning model and backend system to identify fraudulent transactions in real-time with high precision and recall.
                     </p>
@@ -333,16 +501,16 @@
                         <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Python</span>
                         <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">AWS</span>
                     </div>
-                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group">
+                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
                         Read the deep dive
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
                     </a>
                 </div>
 
                 <!-- Project Card 2 (Mock Data) -->
-                <div class="card">
+                <div class="card morphing-card glow-effect">
                     <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+2" alt="Screenshot of a patient analytics dashboard for healthcare operations" loading="lazy" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Patient Lifetime Value Prediction</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-gradient">Patient Lifetime Value Prediction</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
                         Developed a predictive model to forecast patient retention and lifetime value, enabling targeted marketing and resource allocation.
                     </p>
@@ -351,16 +519,16 @@
                         <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Data Viz</span>
                         <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Python</span>
                     </div>
-                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group">
+                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
                         Read the deep dive
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
                     </a>
                 </div>
 
                 <!-- Project Card 3 (Mock Data) -->
-                <div class="card">
+                <div class="card morphing-card glow-effect">
                     <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Project+3" alt="Screenshot of an IT infrastructure diagram with multiple servers" loading="lazy" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Automated CI/CD Pipeline for ML Ops</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-gradient">Automated CI/CD Pipeline for ML Ops</h3>
                     <p class="text-[var(--text-secondary)] text-sm mb-4">
                         Engineered a fully automated CI/CD pipeline to streamline the deployment of machine learning models into production environments.
                     </p>
@@ -369,7 +537,7 @@
                         <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Cloud</span>
                         <span class="text-xs px-2 py-1 rounded-full bg-[var(--surface-2)] text-[var(--text-secondary)]">Terraform</span>
                     </div>
-                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group">
+                    <a href="#" class="text-[var(--accent)] font-medium inline-flex items-center gap-1 group magnetic-hover">
                         Read the deep dive
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-circle transition-transform group-hover:translate-x-1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>
                     </a>
@@ -379,8 +547,8 @@
         
         <!-- Manifesto/Principles Section -->
         <section id="principles" class="container">
-            <div class="card p-12 text-center max-w-4xl mx-auto animate-on-scroll">
-                <h2 class="text-2xl font-bold mb-4">The Discipline of Data</h2>
+            <div class="card glassmorphism p-12 text-center max-w-4xl mx-auto animate-on-scroll glow-effect floating-element">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">The Discipline of Data</h2>
                 <p class="text-[var(--text-secondary)] leading-relaxed max-w-[75ch] mx-auto">
                     Data isn't just numbers; it's a narrative waiting to be told. My approach is rooted in the belief that true insight comes from a relentless pursuit of clarity, a respect for statistical rigor, and an uncompromising commitment to the integrity of the process. I believe in systems that are not only intelligent but also reliable, auditable, and transparent. Every model, every dashboard, every line of infrastructure code is an artifact of this philosophy.
                 </p>
@@ -432,6 +600,135 @@
         document.addEventListener('DOMContentLoaded', () => {
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+            // --- Advanced Immersive Effects ---
+            if (!prefersReducedMotion) {
+                // Cursor Trail Effect
+                const cursorTrail = document.getElementById('cursor-trail');
+                let trails = [];
+                const maxTrails = 20;
+
+                document.addEventListener('mousemove', (e) => {
+                    // Create trail element
+                    const trail = document.createElement('div');
+                    trail.className = 'cursor-trail';
+                    trail.style.left = e.clientX + 'px';
+                    trail.style.top = e.clientY + 'px';
+                    trail.style.opacity = '1';
+                    document.body.appendChild(trail);
+
+                    trails.push(trail);
+
+                    // Animate trail
+                    gsap.to(trail, {
+                        scale: 0,
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        onComplete: () => {
+                            if (trail.parentNode) {
+                                trail.parentNode.removeChild(trail);
+                            }
+                        }
+                    });
+
+                    // Remove old trails
+                    if (trails.length > maxTrails) {
+                        const oldTrail = trails.shift();
+                        if (oldTrail && oldTrail.parentNode) {
+                            oldTrail.parentNode.removeChild(oldTrail);
+                        }
+                    }
+                });
+
+                // Magnetic Hover Effect
+                document.querySelectorAll('.magnetic-hover').forEach(element => {
+                    element.addEventListener('mouseenter', () => {
+                        gsap.to(element, {
+                            scale: 1.05,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    });
+
+                    element.addEventListener('mouseleave', () => {
+                        gsap.to(element, {
+                            scale: 1,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    });
+
+                    element.addEventListener('mousemove', (e) => {
+                        const rect = element.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        
+                        gsap.to(element, {
+                            x: x * 0.1,
+                            y: y * 0.1,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    });
+
+                    element.addEventListener('mouseleave', () => {
+                        gsap.to(element, {
+                            x: 0,
+                            y: 0,
+                            duration: 0.5,
+                            ease: "elastic.out(1, 0.3)"
+                        });
+                    });
+                });
+
+                // Ripple Effect
+                document.querySelectorAll('.ripple-effect').forEach(element => {
+                    element.addEventListener('click', (e) => {
+                        const ripple = document.createElement('span');
+                        ripple.classList.add('ripple');
+                        
+                        const rect = element.getBoundingClientRect();
+                        const size = Math.max(rect.width, rect.height);
+                        const x = e.clientX - rect.left - size / 2;
+                        const y = e.clientY - rect.top - size / 2;
+                        
+                        ripple.style.width = ripple.style.height = size + 'px';
+                        ripple.style.left = x + 'px';
+                        ripple.style.top = y + 'px';
+                        
+                        element.appendChild(ripple);
+                        
+                        setTimeout(() => {
+                            if (ripple.parentNode) {
+                                ripple.parentNode.removeChild(ripple);
+                            }
+                        }, 600);
+                    });
+                });
+
+                // Advanced Parallax Scrolling
+                const parallaxElements = document.querySelectorAll('.parallax-element');
+                window.addEventListener('scroll', () => {
+                    const scrolled = window.pageYOffset;
+                    parallaxElements.forEach(element => {
+                        const rate = scrolled * -0.5;
+                        element.style.transform = `translateY(${rate}px)`;
+                    });
+                });
+
+                // Interactive Grid Animation
+                const grid = document.querySelector('.interactive-grid');
+                document.addEventListener('mousemove', (e) => {
+                    const x = (e.clientX / window.innerWidth) * 100;
+                    const y = (e.clientY / window.innerHeight) * 100;
+                    
+                    grid.style.background = `
+                        linear-gradient(rgba(${getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()}, 0.${Math.floor(x/10)}) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(${getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()}, 0.${Math.floor(y/10)}) 1px, transparent 1px)
+                    `;
+                });
+            }
+
             // --- Theme Toggle Logic ---
             const themeToggleBtn = document.getElementById('theme-toggle');
             const sunIcon = document.getElementById('sun-icon');
@@ -480,19 +777,39 @@
                 const heroWords = document.querySelectorAll('.hero-headline-word');
                 gsap.from(heroWords, {
                     opacity: 0,
-                    y: 20,
-                    stagger: 0.1,
-                    ease: "power2.out"
+                    y: 100,
+                    rotationX: -90,
+                    stagger: 0.2,
+                    duration: 1.2,
+                    ease: "back.out(1.7)"
                 });
-                gsap.from('.hero-text-animate', { opacity: 0, y: 20, delay: 0.5, ease: "power2.out" });
-                gsap.from('.hero-cta-animate', { opacity: 0, y: 20, delay: 0.7, ease: "power2.out" });
-                gsap.from('.hero-image-wrap', { opacity: 0, scale: 0.95, delay: 0.8, ease: "back.out(1.7)" });
+                gsap.from('.hero-text-animate', { 
+                    opacity: 0, 
+                    y: 30, 
+                    delay: 0.8, 
+                    duration: 1,
+                    ease: "power2.out" 
+                });
+                gsap.from('.hero-cta-animate', { 
+                    opacity: 0, 
+                    y: 30, 
+                    delay: 1.2, 
+                    duration: 1,
+                    ease: "power2.out" 
+                });
+                gsap.from('.hero-image-wrap', { 
+                    opacity: 0, 
+                    scale: 0.8, 
+                    delay: 1.5, 
+                    duration: 1.2,
+                    ease: "elastic.out(1, 0.5)" 
+                });
 
-
-                // Hero Image Parallax & Float
+                // Hero Image Advanced Parallax & Float
                 const heroImageWrap = document.querySelector('.hero-image-wrap');
                 const heroImage = document.querySelector('.hero-image');
 
+                // Enhanced 3D hover effect
                 document.addEventListener('mousemove', (e) => {
                     const rect = heroImageWrap.getBoundingClientRect();
                     const centerX = rect.left + rect.width / 2;
@@ -500,39 +817,52 @@
                     const mouseX = e.clientX - centerX;
                     const mouseY = e.clientY - centerY;
                     
-                    const rotateX = (-mouseY / centerY) * 10;
-                    const rotateY = (mouseX / centerX) * 10;
+                    const rotateX = (-mouseY / centerY) * 15;
+                    const rotateY = (mouseX / centerX) * 15;
                     
                     gsap.to(heroImage, {
-                        duration: 0.5,
+                        duration: 0.6,
                         rotateX: rotateX,
                         rotateY: rotateY,
-                        ease: "power1.out"
+                        transformPerspective: 1000,
+                        ease: "power2.out"
                     });
                 });
 
-                // Scroll-triggered animations for all sections
+                // Reset on mouse leave
+                heroImageWrap.addEventListener('mouseleave', () => {
+                    gsap.to(heroImage, {
+                        duration: 0.8,
+                        rotateX: 0,
+                        rotateY: 0,
+                        ease: "elastic.out(1, 0.3)"
+                    });
+                });
+
+                // Scroll-triggered animations for all sections with enhanced effects
                 const sections = document.querySelectorAll('.animate-on-scroll');
-                sections.forEach(section => {
+                sections.forEach((section, index) => {
                     gsap.from(section.children, {
                         opacity: 0,
-                        y: 30,
-                        stagger: 0.2,
-                        ease: "power2.out",
+                        y: 50,
+                        rotationX: -15,
+                        stagger: 0.15,
+                        duration: 1,
+                        ease: "power3.out",
                         scrollTrigger: {
                             trigger: section,
-                            start: "top 80%",
+                            start: "top 85%",
                             toggleActions: "play none none reverse",
                         }
                     });
                 });
 
-                // Animated Counters with smooth incrementing
+                // Enhanced Animated Counters
                 const counters = document.querySelectorAll('[data-count]');
                 counters.forEach(counter => {
                     gsap.to(counter, {
                         textContent: counter.dataset.count,
-                        duration: 2,
+                        duration: 2.5,
                         ease: "power2.out",
                         snap: { textContent: 1 },
                         scrollTrigger: {
@@ -540,17 +870,33 @@
                             start: "top 90%",
                             toggleActions: "play none none none"
                         },
-                        onUpdate: () => counter.textContent = Math.ceil(counter._gsap.vars.textContent),
+                        onUpdate: () => {
+                            counter.textContent = Math.ceil(counter._gsap.vars.textContent);
+                        },
+                    });
+
+                    // Add glow pulse effect
+                    gsap.to(counter, {
+                        textShadow: "0 0 20px var(--accent)",
+                        duration: 0.5,
+                        yoyo: true,
+                        repeat: -1,
+                        ease: "power2.inOut",
+                        scrollTrigger: {
+                            trigger: counter,
+                            start: "top 90%",
+                            toggleActions: "play pause resume pause"
+                        }
                     });
                 });
 
-                // Particle System for Live Now Panel
+                // Enhanced Particle System for Live Now Panel
                 const particleContainer = document.querySelector('.live-now-bg');
-                const numParticles = 30;
+                const numParticles = 50;
                 for (let i = 0; i < numParticles; i++) {
                     const particle = document.createElement('div');
                     particle.classList.add('particle');
-                    const size = Math.random() * 3 + 1;
+                    const size = Math.random() * 4 + 1;
                     particle.style.width = `${size}px`;
                     particle.style.height = `${size}px`;
                     particle.style.left = `${Math.random() * 100}%`;
@@ -558,16 +904,39 @@
                     particleContainer.appendChild(particle);
 
                     gsap.to(particle, {
-                        x: () => Math.random() * 200 - 100,
-                        y: () => Math.random() * 200 - 100,
-                        opacity: 1,
-                        scale: 1,
-                        duration: 5 + Math.random() * 5,
+                        x: () => Math.random() * 300 - 150,
+                        y: () => Math.random() * 300 - 150,
+                        opacity: 0.8,
+                        scale: () => Math.random() * 2 + 0.5,
+                        duration: () => Math.random() * 8 + 4,
                         ease: 'sine.inOut',
                         repeat: -1,
                         yoyo: true,
+                        delay: () => Math.random() * 2
                     });
                 }
+
+                // Scroll-triggered glow effects
+                ScrollTrigger.batch('.glow-effect', {
+                    onEnter: (elements) => {
+                        elements.forEach(el => {
+                            gsap.to(el, {
+                                boxShadow: "0 0 30px rgba(var(--accent), 0.3)",
+                                duration: 0.5,
+                                ease: "power2.out"
+                            });
+                        });
+                    },
+                    onLeave: (elements) => {
+                        elements.forEach(el => {
+                            gsap.to(el, {
+                                boxShadow: "var(--shadow-1)",
+                                duration: 0.5,
+                                ease: "power2.out"
+                            });
+                        });
+                    }
+                });
             }
             
             // --- Client-side API Calls (with mock data & fallbacks) ---
