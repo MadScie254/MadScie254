@@ -1,0 +1,17 @@
+{
+  "data": {
+    "fetch_time": "2025-09-02T00:56:55.113592",
+    "results": {
+      "github": "success"
+    },
+    "success_count": 1,
+    "total_apis": 1,
+    "next_scheduled_fetch": "2025-09-02T04:56:55.113619"
+  },
+  "metadata": {
+    "fetched_at": "2025-09-02T00:56:55.113644",
+    "expires_at": "2025-09-02T02:56:55.113645",
+    "source": "api-prefetch-pipeline",
+    "version": "2.0"
+  }
+}

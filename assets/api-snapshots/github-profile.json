@@ -1,0 +1,895 @@
+{
+  "data": {
+    "profile": {
+      "login": "MadScie254",
+      "name": "Daniel Wanjala",
+      "bio": "Daniel Wanjala is a data analyst and also a rational technical analyst with 4 year of experience enhancing operations for organizations through information syst",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134260642?v=4",
+      "html_url": "https://github.com/MadScie254",
+      "blog": "https://madscie254.github.io/MadScie254/",
+      "location": "Nairobi",
+      "email": null,
+      "twitter_username": null,
+      "company": "@Danco-Analytics ",
+      "public_repos": 117,
+      "public_gists": 0,
+      "followers": 9,
+      "following": 10,
+      "created_at": "2023-05-22T06:28:35Z",
+      "updated_at": "2025-08-15T10:51:55Z"
+    },
+    "repositories": [
+      {
+        "name": "MadScie254",
+        "full_name": "MadScie254/MadScie254",
+        "description": "Config files for my GitHub profile.",
+        "html_url": "https://github.com/MadScie254/MadScie254",
+        "language": "JavaScript",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 1,
+        "created_at": "2023-05-24T00:30:28Z",
+        "updated_at": "2025-09-01T21:37:39Z",
+        "pushed_at": "2025-09-01T21:37:35Z",
+        "size": 121773,
+        "topics": [
+          "config",
+          "github-config"
+        ],
+        "license": null,
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": false
+      },
+      {
+        "name": "sentiment_analysis",
+        "full_name": "MadScie254/sentiment_analysis",
+        "description": "dashbord for sentiment and metadata",
+        "html_url": "https://github.com/MadScie254/sentiment_analysis",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "created_at": "2025-08-26T23:32:52Z",
+        "updated_at": "2025-08-31T02:32:42Z",
+        "pushed_at": "2025-08-31T02:32:39Z",
+        "size": 726,
+        "topics": [],
+        "license": null,
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": true,
+        "readme_size": 12312
+      },
+      {
+        "name": "InvestWise-Predictor",
+        "full_name": "MadScie254/InvestWise-Predictor",
+        "description": "InvestWise-Predictor",
+        "html_url": "https://github.com/MadScie254/InvestWise-Predictor",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 1,
+        "created_at": "2025-02-02T23:25:35Z",
+        "updated_at": "2025-08-26T14:12:43Z",
+        "pushed_at": "2025-08-26T14:12:40Z",
+        "size": 15963,
+        "topics": [],
+        "license": "MIT License",
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": true,
+        "readme_size": 13898
+      },
+      {
+        "name": "EconoNet",
+        "full_name": "MadScie254/EconoNet",
+        "description": null,
+        "html_url": "https://github.com/MadScie254/EconoNet",
+        "language": "Jupyter Notebook",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "created_at": "2025-08-17T19:52:39Z",
+        "updated_at": "2025-08-23T18:04:01Z",
+        "pushed_at": "2025-08-23T18:03:58Z",
+        "size": 5691,
+        "topics": [],
+        "license": null,
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": true,
+        "readme_size": 16239
+      },
+      {
+        "name": "NehemiaMinistryKenya",
+        "full_name": "MadScie254/NehemiaMinistryKenya",
+        "description": "A comprehensive Church website",
+        "html_url": "https://github.com/MadScie254/NehemiaMinistryKenya",
+        "language": "HTML",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "created_at": "2025-05-16T07:59:29Z",
+        "updated_at": "2025-08-14T07:22:17Z",
+        "pushed_at": "2025-08-14T07:22:13Z",
+        "size": 917,
+        "topics": [],
+        "license": "MIT License",
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": true,
+        "readme_size": 10758
+      },
+      {
+        "name": "ml_DL",
+        "full_name": "MadScie254/ml_DL",
+        "description": "Machine Learnining and DL using inbuilt python cancer datset",
+        "html_url": "https://github.com/MadScie254/ml_DL",
+        "language": "Jupyter Notebook",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "created_at": "2025-07-31T22:36:29Z",
+        "updated_at": "2025-08-03T20:36:51Z",
+        "pushed_at": "2025-08-03T20:36:48Z",
+        "size": 3000,
+        "topics": [
+          "ai",
+          "cancer-detection",
+          "css",
+          "jupyter-notebook",
+          "machine-learning-algorithms",
+          "python"
+        ],
+        "license": null,
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": true,
+        "readme_size": 10238
+      },
+      {
+        "name": "CBK-Analysis",
+        "full_name": "MadScie254/CBK-Analysis",
+        "description": null,
+        "html_url": "https://github.com/MadScie254/CBK-Analysis",
+        "language": "Jupyter Notebook",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "created_at": "2023-11-13T18:49:32Z",
+        "updated_at": "2025-08-01T00:29:16Z",
+        "pushed_at": "2025-08-01T00:29:11Z",
+        "size": 20505,
+        "topics": [],
+        "license": null,
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": true,
+        "readme_size": 4937
+      },
+      {
+        "name": "clickclickclick",
+        "full_name": "MadScie254/clickclickclick",
+        "description": "A framework to enable autonomous android and computer use using any LLM (local or remote)",
+        "html_url": "https://github.com/MadScie254/clickclickclick",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "created_at": "2024-12-27T22:41:27Z",
+        "updated_at": "2025-07-31T14:05:49Z",
+        "pushed_at": "2025-07-28T12:37:34Z",
+        "size": 101,
+        "topics": [],
+        "license": "MIT License",
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "readme_available": true,
+        "readme_size": 5215
+      },
+      {
+        "name": "portifolio_site",
+        "full_name": "MadScie254/portifolio_site",
+        "description": "See the Magic",
+        "html_url": "https://github.com/MadScie254/portifolio_site",
+        "language": "HTML",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "created_at": "2025-07-26T21:32:53Z",
+        "updated_at": "2025-07-29T10:22:11Z",
+        "pushed_at": "2025-07-29T10:22:07Z",
+        "size": 167,
+        "topics": [],
+        "license": "GNU General Public License v3.0",
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": true,
+        "readme_size": 5410
+      },
+      {
+        "name": "madscie254-portfolio-website",
+        "full_name": "MadScie254/madscie254-portfolio-website",
+        "description": null,
+        "html_url": "https://github.com/MadScie254/madscie254-portfolio-website",
+        "language": "HTML",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "open_issues_count": 0,
+        "created_at": "2025-07-26T22:53:53Z",
+        "updated_at": "2025-07-26T22:56:18Z",
+        "pushed_at": "2025-07-26T22:56:15Z",
+        "size": 14,
+        "topics": [],
+        "license": null,
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "readme_available": true,
+        "readme_size": 2018
+      }
+    ],
+    "recent_activity": [
+      {
+        "id": "54047310105",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26483614367,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "20f2ffce75f84a5a912f59f1c97da29db4204dd0",
+          "before": "f3501cf1cf1d7437d7ba02573b377563e7e7e1a9",
+          "commits": [
+            {
+              "sha": "20f2ffce75f84a5a912f59f1c97da29db4204dd0",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Update .env",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/20f2ffce75f84a5a912f59f1c97da29db4204dd0"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-31T02:32:41Z"
+      },
+      {
+        "id": "54047307922",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26483613132,
+          "size": 2,
+          "distinct_size": 2,
+          "ref": "refs/heads/main",
+          "head": "f3501cf1cf1d7437d7ba02573b377563e7e7e1a9",
+          "before": "12285cf9a4338b989a746bd9840e5136a7207666",
+          "commits": [
+            {
+              "sha": "80955f5906291691b480fc9206b685bcd40eff2d",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Add comprehensive testing suite for Enhanced Sentiment Analysis system  - Implemented system tests in `system_test.py` to validate the functionality of the Enhanced Sentiment Analyzer, production configuration, and API endpoints. - Created integration tests in `test_dashboard_integration.py` to ensure all components work together with real API keys. - Developed endpoint tests in `test_endpoints.py` to verify the correctness of the sentiment analysis and news retrieval functionalities. - Added tests for the fixed sentiment analyzer in `test_fixed_sentiment.py` to confirm accurate sentiment classification. - Established a complete testing framework in `test_suite.py` using pytest, covering sentiment analysis, news ingestion, configuration management, API endpoints, and performance metrics.Add comprehensive testing suite for Enhanced Sentiment Analysis system  - Implemented system tests in `system_test.py` to validate the functionality of the Enhanced Sentiment Analyzer, production configuration, and API endpoints. - Created integration tests in `test_dashboard_integration.py` to ensure all components work together with real API keys. - Developed endpoint tests in `test_endpoints.py` to verify the correctness of the sentiment analysis and news retrieval functionalities. - Added tests for the fixed sentiment analyzer in `test_fixed_sentiment.py` to confirm accurate sentiment classification. - Established a complete testing framework in `test_suite.py` using pytest, covering sentiment analysis, news ingestion, configuration management, API endpoints, and performance metrics.\n\nAdd comprehensive testing suite for Enhanced Sentiment Analysis system\n\n- Implemented system tests in `system_test.py` to validate the functionality of the Enhanced Sentiment Analyzer, production configuration, and API endpoints.\n- Created integration tests in `test_dashboard_integration.py` to ensure all components work together with real API keys.\n- Developed endpoint tests in `test_endpoints.py` to verify the correctness of the sentiment analysis and news retrieval functionalities.\n- Added tests for the fixed sentiment analyzer in `test_fixed_sentiment.py` to confirm accurate sentiment classification.\n- Established a complete testing framework in `test_suite.py` using pytest, covering sentiment analysis, news ingestion, configuration management, API endpoints, and performance metrics.",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/80955f5906291691b480fc9206b685bcd40eff2d"
+            },
+            {
+              "sha": "f3501cf1cf1d7437d7ba02573b377563e7e7e1a9",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Update .gitignore\n\nt",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/f3501cf1cf1d7437d7ba02573b377563e7e7e1a9"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-31T02:32:26Z"
+      },
+      {
+        "id": "54045941338",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26482703619,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "12285cf9a4338b989a746bd9840e5136a7207666",
+          "before": "f6e85128a6a8b9a9c1465e9a27bbdd16b486db31",
+          "commits": [
+            {
+              "sha": "12285cf9a4338b989a746bd9840e5136a7207666",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Implement comprehensive news aggregator and real sentiment analyzer with API integration\n\n- Added ComprehensiveNewsAggregator class to fetch news from multiple sources including NewsAPI, GNews, CurrentsAPI, RSS feeds, JSON APIs, and MediaStack.\n- Implemented rate limiting and error handling for API requests.\n- Created RealSentimentAnalyzer class utilizing Hugging Face API, VADER, and TextBlob for sentiment analysis.\n- Developed tests for API functionality including news fetching and sentiment analysis.\n- Added a simple API test script to validate API keys and responses.\n- Included detailed logging for debugging and monitoring purposes.",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/12285cf9a4338b989a746bd9840e5136a7207666"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-31T00:12:56Z"
+      },
+      {
+        "id": "54045626694",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26482498304,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "f6e85128a6a8b9a9c1465e9a27bbdd16b486db31",
+          "before": "f6897fd27753b3dc5b7e3827a78f853da047743f",
+          "commits": [
+            {
+              "sha": "f6e85128a6a8b9a9c1465e9a27bbdd16b486db31",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Add Quick Sentiment Analysis Dashboard with mock components and API endpoints\n\n- Implemented a Flask application for sentiment analysis with a quick-start dashboard.\n- Added mock NLP engine, database manager, news API, and Twitter API for demonstration purposes.\n- Created endpoints for sentiment analysis, news retrieval, social media sentiment, and analytics summary.\n- Developed a responsive HTML dashboard with interactive elements and charts using Chart.js.\n- Included logging for API requests and responses.\n- Added test scripts for the sentiment analysis API endpoint to ensure functionality.",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/f6e85128a6a8b9a9c1465e9a27bbdd16b486db31"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-30T23:40:41Z"
+      },
+      {
+        "id": "54045166230",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26482185763,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "f6897fd27753b3dc5b7e3827a78f853da047743f",
+          "before": "1e70e689eae7f7d299cc45fc65a6d7d57b6e6df8",
+          "commits": [
+            {
+              "sha": "f6897fd27753b3dc5b7e3827a78f853da047743f",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Add SimpleDB fallback implementation and enhance database initialization logic\n\n- Introduced SimpleDB class for fallback database functionality.\n- Updated database initialization to handle exceptions and log warnings.\n- Refactored application startup process for improved clarity and error handling.",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/f6897fd27753b3dc5b7e3827a78f853da047743f"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-30T22:53:37Z"
+      },
+      {
+        "id": "54045097265",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26482139564,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "1e70e689eae7f7d299cc45fc65a6d7d57b6e6df8",
+          "before": "feeed27c6485d9ce355e5f632c7bdb1701e7f3e6",
+          "commits": [
+            {
+              "sha": "1e70e689eae7f7d299cc45fc65a6d7d57b6e6df8",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Add initial log file and SQLite database for sentiment analysis dashboard  - Created awesome_dashboard.log to capture server logs and warnings. - Initialized awesome_sentiment_analysis.db with tables for news articles and sentiment analyses, including relevant fields for data storage.\n\nAdd initial log file and SQLite database for sentiment analysis dashboard\n\n- Created awesome_dashboard.log to capture server logs and warnings.\n- Initialized awesome_sentiment_analysis.db with tables for news articles and sentiment analyses, including relevant fields for data storage.",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/1e70e689eae7f7d299cc45fc65a6d7d57b6e6df8"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-30T22:45:51Z"
+      },
+      {
+        "id": "54044991712",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26482068856,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "feeed27c6485d9ce355e5f632c7bdb1701e7f3e6",
+          "before": "3e35405ca00aacd4c67915b5ccf242749d709035",
+          "commits": [
+            {
+              "sha": "feeed27c6485d9ce355e5f632c7bdb1701e7f3e6",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Add initial setup scripts and requirements for Immersive Sentiment Analysis Dashboard",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/feeed27c6485d9ce355e5f632c7bdb1701e7f3e6"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-30T22:34:51Z"
+      },
+      {
+        "id": "54044982482",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26482062824,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "3e35405ca00aacd4c67915b5ccf242749d709035",
+          "before": "8117060161259fe92a94c5083c12818e8bd8ab4e",
+          "commits": [
+            {
+              "sha": "3e35405ca00aacd4c67915b5ccf242749d709035",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Add Real NLP Engine and Video Metadata Extractor\n\n- Implemented Real NLP Engine with support for multiple sentiment analysis models including BERT, RoBERTa, VADER, and TextBlob.\n- Added comprehensive sentiment analysis features, including emotion detection, toxicity, and bias scoring.\n- Created Real Video Metadata Extractor to extract metadata, transcripts, and perform sentiment analysis on video content.\n- Integrated support for audio extraction, speech recognition, and YouTube video processing.\n- Enhanced error handling and logging throughout both modules for better debugging and user feedback.",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/3e35405ca00aacd4c67915b5ccf242749d709035"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-30T22:33:54Z"
+      },
+      {
+        "id": "54043865896",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26481305889,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "8117060161259fe92a94c5083c12818e8bd8ab4e",
+          "before": "3331d7e002e2bd133fdd886c37fc2f2cff2533ed",
+          "commits": [
+            {
+              "sha": "8117060161259fe92a94c5083c12818e8bd8ab4e",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Add initial settings configuration for CodeGPT API key",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/8117060161259fe92a94c5083c12818e8bd8ab4e"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-30T20:53:58Z"
+      },
+      {
+        "id": "53968083504",
+        "type": "PushEvent",
+        "actor": {
+          "id": 134260642,
+          "login": "MadScie254",
+          "display_login": "MadScie254",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?"
+        },
+        "repo": {
+          "id": 1045280900,
+          "name": "MadScie254/sentiment_analysis",
+          "url": "https://api.github.com/repos/MadScie254/sentiment_analysis"
+        },
+        "payload": {
+          "repository_id": 1045280900,
+          "push_id": 26441263133,
+          "size": 1,
+          "distinct_size": 1,
+          "ref": "refs/heads/main",
+          "head": "3331d7e002e2bd133fdd886c37fc2f2cff2533ed",
+          "before": "483842bab1ef48bbd0b7c4ddb8e3c7597def35c8",
+          "commits": [
+            {
+              "sha": "3331d7e002e2bd133fdd886c37fc2f2cff2533ed",
+              "author": {
+                "email": "134260642+MadScie254@users.noreply.github.com",
+                "name": "Daniel Wanjala"
+              },
+              "message": "Enhance sentiment analysis functionality with keyword-based detection and improved error handling; add sentiment testing script for validation",
+              "distinct": true,
+              "url": "https://api.github.com/repos/MadScie254/sentiment_analysis/commits/3331d7e002e2bd133fdd886c37fc2f2cff2533ed"
+            }
+          ]
+        },
+        "public": true,
+        "created_at": "2025-08-28T17:38:34Z"
+      }
+    ],
+    "organizations": [],
+    "statistics": {
+      "total_repositories": 20,
+      "languages": [
+        "Python",
+        "HTML",
+        "Jupyter Notebook",
+        "JavaScript"
+      ],
+      "total_stars": 1,
+      "total_forks": 0,
+      "most_starred_repo": {
+        "id": 1029982913,
+        "node_id": "R_kgDOPWRKwQ",
+        "name": "ml_DL",
+        "full_name": "MadScie254/ml_DL",
+        "private": false,
+        "owner": {
+          "login": "MadScie254",
+          "id": 134260642,
+          "node_id": "U_kgDOCACnog",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "html_url": "https://github.com/MadScie254",
+          "followers_url": "https://api.github.com/users/MadScie254/followers",
+          "following_url": "https://api.github.com/users/MadScie254/following{/other_user}",
+          "gists_url": "https://api.github.com/users/MadScie254/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/MadScie254/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/MadScie254/subscriptions",
+          "organizations_url": "https://api.github.com/users/MadScie254/orgs",
+          "repos_url": "https://api.github.com/users/MadScie254/repos",
+          "events_url": "https://api.github.com/users/MadScie254/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/MadScie254/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/MadScie254/ml_DL",
+        "description": "Machine Learnining and DL using inbuilt python cancer datset",
+        "fork": false,
+        "url": "https://api.github.com/repos/MadScie254/ml_DL",
+        "forks_url": "https://api.github.com/repos/MadScie254/ml_DL/forks",
+        "keys_url": "https://api.github.com/repos/MadScie254/ml_DL/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/MadScie254/ml_DL/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/MadScie254/ml_DL/teams",
+        "hooks_url": "https://api.github.com/repos/MadScie254/ml_DL/hooks",
+        "issue_events_url": "https://api.github.com/repos/MadScie254/ml_DL/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/MadScie254/ml_DL/events",
+        "assignees_url": "https://api.github.com/repos/MadScie254/ml_DL/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/MadScie254/ml_DL/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/MadScie254/ml_DL/tags",
+        "blobs_url": "https://api.github.com/repos/MadScie254/ml_DL/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/MadScie254/ml_DL/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/MadScie254/ml_DL/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/MadScie254/ml_DL/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/MadScie254/ml_DL/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/MadScie254/ml_DL/languages",
+        "stargazers_url": "https://api.github.com/repos/MadScie254/ml_DL/stargazers",
+        "contributors_url": "https://api.github.com/repos/MadScie254/ml_DL/contributors",
+        "subscribers_url": "https://api.github.com/repos/MadScie254/ml_DL/subscribers",
+        "subscription_url": "https://api.github.com/repos/MadScie254/ml_DL/subscription",
+        "commits_url": "https://api.github.com/repos/MadScie254/ml_DL/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/MadScie254/ml_DL/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/MadScie254/ml_DL/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/MadScie254/ml_DL/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/MadScie254/ml_DL/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/MadScie254/ml_DL/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/MadScie254/ml_DL/merges",
+        "archive_url": "https://api.github.com/repos/MadScie254/ml_DL/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/MadScie254/ml_DL/downloads",
+        "issues_url": "https://api.github.com/repos/MadScie254/ml_DL/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/MadScie254/ml_DL/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/MadScie254/ml_DL/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/MadScie254/ml_DL/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/MadScie254/ml_DL/labels{/name}",
+        "releases_url": "https://api.github.com/repos/MadScie254/ml_DL/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/MadScie254/ml_DL/deployments",
+        "created_at": "2025-07-31T22:36:29Z",
+        "updated_at": "2025-08-03T20:36:51Z",
+        "pushed_at": "2025-08-03T20:36:48Z",
+        "git_url": "git://github.com/MadScie254/ml_DL.git",
+        "ssh_url": "git@github.com:MadScie254/ml_DL.git",
+        "clone_url": "https://github.com/MadScie254/ml_DL.git",
+        "svn_url": "https://github.com/MadScie254/ml_DL",
+        "homepage": "",
+        "size": 3000,
+        "stargazers_count": 1,
+        "watchers_count": 1,
+        "language": "Jupyter Notebook",
+        "has_issues": true,
+        "has_projects": true,
+        "has_downloads": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "has_discussions": false,
+        "forks_count": 0,
+        "mirror_url": null,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 0,
+        "license": null,
+        "allow_forking": true,
+        "is_template": false,
+        "web_commit_signoff_required": false,
+        "topics": [
+          "ai",
+          "cancer-detection",
+          "css",
+          "jupyter-notebook",
+          "machine-learning-algorithms",
+          "python"
+        ],
+        "visibility": "public",
+        "forks": 0,
+        "open_issues": 0,
+        "watchers": 1,
+        "default_branch": "main"
+      },
+      "most_recent_repo": {
+        "id": 644640589,
+        "node_id": "R_kgDOJmxvTQ",
+        "name": "MadScie254",
+        "full_name": "MadScie254/MadScie254",
+        "private": false,
+        "owner": {
+          "login": "MadScie254",
+          "id": 134260642,
+          "node_id": "U_kgDOCACnog",
+          "avatar_url": "https://avatars.githubusercontent.com/u/134260642?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/MadScie254",
+          "html_url": "https://github.com/MadScie254",
+          "followers_url": "https://api.github.com/users/MadScie254/followers",
+          "following_url": "https://api.github.com/users/MadScie254/following{/other_user}",
+          "gists_url": "https://api.github.com/users/MadScie254/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/MadScie254/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/MadScie254/subscriptions",
+          "organizations_url": "https://api.github.com/users/MadScie254/orgs",
+          "repos_url": "https://api.github.com/users/MadScie254/repos",
+          "events_url": "https://api.github.com/users/MadScie254/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/MadScie254/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/MadScie254/MadScie254",
+        "description": "Config files for my GitHub profile.",
+        "fork": false,
+        "url": "https://api.github.com/repos/MadScie254/MadScie254",
+        "forks_url": "https://api.github.com/repos/MadScie254/MadScie254/forks",
+        "keys_url": "https://api.github.com/repos/MadScie254/MadScie254/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/MadScie254/MadScie254/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/MadScie254/MadScie254/teams",
+        "hooks_url": "https://api.github.com/repos/MadScie254/MadScie254/hooks",
+        "issue_events_url": "https://api.github.com/repos/MadScie254/MadScie254/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/MadScie254/MadScie254/events",
+        "assignees_url": "https://api.github.com/repos/MadScie254/MadScie254/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/MadScie254/MadScie254/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/MadScie254/MadScie254/tags",
+        "blobs_url": "https://api.github.com/repos/MadScie254/MadScie254/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/MadScie254/MadScie254/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/MadScie254/MadScie254/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/MadScie254/MadScie254/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/MadScie254/MadScie254/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/MadScie254/MadScie254/languages",
+        "stargazers_url": "https://api.github.com/repos/MadScie254/MadScie254/stargazers",
+        "contributors_url": "https://api.github.com/repos/MadScie254/MadScie254/contributors",
+        "subscribers_url": "https://api.github.com/repos/MadScie254/MadScie254/subscribers",
+        "subscription_url": "https://api.github.com/repos/MadScie254/MadScie254/subscription",
+        "commits_url": "https://api.github.com/repos/MadScie254/MadScie254/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/MadScie254/MadScie254/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/MadScie254/MadScie254/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/MadScie254/MadScie254/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/MadScie254/MadScie254/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/MadScie254/MadScie254/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/MadScie254/MadScie254/merges",
+        "archive_url": "https://api.github.com/repos/MadScie254/MadScie254/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/MadScie254/MadScie254/downloads",
+        "issues_url": "https://api.github.com/repos/MadScie254/MadScie254/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/MadScie254/MadScie254/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/MadScie254/MadScie254/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/MadScie254/MadScie254/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/MadScie254/MadScie254/labels{/name}",
+        "releases_url": "https://api.github.com/repos/MadScie254/MadScie254/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/MadScie254/MadScie254/deployments",
+        "created_at": "2023-05-24T00:30:28Z",
+        "updated_at": "2025-09-01T21:37:39Z",
+        "pushed_at": "2025-09-01T21:37:35Z",
+        "git_url": "git://github.com/MadScie254/MadScie254.git",
+        "ssh_url": "git@github.com:MadScie254/MadScie254.git",
+        "clone_url": "https://github.com/MadScie254/MadScie254.git",
+        "svn_url": "https://github.com/MadScie254/MadScie254",
+        "homepage": "https://github.com/MadScie254",
+        "size": 121773,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": "JavaScript",
+        "has_issues": false,
+        "has_projects": true,
+        "has_downloads": true,
+        "has_wiki": false,
+        "has_pages": true,
+        "has_discussions": false,
+        "forks_count": 0,
+        "mirror_url": null,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 1,
+        "license": null,
+        "allow_forking": true,
+        "is_template": false,
+        "web_commit_signoff_required": false,
+        "topics": [
+          "config",
+          "github-config"
+        ],
+        "visibility": "public",
+        "forks": 0,
+        "open_issues": 1,
+        "watchers": 0,
+        "default_branch": "main"
+      }
+    }
+  },
+  "metadata": {
+    "fetched_at": "2025-09-02T00:56:54.608031",
+    "expires_at": "2025-09-02T02:56:54.608890",
+    "source": "api-prefetch-pipeline",
+    "version": "2.0"
+  }
+}
