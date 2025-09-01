@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - MadScie254 | Data Science & Analytics Expert</title>
+    <meta name="description" content="Welcome to MadScie254's professional portfolio. Explore data-driven solutions, strategic analytics, and innovative technology implementations.">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Theme and CSS Variables -->
+    <style>
+        :root {
+            --bg: #0F0F23;
+            --surface-1: #1A1A2E;
+            --surface-2: #16213E;
+            --surface-3: #2A4A6B;
+            --text-primary: #E1E8ED;
+            --text-secondary: #8B9DC3;
+            --accent: #7877C6;
+            --accent-400: #9896E0;
+            --accent-600: #5A59A6;
+            --accent-contrast: #FFFFFF;
+            --shadow-1: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-2: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .light {
+            --bg: #FFFFFF;
+            --surface-1: #F8FAFC;
+            --surface-2: #F1F5F9;
+            --surface-3: #E2E8F0;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --accent: #6366F1;
+            --accent-400: #818CF8;
+            --accent-600: #4F46E5;
+            --accent-contrast: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--accent-contrast);
+        }
+
+        .btn-secondary {
+            background: var(--surface-2);
+            color: var(--text-primary);
+            border-color: var(--surface-3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .card {
+            background: var(--surface-1);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-1);
+            border: 1px solid var(--surface-2);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent), var(--accent-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @media (max-width: 767px) {
+            .container { padding: 0 1rem; }
+            .card { padding: 1.5rem; }
+            .text-3xl { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--bg)] text-[var(--text-primary)]">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-[var(--surface-1)]/90 backdrop-blur-md border-b border-[var(--surface-2)]">
+        <div class="container flex justify-between items-center py-4">
+            <a href="index.html" class="font-bold text-xl text-[var(--accent)]">MadScie254</a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">← Back to Portfolio</a>
+                <a href="about.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">About</a>
+                <a href="projects.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Projects</a>
+                <a href="connect.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-16 space-y-16">
+        <!-- Welcome Section -->
+        <section class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Welcome to My Digital Laboratory</h1>
+            <p class="text-xl text-[var(--text-secondary)] max-w-3xl mx-auto mb-8">
+                This is where data science meets strategic thinking, where complex problems find elegant solutions, 
+                and where analytical rigor drives innovation. Explore my journey through the intersection of 
+                technology, business, and transformative insights.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="projects.html" class="btn btn-primary">
+                    <i data-lucide="folder-kanban"></i>
+                    Explore Projects
+                </a>
+                <a href="about.html" class="btn btn-secondary">
+                    <i data-lucide="user"></i>
+                    Learn About Me
+                </a>
+            </div>
+        </section>
+
+        <!-- Quick Overview -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card text-center">
+                <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="brain-circuit" class="w-8 h-8 text-[var(--accent)]"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-gradient">Data Science Expertise</h3>
+                <p class="text-[var(--text-secondary)]">
+                    Advanced statistical modeling, machine learning, and predictive analytics with 
+                    real-world business applications.
+                </p>
+            </div>
+
+            <div class="card text-center">
+                <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="server" class="w-8 h-8 text-[var(--accent)]"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-gradient">Infrastructure Management</h3>
+                <p class="text-[var(--text-secondary)]">
+                    Cloud architecture, DevOps automation, and scalable system design 
+                    for high-performance applications.
+                </p>
+            </div>
+
+            <div class="card text-center">
+                <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="trending-up" class="w-8 h-8 text-[var(--accent)]"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-gradient">Strategic Analytics</h3>
+                <p class="text-[var(--text-secondary)]">
+                    Business intelligence frameworks and data-driven decision support 
+                    systems that drive measurable impact.
+                </p>
+            </div>
+        </section>
+
+        <!-- Recent Highlights -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Recent Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3">Sentiment Analysis Dashboard</h3>
+                    <p class="text-[var(--text-secondary)] mb-4">
+                        Built a real-time sentiment analysis system processing social media streams 
+                        with advanced NLP models and interactive visualization.
+                    </p>
+                    <a href="projects.html" class="text-[var(--accent)] font-medium">Learn More →</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3">InvestWise AI Predictor</h3>
+                    <p class="text-[var(--text-secondary)] mb-4">
+                        Neural network-powered investment advisory system analyzing market patterns 
+                        and regional business opportunities.
+                    </p>
+                    <a href="projects.html" class="text-[var(--accent)] font-medium">Learn More →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="card text-center bg-gradient-to-r from-[var(--accent)]/10 to-[var(--accent-400)]/10 border-[var(--accent)]/20">
+            <h2 class="text-3xl font-bold mb-4 text-gradient">Ready to Collaborate?</h2>
+            <p class="text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
+                I'm always interested in discussing complex technical challenges, exploring innovative solutions, 
+                and collaborating with forward-thinking organizations.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="connect.html" class="btn btn-primary">
+                    <i data-lucide="mail"></i>
+                    Get In Touch
+                </a>
+                <a href="https://github.com/MadScie254" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <i data-lucide="github"></i>
+                    View GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

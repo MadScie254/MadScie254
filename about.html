@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - MadScie254 | Daniel Wanjala</title>
+    <meta name="description" content="Learn about Daniel Wanjala (MadScie254) - a polymathic technologist specializing in data science, IT management, and strategic innovation.">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Theme and CSS Variables -->
+    <style>
+        :root {
+            --bg: #0F0F23;
+            --surface-1: #1A1A2E;
+            --surface-2: #16213E;
+            --surface-3: #2A4A6B;
+            --text-primary: #E1E8ED;
+            --text-secondary: #8B9DC3;
+            --accent: #7877C6;
+            --accent-400: #9896E0;
+            --accent-600: #5A59A6;
+            --accent-contrast: #FFFFFF;
+            --shadow-1: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-2: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .light {
+            --bg: #FFFFFF;
+            --surface-1: #F8FAFC;
+            --surface-2: #F1F5F9;
+            --surface-3: #E2E8F0;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --accent: #6366F1;
+            --accent-400: #818CF8;
+            --accent-600: #4F46E5;
+            --accent-contrast: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--accent-contrast);
+        }
+
+        .btn-secondary {
+            background: var(--surface-2);
+            color: var(--text-primary);
+            border-color: var(--surface-3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .card {
+            background: var(--surface-1);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-1);
+            border: 1px solid var(--surface-2);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent), var(--accent-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .timeline-item {
+            border-left: 2px solid var(--surface-2);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        @media (max-width: 767px) {
+            .container { padding: 0 1rem; }
+            .card { padding: 1.5rem; }
+            .text-3xl { font-size: 1.75rem; }
+            .grid-cols-2 { grid-template-columns: 1fr; }
+            .grid-cols-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--bg)] text-[var(--text-primary)]">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-[var(--surface-1)]/90 backdrop-blur-md border-b border-[var(--surface-2)]">
+        <div class="container flex justify-between items-center py-4">
+            <a href="index.html" class="font-bold text-xl text-[var(--accent)]">MadScie254</a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">← Portfolio</a>
+                <a href="projects.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Projects</a>
+                <a href="connect.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-16 space-y-16">
+        <!-- Hero Section -->
+        <section class="text-center">
+            <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-8 border-4 border-[var(--accent)]/30">
+                <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="Daniel Wanjala" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Daniel Wanjala</h1>
+            <p class="text-xl text-[var(--text-secondary)] max-w-3xl mx-auto mb-8">
+                Polymathic Technologist • Data Science Expert • Strategic Innovation Leader
+            </p>
+        </section>
+
+        <!-- Professional Identity -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2">
+                <div class="card">
+                    <h2 class="text-3xl font-bold mb-6 text-gradient">Professional Identity</h2>
+                    <div class="space-y-6 text-[var(--text-secondary)]">
+                        <p>
+                            I am Daniel Wanjala, a polymathic technologist operating at the nexus of data science, 
+                            infrastructure management, and strategic innovation. With four years of deep experience 
+                            enhancing organizational operations through systematic information architecture, I translate 
+                            complex analytical challenges into scalable, production-ready solutions.
+                        </p>
+                        <p>
+                            My approach is characterized by analytical rigor and quiet confidence—I believe in letting 
+                            the work speak for itself. Every project I undertake follows a disciplined methodology: 
+                            thorough problem decomposition, evidence-based solution design, and meticulous implementation 
+                            with robust monitoring frameworks.
+                        </p>
+                        <p>
+                            Based in Nairobi and working with 
+                            <a href="https://github.com/Danco-Analytics" class="text-[var(--accent)] hover:text-[var(--accent-400)] transition-colors">@Danco-Analytics</a>, 
+                            I specialize in building systems that not only solve immediate business problems but create 
+                            sustainable competitive advantages through data-driven decision making.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Metrics -->
+            <div class="space-y-6">
+                <div class="card text-center">
+                    <div class="text-3xl font-bold mb-2 text-[var(--accent)]">117+</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Public Repositories</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-3xl font-bold mb-2 text-[var(--accent)]">4+</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Years Experience</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-3xl font-bold mb-2 text-[var(--accent)]">2</div>
+                    <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Major Contest Wins</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Core Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="brain-circuit" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gradient">Data Science & ML</h3>
+                    <p class="text-[var(--text-secondary)]">
+                        Advanced statistical modeling, predictive analytics, and machine learning pipeline 
+                        development with production deployment experience.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="server" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gradient">Infrastructure & DevOps</h3>
+                    <p class="text-[var(--text-secondary)]">
+                        Cloud architecture design, CI/CD pipeline automation, and scalable system deployment 
+                        across AWS, Azure, and hybrid environments.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gradient">Strategic Analytics</h3>
+                    <p class="text-[var(--text-secondary)]">
+                        Business intelligence frameworks, performance optimization strategies, and 
+                        data-driven decision support systems.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Journey -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Professional Journey</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold mb-2">Technical Analyst - Danco Analytics</h3>
+                    <p class="text-[var(--accent)] font-medium mb-2">2021 - Present</p>
+                    <p class="text-[var(--text-secondary)]">
+                        Leading data science initiatives and infrastructure optimization projects. 
+                        Developed predictive models for healthcare and financial sectors, resulting in 
+                        improved operational efficiency and strategic decision-making capabilities.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold mb-2">Research & Development</h3>
+                    <p class="text-[var(--accent)] font-medium mb-2">2020 - Present</p>
+                    <p class="text-[var(--text-secondary)]">
+                        Continuous research in machine learning applications, economic network analysis, 
+                        and innovative technology integration. Published research and open-source contributions 
+                        in data science and fintech domains.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="text-xl font-semibold mb-2">Early Career & Foundation Building</h3>
+                    <p class="text-[var(--accent)] font-medium mb-2">2018 - 2021</p>
+                    <p class="text-[var(--text-secondary)]">
+                        Built foundational expertise in data analysis, programming, and system administration. 
+                        Focused on developing practical skills in Python, statistical modeling, and 
+                        cloud infrastructure management.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy -->
+        <section class="card text-center bg-gradient-to-r from-[var(--accent)]/10 to-[var(--accent-400)]/10 border-[var(--accent)]/20">
+            <h2 class="text-3xl font-bold mb-6 text-gradient">Philosophy & Approach</h2>
+            <blockquote class="text-lg italic text-[var(--text-secondary)] max-w-4xl mx-auto mb-8">
+                "Data isn't just numbers; it's a narrative waiting to be told. My approach is rooted in the belief 
+                that true insight comes from a relentless pursuit of clarity, a respect for statistical rigor, 
+                and an uncompromising commitment to the integrity of the process."
+            </blockquote>
+            <p class="text-[var(--text-secondary)] max-w-3xl mx-auto">
+                I believe in systems that are not only intelligent but also reliable, auditable, and transparent. 
+                Every model, every dashboard, every line of infrastructure code is an artifact of this philosophy.
+            </p>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center">
+            <h2 class="text-3xl font-bold mb-6 text-gradient">Let's Build Something Exceptional</h2>
+            <p class="text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
+                Ready to discuss complex technical challenges and explore innovative solutions? 
+                I'm always interested in collaborating with forward-thinking organizations.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="connect.html" class="btn btn-primary">
+                    <i data-lucide="mail"></i>
+                    Get In Touch
+                </a>
+                <a href="projects.html" class="btn btn-secondary">
+                    <i data-lucide="folder-kanban"></i>
+                    View My Work
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

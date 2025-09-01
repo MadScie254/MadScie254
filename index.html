@@ -148,6 +148,131 @@
             border: 1px solid var(--text-secondary);
         }
         
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* --- Enhanced Responsive Design --- */
+        @media (max-width: 767px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            /* Grid responsiveness */
+            .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .grid-cols-4 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            
+            .md\:grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .md\:grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            
+            .lg\:grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .lg\:grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .lg\:grid-cols-4 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            
+            /* Typography */
+            .text-6xl { font-size: 2.5rem; line-height: 1.1; }
+            .text-5xl { font-size: 2.25rem; line-height: 1.1; }
+            .text-4xl { font-size: 2rem; line-height: 1.2; }
+            .text-3xl { font-size: 1.75rem; line-height: 1.2; }
+            .text-2xl { font-size: 1.5rem; line-height: 1.3; }
+            .text-xl { font-size: 1.25rem; line-height: 1.4; }
+            
+            /* Content width adjustments */
+            .max-w-\[70ch\] { max-width: 100%; }
+            .max-w-\[75ch\] { max-width: 100%; }
+            .max-w-4xl { max-width: 100%; }
+            
+            /* Card adjustments */
+            .card {
+                padding: 1rem;
+                border-radius: 0.75rem;
+            }
+            
+            /* Hero image adjustments */
+            .hero-image-wrap {
+                width: 250px !important;
+                height: 250px !important;
+                margin: 0 auto;
+            }
+            
+            /* Button adjustments */
+            .btn {
+                padding: 0.75rem 1rem;
+                font-size: 0.875rem;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .flex-col.sm\:flex-row {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            /* Navigation adjustments */
+            .hidden.md\:flex {
+                display: none !important;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+            
+            .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+        
+        @media (min-width: 1280px) {
+            .container {
+                padding: 0 2.5rem;
+            }
+        }
+
+        /* --- Skill Progress Bar Classes --- */
+        .skill-python { width: 95%; }
+        .skill-tensorflow { width: 90%; }
+        .skill-statistics { width: 92%; }
+        .skill-mlops { width: 85%; }
+        .skill-cloud { width: 88%; }
+        .skill-docker { width: 82%; }
+        .skill-cicd { width: 90%; }
+        .skill-iac { width: 86%; }
+
+        /* --- Image Responsiveness --- */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+        
         /* New: Cinematic GSAP classes for text reveal */
         .hero-headline-word {
             display: inline-block;
@@ -421,7 +546,7 @@
                 <p class="text-[var(--text-secondary)] text-lg leading-relaxed max-w-[70ch] mb-8 hero-text-animate">
                     I am a polymathic technologist blending data science, IT management, and software engineering. I apply analytical rigor to complex problems, building robust, scalable systems that translate raw data into strategic advantage. From predictive models in healthcare to optimized infrastructure in finance, I bridge the gap between business objectives and technical execution with a quiet, confident precision.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 hero-cta-animate">
+                <div class="flex flex-col gap-3 sm:flex-row sm:gap-4 hero-cta-animate">
                     <a href="projects.html" class="btn btn-primary glow-effect magnetic-hover ripple-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-kanban"><path d="M15 15.5V11m0 0V8m0 3l-4 4m4-4l4 4"/><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M10 4v16"/><path d="M17 4v16"/></svg>
                         Explore Projects
@@ -432,10 +557,18 @@
                     </a>
                 </div>
             </div>
-            <div class="relative flex justify-center items-center p-8 hero-image-wrap floating-element">
-                <div class="hero-image w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden glow-effect">
+            <div class="relative flex justify-center items-center p-4 sm:p-8 hero-image-wrap floating-element">
+                <div class="hero-image w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden glow-effect">
                     <img src="https://madscie254.github.io/MadScie254/assets/profile.jpg" alt="A profile photo of MadScie254, a data scientist and IT manager" loading="eager" class="w-full h-full object-cover">
                 </div>
+            </div>
+            
+            <!-- Section Navigation -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="home.html" class="btn btn-outline magnetic-hover glow-effect ripple-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    Explore Home Page
+                </a>
             </div>
         </section>
 
@@ -528,6 +661,14 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Section Navigation -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="about.html" class="btn btn-outline magnetic-hover glow-effect ripple-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Learn More About Me
+                </a>
+            </div>
         </section>
 
         <!-- Impact Metrics -->
@@ -550,6 +691,14 @@
                     <div class="text-5xl font-bold mb-2 text-[var(--accent)]"><span data-count="2">0</span></div>
                     <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Key Domains</p>
                 </div>
+            </div>
+            
+            <!-- Section Navigation -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="metrics.html" class="btn btn-outline magnetic-hover glow-effect ripple-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/></svg>
+                    View Detailed Metrics
+                </a>
             </div>
         </section>
 
@@ -665,6 +814,14 @@
                     </a>
                 </div>
             </div>
+            
+            <!-- Section Navigation -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="projects.html" class="btn btn-outline magnetic-hover glow-effect ripple-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-kanban"><path d="M15 15.5V11m0 0V8m0 3l-4 4m4-4l4 4"/><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M10 4v16"/><path d="M17 4v16"/></svg>
+                    Explore All Projects
+                </a>
+            </div>
         </section>
         <!-- Nlog Section -->
         <section id="nlog" class="container">
@@ -746,6 +903,14 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Section Navigation -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="nlog.html" class="btn btn-outline magnetic-hover glow-effect ripple-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Read Full Nlog
+                </a>
+            </div>
         </section>
 
         <!-- Innovation Portfolio Section -->
@@ -800,6 +965,14 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Section Navigation -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="innovation.html" class="btn btn-outline magnetic-hover glow-effect ripple-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                    Explore Innovation Lab
+                </a>
+            </div>
         </section>
 
         <!-- Technical Mastery Section -->
@@ -821,7 +994,7 @@
                                     <span class="text-sm text-[var(--text-secondary)]">Expert</span>
                                 </div>
                                 <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
-                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 95%"></div>
+                                    <div class="bg-[var(--accent)] h-2 rounded-full skill-python"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -830,7 +1003,7 @@
                                     <span class="text-sm text-[var(--text-secondary)]">Advanced</span>
                                 </div>
                                 <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
-                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 90%"></div>
+                                    <div class="bg-[var(--accent)] h-2 rounded-full skill-tensorflow"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -839,7 +1012,7 @@
                                     <span class="text-sm text-[var(--text-secondary)]">Expert</span>
                                 </div>
                                 <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
-                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 92%"></div>
+                                    <div class="bg-[var(--accent)] h-2 rounded-full skill-statistics"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -848,7 +1021,7 @@
                                     <span class="text-sm text-[var(--text-secondary)]">Advanced</span>
                                 </div>
                                 <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
-                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 85%"></div>
+                                    <div class="bg-[var(--accent)] h-2 rounded-full skill-mlops"></div>
                                 </div>
                             </div>
                         </div>
@@ -863,7 +1036,7 @@
                                     <span class="text-sm text-[var(--text-secondary)]">Expert</span>
                                 </div>
                                 <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
-                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 88%"></div>
+                                    <div class="bg-[var(--accent)] h-2 rounded-full skill-cloud"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -872,7 +1045,7 @@
                                     <span class="text-sm text-[var(--text-secondary)]">Advanced</span>
                                 </div>
                                 <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
-                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 82%"></div>
+                                    <div class="bg-[var(--accent)] h-2 rounded-full skill-docker"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -881,7 +1054,7 @@
                                     <span class="text-sm text-[var(--text-secondary)]">Expert</span>
                                 </div>
                                 <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
-                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 90%"></div>
+                                    <div class="bg-[var(--accent)] h-2 rounded-full skill-cicd"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -890,7 +1063,7 @@
                                     <span class="text-sm text-[var(--text-secondary)]">Advanced</span>
                                 </div>
                                 <div class="w-full bg-[var(--surface-2)] rounded-full h-2">
-                                    <div class="bg-[var(--accent)] h-2 rounded-full" style="width: 86%"></div>
+                                    <div class="bg-[var(--accent)] h-2 rounded-full skill-iac"></div>
                                 </div>
                             </div>
                         </div>
@@ -954,6 +1127,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Section Navigation -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="technical.html" class="btn btn-outline magnetic-hover glow-effect ripple-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+                    View Technical Skills
+                </a>
             </div>
         </section>
 
@@ -1038,6 +1219,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Section Navigation -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="connect.html" class="btn btn-outline magnetic-hover glow-effect ripple-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Connect & Collaborate
+                </a>
             </div>
         </section>
 

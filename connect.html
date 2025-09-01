@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - MadScie254 | Professional Collaboration</title>
+    <meta name="description" content="Connect with MadScie254 for data science consulting, technical leadership, and strategic collaboration opportunities.">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Theme and CSS Variables -->
+    <style>
+        :root {
+            --bg: #0F0F23;
+            --surface-1: #1A1A2E;
+            --surface-2: #16213E;
+            --surface-3: #2A4A6B;
+            --text-primary: #E1E8ED;
+            --text-secondary: #8B9DC3;
+            --accent: #7877C6;
+            --accent-400: #9896E0;
+            --accent-600: #5A59A6;
+            --accent-contrast: #FFFFFF;
+            --shadow-1: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-2: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--accent-contrast);
+        }
+
+        .btn-secondary {
+            background: var(--surface-2);
+            color: var(--text-primary);
+            border-color: var(--surface-3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .card {
+            background: var(--surface-1);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-1);
+            border: 1px solid var(--surface-2);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent), var(--accent-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-card {
+            background: var(--surface-1);
+            border: 1px solid var(--surface-2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent);
+            background: var(--surface-2);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 767px) {
+            .container { padding: 0 1rem; }
+            .card { padding: 1.5rem; }
+            .text-3xl { font-size: 1.75rem; }
+            .grid-cols-2 { grid-template-columns: 1fr; }
+            .grid-cols-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--bg)] text-[var(--text-primary)]">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-[var(--surface-1)]/90 backdrop-blur-md border-b border-[var(--surface-2)]">
+        <div class="container flex justify-between items-center py-4">
+            <a href="index.html" class="font-bold text-xl text-[var(--accent)]">MadScie254</a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">← Portfolio</a>
+                <a href="about.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">About</a>
+                <a href="projects.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-16 space-y-16">
+        <!-- Hero Section -->
+        <section class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Connect & Collaborate</h1>
+            <p class="text-xl text-[var(--text-secondary)] max-w-4xl mx-auto mb-8">
+                Ready to build something exceptional? I'm always interested in discussing complex technical challenges, 
+                exploring innovative solutions, and collaborating with forward-thinking organizations that value 
+                analytical rigor and strategic impact.
+            </p>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Professional Channels -->
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-6 text-gradient">Professional Channels</h2>
+                <div class="space-y-4">
+                    <a href="https://www.linkedin.com/in/daniel-wanjala-912b8b17b" 
+                       target="_blank" rel="noopener" 
+                       class="contact-card flex items-center gap-4">
+                        <div class="w-12 h-12 bg-[var(--accent)]/20 rounded-full flex items-center justify-center">
+                            <i data-lucide="linkedin" class="w-6 h-6 text-[var(--accent)]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">LinkedIn</h3>
+                            <p class="text-sm text-[var(--text-secondary)]">Professional networking & updates</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/MadScie254" 
+                       target="_blank" rel="noopener" 
+                       class="contact-card flex items-center gap-4">
+                        <div class="w-12 h-12 bg-[var(--accent)]/20 rounded-full flex items-center justify-center">
+                            <i data-lucide="github" class="w-6 h-6 text-[var(--accent)]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">GitHub</h3>
+                            <p class="text-sm text-[var(--text-secondary)]">Code repositories & open source</p>
+                        </div>
+                    </a>
+
+                    <a href="https://orcid.org/0009-0005-1979-8555" 
+                       target="_blank" rel="noopener" 
+                       class="contact-card flex items-center gap-4">
+                        <div class="w-12 h-12 bg-[var(--accent)]/20 rounded-full flex items-center justify-center">
+                            <i data-lucide="user-check" class="w-6 h-6 text-[var(--accent)]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">ORCID</h3>
+                            <p class="text-sm text-[var(--text-secondary)]">Research & academic publications</p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:contact@madscie254.dev" 
+                       class="contact-card flex items-center gap-4">
+                        <div class="w-12 h-12 bg-[var(--accent)]/20 rounded-full flex items-center justify-center">
+                            <i data-lucide="mail" class="w-6 h-6 text-[var(--accent)]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Email</h3>
+                            <p class="text-sm text-[var(--text-secondary)]">Direct professional communication</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Collaboration Interests -->
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-6 text-gradient">Collaboration Interests</h2>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-[var(--accent)] pl-4">
+                        <h3 class="font-semibold text-lg mb-2">Data Strategy Consulting</h3>
+                        <p class="text-[var(--text-secondary)]">
+                            Strategic data architecture design, analytics roadmap development, and 
+                            organizational capability assessment for data-driven transformation.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-[var(--surface-2)] pl-4">
+                        <h3 class="font-semibold text-lg mb-2">ML System Design</h3>
+                        <p class="text-[var(--text-secondary)]">
+                            End-to-end machine learning pipeline development, model deployment strategies, 
+                            and production MLOps implementation.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-[var(--surface-2)] pl-4">
+                        <h3 class="font-semibold text-lg mb-2">Research Partnerships</h3>
+                        <p class="text-[var(--text-secondary)]">
+                            Applied research in fintech innovation, healthcare analytics, and 
+                            infrastructure optimization with academic and industry partners.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-[var(--surface-2)] pl-4">
+                        <h3 class="font-semibold text-lg mb-2">Technical Leadership</h3>
+                        <p class="text-[var(--text-secondary)]">
+                            Leading cross-functional teams on complex technical initiatives, 
+                            mentoring data science teams, and driving innovation strategy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Approach -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">How I Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="target" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gradient">Problem-First Approach</h3>
+                    <p class="text-[var(--text-secondary)]">
+                        I start with deep problem understanding, stakeholder alignment, and clear success metrics 
+                        before diving into technical solutions.
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="zap" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gradient">Rapid Prototyping</h3>
+                    <p class="text-[var(--text-secondary)]">
+                        Fast iteration cycles with early validation, continuous stakeholder feedback, 
+                        and agile development methodologies.
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gradient">Production Ready</h3>
+                    <p class="text-[var(--text-secondary)]">
+                        Every solution is built with scalability, maintainability, and operational excellence 
+                        as core requirements from day one.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Availability -->
+        <section class="card text-center bg-gradient-to-r from-[var(--accent)]/10 to-[var(--accent-400)]/10 border-[var(--accent)]/20">
+            <h2 class="text-3xl font-bold mb-6 text-gradient">Location & Availability</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">📍 Based in Nairobi, Kenya</h3>
+                    <p class="text-[var(--text-secondary)]">
+                        Local time zone: EAT (UTC+3)<br>
+                        Available for in-person meetings in Nairobi area
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">🌍 Remote Collaboration</h3>
+                    <p class="text-[var(--text-secondary)]">
+                        Experienced in distributed team collaboration<br>
+                        Flexible with global time zones for project alignment
+                    </p>
+                </div>
+            </div>
+            
+            <blockquote class="text-lg italic text-[var(--text-secondary)] mb-8 max-w-3xl mx-auto">
+                "Excellence is not a destination; it is a continuous journey that never ends."
+            </blockquote>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:contact@madscie254.dev" class="btn btn-primary">
+                    <i data-lucide="mail"></i>
+                    Start a Conversation
+                </a>
+                <a href="https://madscie254.github.io/MadScie254/assets/cv.pdf" 
+                   target="_blank" rel="noopener" 
+                   class="btn btn-secondary">
+                    <i data-lucide="download"></i>
+                    Download CV
+                </a>
+            </div>
+        </section>
+
+        <!-- Response Time -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">What to Expect</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4 text-gradient">Response Timeline</h3>
+                    <ul class="space-y-3 text-[var(--text-secondary)]">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-[var(--accent)]"></i>
+                            Initial response within 24-48 hours
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="calendar" class="w-5 h-5 text-[var(--accent)]"></i>
+                            Discovery call scheduled within one week
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="file-text" class="w-5 h-5 text-[var(--accent)]"></i>
+                            Detailed proposal within 3-5 business days
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4 text-gradient">Project Criteria</h3>
+                    <ul class="space-y-3 text-[var(--text-secondary)]">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-[var(--accent)]"></i>
+                            Complex technical challenges
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-[var(--accent)]"></i>
+                            Strategic business impact
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-[var(--accent)]"></i>
+                            Long-term collaboration potential
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

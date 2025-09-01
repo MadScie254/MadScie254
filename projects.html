@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - MadScie254 | Data Science Portfolio</title>
+    <meta name="description" content="Explore MadScie254's data science and machine learning projects including sentiment analysis, investment prediction, and economic network analysis.">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Theme and CSS Variables -->
+    <style>
+        :root {
+            --bg: #0F0F23;
+            --surface-1: #1A1A2E;
+            --surface-2: #16213E;
+            --surface-3: #2A4A6B;
+            --text-primary: #E1E8ED;
+            --text-secondary: #8B9DC3;
+            --accent: #7877C6;
+            --accent-400: #9896E0;
+            --accent-600: #5A59A6;
+            --accent-contrast: #FFFFFF;
+            --shadow-1: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-2: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--accent-contrast);
+        }
+
+        .btn-secondary {
+            background: var(--surface-2);
+            color: var(--text-primary);
+            border-color: var(--surface-3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .card {
+            background: var(--surface-1);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-1);
+            border: 1px solid var(--surface-2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-2);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent), var(--accent-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            background: var(--surface-2);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--surface-2);
+            color: var(--text-secondary);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 767px) {
+            .container { padding: 0 1rem; }
+            .card { padding: 1.5rem; }
+            .text-3xl { font-size: 1.75rem; }
+            .grid-cols-2 { grid-template-columns: 1fr; }
+            .grid-cols-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--bg)] text-[var(--text-primary)]">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-[var(--surface-1)]/90 backdrop-blur-md border-b border-[var(--surface-2)]">
+        <div class="container flex justify-between items-center py-4">
+            <a href="index.html" class="font-bold text-xl text-[var(--accent)]">MadScie254</a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">← Portfolio</a>
+                <a href="about.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">About</a>
+                <a href="connect.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-16 space-y-16">
+        <!-- Hero Section -->
+        <section class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Featured Case Studies</h1>
+            <p class="text-xl text-[var(--text-secondary)] max-w-4xl mx-auto mb-8">
+                My work is a testament to the synthesis of deep technical expertise and strategic business insight. 
+                These featured projects demonstrate how I approach complex, real-world problems by building robust, 
+                data-centric solutions with analytical rigor and meticulous engineering.
+            </p>
+        </section>
+
+        <!-- GitHub Stats -->
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="card text-center">
+                <div class="text-3xl font-bold mb-2 text-[var(--accent)]">117+</div>
+                <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Repositories</p>
+            </div>
+            <div class="card text-center">
+                <div class="text-3xl font-bold mb-2 text-[var(--accent)]">75%</div>
+                <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Python/ML Focus</p>
+            </div>
+            <div class="card text-center">
+                <div class="text-3xl font-bold mb-2 text-[var(--accent)]">250+</div>
+                <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">2025 Contributions</p>
+            </div>
+            <div class="card text-center">
+                <div class="text-3xl font-bold mb-2 text-[var(--accent)]">MIT</div>
+                <p class="text-sm font-medium uppercase text-[var(--text-secondary)]">Open Source</p>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Signature Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Sentiment Analysis Dashboard -->
+                <div class="card">
+                    <div class="relative mb-6">
+                        <img src="https://madscie254.github.io/MadScie254/assets/project-sentiment.jpg" 
+                             alt="Sentiment Analysis Dashboard" 
+                             class="project-image"
+                             onerror="this.style.background='var(--surface-2)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<span style=color:var(--text-secondary)>Sentiment Analysis Dashboard</span>'">
+                        <div class="absolute top-3 right-3 bg-[var(--surface-1)]/90 rounded-full px-3 py-1 text-xs font-medium">
+                            Live Demo
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gradient">Sentiment Analysis Dashboard</h3>
+                    <p class="text-[var(--text-secondary)] mb-4">
+                        Real-time sentiment analysis system processing social media streams with advanced NLP models. 
+                        Features comprehensive metadata extraction and interactive visualization dashboard.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tag">Python</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Real-time</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a href="https://github.com/MadScie254/sentiment_analysis" 
+                           target="_blank" rel="noopener" 
+                           class="text-[var(--accent)] font-medium flex items-center gap-1">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            View Code
+                        </a>
+                        <a href="#" class="text-[var(--accent)] font-medium flex items-center gap-1">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- InvestWise Predictor -->
+                <div class="card">
+                    <div class="relative mb-6">
+                        <img src="https://madscie254.github.io/MadScie254/assets/project-invest.jpg" 
+                             alt="InvestWise AI Predictor" 
+                             class="project-image"
+                             onerror="this.style.background='var(--surface-2)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<span style=color:var(--text-secondary)>InvestWise AI</span>'">
+                        <div class="absolute top-3 right-3 bg-[var(--surface-1)]/90 rounded-full px-3 py-1 text-xs font-medium">
+                            ML Model
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gradient">InvestWise AI Predictor</h3>
+                    <p class="text-[var(--text-secondary)] mb-4">
+                        Neural network-powered investment advisory system analyzing market patterns and regional 
+                        business opportunities. Provides data-driven recommendations for venture capital decisions.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">FinTech</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">API</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a href="https://github.com/MadScie254/InvestWise-Predictor" 
+                           target="_blank" rel="noopener" 
+                           class="text-[var(--accent)] font-medium flex items-center gap-1">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            View Code
+                        </a>
+                        <span class="text-[var(--text-secondary)] text-sm">Production Ready</span>
+                    </div>
+                </div>
+
+                <!-- EconoNet -->
+                <div class="card">
+                    <div class="relative mb-6">
+                        <img src="https://madscie254.github.io/MadScie254/assets/project-econet.jpg" 
+                             alt="EconoNet Analysis" 
+                             class="project-image"
+                             onerror="this.style.background='var(--surface-2)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<span style=color:var(--text-secondary)>EconoNet</span>'">
+                        <div class="absolute top-3 right-3 bg-[var(--surface-1)]/90 rounded-full px-3 py-1 text-xs font-medium">
+                            Research
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gradient">EconoNet Analysis Platform</h3>
+                    <p class="text-[var(--text-secondary)] mb-4">
+                        Comprehensive economic network analysis toolkit for modeling complex financial relationships 
+                        and market dynamics using advanced graph theory and machine learning.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="tag">Network Analysis</span>
+                        <span class="tag">Economics</span>
+                        <span class="tag">Graph Theory</span>
+                        <span class="tag">Jupyter</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a href="https://github.com/MadScie254/EconoNet" 
+                           target="_blank" rel="noopener" 
+                           class="text-[var(--accent)] font-medium flex items-center gap-1">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            View Code
+                        </a>
+                        <span class="text-[var(--text-secondary)] text-sm">Open Source</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Categories -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Project Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="brain-circuit" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gradient">Machine Learning</h3>
+                    <p class="text-sm text-[var(--text-secondary)]">Predictive models, classification systems, and deep learning applications</p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gradient">Financial Analytics</h3>
+                    <p class="text-sm text-[var(--text-secondary)]">Investment prediction, market analysis, and economic modeling</p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="server" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gradient">Infrastructure</h3>
+                    <p class="text-sm text-[var(--text-secondary)]">Cloud deployment, DevOps automation, and system optimization</p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-[var(--accent)]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="database" class="w-8 h-8 text-[var(--accent)]"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-gradient">Data Engineering</h3>
+                    <p class="text-sm text-[var(--text-secondary)]">ETL pipelines, data warehousing, and real-time processing</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Integration -->
+        <section class="card text-center bg-gradient-to-r from-[var(--accent)]/10 to-[var(--accent-400)]/10 border-[var(--accent)]/20">
+            <h2 class="text-3xl font-bold mb-6 text-gradient">Open Source Contributions</h2>
+            <p class="text-[var(--text-secondary)] mb-8 max-w-3xl mx-auto">
+                All projects are available on GitHub with comprehensive documentation, setup instructions, 
+                and detailed technical explanations. I believe in transparent, reproducible research and 
+                open collaboration.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://github.com/MadScie254" 
+                   target="_blank" rel="noopener" 
+                   class="btn btn-primary">
+                    <i data-lucide="github"></i>
+                    View All Repositories
+                </a>
+                <a href="connect.html" class="btn btn-secondary">
+                    <i data-lucide="mail"></i>
+                    Discuss Collaboration
+                </a>
+            </div>
+        </section>
+
+        <!-- Technical Stack -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Technical Stack</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="card text-center p-4">
+                    <div class="text-2xl mb-2">🐍</div>
+                    <p class="text-sm font-medium">Python</p>
+                </div>
+                <div class="card text-center p-4">
+                    <div class="text-2xl mb-2">🧠</div>
+                    <p class="text-sm font-medium">TensorFlow</p>
+                </div>
+                <div class="card text-center p-4">
+                    <div class="text-2xl mb-2">📊</div>
+                    <p class="text-sm font-medium">Pandas</p>
+                </div>
+                <div class="card text-center p-4">
+                    <div class="text-2xl mb-2">☁️</div>
+                    <p class="text-sm font-medium">AWS</p>
+                </div>
+                <div class="card text-center p-4">
+                    <div class="text-2xl mb-2">🐳</div>
+                    <p class="text-sm font-medium">Docker</p>
+                </div>
+                <div class="card text-center p-4">
+                    <div class="text-2xl mb-2">📈</div>
+                    <p class="text-sm font-medium">Plotly</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

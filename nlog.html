@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nlog - MadScie254 | Technical Articles & Insights</title>
+    <meta name="description" content="Read MadScie254's technical blog covering data science, machine learning, fintech innovations, and technology trends.">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Theme and CSS Variables -->
+    <style>
+        :root {
+            --bg: #0F0F23;
+            --surface-1: #1A1A2E;
+            --surface-2: #16213E;
+            --surface-3: #2A4A6B;
+            --text-primary: #E1E8ED;
+            --text-secondary: #8B9DC3;
+            --accent: #7877C6;
+            --accent-400: #9896E0;
+            --accent-600: #5A59A6;
+            --accent-contrast: #FFFFFF;
+            --shadow-1: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-2: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--accent-contrast);
+        }
+
+        .btn-secondary {
+            background: var(--surface-2);
+            color: var(--text-primary);
+            border-color: var(--surface-3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .card {
+            background: var(--surface-1);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-1);
+            border: 1px solid var(--surface-2);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent), var(--accent-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-card {
+            border-left: 4px solid var(--accent);
+            background: var(--surface-1);
+            border-radius: 0 1rem 1rem 0;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--surface-2);
+            color: var(--text-secondary);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 767px) {
+            .container { padding: 0 1rem; }
+            .card { padding: 1.5rem; }
+            .text-3xl { font-size: 1.75rem; }
+            .grid-cols-2 { grid-template-columns: 1fr; }
+            .grid-cols-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--bg)] text-[var(--text-primary)]">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-[var(--surface-1)]/90 backdrop-blur-md border-b border-[var(--surface-2)]">
+        <div class="container flex justify-between items-center py-4">
+            <a href="index.html" class="font-bold text-xl text-[var(--accent)]">MadScie254</a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">← Portfolio</a>
+                <a href="about.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">About</a>
+                <a href="projects.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Projects</a>
+                <a href="connect.html" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-16 space-y-16">
+        <!-- Hero Section -->
+        <section class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Nlog</h1>
+            <p class="text-xl text-[var(--text-secondary)] max-w-4xl mx-auto mb-8">
+                A curated synthesis of emerging patterns in data science, fintech innovation, and technical infrastructure. 
+                Each article represents deep analysis of market trends, technical breakthroughs, and strategic insights 
+                from the intersection of technology and business.
+            </p>
+        </section>
+
+        <!-- Featured Articles -->
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Featured Articles</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Article 1 -->
+                <article class="article-card card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://via.placeholder.com/60x60/7877C6/ffffff?text=DS" 
+                             alt="Data Science" 
+                             class="w-15 h-15 rounded-full">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-gradient">
+                                The Evolution of MLOps: From Research to Production
+                            </h3>
+                            <p class="text-[var(--text-secondary)] mb-3">
+                                Exploring the critical transition from experimental machine learning models to 
+                                production-ready systems. A deep dive into infrastructure patterns, monitoring 
+                                strategies, and operational excellence in ML deployment.
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-[var(--text-secondary)] mb-3">
+                                <span>Daniel Wanjala</span>
+                                <span>December 15, 2024</span>
+                                <span>8 min read</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">#MLOps</span>
+                                <span class="tag">#DevOps</span>
+                                <span class="tag">#Production</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://via.placeholder.com/60x60/7877C6/ffffff?text=FT" 
+                             alt="FinTech" 
+                             class="w-15 h-15 rounded-full">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-gradient">
+                                Fintech Innovation in Emerging Markets: A Data-Driven Analysis
+                            </h3>
+                            <p class="text-[var(--text-secondary)] mb-3">
+                                Analyzing the unique patterns of financial technology adoption in African markets. 
+                                Statistical insights into mobile payment systems, credit scoring innovations, and 
+                                regulatory adaptation strategies.
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-[var(--text-secondary)] mb-3">
+                                <span>Daniel Wanjala</span>
+                                <span>November 28, 2024</span>
+                                <span>12 min read</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">#FinTech</span>
+                                <span class="tag">#EmergingMarkets</span>
+                                <span class="tag">#DataAnalysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://via.placeholder.com/60x60/7877C6/ffffff?text=AI" 
+                             alt="AI Ethics" 
+                             class="w-15 h-15 rounded-full">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-gradient">
+                                Ethical AI in Healthcare: Balancing Innovation and Responsibility
+                            </h3>
+                            <p class="text-[var(--text-secondary)] mb-3">
+                                Examining the ethical implications of AI-driven healthcare solutions. 
+                                Framework for responsible AI development, bias mitigation strategies, 
+                                and patient privacy protection in medical data analytics.
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-[var(--text-secondary)] mb-3">
+                                <span>Daniel Wanjala</span>
+                                <span>November 10, 2024</span>
+                                <span>10 min read</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">#AIEthics</span>
+                                <span class="tag">#Healthcare</span>
+                                <span class="tag">#ResponsibleAI</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://via.placeholder.com/60x60/7877C6/ffffff?text=IF" 
+                             alt="Infrastructure" 
+                             class="w-15 h-15 rounded-full">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-gradient">
+                                Scaling Data Infrastructure: Lessons from High-Growth Startups
+                            </h3>
+                            <p class="text-[var(--text-secondary)] mb-3">
+                                Real-world case studies of data infrastructure evolution in rapidly scaling organizations. 
+                                Architectural decisions, cost optimization strategies, and performance bottleneck solutions.
+                            </p>
+                            <div class="flex items-center gap-4 text-sm text-[var(--text-secondary)] mb-3">
+                                <span>Daniel Wanjala</span>
+                                <span>October 22, 2024</span>
+                                <span>15 min read</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tag">#DataInfrastructure</span>
+                                <span class="tag">#Scaling</span>
+                                <span class="tag">#CloudArchitecture</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sidebar Content -->
+        <section class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3">
+                <h2 class="text-2xl font-bold mb-8 text-gradient">Recent Insights</h2>
+                <div class="space-y-6">
+                    
+                    <!-- Insight 1 -->
+                    <div class="card border-l-4 border-[var(--accent)]">
+                        <h3 class="text-lg font-semibold mb-2">The Future of Real-Time Analytics</h3>
+                        <p class="text-[var(--text-secondary)] mb-3">
+                            Stream processing technologies are reshaping how organizations handle real-time data. 
+                            Apache Kafka, Apache Flink, and emerging edge computing solutions are creating new 
+                            possibilities for instant business intelligence.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-2">
+                                <span class="tag">#StreamProcessing</span>
+                                <span class="tag">#RealTime</span>
+                            </div>
+                            <span class="text-sm text-[var(--text-secondary)]">5 min read</span>
+                        </div>
+                    </div>
+
+                    <!-- Insight 2 -->
+                    <div class="card border-l-4 border-[var(--surface-2)]">
+                        <h3 class="text-lg font-semibold mb-2">Graph Neural Networks in Financial Risk</h3>
+                        <p class="text-[var(--text-secondary)] mb-3">
+                            Exploring how graph neural networks are revolutionizing fraud detection and risk assessment 
+                            in financial services. Network analysis meets deep learning for superior pattern recognition.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-2">
+                                <span class="tag">#GraphML</span>
+                                <span class="tag">#FinTech</span>
+                            </div>
+                            <span class="text-sm text-[var(--text-secondary)]">7 min read</span>
+                        </div>
+                    </div>
+
+                    <!-- Insight 3 -->
+                    <div class="card border-l-4 border-[var(--surface-2)]">
+                        <h3 class="text-lg font-semibold mb-2">Serverless ML: The Next Paradigm</h3>
+                        <p class="text-[var(--text-secondary)] mb-3">
+                            Serverless computing is transforming machine learning deployment. Cost efficiency, 
+                            automatic scaling, and reduced operational overhead are making serverless ML attractive 
+                            for enterprise applications.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-2">
+                                <span class="tag">#Serverless</span>
+                                <span class="tag">#MachineLearning</span>
+                            </div>
+                            <span class="text-sm text-[var(--text-secondary)]">6 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-8">
+                <!-- Categories -->
+                <div class="card">
+                    <h3 class="text-lg font-semibold mb-4 text-gradient">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Data Science (12)</a></li>
+                        <li><a href="#" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Machine Learning (8)</a></li>
+                        <li><a href="#" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">FinTech (6)</a></li>
+                        <li><a href="#" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Infrastructure (5)</a></li>
+                        <li><a href="#" class="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors">Research (4)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Reading List -->
+                <div class="card">
+                    <h3 class="text-lg font-semibold mb-4 text-gradient">Current Reading</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="border-l-2 border-[var(--accent)] pl-3">
+                            <p class="font-medium">Deep Learning Patterns</p>
+                            <p class="text-[var(--text-secondary)]">Advanced architectural patterns for production ML</p>
+                        </div>
+                        <div class="border-l-2 border-[var(--surface-2)] pl-3">
+                            <p class="font-medium">Distributed Systems Design</p>
+                            <p class="text-[var(--text-secondary)]">Scalability patterns for data processing</p>
+                        </div>
+                        <div class="border-l-2 border-[var(--surface-2)] pl-3">
+                            <p class="font-medium">Behavioral Economics</p>
+                            <p class="text-[var(--text-secondary)]">Decision science in financial markets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="card bg-gradient-to-br from-[var(--accent)]/10 to-[var(--accent-400)]/10 border-[var(--accent)]/20">
+                    <h3 class="text-lg font-semibold mb-3 text-gradient">Stay Updated</h3>
+                    <p class="text-sm text-[var(--text-secondary)] mb-4">
+                        Get notified about new articles and insights directly to your inbox.
+                    </p>
+                    <a href="connect.html" class="btn btn-primary w-full justify-center">
+                        <i data-lucide="mail"></i>
+                        Subscribe to Updates
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- External Links -->
+        <section class="text-center">
+            <h2 class="text-3xl font-bold mb-8 text-gradient">Follow My Writing</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://dev.to/madscie254" 
+                   target="_blank" rel="noopener" 
+                   class="btn btn-primary">
+                    <i data-lucide="book-open"></i>
+                    DEV.to Articles
+                </a>
+                <a href="https://github.com/MadScie254" 
+                   target="_blank" rel="noopener" 
+                   class="btn btn-secondary">
+                    <i data-lucide="github"></i>
+                    Technical Documentation
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
