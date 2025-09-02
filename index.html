@@ -2034,8 +2034,6 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
                 const noiseDark = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23C5C6C7' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E\")";
                 bodyEl.style.backgroundImage = isDark ? noiseDark : noiseLight;
 
-                // Re-initialize particles if canvas exists
-                if (particleCanvas) initParticles();
                 // Re-initialize skill constellation if canvas exists
                 if (skillConstellationCanvas) initSkillConstellation();
             }
@@ -2433,99 +2431,6 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
                     backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
                 }
             }
-
-
-            // --- Particle Background Logic ---
-            let particles = [];
-            /** Initializes or re-initializes the particle canvas and animation. */
-            function initParticles() {
-                if (!particleCanvas) return;
-                const ctx = particleCanvas.getContext('2d');
-                if (!ctx) return;
-                if (particleAnimationId) cancelAnimationFrame(particleAnimationId);
-                resizeParticleCanvas();
-                particles.forEach(p => p.baseColor = null);
-                createParticles();
-                if (!document.hidden) drawParticles();
-            }
-
-            /** Resizes the particle canvas to fill the window. */
-            function resizeParticleCanvas() {
-                if (!particleCanvas) return;
-                particleCanvas.width = window.innerWidth;
-                particleCanvas.height = window.innerHeight;
-            }
-
-            /** Creates the initial set of particles. */
-            function createParticles() {
-                if (!particleCanvas) return;
-                particles = [];
-                const particleCount = Math.floor((particleCanvas.width * particleCanvas.height) / 18000);
-                for (let i = 0; i < particleCount; i++) {
-                    particles.push({
-                        x: Math.random() * particleCanvas.width, y: Math.random() * particleCanvas.height,
-                        vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
-                        radius: Math.random() * 1.8 + 0.8, baseRadius: Math.random() * 1.8 + 0.8,
-                        baseColor: null, drawColor: null,
-                    });
-                }
-            }
-
-            /** The main animation loop for drawing particles and lines. */
-            function drawParticles() {
-                if (!particleCanvas) return;
-                const ctx = particleCanvas.getContext('2d');
-                if (!ctx) return;
-                ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
-                const isDark = htmlEl.classList.contains('dark');
-                const twConfig = tailwind.config.theme.extend.colors;
-                const lightColors = [`${twConfig.accent}80`, `${twConfig['accent-secondary']}80`, `${twConfig['tertiary-light']}60`];
-                const darkColors = [`${twConfig['dark-accent']}80`, `${twConfig['dark-accent-secondary']}80`, `${twConfig['tertiary-dark']}60`];
-                const themeColors = isDark ? darkColors : lightColors;
-                const lineColor = isDark ? 'rgba(197, 198, 199, 0.05)' : 'rgba(74, 74, 74, 0.05)';
-
-                particles.forEach((p, i) => {
-                    if (!p.baseColor) p.baseColor = themeColors[Math.floor(Math.random() * themeColors.length)];
-                    p.drawColor = p.baseColor; p.radius = p.baseRadius;
-
-                    // Mouse interaction (using window-relative mouse coords)
-                    if (mouse.x !== null && mouse.y !== null) {
-                        const rect = particleCanvas.getBoundingClientRect();
-                        const canvasMouseX = mouse.x - rect.left;
-                        const canvasMouseY = mouse.y - rect.top;
-                        const dx = canvasMouseX - p.x;
-                        const dy = canvasMouseY - p.y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-
-                        if (distance < particleInteractionRadius) {
-                            const proximityFactor = 1 - (distance / particleInteractionRadius);
-                            const baseHex = p.baseColor.substring(0, 7);
-                            const currentAlphaHex = p.baseColor.substring(7, 9) || '80';
-                            const currentAlphaDec = parseInt(currentAlphaHex, 16);
-                            const targetAlphaDec = Math.min(255, Math.floor(currentAlphaDec + proximityFactor * 100));
-                            p.drawColor = `${baseHex}${targetAlphaDec.toString(16).padStart(2, '0')}`;
-                            p.radius = p.baseRadius + proximityFactor * 1.5;
-                            const force = proximityFactor; const pushStrength = 0.4;
-                            p.x -= (dx / distance) * force * pushStrength;
-                            p.y -= (dy / distance) * force * pushStrength;
-                        }
-                    }
-
-                    ctx.fillStyle = p.drawColor; ctx.beginPath(); ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2); ctx.fill();
-                    p.x += p.vx; p.y += p.vy;
-                    if (p.x < -p.radius) p.x = particleCanvas.width + p.radius; if (p.x > particleCanvas.width + p.radius) p.x = -p.radius;
-                    if (p.y < -p.radius) p.y = particleCanvas.height + p.radius; if (p.y > particleCanvas.height + p.radius) p.y = -p.radius;
-
-                    for (let j = i + 1; j < particles.length; j++) {
-                        const p2 = particles[j]; const dx = p.x - p2.x; const dy = p.y - p2.y; const distance = Math.sqrt(dx * dx + dy * dy);
-                        if (distance < particleLineThreshold) {
-                            ctx.strokeStyle = lineColor; ctx.lineWidth = 0.5 * (1 - distance / particleLineThreshold);
-                            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
-                        }
-                    }
-                });
-                particleAnimationId = requestAnimationFrame(drawParticles);
-            } // End drawParticles
 
 
             // --- Skill Constellation Logic --- "Brilliant Creation"
