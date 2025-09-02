@@ -1595,35 +1595,33 @@
                         </div>
                     </div>
 
-                    <!-- Music Player Wireframe -->
+                    <!-- Interactive Elements Wireframe -->
                     <div class="wireframe-card bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-6 border border-accent/20 dark:border-dark-accent/20 shadow-lg group hover:border-accent dark:hover:border-dark-accent transition-all duration-300 reveal-hidden">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-accent/10 dark:bg-dark-accent/10">
-                                <i data-lucide="music" class="w-6 h-6 text-accent dark:text-dark-accent"></i>
+                                <i data-lucide="zap" class="w-6 h-6 text-accent dark:text-dark-accent"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-text dark:text-dark-primary-text font-heading">Music Experience</h3>
+                            <h3 class="text-xl font-semibold text-primary-text dark:text-dark-primary-text font-heading">Interactive Elements</h3>
                         </div>
                         <div class="space-y-4">
                             <div class="aspect-[9/16] bg-accent/5 dark:bg-dark-accent/5 rounded-lg p-4 relative overflow-hidden group-hover:bg-accent/10 dark:group-hover:bg-dark-accent/10 transition-colors duration-300">
-                                <!-- Music Player Wireframe -->
-                                <div class="absolute bottom-4 left-4 right-4">
-                                    <div class="bg-accent/10 dark:bg-dark-accent/10 rounded-xl p-4 space-y-4">
-                                        <div class="flex items-center gap-4">
-                                            <div class="w-16 h-16 rounded-lg bg-accent/20 dark:bg-dark-accent/20"></div>
-                                            <div class="flex-1 space-y-2">
-                                                <div class="h-4 bg-accent/20 dark:bg-dark-accent/20 rounded w-3/4"></div>
-                                                <div class="h-3 bg-accent/20 dark:bg-dark-accent/20 rounded w-1/2"></div>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-center gap-4">
-                                            <div class="w-10 h-10 rounded-full bg-accent/20 dark:bg-dark-accent/20"></div>
-                                            <div class="w-12 h-12 rounded-full bg-accent dark:bg-dark-accent"></div>
-                                            <div class="w-10 h-10 rounded-full bg-accent/20 dark:bg-dark-accent/20"></div>
-                                        </div>
+                                <!-- Interactive Elements Wireframe -->
+                                <div class="space-y-4">
+                                    <div class="h-12 bg-accent/10 dark:bg-dark-accent/10 rounded-lg flex items-center px-4">
+                                        <div class="w-8 h-8 rounded-full bg-accent/20 dark:bg-dark-accent/20"></div>
+                                        <div class="ml-3 h-3 bg-accent/20 dark:bg-dark-accent/20 rounded w-1/2"></div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div class="h-16 bg-accent/10 dark:bg-dark-accent/10 rounded-lg"></div>
+                                        <div class="h-16 bg-accent/10 dark:bg-dark-accent/10 rounded-lg"></div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="h-8 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-3/4"></div>
+                                        <div class="h-8 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-5/6"></div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-sm text-secondary-text dark:text-dark-secondary-text">Touch-optimized music controls and responsive player interface.</p>
+                            <p class="text-sm text-secondary-text dark:text-dark-secondary-text">Touch-optimized interactive components with smooth animations and feedback.</p>
                         </div>
                     </div>
 
@@ -1892,8 +1890,6 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
             // Configuration
             const whatsappBaseUrl = "https://wa.me/254742007277"; // Your WhatsApp number
             const whatsappMessage = "Hello Daniel, I visited your portfolio and would like to connect.";
-            const particleInteractionRadius = 120; // Radius for mouse interaction with particles
-            const particleLineThreshold = 110; // Max distance for connecting lines between particles
             const scrollRevealThreshold = 0.1; // Percentage of element visible to trigger animation
             const scrollRevealRootMargin = "0px 0px -50px 0px"; // Adjust trigger point relative to viewport
             const navScrollThreshold = 0; // Threshold for nav highlighting
@@ -1905,7 +1901,6 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
             // State Variables
             let toneJsStarted = false;
             let synth, clickSynth;
-            let particleAnimationId = null; // ID for particle animation frame
             let skillConstellationAnimationId = null; // ID for skill constellation animation
             let mouse = { x: null, y: null }; // Mouse position relative to window
             let constellationMouse = { x: null, y: null }; // Mouse position relative to skill canvas
@@ -1945,7 +1940,6 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
             const copyButtons = document.querySelectorAll('.copy-btn');
             const copyToast = document.getElementById('copy-toast');
             const mainContentContainer = document.getElementById('main-content-container');
-            const particleCanvas = document.getElementById('particle-canvas');
             const skillConstellationCanvas = document.getElementById('skill-constellation-canvas'); // New Canvas
             const backToTopButton = document.getElementById('back-to-top');
             const interactiveElements = document.querySelectorAll('a[href], button, [role="button"], [role="link"], .project-card, .essay-card, .demo-card, #theme-toggle, .publication-card, .skill-card, .education-item, #back-to-top, .copy-btn, #floating-whatsapp');
