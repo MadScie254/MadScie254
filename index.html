@@ -3206,41 +3206,6 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
 
 
 
-    <script>
-    function updateNowPlaying(track) {
-        const titleEl = document.getElementById('now-playing-title');
-        const artistEl = document.getElementById('now-playing-artist');
-        const artEl = document.getElementById('now-playing-art');
-        
-        if (track) {
-            titleEl.textContent = track.name;
-            artistEl.textContent = track.artists.map(a => a.name).join(', ');
-            if (track.album.images[0]) {
-                artEl.innerHTML = `<img src="${track.album.images[0].url}" alt="Album Art" class="w-full h-full object-cover rounded-lg">`;
-            }
-        }
-    }
 
-    // Update the player initialization
-    function initializePlayer(token) {
-        const player = new Spotify.Player({
-            name: 'Portfolio Player',
-            getOAuthToken: cb => { cb(token); }
-        });
-
-        player.addListener('player_state_changed', state => {
-            if (state && state.track_window.current_track) {
-                updateNowPlaying(state.track_window.current_track);
-            }
-        });
-
-        const playPauseBtn = document.getElementById('play-pause');
-        playPauseBtn.addEventListener('click', () => {
-            player.togglePlay();
-        });
-
-        player.connect();
-    }
-    </script>
 </body>
 </html>
