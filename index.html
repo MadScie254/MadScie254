@@ -804,15 +804,17 @@
             box-shadow: 0 4px 6px -1px rgba(102, 252, 241, 0.2), 0 2px 4px -1px rgba(102, 252, 241, 0.1);
         }
 
-        /* Hover effects matching skills.html cert-badge */
+        /* Hover effects with enhanced gradient */
         .know-more-button:hover {
             transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border-color: #6C5CE7;
+            box-shadow: 0 8px 16px -4px rgba(108, 92, 231, 0.3), 0 4px 8px -2px rgba(108, 92, 231, 0.2);
+            border-color: rgba(108, 92, 231, 0.4);
+            filter: brightness(1.1) saturate(1.1);
         }
 
         html.dark .know-more-button:hover {
-            border-color: #66FCF1;
+            box-shadow: 0 8px 16px -4px rgba(102, 252, 241, 0.3), 0 4px 8px -2px rgba(102, 252, 241, 0.2);
+            border-color: rgba(102, 252, 241, 0.4);
         }
 
         /* Icon styling */
@@ -821,11 +823,11 @@
             height: 1rem;
             width: 1rem;
             transition: all 0.3s ease;
-            color: #6C5CE7;
+            color: white;
         }
 
         html.dark .know-more-button i {
-            color: #66FCF1;
+            color: #1e293b;
         }
 
         .know-more-button:hover i {
@@ -835,12 +837,11 @@
         /* Focus states for accessibility */
         .know-more-button:focus {
             outline: none;
-            ring: 2px solid #6C5CE7;
-            ring-offset: 2px;
+            box-shadow: 0 0 0 2px #6C5CE7, 0 0 0 4px rgba(108, 92, 231, 0.2);
         }
 
         html.dark .know-more-button:focus {
-            ring-color: #66FCF1;
+            box-shadow: 0 0 0 2px #66FCF1, 0 0 0 4px rgba(102, 252, 241, 0.2);
         }
 
         /* Mobile optimization */
