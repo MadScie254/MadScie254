@@ -776,19 +776,33 @@
         }
         #copy-toast.show { opacity: 1; transform: translateX(-50%) translateY(-10px); }
 
-        /* --- Know More Button Style --- Enhanced & More Visible --- */
+        /* --- Know More Button Style --- ENHANCED, BIGGER & MORE ATTRACTIVE --- */
         .know-more-button {
-            @apply relative inline-flex items-center justify-center px-10 py-4 text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 ease-out transform hover:-translate-y-2 hover:scale-105 overflow-hidden;
+            @apply relative inline-flex items-center justify-center px-12 py-5 text-xl font-bold rounded-2xl shadow-2xl transition-all duration-300 ease-out transform hover:-translate-y-3 hover:scale-110 overflow-hidden;
             @apply bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary text-white dark:text-jet-black;
-            @apply hover:shadow-2xl hover:shadow-accent/30 dark:hover:shadow-dark-accent/30;
-            @apply focus:outline-none focus:ring-4 focus:ring-accent/50 dark:focus:ring-dark-accent/50;
+            @apply hover:shadow-2xl hover:shadow-accent/40 dark:hover:shadow-dark-accent/40;
+            @apply focus:outline-none focus:ring-4 focus:ring-accent/60 dark:focus:ring-dark-accent/60;
             font-family: 'Satoshi', 'Space Grotesk', sans-serif;
-            letter-spacing: 0.025em;
-            min-height: 56px;
-            min-width: 180px;
-            border: 2px solid transparent;
+            letter-spacing: 0.05em;
+            min-height: 70px;
+            min-width: 220px;
+            border: 3px solid transparent;
             position: relative;
             z-index: 10;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-size: 200% 200%;
+            animation: gradient-pulse 3s ease-in-out infinite;
+        }
+
+        /* Animated gradient background */
+        @keyframes gradient-pulse {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         .know-more-button::before {
@@ -798,68 +812,132 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.5s ease;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            transition: left 0.6s ease;
         }
 
         .know-more-button:hover::before {
             left: 100%;
         }
 
-        .know-more-button i {
-            @apply ml-3 h-6 w-6 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-125;
+        /* Pulsing border effect */
+        .know-more-button::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe, #6c5ce7);
+            border-radius: 1.25rem;
+            z-index: -1;
+            animation: border-pulse 2s ease-in-out infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        /* Enhanced visibility with glow effect */
+        @keyframes border-pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.7;
+            }
+        }
+
+        .know-more-button:hover::after {
+            opacity: 1;
+        }
+
+        .know-more-button i {
+            @apply ml-4 h-7 w-7 transition-all duration-300 group-hover:translate-x-3 group-hover:scale-150;
+        }
+
+        /* Enhanced visibility with multiple glow effects */
         .know-more-button {
             box-shadow: 
+                0 12px 28px -8px rgba(108, 92, 231, 0.4),
                 0 8px 16px -4px rgba(108, 92, 231, 0.3),
                 0 4px 8px -2px rgba(108, 92, 231, 0.2),
-                0 0 0 1px rgba(108, 92, 231, 0.1);
+                0 0 0 2px rgba(108, 92, 231, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
         html.dark .know-more-button {
             box-shadow: 
+                0 12px 28px -8px rgba(102, 252, 241, 0.4),
                 0 8px 16px -4px rgba(102, 252, 241, 0.3),
                 0 4px 8px -2px rgba(102, 252, 241, 0.2),
-                0 0 0 1px rgba(102, 252, 241, 0.1);
+                0 0 0 2px rgba(102, 252, 241, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
         .know-more-button:hover {
             box-shadow: 
-                0 12px 24px -4px rgba(108, 92, 231, 0.4),
-                0 8px 16px -4px rgba(108, 92, 231, 0.3),
-                0 0 0 2px rgba(108, 92, 231, 0.2);
+                0 20px 40px -8px rgba(108, 92, 231, 0.6),
+                0 16px 24px -4px rgba(108, 92, 231, 0.4),
+                0 8px 16px -2px rgba(108, 92, 231, 0.3),
+                0 0 0 3px rgba(108, 92, 231, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            filter: brightness(1.1) saturate(1.2);
         }
 
         html.dark .know-more-button:hover {
             box-shadow: 
-                0 12px 24px -4px rgba(102, 252, 241, 0.4),
-                0 8px 16px -4px rgba(102, 252, 241, 0.3),
-                0 0 0 2px rgba(102, 252, 241, 0.2);
+                0 20px 40px -8px rgba(102, 252, 241, 0.6),
+                0 16px 24px -4px rgba(102, 252, 241, 0.4),
+                0 8px 16px -2px rgba(102, 252, 241, 0.3),
+                0 0 0 3px rgba(102, 252, 241, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            filter: brightness(1.1) saturate(1.2);
         }
 
-        /* Mobile optimization for buttons */
+        /* Interactive hover state enhancements */
+        .know-more-button:hover {
+            transform: translateY(-4px) scale(1.08) rotate(-1deg);
+            letter-spacing: 0.08em;
+        }
+
+        .know-more-button:active {
+            transform: translateY(-1px) scale(1.02);
+            transition: all 0.1s ease;
+        }
+
+        /* Mobile optimization for bigger buttons */
         @media (max-width: 640px) {
             .know-more-button {
-                @apply px-8 py-4 text-base;
-                min-height: 52px;
-                min-width: 160px;
-                font-size: 1rem;
+                @apply px-10 py-4 text-lg;
+                min-height: 64px;
+                min-width: 200px;
+                font-size: 1.125rem;
+                letter-spacing: 0.03em;
             }
             
             .know-more-button i {
-                @apply h-5 w-5 ml-2;
+                @apply h-6 w-6 ml-3;
             }
         }
 
-        /* Tablet optimization for buttons */
+        /* Tablet optimization for bigger buttons */
         @media (min-width: 641px) and (max-width: 1024px) {
             .know-more-button {
-                @apply px-9 py-4 text-lg;
-                min-height: 54px;
-                min-width: 170px;
+                @apply px-11 py-5 text-xl;
+                min-height: 68px;
+                min-width: 210px;
             }
+        }
+
+        /* Focus state for accessibility */
+        .know-more-button:focus {
+            transform: translateY(-2px) scale(1.05);
+            outline: none;
+        }
+
+        /* Add text shadow for better readability */
+        .know-more-button {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         /* --- End Know More Button Style --- */
 
