@@ -663,6 +663,573 @@
              padding-bottom: 1.5rem; /* Add padding at the bottom */
         }
 
+        /* ================================ */
+        /* RESPONSIVE NAVBAR & MOBILE MENU */
+        /* ================================ */
+        
+        /* Mobile Menu Base Styles */
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: rgba(247, 247, 247, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(74, 74, 74, 0.1);
+            z-index: 9999;
+            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            box-shadow: -10px 0 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dark mode mobile menu */
+        html.dark #mobile-menu {
+            background: rgba(11, 12, 16, 0.95);
+            border-left-color: rgba(197, 198, 199, 0.2);
+            box-shadow: -10px 0 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Mobile menu open state */
+        #mobile-menu.open {
+            right: 0;
+        }
+
+        /* Mobile menu overlay */
+        #mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        #mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile menu header */
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(74, 74, 74, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        html.dark .mobile-menu-header {
+            border-bottom-color: rgba(197, 198, 199, 0.2);
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile close button */
+        .mobile-close-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(108, 92, 231, 0.1);
+            color: #6C5CE7;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .mobile-close-btn:hover {
+            background: rgba(108, 92, 231, 0.2);
+            transform: scale(1.05);
+        }
+
+        html.dark .mobile-close-btn {
+            background: rgba(102, 252, 241, 0.1);
+            color: #66FCF1;
+        }
+
+        html.dark .mobile-close-btn:hover {
+            background: rgba(102, 252, 241, 0.2);
+        }
+
+        /* Mobile navigation links */
+        .mobile-nav-container {
+            padding: 1rem 0;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4A4A4A;
+            text-decoration: none;
+            border-left: 4px solid transparent;
+            transition: all 0.2s ease;
+            min-height: 44px; /* Touch target */
+            display: flex;
+            align-items: center;
+        }
+
+        html.dark .mobile-nav-link {
+            color: #C5C6C7;
+        }
+
+        .mobile-nav-link:hover {
+            background: rgba(108, 92, 231, 0.05);
+            border-left-color: #6C5CE7;
+            color: #6C5CE7;
+            padding-left: 2rem;
+        }
+
+        html.dark .mobile-nav-link:hover {
+            background: rgba(102, 252, 241, 0.05);
+            border-left-color: #66FCF1;
+            color: #66FCF1;
+        }
+
+        .mobile-nav-link.nav-active {
+            background: rgba(108, 92, 231, 0.1);
+            border-left-color: #6C5CE7;
+            color: #6C5CE7;
+            font-weight: 600;
+        }
+
+        html.dark .mobile-nav-link.nav-active {
+            background: rgba(102, 252, 241, 0.1);
+            border-left-color: #66FCF1;
+            color: #66FCF1;
+        }
+
+        /* ======================== */
+        /* RESPONSIVE LOGO SCALING  */
+        /* ======================== */
+        
+        /* Desktop logo (default) */
+        .navbar-logo {
+            height: 2rem; /* 32px */
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-logo-text {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 700;
+        }
+
+        /* Tablet logo scaling */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .navbar-logo {
+                height: 1.75rem; /* 28px */
+            }
+            .navbar-logo-text {
+                font-size: 1.125rem; /* 18px */
+            }
+        }
+
+        /* Mobile logo scaling */
+        @media (max-width: 768px) {
+            .navbar-logo {
+                height: 1.5rem; /* 24px */
+                max-width: 120px;
+            }
+            .navbar-logo-text {
+                font-size: 1rem; /* 16px */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        /* Extra small mobile */
+        @media (max-width: 480px) {
+            .navbar-logo {
+                height: 1.25rem; /* 20px */
+                max-width: 100px;
+            }
+            .navbar-logo-text {
+                font-size: 0.875rem; /* 14px */
+            }
+        }
+
+        /* Hamburger menu button */
+        .mobile-menu-button {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 44px; /* Touch target */
+            height: 44px;
+            border-radius: 0.5rem;
+            border: none;
+            background: transparent;
+            color: #4A4A4A;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        html.dark .mobile-menu-button {
+            color: #C5C6C7;
+        }
+
+        .mobile-menu-button:hover {
+            background: rgba(108, 92, 231, 0.1);
+            color: #6C5CE7;
+        }
+
+        html.dark .mobile-menu-button:hover {
+            background: rgba(102, 252, 241, 0.1);
+            color: #66FCF1;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: flex;
+            }
+        }
+
+        /* ===================================== */
+        /* COMPREHENSIVE MOBILE LAYOUT SYSTEM   */
+        /* ===================================== */
+
+        /* Base mobile container system */
+        .mobile-container {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 1rem; /* 16px minimum side padding */
+            padding-right: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Responsive typography using clamp() for fluid scaling */
+        h1, .hero-title {
+            font-size: clamp(1.875rem, 4vw + 1rem, 3.5rem); /* 30px - 56px */
+            line-height: clamp(1.2, 1.1, 1.3);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem); /* 24px - 40px */
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw + 0.25rem, 2rem); /* 20px - 32px */
+            line-height: 1.4;
+        }
+
+        p, .body-text {
+            font-size: clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem); /* 14px - 18px */
+            line-height: clamp(1.5, 1.4, 1.7);
+        }
+
+        /* Responsive images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Mobile breakpoint optimizations */
+        @media (max-width: 768px) {
+            /* Global mobile container */
+            .mobile-container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /* Ensure no horizontal overflow */
+            body {
+                overflow-x: hidden;
+            }
+
+            /* Hero section mobile layout */
+            #hero {
+                padding-top: 5rem; /* Account for fixed header */
+                padding-bottom: 3rem;
+            }
+
+            .hero-content {
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            /* Button stack on mobile */
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                justify-content: center;
+                min-height: 48px; /* Touch target */
+            }
+
+            /* Project grid mobile */
+            .project-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .project-card {
+                margin-bottom: 1.5rem;
+                padding: 1.5rem;
+                border-radius: 1rem;
+            }
+
+            /* Skills grid mobile */
+            .skills-grid,
+            .skill-categories {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .skill-card {
+                padding: 1.25rem;
+                margin-bottom: 1rem;
+            }
+
+            /* Education timeline mobile */
+            .education-timeline {
+                padding-left: 1rem;
+            }
+
+            .timeline-item {
+                margin-bottom: 2rem;
+                padding: 1.25rem;
+            }
+
+            /* Wireframes mobile - single column */
+            .wireframes-grid {
+                columns: 1;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .wireframe-card {
+                break-inside: avoid;
+                margin-bottom: 1.5rem;
+                width: 100%;
+            }
+
+            /* Contact form mobile */
+            .contact-form {
+                padding: 0 1rem;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 16px; /* Prevent zoom on iOS */
+                padding: 0.875rem;
+                border-radius: 0.5rem;
+            }
+
+            /* Social links mobile */
+            .social-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+        }
+
+        /* Tablet breakpoint (768px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .mobile-container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+                max-width: 100%;
+            }
+
+            /* Two-column layouts on tablet */
+            .project-grid,
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .wireframes-grid {
+                columns: 2;
+                gap: 1.5rem;
+            }
+
+            .social-links {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        /* Desktop and up (1025px+) */
+        @media (min-width: 1025px) {
+            .mobile-container {
+                max-width: 1200px;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+
+            /* Full grid layouts on desktop */
+            .project-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem;
+            }
+
+            .wireframes-grid {
+                columns: 3;
+                gap: 2rem;
+            }
+
+            .social-links {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        /* Touch optimization for mobile devices */
+        @media (max-width: 1024px) {
+            /* Ensure all interactive elements are touch-friendly */
+            button,
+            a,
+            .interactive-element {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 0.75rem;
+                touch-action: manipulation;
+            }
+
+            /* Improve tap targets for navigation */
+            .nav-link,
+            .mobile-nav-link {
+                padding: 1rem;
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Form elements touch optimization */
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea,
+            select {
+                font-size: 16px; /* Prevent zoom on iOS */
+                min-height: 44px;
+                padding: 0.75rem;
+            }
+
+            /* Better spacing for mobile */
+            section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            /* Improve readability */
+            p {
+                margin-bottom: 1.5rem;
+            }
+
+            /* Image optimization */
+            .hero-image,
+            .about-image,
+            .project-image {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+        }
+
+        /* Extra small devices (320px - 480px) */
+        @media (max-width: 480px) {
+            .mobile-container {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+            /* Even smaller text for very small screens */
+            h1, .hero-title {
+                font-size: clamp(1.5rem, 5vw, 2.5rem);
+            }
+
+            /* Tighter spacing */
+            section {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            /* Stack everything */
+            .hero-buttons {
+                gap: 0.75rem;
+            }
+
+            .project-card,
+            .skill-card,
+            .timeline-item {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Landscape mobile optimization */
+        @media (max-height: 500px) and (orientation: landscape) {
+            #hero {
+                padding-top: 4rem;
+                padding-bottom: 2rem;
+            }
+
+            .hero-content {
+                padding: 1rem;
+            }
+
+            /* Reduce vertical spacing in landscape */
+            section {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+        /* Print optimization */
+        @media print {
+            .mobile-menu,
+            .mobile-menu-button,
+            #mobile-menu-overlay,
+            .theme-toggle {
+                display: none !important;
+            }
+
+            body {
+                font-size: 12pt;
+                line-height: 1.5;
+                color: black;
+                background: white;
+            }
+        }
+
+        /* Existing mobile styles continuation */
+        @media (max-width: 768px) {
+            
+            /* Navigation fixes */
+            nav .hidden {
+                display: none !important;
+            }
+            
+            .mobile-menu-button {
+                display: flex !important;
+            }
+
         /* Mobile Menu Transition */
         #mobile-menu {
             max-height: 0; overflow: hidden;
@@ -1233,12 +1800,15 @@
     <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 backdrop-blur-md bg-glass-light dark:bg-glass-dark border-b border-secondary-text/10 dark:border-dark-secondary-text/10 h-16">
        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 transition-all duration-300">
+                <!-- RESPONSIVE LOGO - Scales properly on all devices -->
                 <a href="#hero" class="flex items-center space-x-2 group" aria-label="Daniel Wanjala - Home">
-                     <img src="assets/images/logo.png" alt="" class="h-8 w-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-5deg]" aria-hidden="true" onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin', '<span class=\'text-xl font-bold text-accent dark:text-dark-accent\'>DW</span>'); console.error('Logo image failed to load')">
-                     <span class="text-xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent font-heading group-hover:opacity-80 transition-opacity duration-300">
+                     <img src="assets/images/logo.png" alt="Daniel Wanjala Logo" class="navbar-logo transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-5deg]" onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin', '<span class=\'text-xl font-bold text-accent dark:text-dark-accent\'>DW</span>'); console.error('Logo image failed to load')">
+                     <span class="navbar-logo-text bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent font-heading group-hover:opacity-80 transition-opacity duration-300">
                         Daniel Wanjala.
                     </span>
                 </a>
+                
+                <!-- DESKTOP NAVIGATION -->
                 <nav class="hidden md:flex space-x-6" id="desktop-nav" aria-label="Main navigation">
                      <a href="#about" data-section="about" class="nav-link px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text">
                         About <span class="active-underline"></span>
@@ -1265,34 +1835,48 @@
                         Contact <span class="active-underline"></span>
                     </a>
                 </nav>
+                
+                <!-- RIGHT SIDE CONTROLS -->
                 <div class="flex items-center space-x-2">
+                     <!-- THEME TOGGLE -->
                      <button id="theme-toggle" aria-label="Toggle Dark/Light Mode" class="interactive-element p-2 rounded-full text-secondary-text dark:text-dark-secondary-text hover:text-accent dark:hover:text-dark-accent hover:bg-secondary-text/10 dark:hover:bg-dark-secondary-text/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent dark:focus:ring-dark-accent">
                         <i id="theme-icon-sun" data-lucide="sun" class="h-5 w-5 hidden" aria-hidden="true"></i>
                         <i id="theme-icon-moon" data-lucide="moon" class="h-5 w-5" aria-hidden="true"></i>
                      </button>
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="interactive-element inline-flex items-center justify-center p-2 rounded-md text-secondary-text dark:text-dark-secondary-text hover:text-accent dark:hover:text-dark-accent hover:bg-secondary-text/10 dark:hover:bg-dark-secondary-text/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent dark:focus:ring-dark-accent" aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
-                            <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                            <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        </button>
-                    </div>
+                     
+                     <!-- MOBILE MENU BUTTON -->
+                    <button id="mobile-menu-button" class="mobile-menu-button md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
+                        <i id="menu-icon-open" data-lucide="menu" class="h-6 w-6" aria-hidden="true"></i>
+                        <i id="menu-icon-close" data-lucide="x" class="h-6 w-6 hidden" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="md:hidden bg-glass-light dark:bg-glass-darker border-t border-secondary-text/10 dark:border-dark-secondary-text/10" id="mobile-menu">
-             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3" role="menu" aria-orientation="vertical" aria-labelledby="mobile-menu-button">
-                <a href="#hero" data-section="hero" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">Hero</a>
-                <a href="#about" data-section="about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">About</a>
-                <a href="#skills" data-section="skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">Skills</a>
-                <a href="#education" data-section="education" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">Education</a>
-                <a href="#projects" data-section="projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">Projects</a>
-                <a href="#essays" data-section="essays" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">Essays</a>
-                <a href="#publications" data-section="publications" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">Publications</a>
-                <a href="#demos" data-section="demos" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">Demos</a>
-                <a href="#contact" data-section="contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 text-secondary-text dark:text-dark-secondary-text hover:text-primary-text dark:hover:text-dark-primary-text" role="menuitem">Contact</a>
-            </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu-overlay" class="md:hidden"></div>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <nav id="mobile-menu" class="md:hidden" aria-label="Mobile navigation">
+        <div class="mobile-menu-header">
+            <span class="font-semibold text-lg">Navigation</span>
+            <button id="mobile-close-btn" class="mobile-close-btn" aria-label="Close navigation menu">
+                <i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i>
+            </button>
         </div>
+        <div class="mobile-nav-container">
+            <a href="#hero" data-section="hero" class="mobile-nav-link" role="menuitem">Home</a>
+            <a href="#about" data-section="about" class="mobile-nav-link" role="menuitem">About</a>
+            <a href="#skills" data-section="skills" class="mobile-nav-link" role="menuitem">Skills</a>
+            <a href="#education" data-section="education" class="mobile-nav-link" role="menuitem">Education</a>
+            <a href="#projects" data-section="projects" class="mobile-nav-link" role="menuitem">Projects</a>
+            <a href="#essays" data-section="essays" class="mobile-nav-link" role="menuitem">Essays</a>
+            <a href="#publications" data-section="publications" class="mobile-nav-link" role="menuitem">Publications</a>
+            <a href="#demos" data-section="demos" class="mobile-nav-link" role="menuitem">Demos</a>
+            <a href="#contact" data-section="contact" class="mobile-nav-link" role="menuitem">Contact</a>
+        </div>
+    </nav>
     </header>
 
     <div id="main-content-container">
@@ -2421,25 +3005,126 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
                 }
             }
 
-            /** Toggles the mobile navigation menu visibility and updates ARIA attributes. */
+            /** 
+             * Enhanced Mobile Navigation System
+             * Handles side-drawer mobile menu with overlay and proper animations
+             */
             function toggleMobileMenu() {
-                 if (!mobileMenuButton || !mobileMenu || !menuIconOpen || !menuIconClose) return;
-                 const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                 mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                 mobileMenu.classList.toggle('open');
-                 menuIconOpen.classList.toggle('hidden');
-                 menuIconClose.classList.toggle('hidden');
+                if (!mobileMenuButton || !mobileMenu) return;
+                
+                const isOpen = mobileMenu.classList.contains('open');
+                const menuOverlay = document.getElementById('mobile-menu-overlay');
+                const menuIconOpen = document.getElementById('menu-icon-open');
+                const menuIconClose = document.getElementById('menu-icon-close');
+                
+                if (isOpen) {
+                    // Close menu
+                    mobileMenu.classList.remove('open');
+                    if (menuOverlay) menuOverlay.classList.remove('active');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    
+                    // Icon animation
+                    if (menuIconOpen && menuIconClose) {
+                        menuIconOpen.classList.remove('hidden');
+                        menuIconClose.classList.add('hidden');
+                    }
+                    
+                    // Re-enable body scroll
+                    document.body.style.overflow = '';
+                } else {
+                    // Open menu
+                    mobileMenu.classList.add('open');
+                    if (menuOverlay) menuOverlay.classList.add('active');
+                    mobileMenuButton.setAttribute('aria-expanded', 'true');
+                    
+                    // Icon animation
+                    if (menuIconOpen && menuIconClose) {
+                        menuIconOpen.classList.add('hidden');
+                        menuIconClose.classList.remove('hidden');
+                    }
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.style.overflow = 'hidden';
+                }
+
+                // Audio feedback
+                if (toneJsStarted && clickSynth) {
+                    try { 
+                        clickSynth.triggerAttackRelease(isOpen ? 'C4' : 'E4', '8n', Tone.now()); 
+                    } catch(e) { /* Silenced */ }
+                }
             }
 
-            /** Closes the mobile menu (used when a link is clicked). */
+            /** Closes the mobile menu */
             function closeMobileMenu() {
-                if (!mobileMenuButton || !mobileMenu || !menuIconOpen || !menuIconClose) return;
-                if (mobileMenuButton.getAttribute('aria-expanded') === 'true') {
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                    mobileMenu.classList.remove('open');
+                if (!mobileMenu) return;
+                
+                const menuOverlay = document.getElementById('mobile-menu-overlay');
+                const menuIconOpen = document.getElementById('menu-icon-open');
+                const menuIconClose = document.getElementById('menu-icon-close');
+                
+                mobileMenu.classList.remove('open');
+                if (menuOverlay) menuOverlay.classList.remove('active');
+                if (mobileMenuButton) mobileMenuButton.setAttribute('aria-expanded', 'false');
+                
+                // Reset icons
+                if (menuIconOpen && menuIconClose) {
                     menuIconOpen.classList.remove('hidden');
                     menuIconClose.classList.add('hidden');
                 }
+                
+                // Re-enable body scroll
+                document.body.style.overflow = '';
+            }
+
+            /** Setup mobile menu event listeners */
+            function setupMobileNavigation() {
+                const mobileCloseBtn = document.getElementById('mobile-close-btn');
+                const menuOverlay = document.getElementById('mobile-menu-overlay');
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+                
+                // Mobile menu button
+                if (mobileMenuButton) {
+                    mobileMenuButton.addEventListener('click', toggleMobileMenu);
+                }
+                
+                // Close button in mobile menu
+                if (mobileCloseBtn) {
+                    mobileCloseBtn.addEventListener('click', closeMobileMenu);
+                }
+                
+                // Overlay click to close
+                if (menuOverlay) {
+                    menuOverlay.addEventListener('click', closeMobileMenu);
+                }
+                
+                // Close menu when navigation link is clicked
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        closeMobileMenu();
+                        // Small delay to ensure smooth scrolling
+                        setTimeout(() => {
+                            const target = document.querySelector(link.getAttribute('href'));
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }, 300);
+                    });
+                });
+                
+                // Close menu on Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+                        closeMobileMenu();
+                    }
+                });
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth > 768 && mobileMenu && mobileMenu.classList.contains('open')) {
+                        closeMobileMenu();
+                    }
+                });
             }
 
             /** Animates the rotating word in the hero section. */
