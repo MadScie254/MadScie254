@@ -94,15 +94,6 @@ html.dark .stat-item:hover i[data-lucide] {
     animation: stats-entrance 0.5s ease-out forwards;
 }
 
-/* Transition delay utilities */
-.delay-150 {
-    transition-delay: 150ms;
-}
-
-.delay-300 {
-    transition-delay: 300ms;
-}
-
 /* GitHub Stats Container Styles */
 .github-stats-container {
     margin-top: 1.5rem;
@@ -120,7 +111,6 @@ html.dark .github-stats-container {
     gap: 1rem;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-radius: 0.75rem;
     border: 1px solid rgba(108, 92, 231, 0.2);
@@ -203,4 +193,4 @@ html.dark .stat-progress-bar {
 
 html.dark .stat-progress {
     background: linear-gradient(to right, #66FCF1, #45A29E);
-}
+} 
