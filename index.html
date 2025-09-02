@@ -2834,6 +2834,9 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
                 console.error('Error creating Lucide icons:', e);
             }
 
+            // --- Initialize Mobile Navigation ---
+            setupMobileNavigation();
+
 
             // --- Constants and State ---
             const name = "Daniel Wanjala"; // Used potentially elsewhere
@@ -3676,8 +3679,7 @@ n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transiti
             if (themeToggleButton) themeToggleButton.addEventListener('click', () => setTheme(htmlEl.classList.contains('dark') ? 'light' : 'dark'));
 
             // Mobile Menu Button & Links
-            if (mobileMenuButton) mobileMenuButton.addEventListener('click', toggleMobileMenu);
-            mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+            setupMobileNavigation();
 
             // Project Card Clicks & Keydown (Open Modal)
             projectCards.forEach(card => {
