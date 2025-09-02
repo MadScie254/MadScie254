@@ -316,18 +316,6 @@
              color: theme('colors.dark-accent') !important;
         }
 
-        /* --- Canvas Background --- */
-        #particle-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            /* pointer-events: none; */ /* Removed to allow mouse interaction */
-            /* Performance consideration: May impact low-end devices */
-        }
-
          /* --- Main Content Container for Tilt --- */
         #main-content-container {
             perspective: 1000px;
@@ -797,7 +785,7 @@
         <div class="preloader-pulse"></div>
     </div>
 
-    <canvas id="particle-canvas"></canvas>
+
 
     <div id="scrollProgressBar" class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary origin-left z-50" style="transform: scaleX(0);"></div>
 
