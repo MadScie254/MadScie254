@@ -188,6 +188,260 @@
             scroll-snap-align: start;
             height: 100vh;
         }
+
+        /* ===== COMPREHENSIVE RESPONSIVE DESIGN FIXES ===== */
+        
+        /* Mobile-first responsive containers */
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Navigation fixes */
+            nav .hidden {
+                display: none !important;
+            }
+            
+            .mobile-menu-button {
+                display: flex !important;
+            }
+            
+            /* Hero section mobile */
+            .hero-title {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem !important;
+                line-height: 1.5 !important;
+            }
+            
+            /* Project cards mobile */
+            .project-card {
+                padding: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            /* Skills section mobile */
+            .skills-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            .skill-card {
+                padding: 1rem !important;
+            }
+            
+            /* Wireframes mobile */
+            .wireframes-grid {
+                columns: 1 !important;
+                gap: 1rem !important;
+            }
+            
+            .wireframe-card {
+                break-inside: avoid;
+                margin-bottom: 1rem !important;
+                padding: 1rem !important;
+            }
+            
+            /* Text sizing mobile */
+            h1 { font-size: 1.875rem !important; }
+            h2 { font-size: 1.5rem !important; }
+            h3 { font-size: 1.25rem !important; }
+            
+            /* Button sizing mobile */
+            .btn {
+                padding: 0.75rem 1.5rem !important;
+                font-size: 0.875rem !important;
+            }
+            
+            /* Form elements mobile */
+            input, textarea, select {
+                font-size: 16px !important; /* Prevents zoom on iOS */
+            }
+            
+            /* Modal/dialog mobile */
+            .modal, .dialog {
+                margin: 1rem !important;
+                width: calc(100% - 2rem) !important;
+                max-width: none !important;
+            }
+            
+            /* Image containers mobile */
+            .aspect-ratio-container {
+                aspect-ratio: 16/9 !important;
+            }
+            
+            /* Flex items mobile */
+            .flex-mobile-col {
+                flex-direction: column !important;
+            }
+            
+            /* Spacing mobile */
+            .section-padding {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+        }
+        
+        /* Tablet responsive design */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .container {
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+            }
+            
+            /* Project grid tablet */
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Skills grid tablet */
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Wireframes tablet */
+            .wireframes-grid {
+                columns: 2 !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Navigation tablet */
+            .nav-desktop {
+                display: flex !important;
+            }
+            
+            .nav-mobile {
+                display: none !important;
+            }
+            
+            /* Text sizing tablet */
+            h1 { font-size: 2.5rem !important; }
+            h2 { font-size: 2rem !important; }
+            h3 { font-size: 1.5rem !important; }
+        }
+        
+        /* Desktop responsive design */
+        @media (min-width: 1025px) {
+            .container {
+                max-width: 1200px !important;
+                margin: 0 auto !important;
+            }
+            
+            /* Project grid desktop */
+            .project-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 2rem !important;
+            }
+            
+            /* Skills grid desktop */
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 2rem !important;
+            }
+            
+            /* Wireframes desktop */
+            .wireframes-grid {
+                columns: 3 !important;
+                gap: 2rem !important;
+            }
+        }
+        
+        /* Ultra-wide desktop */
+        @media (min-width: 1440px) {
+            .container {
+                max-width: 1400px !important;
+            }
+            
+            .project-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+            
+            .wireframes-grid {
+                columns: 4 !important;
+            }
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) {
+            .hover\:scale-105:hover {
+                transform: none !important;
+            }
+            
+            .hover\:shadow-lg:hover {
+                box-shadow: none !important;
+            }
+            
+            /* Make tap targets larger */
+            button, a, .interactive {
+                min-height: 48px !important;
+                min-width: 48px !important;
+            }
+        }
+        
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .high-dpi-image {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            
+            .print-break {
+                page-break-after: always;
+            }
+        }
+        
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+        }
+        
+        /* Fix for iOS Safari viewport units */
+        @supports (-webkit-touch-callout: none) {
+            .vh-fix {
+                height: -webkit-fill-available;
+            }
+        }
+        
+        /* Prevent horizontal scrolling */
+        body {
+            overflow-x: hidden !important;
+        }
+        
+        /* Fix for mobile keyboard appearing */
+        @media screen and (max-height: 600px) {
+            .mobile-keyboard-fix {
+                height: auto !important;
+                min-height: auto !important;
+            }
+        }
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

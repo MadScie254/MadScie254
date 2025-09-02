@@ -127,6 +127,74 @@
         html.dark *:focus-visible { outline-color: theme('colors.dark-accent'); }
         *:focus { outline: none; }
 
+        /* ===== COMPREHENSIVE RESPONSIVE DESIGN FIXES ===== */
+        
+        /* Mobile-first responsive containers */
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Project cards mobile */
+            .project-card {
+                padding: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            /* Text sizing mobile */
+            h1 { font-size: 1.875rem !important; }
+            h2 { font-size: 1.5rem !important; }
+            h3 { font-size: 1.25rem !important; }
+            
+            /* Button sizing mobile */
+            .btn {
+                padding: 0.75rem 1.5rem !important;
+                font-size: 0.875rem !important;
+            }
+            
+            /* Section spacing mobile */
+            .section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+        }
+        
+        /* Tablet responsive design */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .container {
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+            }
+            
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) {
+            .hover\:scale-105:hover {
+                transform: none !important;
+            }
+            
+            button, a, .interactive {
+                min-height: 48px !important;
+                min-width: 48px !important;
+            }
+        }
+        
+        /* Prevent horizontal scrolling */
+        body {
+            overflow-x: hidden !important;
+        }
+
     </style>
     <script>
       tailwind.config = { /* Tailwind config - same as before */
