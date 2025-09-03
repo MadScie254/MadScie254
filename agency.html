@@ -33,148 +33,177 @@
         .font-heading { font-family: 'Satoshi', 'Space Grotesk', 'Neue Montreal', sans-serif; }
         .font-body { font-family: 'Inter', 'IBM Plex Sans', sans-serif; }
         .font-mono { font-family: 'JetBrains Mono', 'Source Code Pro', monospace; }
+                .reveal-hidden.revealed{opacity:1;transform:translateY(0)}
 
-        /* Custom Scrollbar Styling (Keep consistent) */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: theme('colors.sandstone'); }
-        ::-webkit-scrollbar-thumb { background: theme('colors.accent'); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: theme('colors.accent-secondary'); }
-        html.dark ::-webkit-scrollbar-track { background: theme('colors.dark-secondary-bg'); }
-        html.dark ::-webkit-scrollbar-thumb { background: theme('colors.dark-accent'); }
-        html.dark ::-webkit-scrollbar-thumb:hover { background: theme('colors.dark-accent-secondary'); }
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>D&H Collective – Agency</title>
+    <link rel="icon" href="assets/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-        /* Smooth scrolling */
-        html { scroll-behavior: smooth; }
+    <style>
+        :root{--accent:#6C5CE7;--accent-secondary:#A29BFE;--dark-accent:#66FCF1;--dark-accent-secondary:#45A29E;}
+        body{font-family:Inter,system-ui,Arial;color:#0b1020;background:#f7f7fb;margin:0;-webkit-font-smoothing:antialiased}
+        html.dark body{background:#0b0c10;color:#e6eef6}
 
-        /* --- COMPREHENSIVE MOBILE OPTIMIZATION --- */
-        
-        /* Mobile-first responsive breakpoints */
-        /* Mobile: ≤640px, Tablet: 641px-1024px, Desktop: ≥1025px */
-        
-        /* Base container optimizations */
-        .mobile-container {
-            max-width: 100%;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-        
-        @media (min-width: 375px) {
-            .mobile-container {
-                padding-left: 1.25rem;
-                padding-right: 1.25rem;
-            }
-        }
-        
-        @media (min-width: 414px) {
-            .mobile-container {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-        }
-        
-        /* Typography scaling for mobile */
-        @media (max-width: 640px) {
-            .mobile-text-scale h1 { font-size: 2rem; line-height: 1.2; }
-            .mobile-text-scale h2 { font-size: 1.5rem; line-height: 1.3; }
-            .mobile-text-scale h3 { font-size: 1.25rem; line-height: 1.4; }
-            .mobile-text-scale p { font-size: 0.95rem; line-height: 1.6; }
-            .mobile-text-scale .text-lg { font-size: 1rem; }
-            .mobile-text-scale .text-xl { font-size: 1.125rem; }
-            .mobile-text-scale .text-2xl { font-size: 1.5rem; }
-            .mobile-text-scale .text-3xl { font-size: 1.75rem; }
-            .mobile-text-scale .text-4xl { font-size: 2rem; }
-        }
-        
-        /* Mobile grid optimizations */
-        @media (max-width: 640px) {
-            .mobile-grid-1 { grid-template-columns: 1fr; }
-            .mobile-stack > * { margin-bottom: 1.5rem; }
-            .mobile-stack > *:last-child { margin-bottom: 0; }
-            .mobile-spacing { gap: 1rem; }
-        }
-        
-        /* Touch target optimizations */
-        @media (hover: none) {
-            .interactive-element {
-                min-height: 44px;
-                min-width: 44px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            /* Disable hover effects on touch devices */
-            .hover\:scale-105:hover,
-            .hover\:-translate-y-1:hover,
-            .group-hover\:translate-x-1,
-            .group-hover\:opacity-100 {
-                transform: none !important;
-                opacity: inherit !important;
-            }
-        }
-        
-        /* Responsive navigation fixes */
-        @media (max-width: 768px) {
-            .mobile-nav-hidden { display: none !important; }
-            .mobile-nav-visible { display: block !important; }
-            
-            /* Ensure mobile menu doesn't interfere with content */
-            .mobile-menu-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(4px);
-                z-index: 9998;
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-            }
-            
-            .mobile-menu-overlay.active {
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            .mobile-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 280px;
-                max-width: 85vw;
-                height: 100vh;
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(20px);
-                z-index: 9999;
-                transition: right 0.3s ease;
-                overflow-y: auto;
-                border-left: 1px solid rgba(0, 0, 0, 0.1);
-            }
-            
-            html.dark .mobile-menu {
-                background: rgba(15, 15, 35, 0.95);
-                border-left: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            .mobile-menu.open {
-                right: 0;
-            }
-            
-            .mobile-menu-header {
-                padding: 1rem;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                display: flex;
-                justify-content: flex-end;
-            }
-            
-            html.dark .mobile-menu-header {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            .mobile-close-btn {
-                background: rgba(108, 92, 231, 0.1);
+        /* Glass and utilities */
+        .bg-glass-light{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background:rgba(255,255,255,0.22);border:1px solid rgba(255,255,255,0.08)}
+        .bg-glass-dark{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background:rgba(15,15,35,0.28);border:1px solid rgba(255,255,255,0.06)}
+
+        .primary-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.1rem;border-radius:.6rem;font-weight:600;background:linear-gradient(90deg,var(--accent),var(--accent-secondary));color:#fff;box-shadow:0 10px 30px rgba(108,92,231,.12);transition:transform .22s,box-shadow .22s}
+        .primary-cta:hover{transform:translateY(-3px)}
+
+        .see-example-btn{display:inline-flex;align-items:center;justify-content:center;padding:.6rem 1.2rem;border-radius:.6rem;font-weight:600;background:linear-gradient(90deg,var(--accent),var(--accent-secondary));color:#fff;box-shadow:0 10px 30px rgba(108,92,231,.12);transition:transform .25s,box-shadow .25s}
+        .see-example-btn:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 40px rgba(108,92,231,.16)}
+
+        .navbar-logo{height:clamp(2rem,4vw,2.5rem)}
+        .gradient-text{background:linear-gradient(90deg,var(--accent),var(--accent-secondary));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+        .reveal-hidden{opacity:0;transform:translateY(18px);transition:all .6s ease}
+        .reveal-hidden.revealed{opacity:1;transform:translateY(0)}
+
+        @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+<header class="fixed inset-x-0 top-0 z-40 bg-glass-light dark:bg-glass-dark backdrop-blur-md border-b border-secondary-text/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/images/logo.png" alt="logo" class="navbar-logo">
+                    <span class="font-heading text-lg gradient-text">D&H Collective</span>
+                </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#projects" class="nav-link">Work</a>
+                <a href="nlog.html" class="nav-link">Articles</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="flex items-center gap-3">
+            <button id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="p-2 rounded-md md:hidden">
+                    <i data-lucide="menu" id="menu-icon-open" class="h-6 w-6"></i>
+                    <i data-lucide="x" id="menu-icon-close" class="h-6 w-6 hidden"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-30 bg-black/40" aria-hidden="true"></div>
+    <div id="mobile-menu" class="fixed right-0 top-0 h-full w-80 max-w-full transform translate-x-full transition-transform duration-300 z-40 bg-glass-light p-6">
+        <button id="mobile-close-btn" aria-label="Close menu" class="mb-6 p-2 rounded-md"><i data-lucide="x" class="h-5 w-5"></i></button>
+        <nav class="space-y-4">
+            <a href="index.html#about" class="mobile-nav-link">About</a>
+            <a href="index.html#services" class="mobile-nav-link">Services</a>
+            <a href="index.html#projects" class="mobile-nav-link">Work</a>
+            <a href="nlog.html" class="mobile-nav-link">Articles</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content-container" class="pt-24">
+    <section id="hero" class="hero min-h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 font-heading gradient-text">Where Data Meets Design</h1>
+            <p class="text-lg text-secondary-text mb-8">Strategy, design and engineering — we ship production-ready data products with clarity and delight.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="contact.html" class="see-example-btn">Request a Quote <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i></a>
+                <a href="#projects" class="primary-cta">View Our Work <i data-lucide="eye" class="ml-2 h-4 w-4"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center font-heading">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="service-card bg-glass-light rounded-xl p-6 shadow-lg">
+                    <i data-lucide="bar-chart-3" class="h-8 w-8 text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Data & Analytics</h3>
+                    <p class="text-sm text-secondary-text mb-4">Analytics, modeling, dashboards.</p>
+                    <a href="#" class="see-example-btn">Learn More</a>
+                </article>
+                <article class="service-card bg-glass-light rounded-xl p-6 shadow-lg">
+                    <i data-lucide="palette" class="h-8 w-8 text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Design & Branding</h3>
+                    <p class="text-sm text-secondary-text mb-4">UX, identity, and storytelling.</p>
+                    <a href="#" class="see-example-btn">Learn More</a>
+                </article>
+                <article class="service-card bg-glass-light rounded-xl p-6 shadow-lg">
+                    <i data-lucide="globe" class="h-8 w-8 text-accent mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Web & Apps</h3>
+                    <p class="text-sm text-secondary-text mb-4">Robust web apps and dashboards.</p>
+                    <a href="#" class="see-example-btn">Learn More</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center font-heading">Recent Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <article class="project-card bg-glass-light p-6 rounded-xl shadow-lg">
+                    <h3 class="font-semibold mb-2">Retail Demand Forecasting</h3>
+                    <p class="text-sm text-secondary-text mb-4">Reduced stockouts by 18% through forecasting.</p>
+                    <a class="primary-cta" href="#">Case Study</a>
+                </article>
+                <article class="project-card bg-glass-light p-6 rounded-xl shadow-lg">
+                    <h3 class="font-semibold mb-2">Interactive Public Dashboards</h3>
+                    <p class="text-sm text-secondary-text mb-4">Public-facing dashboards for city data.</p>
+                    <a class="primary-cta" href="#">Case Study</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Start a Project</h2>
+            <p class="text-secondary-text mb-6">Tell us about your challenge and we’ll assemble a tailored team to get you moving.</p>
+            <a href="contact.html" class="see-example-btn">Let's Talk</a>
+        </div>
+    </section>
+</main>
+
+<footer class="py-8 bg-white border-t mt-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+            <img src="assets/images/logo.png" alt="logo" class="h-8">
+            <div>
+                <div class="text-sm font-semibold">D&H Collective</div>
+                <div class="text-xs text-secondary-text">Nairobi • Remote</div>
+            </div>
+        </div>
+        <div class="text-sm text-secondary-text">© <span id="currentYear"></span> D&H Collective</div>
+    </div>
+</footer>
+
+<script>
+    try{ if(typeof lucide!=='undefined') lucide.createIcons(); }catch(e){}
+    const mobileMenuButton=document.getElementById('mobile-menu-button');
+    const mobileMenu=document.getElementById('mobile-menu');
+    const mobileMenuOverlay=document.getElementById('mobile-menu-overlay');
+    const mobileCloseBtn=document.getElementById('mobile-close-btn');
+    function openMenu(){ if(mobileMenu){ mobileMenu.classList.remove('translate-x-full'); mobileMenu.style.transform='translateX(0)'; if(mobileMenuOverlay) mobileMenuOverlay.classList.remove('hidden'); document.body.style.overflow='hidden'; mobileMenuButton&&mobileMenuButton.setAttribute('aria-expanded','true'); const openI=document.getElementById('menu-icon-open'), closeI=document.getElementById('menu-icon-close'); if(openI) openI.classList.add('hidden'); if(closeI) closeI.classList.remove('hidden'); }}
+    function closeMenu(){ if(mobileMenu){ mobileMenu.classList.add('translate-x-full'); mobileMenu.style.transform='translateX(100%)'; if(mobileMenuOverlay) mobileMenuOverlay.classList.add('hidden'); document.body.style.overflow=''; mobileMenuButton&&mobileMenuButton.setAttribute('aria-expanded','false'); const openI=document.getElementById('menu-icon-open'), closeI=document.getElementById('menu-icon-close'); if(openI) openI.classList.remove('hidden'); if(closeI) closeI.classList.add('hidden'); }}
+    if(mobileMenuButton) mobileMenuButton.addEventListener('click', ()=>{ const expanded=mobileMenuButton.getAttribute('aria-expanded')==='true'; if(expanded) closeMenu(); else openMenu(); });
+    if(mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMenu);
+    if(mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', closeMenu);
+    document.getElementById('currentYear').textContent=new Date().getFullYear();
+    const revealElems=document.querySelectorAll('.reveal-hidden');
+    const obs=new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); }}); },{threshold:0.12});
+    revealElems.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
                 border: none;
                 border-radius: 50%;
                 width: 40px;
