@@ -133,6 +133,83 @@
                 gap: 1rem !important;
             }
 
+            /* Wireframes mobile fixes */
+            .wireframe-card {
+                padding: 1rem !important;
+                margin-bottom: 1.5rem !important;
+                display: block !important;
+                width: 100% !important;
+                background: rgba(247, 247, 247, 0.9) !important;
+                backdrop-filter: blur(10px) !important;
+                border: 1px solid rgba(108, 92, 231, 0.2) !important;
+            }
+
+            html.dark .wireframe-card {
+                background: rgba(11, 12, 16, 0.9) !important;
+                border-color: rgba(102, 252, 241, 0.2) !important;
+            }
+
+            .wireframe-card .aspect-\[16\/9\] {
+                aspect-ratio: 16/9 !important;
+                min-height: 180px !important;
+                max-height: 220px !important;
+            }
+
+            .wireframe-card h3 {
+                font-size: 1.25rem !important;
+                line-height: 1.4 !important;
+                color: #4A4A4A !important;
+            }
+
+            html.dark .wireframe-card h3 {
+                color: #C5C6C7 !important;
+            }
+
+            .wireframe-card p {
+                font-size: 0.875rem !important;
+                line-height: 1.5 !important;
+                color: #6B7280 !important;
+            }
+
+            html.dark .wireframe-card p {
+                color: #9CA3AF !important;
+            }
+
+            /* Wireframes grid mobile layout */
+            .wireframes-grid {
+                display: block !important;
+            }
+
+            .wireframes-grid .wireframe-card {
+                break-inside: avoid !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            /* Mobile stats grid optimization */
+            .grid.grid-cols-2.md\:grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem !important;
+                padding: 1rem !important;
+            }
+
+            .grid.grid-cols-2.md\:grid-cols-4 .text-center {
+                padding: 0.5rem !important;
+            }
+
+            .grid.grid-cols-2.md\:grid-cols-4 .text-2xl {
+                font-size: 1.5rem !important;
+            }
+
+            .grid.grid-cols-2.md\:grid-cols-4 .text-xs {
+                font-size: 0.75rem !important;
+            }
+
+            /* Mobile Features List fixes */
+            .max-w-4xl.mx-auto.grid.grid-cols-1.md\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+
             /* Responsive text sizing */
             h1 { font-size: 2rem !important; line-height: 1.2 !important; }
             h2 { font-size: 1.75rem !important; line-height: 1.3 !important; }
@@ -2706,8 +2783,8 @@
             <section id="wireframes" class="min-h-screen w-full py-20 px-4 md:px-8 lg:px-16 bg-primary-bg dark:bg-dark-primary-bg reveal-hidden pt-20">
                 <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent font-heading tracking-tight reveal-hidden">Mobile Experience</h2>
                 
-                <!-- Mobile Wireframes Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Mobile Wireframes Grid - Optimized for Mobile -->
+                <div class="space-y-8 max-w-6xl mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:space-y-0">
                     <!-- Navigation Wireframe -->
                     <div class="wireframe-card bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-6 border border-accent/20 dark:border-dark-accent/20 shadow-lg group hover:border-accent dark:hover:border-dark-accent transition-all duration-300 reveal-hidden">
                         <div class="flex items-center gap-4 mb-6">
@@ -2717,18 +2794,18 @@
                             <h3 class="text-xl font-semibold text-primary-text dark:text-dark-primary-text font-heading">Mobile Navigation</h3>
                         </div>
                         <div class="space-y-4">
-                            <div class="aspect-[9/16] bg-accent/5 dark:bg-dark-accent/5 rounded-lg p-4 relative overflow-hidden group-hover:bg-accent/10 dark:group-hover:bg-dark-accent/10 transition-colors duration-300">
+                            <div class="aspect-[16/9] md:aspect-[9/16] bg-accent/5 dark:bg-dark-accent/5 rounded-lg p-4 relative overflow-hidden group-hover:bg-accent/10 dark:group-hover:bg-dark-accent/10 transition-colors duration-300 min-h-[200px]">
                                 <!-- Mobile Nav Wireframe -->
-                                <div class="absolute top-0 left-0 right-0 h-14 bg-accent/10 dark:bg-dark-accent/10 flex items-center justify-between px-4">
-                                    <div class="w-8 h-8 rounded-full bg-accent/20 dark:bg-dark-accent/20"></div>
-                                    <div class="w-8 h-8 flex items-center justify-center">
-                                        <i data-lucide="menu" class="w-6 h-6 text-accent dark:text-dark-accent"></i>
+                                <div class="absolute top-0 left-0 right-0 h-12 md:h-14 bg-accent/10 dark:bg-dark-accent/10 flex items-center justify-between px-4">
+                                    <div class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-accent/20 dark:bg-dark-accent/20"></div>
+                                    <div class="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center">
+                                        <i data-lucide="menu" class="w-4 h-4 md:w-6 md:h-6 text-accent dark:text-dark-accent"></i>
                                     </div>
                                 </div>
-                                <div class="mt-16 space-y-2">
-                                    <div class="h-10 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-full"></div>
-                                    <div class="h-10 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-3/4"></div>
-                                    <div class="h-10 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-5/6"></div>
+                                <div class="mt-14 md:mt-16 space-y-2">
+                                    <div class="h-8 md:h-10 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-full"></div>
+                                    <div class="h-8 md:h-10 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-3/4"></div>
+                                    <div class="h-8 md:h-10 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-5/6"></div>
                                 </div>
                             </div>
                             <p class="text-sm text-secondary-text dark:text-dark-secondary-text">Optimized navigation with collapsible menu and smooth transitions.</p>
@@ -2744,20 +2821,20 @@
                             <h3 class="text-xl font-semibold text-primary-text dark:text-dark-primary-text font-heading">Interactive Elements</h3>
                         </div>
                         <div class="space-y-4">
-                            <div class="aspect-[9/16] bg-accent/5 dark:bg-dark-accent/5 rounded-lg p-4 relative overflow-hidden group-hover:bg-accent/10 dark:group-hover:bg-dark-accent/10 transition-colors duration-300">
+                            <div class="aspect-[16/9] md:aspect-[9/16] bg-accent/5 dark:bg-dark-accent/5 rounded-lg p-4 relative overflow-hidden group-hover:bg-accent/10 dark:group-hover:bg-dark-accent/10 transition-colors duration-300 min-h-[200px]">
                                 <!-- Interactive Elements Wireframe -->
-                                <div class="space-y-4">
-                                    <div class="h-12 bg-accent/10 dark:bg-dark-accent/10 rounded-lg flex items-center px-4">
-                                        <div class="w-8 h-8 rounded-full bg-accent/20 dark:bg-dark-accent/20"></div>
-                                        <div class="ml-3 h-3 bg-accent/20 dark:bg-dark-accent/20 rounded w-1/2"></div>
+                                <div class="space-y-3 md:space-y-4">
+                                    <div class="h-10 md:h-12 bg-accent/10 dark:bg-dark-accent/10 rounded-lg flex items-center px-4">
+                                        <div class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-accent/20 dark:bg-dark-accent/20"></div>
+                                        <div class="ml-3 h-2 md:h-3 bg-accent/20 dark:bg-dark-accent/20 rounded w-1/2"></div>
                                     </div>
                                     <div class="grid grid-cols-2 gap-2">
-                                        <div class="h-16 bg-accent/10 dark:bg-dark-accent/10 rounded-lg"></div>
-                                        <div class="h-16 bg-accent/10 dark:bg-dark-accent/10 rounded-lg"></div>
+                                        <div class="h-12 md:h-16 bg-accent/10 dark:bg-dark-accent/10 rounded-lg"></div>
+                                        <div class="h-12 md:h-16 bg-accent/10 dark:bg-dark-accent/10 rounded-lg"></div>
                                     </div>
                                     <div class="space-y-2">
-                                        <div class="h-8 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-3/4"></div>
-                                        <div class="h-8 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-5/6"></div>
+                                        <div class="h-6 md:h-8 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-3/4"></div>
+                                        <div class="h-6 md:h-8 bg-accent/10 dark:bg-dark-accent/10 rounded-lg w-5/6"></div>
                                     </div>
                                 </div>
                             </div>
@@ -2766,7 +2843,7 @@
                     </div>
 
                     <!-- Content Wireframe -->
-                    <div class="wireframe-card bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-6 border border-accent/20 dark:border-dark-accent/20 shadow-lg group hover:border-accent dark:hover:border-dark-accent transition-all duration-300 reveal-hidden">
+                    <div class="wireframe-card bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-6 border border-accent/20 dark:border-dark-accent/20 shadow-lg group hover:border-accent dark:hover:border-dark-accent transition-all duration-300 reveal-hidden md:col-span-2 lg:col-span-1">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-accent/10 dark:bg-dark-accent/10">
                                 <i data-lucide="layout" class="w-6 h-6 text-accent dark:text-dark-accent"></i>
@@ -2774,18 +2851,18 @@
                             <h3 class="text-xl font-semibold text-primary-text dark:text-dark-primary-text font-heading">Content Layout</h3>
                         </div>
                         <div class="space-y-4">
-                            <div class="aspect-[9/16] bg-accent/5 dark:bg-dark-accent/5 rounded-lg p-4 relative overflow-hidden group-hover:bg-accent/10 dark:group-hover:bg-dark-accent/10 transition-colors duration-300">
+                            <div class="aspect-[16/9] md:aspect-[9/16] bg-accent/5 dark:bg-dark-accent/5 rounded-lg p-4 relative overflow-hidden group-hover:bg-accent/10 dark:group-hover:bg-dark-accent/10 transition-colors duration-300 min-h-[200px]">
                                 <!-- Content Layout Wireframe -->
-                                <div class="space-y-4">
-                                    <div class="h-40 bg-accent/10 dark:bg-dark-accent/10 rounded-lg"></div>
+                                <div class="space-y-3 md:space-y-4">
+                                    <div class="h-24 md:h-40 bg-accent/10 dark:bg-dark-accent/10 rounded-lg"></div>
                                     <div class="space-y-2">
-                                        <div class="h-4 bg-accent/10 dark:bg-dark-accent/10 rounded w-3/4"></div>
-                                        <div class="h-4 bg-accent/10 dark:bg-dark-accent/10 rounded w-full"></div>
-                                        <div class="h-4 bg-accent/10 dark:bg-dark-accent/10 rounded w-5/6"></div>
+                                        <div class="h-3 md:h-4 bg-accent/10 dark:bg-dark-accent/10 rounded w-3/4"></div>
+                                        <div class="h-3 md:h-4 bg-accent/10 dark:bg-dark-accent/10 rounded w-full"></div>
+                                        <div class="h-3 md:h-4 bg-accent/10 dark:bg-dark-accent/10 rounded w-5/6"></div>
                                     </div>
                                     <div class="grid grid-cols-2 gap-2">
-                                        <div class="h-20 bg-accent/10 dark:bg-dark-accent/10 rounded"></div>
-                                        <div class="h-20 bg-accent/10 dark:bg-dark-accent/10 rounded"></div>
+                                        <div class="h-12 md:h-20 bg-accent/10 dark:bg-dark-accent/10 rounded"></div>
+                                        <div class="h-12 md:h-20 bg-accent/10 dark:bg-dark-accent/10 rounded"></div>
                                     </div>
                                 </div>
                             </div>
@@ -2794,8 +2871,8 @@
                     </div>
                 </div>
 
-                <!-- Mobile Features List -->
-                <div class="mt-16 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 reveal-hidden">
+                <!-- Mobile Features List - Improved for Mobile -->
+                <div class="mt-16 max-w-4xl mx-auto space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 reveal-hidden">
                     <div class="space-y-6">
                         <h3 class="text-2xl font-semibold text-accent dark:text-dark-accent font-heading">Touch Optimized</h3>
                         <ul class="space-y-4">
@@ -2832,24 +2909,24 @@
                     </div>
                 </div>
 
-                <!-- Mobile-First Stats -->
-                <div class="mt-16 bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-8 border border-accent/20 dark:border-dark-accent/20 max-w-4xl mx-auto reveal-hidden">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Mobile-First Stats - Mobile Optimized -->
+                <div class="mt-16 bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-6 md:p-8 border border-accent/20 dark:border-dark-accent/20 max-w-4xl mx-auto reveal-hidden">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                         <div class="text-center">
-                            <div class="text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent mb-2">90%</div>
-                            <p class="text-sm text-secondary-text dark:text-dark-secondary-text">Mobile Users</p>
+                            <div class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent mb-2">90%</div>
+                            <p class="text-xs md:text-sm text-secondary-text dark:text-dark-secondary-text">Mobile Users</p>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent mb-2">0.8s</div>
-                            <p class="text-sm text-secondary-text dark:text-dark-secondary-text">Load Time</p>
+                            <div class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent mb-2">0.8s</div>
+                            <p class="text-xs md:text-sm text-secondary-text dark:text-dark-secondary-text">Load Time</p>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent mb-2">95%</div>
-                            <p class="text-sm text-secondary-text dark:text-dark-secondary-text">Satisfaction</p>
+                            <div class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent mb-2">95%</div>
+                            <p class="text-xs md:text-sm text-secondary-text dark:text-dark-secondary-text">Satisfaction</p>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent mb-2">60fps</div>
-                            <p class="text-sm text-secondary-text dark:text-dark-secondary-text">Animation</p>
+                            <div class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent mb-2">60fps</div>
+                            <p class="text-xs md:text-sm text-secondary-text dark:text-dark-secondary-text">Animation</p>
                         </div>
                     </div>
                 </div>
