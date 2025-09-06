@@ -42,6 +42,104 @@
             -webkit-overflow-scrolling: touch;
         }
 
+        /* ===== EMERGENCY MOBILE DISPLAY FIXES ===== */
+        
+        /* Force all critical elements to be visible on mobile */
+        @media (max-width: 768px) {
+            html, body {
+                background-color: #F7F7F7 !important;
+                color: #4A4A4A !important;
+                min-height: 100vh !important;
+                width: 100% !important;
+                overflow-x: hidden !important;
+                font-size: 16px !important;
+                -webkit-text-size-adjust: 100% !important;
+            }
+
+            html.dark, html.dark body {
+                background-color: #0B0C10 !important;
+                color: #C5C6C7 !important;
+            }
+
+            /* Force main content visibility */
+            main {
+                display: block !important;
+                width: 100% !important;
+                min-height: 100vh !important;
+                background: inherit !important;
+            }
+
+            /* Force section visibility */
+            section {
+                display: block !important;
+                width: 100% !important;
+                min-height: auto !important;
+                padding: 2rem 1rem !important;
+                background: inherit !important;
+            }
+
+            /* Ensure hero section is visible */
+            #hero {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                min-height: 100vh !important;
+                padding-top: 5rem !important;
+                background: #F7F7F7 !important;
+            }
+
+            html.dark #hero {
+                background: #0B0C10 !important;
+            }
+
+            /* Force text visibility */
+            h1, h2, h3, h4, h5, h6, p, span, div, a {
+                color: inherit !important;
+                display: block !important;
+            }
+
+            /* Force button visibility */
+            .btn-primary, .btn-secondary, .primary-cta, .see-example-btn, .know-more-button {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                min-height: 44px !important;
+                padding: 0.875rem 1.5rem !important;
+                font-size: 0.875rem !important;
+                background: linear-gradient(to right, #6C5CE7, #A29BFE) !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 0.5rem !important;
+                text-decoration: none !important;
+            }
+
+            html.dark .btn-primary, html.dark .btn-secondary, html.dark .primary-cta, 
+            html.dark .see-example-btn, html.dark .know-more-button {
+                background: linear-gradient(to right, #66FCF1, #45A29E) !important;
+                color: #0B0C10 !important;
+            }
+
+            /* Container fixes */
+            .container, .max-w-6xl, .max-w-7xl {
+                max-width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            /* Grid fixes */
+            .grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+
+            /* Responsive text sizing */
+            h1 { font-size: 2rem !important; line-height: 1.2 !important; }
+            h2 { font-size: 1.75rem !important; line-height: 1.3 !important; }
+            h3 { font-size: 1.5rem !important; line-height: 1.4 !important; }
+            p { font-size: 1rem !important; line-height: 1.6 !important; }
+        }
+
         /* Mobile touch targets */
         button, a, .interactive-element {
             min-height: 44px;
@@ -1798,6 +1896,80 @@
     </script>
 </head>
 <body class="font-body bg-primary-bg text-primary-text dark:bg-dark-primary-bg dark:text-dark-primary-text min-h-screen relative overflow-x-hidden transition-colors duration-300">
+
+    <!-- Critical Mobile Loading Script -->
+    <script>
+        (function() {
+            'use strict';
+            
+            // Immediate mobile fixes
+            function criticalMobileFixes() {
+                const html = document.documentElement;
+                const body = document.body;
+                
+                // Force visibility immediately
+                html.style.backgroundColor = '#F7F7F7';
+                html.style.color = '#4A4A4A';
+                body.style.backgroundColor = '#F7F7F7';
+                body.style.color = '#4A4A4A';
+                body.style.minHeight = '100vh';
+                body.style.fontFamily = 'Inter, system-ui, sans-serif';
+                body.style.display = 'block';
+                body.style.opacity = '1';
+                
+                // Check for dark mode
+                if (html.classList.contains('dark')) {
+                    html.style.backgroundColor = '#0B0C10';
+                    html.style.color = '#C5C6C7';
+                    body.style.backgroundColor = '#0B0C10';
+                    body.style.color = '#C5C6C7';
+                }
+                
+                // Mobile viewport fix
+                const viewport = document.querySelector('meta[name="viewport"]');
+                if (viewport) {
+                    viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes';
+                }
+                
+                // Prevent iOS zoom on inputs
+                if (window.innerWidth <= 768) {
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        input, textarea, select { font-size: 16px !important; }
+                        body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+                        * { box-sizing: border-box; }
+                        .hidden { display: none !important; }
+                        main { display: block !important; min-height: 100vh !important; }
+                        section { display: block !important; width: 100% !important; }
+                        header { display: block !important; }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+            
+            // Emergency fallback
+            function emergencyFallback() {
+                setTimeout(() => {
+                    const main = document.querySelector('main');
+                    if (!main || main.children.length === 0) {
+                        document.body.innerHTML = `
+                            <div style="min-height: 100vh; background: #F7F7F7; color: #4A4A4A; font-family: Arial, sans-serif; padding: 2rem; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                <h1 style="font-size: 2rem; margin-bottom: 1rem; color: #6C5CE7;">Daniel Wanjala</h1>
+                                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Data Scientist & ML Engineer</p>
+                                <p style="margin-bottom: 2rem;">Content is loading... Please wait.</p>
+                                <button onclick="location.reload()" style="background: #6C5CE7; color: white; padding: 0.75rem 2rem; border: none; border-radius: 0.5rem; font-size: 1rem; cursor: pointer;">Refresh Page</button>
+                            </div>
+                        `;
+                    }
+                }, 2000);
+            }
+            
+            // Execute immediately
+            criticalMobileFixes();
+            emergencyFallback();
+            
+        })();
+    </script>
 
     <div id="preloader">
         <div class="preloader-pulse"></div>
