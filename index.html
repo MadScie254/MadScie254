@@ -146,31 +146,55 @@
 
             // --- Initial Setup Functions ---
 
-            /** Hides the preloader after a delay when the window loads. */
+            /** Enhanced mobile-friendly preloader hiding with fallbacks */
             function hidePreloader() {
-  if (!preloader) return;
-  const removePreloader = () => {
-    try {
-      preloader.classList.add('hidden');
-      setTimeout(() => {
-        if (preloader && preloader.parentNode) {
-          preloader.style.display = 'none';
-        }
-      }, 650);
-    } catch(e) {}
-  };
-  if (document.readyState === 'complete') {
-    removePreloader();
-    return;
-  }
-  window.addEventListener('load', removePreloader, { once: true });
-  setTimeout(removePreloader, 2500);
+                if (!preloader) return;
+                
+                const removePreloader = () => {
+                    try {
+                        preloader.classList.add('hidden');
+                        preloader.style.opacity = '0';
+                        preloader.style.pointerEvents = 'none';
+                        
+                        // Enhanced mobile fallback
+                        setTimeout(() => {
+                            if (preloader && preloader.parentNode) {
+                                preloader.style.display = 'none';
+                                // Ensure main content is visible
+                                const mainContent = document.getElementById('main-content-container') || document.querySelector('main');
+                                if (mainContent) {
+                                    mainContent.style.opacity = '1';
+                                    mainContent.style.visibility = 'visible';
+                                }
+                                // Force body background visibility
+                                document.body.style.background = '';
+                                document.body.style.opacity = '1';
+                            }
+                        }, 650);
+                    } catch(e) {
+                        // Emergency fallback for mobile
+                        if (preloader) {
+                            preloader.style.display = 'none';
+                        }
+                        document.body.style.opacity = '1';
+                    }
+                };
 
-                 window.addEventListener('load', () => {
-                     setTimeout(() => {
-                        if (preloader) preloader.classList.add('hidden');
-                     }, 500);
-                 }, { once: true });
+                // Multiple triggers for reliability
+                if (document.readyState === 'complete') {
+                    removePreloader();
+                } else {
+                    window.addEventListener('load', removePreloader, { once: true });
+                    document.addEventListener('DOMContentLoaded', removePreloader, { once: true });
+                    setTimeout(removePreloader, 2000); // Shorter timeout for mobile
+                }
+
+                // iOS Safari specific fix
+                setTimeout(() => {
+                    if (preloader && preloader.style.display !== 'none') {
+                        removePreloader();
+                    }
+                }, 3000);
             }
 
             /** Updates all WhatsApp links with the pre-defined message. */
@@ -1004,11 +1028,30 @@
         html {
             touch-action: manipulation;
             -webkit-tap-highlight-color: transparent;
+            /* Prevent zoom on input focus */
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         body {
             overscroll-behavior-y: none;
             -webkit-overflow-scrolling: touch;
+            /* Prevent horizontal scroll */
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Orientation change fixes */
+        @media screen and (orientation: landscape) and (max-height: 500px) {
+            #hero {
+                min-height: 80vh !important;
+                padding-top: 4rem !important;
+            }
+            
+            .section-padding {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
         }
 
         /* ===== EMERGENCY MOBILE DISPLAY FIXES ===== */
@@ -1102,27 +1145,46 @@
                 gap: 1rem !important;
             }
 
-            /* Wireframes mobile fixes */
+            /* Wireframes mobile fixes - Enhanced */
             .wireframe-card {
-                padding: 1rem !important;
-                margin-bottom: 1.5rem !important;
+                padding: 1.5rem !important;
+                margin-bottom: 2rem !important;
                 display: block !important;
                 width: 100% !important;
-                background: rgba(247, 247, 247, 0.9) !important;
+                max-width: 100% !important;
+                background: rgba(247, 247, 247, 0.95) !important;
                 -webkit-backdrop-filter: blur(10px) !important;
                 backdrop-filter: blur(10px) !important;
                 border: 1px solid rgba(108, 92, 231, 0.2) !important;
+                border-radius: 0.75rem !important;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+                /* Prevent content overflow */
+                overflow: hidden !important;
+                box-sizing: border-box !important;
             }
 
             html.dark .wireframe-card {
-                background: rgba(11, 12, 16, 0.9) !important;
+                background: rgba(11, 12, 16, 0.95) !important;
                 border-color: rgba(102, 252, 241, 0.2) !important;
             }
 
+            /* Fix aspect ratio containers for mobile */
             .wireframe-card .aspect-\[16\/9\] {
                 aspect-ratio: 16/9 !important;
-                min-height: 180px !important;
-                max-height: 220px !important;
+                min-height: 200px !important;
+                max-height: 280px !important;
+                width: 100% !important;
+                overflow: hidden !important;
+                border-radius: 0.5rem !important;
+            }
+
+            /* Mobile-specific aspect ratio for wireframes */
+            @media (max-width: 480px) {
+                .wireframe-card .aspect-\[16\/9\] {
+                    aspect-ratio: 4/3 !important;
+                    min-height: 180px !important;
+                    max-height: 240px !important;
+                }
             }
 
             .wireframe-card h3 {
@@ -1145,14 +1207,43 @@
                 color: #9CA3AF !important;
             }
 
-            /* Wireframes grid mobile layout */
+            /* Wireframes grid mobile layout - Enhanced */
             .wireframes-grid {
                 display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
             }
 
             .wireframes-grid .wireframe-card {
                 break-inside: avoid !important;
-                margin-bottom: 1.5rem !important;
+                margin-bottom: 2rem !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            /* Wireframes section mobile spacing */
+            #wireframes {
+                padding: 3rem 1rem !important;
+                min-height: auto !important;
+            }
+
+            #wireframes .space-y-8 {
+                display: block !important;
+            }
+
+            #wireframes .space-y-8 > * + * {
+                margin-top: 2rem !important;
+            }
+
+            /* Mobile features list spacing */
+            #wireframes .mt-16 {
+                margin-top: 3rem !important;
+            }
+
+            #wireframes .space-y-6 > * + * {
+                margin-top: 1.5rem !important;
             }
 
             /* Mobile stats grid optimization */
@@ -1422,6 +1513,47 @@
                 font-size: 16px !important; /* Prevents zoom on iOS */
             }
             
+            /* Enhanced mobile navigation and touch targets */
+            .mobile-menu-button {
+                min-width: 44px !important;
+                min-height: 44px !important;
+                padding: 12px !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            /* Enhanced touch targets for mobile navigation */
+            .nav-link, .mobile-nav-link {
+                min-height: 44px !important;
+                padding: 12px 16px !important;
+                display: flex !important;
+                align-items: center !important;
+                touch-action: manipulation !important;
+            }
+
+            /* Mobile menu improvements */
+            #mobile-menu {
+                backdrop-filter: blur(20px) !important;
+                -webkit-backdrop-filter: blur(20px) !important;
+                background: rgba(247, 247, 247, 0.95) !important;
+            }
+
+            html.dark #mobile-menu {
+                background: rgba(11, 12, 16, 0.95) !important;
+            }
+
+            /* Back to top button mobile optimization */
+            #back-to-top {
+                width: 56px !important;
+                height: 56px !important;
+                bottom: 1.5rem !important;
+                right: 1.5rem !important;
+                font-size: 1.25rem !important;
+                border-radius: 50% !important;
+                backdrop-filter: blur(20px) !important;
+                -webkit-backdrop-filter: blur(20px) !important;
+            }
+            
             /* Modal/dialog mobile */
             .modal, .dialog {
                 margin: 1rem !important;
@@ -1443,6 +1575,63 @@
             .section-padding {
                 padding-top: 2rem !important;
                 padding-bottom: 2rem !important;
+            }
+        }
+
+        /* Ultra-small screen optimizations (≤375px) */
+        @media (max-width: 375px) {
+            /* Even tighter spacing for small phones */
+            .container, .max-w-7xl, .max-w-6xl, .max-w-4xl {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+            }
+
+            /* Hero section ultra-small */
+            #hero {
+                padding-top: 4rem !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            #hero h1 {
+                font-size: 1.75rem !important;
+                line-height: 1.1 !important;
+            }
+
+            #hero p {
+                font-size: 1rem !important;
+                line-height: 1.4 !important;
+            }
+
+            /* Wireframes ultra-small */
+            .wireframe-card {
+                padding: 1rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .wireframe-card h3 {
+                font-size: 1.125rem !important;
+            }
+
+            .wireframe-card .aspect-\[16\/9\] {
+                min-height: 160px !important;
+                max-height: 200px !important;
+            }
+
+            /* Navigation ultra-small */
+            .navbar-logo {
+                height: 1.75rem !important;
+            }
+
+            .navbar-logo-text {
+                font-size: 1rem !important;
+            }
+
+            /* Button sizing ultra-small */
+            .btn, button {
+                padding: 0.625rem 1.25rem !important;
+                font-size: 0.8125rem !important;
+                min-height: 40px !important;
             }
         }
         
@@ -1745,6 +1934,27 @@
             .backdrop-blur-md {
                 -webkit-backdrop-filter: blur(4px) !important;
                 backdrop-filter: blur(4px) !important;
+            }
+
+            /* Dark mode mobile fixes */
+            html.dark {
+                background-color: #0B0C10 !important;
+                color: #C5C6C7 !important;
+            }
+
+            html.dark body {
+                background-color: #0B0C10 !important;
+                color: #C5C6C7 !important;
+            }
+
+            html.dark #hero {
+                background-color: #0B0C10 !important;
+            }
+
+            html.dark .wireframe-card {
+                background: rgba(11, 12, 16, 0.95) !important;
+                border-color: rgba(102, 252, 241, 0.2) !important;
+                color: #C5C6C7 !important;
             }
         }
     </style>
@@ -3088,7 +3298,7 @@
 
 <div id="main-content-container">
 <main>
-<section class="h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-4 pt-16" id="hero">
+<section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-4 pt-16 md:pt-20 lg:pt-16" id="hero">
 <!-- Add animated wave background -->
 <div class="wave-background absolute inset-0 z-0">
 <canvas class="absolute inset-0 w-full h-full opacity-30 dark:opacity-20" id="waveCanvas"></canvas>
@@ -3681,9 +3891,9 @@
 </div>
 </section>
 <section class="min-h-screen w-full py-20 px-4 md:px-8 lg:px-16 bg-primary-bg dark:bg-dark-primary-bg reveal-hidden pt-20" id="wireframes">
-<h2 class="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent font-heading tracking-tight reveal-hidden">Mobile Experience</h2>
-<!-- Mobile Wireframes Grid - Optimized for Mobile -->
-<div class="space-y-8 max-w-6xl mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:space-y-0">
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent font-heading tracking-tight reveal-hidden">Mobile Experience</h2>
+<!-- Mobile Wireframes Grid - Enhanced Responsive -->
+<div class="space-y-8 max-w-6xl mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 md:space-y-0">
 <!-- Navigation Wireframe -->
 <div class="wireframe-card bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-6 border border-accent/20 dark:border-dark-accent/20 shadow-lg group hover:border-accent dark:hover:border-dark-accent transition-all duration-300 reveal-hidden">
 <div class="flex items-center gap-4 mb-6">
