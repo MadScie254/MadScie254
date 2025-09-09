@@ -2,8 +2,25 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <link rel="manifest" href="manifest.json">
+    <!-- SEO and Social Media Meta Tags -->
+    <meta name="description" content="Daniel Wanjala - Data Scientist & ML Engineer specializing in AI, machine learning, and data analytics. Explore my portfolio of innovative projects and solutions.">
+    <meta name="keywords" content="Data Science, Machine Learning, AI, Python, Analytics, Daniel Wanjala, Portfolio">
+    <meta name="author" content="Daniel Wanjala">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Daniel Wanjala - Data Scientist / ML Engineer">
+    <meta property="og:description" content="Explore innovative data science and machine learning projects by Daniel Wanjala">
+    <meta property="og:image" content="assets/images/profile.jpg">
+    <meta property="og:url" content="https://danielwanjala.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daniel Wanjala - Data Scientist / ML Engineer">
+    <meta name="twitter:description" content="Explore innovative data science and machine learning projects">
+    <meta name="twitter:image" content="assets/images/profile.jpg">
     <style>
         /* Fallback for unsupported browsers */
         body {
@@ -12,6 +29,10 @@
     </style>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#6C5CE7">
+    <meta name="msapplication-navbutton-color" content="#6C5CE7">
+    <meta name="apple-mobile-web-app-title" content="Daniel Wanjala">
     <title>Daniel Wanjala - Data Scientist / ML Engineer</title>
     <link rel="icon" href="assets/images/logo.png" type="image/png">
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
@@ -774,6 +795,28 @@
             .backdrop-blur-md {
                 backdrop-filter: blur(4px) !important;
             }
+            
+            /* Optimize images for mobile */
+            img {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: optimizeQuality;
+            }
+            
+            /* Reduce motion for users who prefer it */
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                }
+            }
+            
+            /* Better text rendering on mobile */
+            body {
+                text-rendering: optimizeLegibility;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
         }
     </style>
 
@@ -1333,6 +1376,22 @@
                 width: 100%;
                 height: auto;
                 object-fit: cover;
+            }
+            
+            /* Enhanced touch feedback */
+            button:active,
+            .interactive-element:active {
+                transform: scale(0.98);
+                transition: transform 0.1s ease;
+            }
+            
+            /* Better focus indicators for accessibility */
+            button:focus-visible,
+            a:focus-visible,
+            .interactive-element:focus-visible {
+                outline: 2px solid #6C5CE7;
+                outline-offset: 2px;
+                border-radius: 4px;
                 border-radius: 1rem;
             }
         }
@@ -2132,7 +2191,6 @@
             <a href="#contact" data-section="contact" class="mobile-nav-link" role="menuitem">Contact</a>
         </div>
     </nav>
-    </header>
 
     <div id="main-content-container">
         <main>
@@ -2559,7 +2617,7 @@
                     <article class="project-card interactive-element relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-glass-light dark:bg-glass-dark backdrop-blur-lg border border-secondary-text/10 dark:border-dark-secondary-text/20 group break-inside-avoid mb-6 reveal-hidden" data-project-id="1" tabindex="0" role="button" aria-haspopup="dialog">
                          <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-blue-500 to-blue-400 z-10" aria-hidden="true"></div>
                         <div class="relative h-48 w-full">
-                             <img src="https://placehold.co/600x400/0B0C10/6C5CE7?text=GDP+Model" alt="GDP Growth Prediction Model" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">>
+                             <img src="https://placehold.co/600x400/0B0C10/6C5CE7?text=GDP+Model" alt="GDP Growth Prediction Model" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">
                         </div>
                         <div class="p-6 text-primary-text dark:text-dark-primary-text">
                             <h3 class="text-xl font-semibold mb-2 font-heading text-accent dark:text-dark-accent">GDP Growth Prediction Model</h3>
@@ -2578,7 +2636,7 @@
                     <article class="project-card interactive-element relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-glass-light dark:bg-glass-dark backdrop-blur-lg border border-secondary-text/10 dark:border-dark-secondary-text/20 group break-inside-avoid mb-6 reveal-hidden" data-project-id="2" tabindex="0" role="button" aria-haspopup="dialog">
                         <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-emerald-500 to-emerald-400 z-10" aria-hidden="true"></div>
                         <div class="relative h-48 w-full">
-                             <img src="https://placehold.co/600x400/0B0C10/2ECC71?text=Plant+AI" alt="AI-Driven Plant Disease Detection" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">>
+                             <img src="https://placehold.co/600x400/0B0C10/2ECC71?text=Plant+AI" alt="AI-Driven Plant Disease Detection" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">
                         </div>
                          <div class="p-6 text-primary-text dark:text-dark-primary-text">
                             <h3 class="text-xl font-semibold mb-2 font-heading text-accent dark:text-dark-accent">AI-Driven Plant Disease Detection</h3>
@@ -2597,7 +2655,7 @@
                     <article class="project-card interactive-element relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-glass-light dark:bg-glass-dark backdrop-blur-lg border border-secondary-text/10 dark:border-dark-secondary-text/20 group break-inside-avoid mb-6 reveal-hidden" data-project-id="3" tabindex="0" role="button" aria-haspopup="dialog">
                        <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-red-500 to-red-400 z-10" aria-hidden="true"></div>
                         <div class="relative h-48 w-full">
-                             <img src="https://placehold.co/600x400/0B0C10/FF6B6B?text=Kenya+GDP" alt="Kenya's GDP Forecasting Tool" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">>
+                             <img src="https://placehold.co/600x400/0B0C10/FF6B6B?text=Kenya+GDP" alt="Kenya's GDP Forecasting Tool" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">
                         </div>
                           <div class="p-6 text-primary-text dark:text-dark-primary-text">
                             <h3 class="text-xl font-semibold mb-2 font-heading text-accent dark:text-dark-accent">Kenya's GDP Forecasting Tool</h3>
@@ -2616,7 +2674,7 @@
                     <article class="project-card interactive-element relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-glass-light dark:bg-glass-dark backdrop-blur-lg border border-secondary-text/10 dark:border-dark-secondary-text/20 group break-inside-avoid mb-6 reveal-hidden" data-project-id="4" tabindex="0" role="button" aria-haspopup="dialog">
                        <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-purple-500 to-purple-400 z-10" aria-hidden="true"></div>
                         <div class="relative h-48 w-full">
-                            <img src="https://placehold.co/600x400/0B0C10/6C5CE7?text=InvestWise" alt="InvestWise Predictor" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">>
+                            <img src="https://placehold.co/600x400/0B0C10/6C5CE7?text=InvestWise" alt="InvestWise Predictor" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">
                         </div>
                          <div class="p-6 text-primary-text dark:text-dark-primary-text">
                             <h3 class="text-xl font-semibold mb-2 font-heading text-accent dark:text-dark-accent">InvestWise Predictor</h3>
@@ -2635,7 +2693,7 @@
                     <article class="project-card interactive-element relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-glass-light dark:bg-glass-dark backdrop-blur-lg border border-secondary-text/10 dark:border-dark-secondary-text/20 group break-inside-avoid mb-6 reveal-hidden" data-project-id="5" tabindex="0" role="button" aria-haspopup="dialog">
                        <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-yellow-500 to-yellow-400 z-10" aria-hidden="true"></div>
                         <div class="relative h-48 w-full">
-                            <img src="https://placehold.co/600x400/0B0C10/E0C097?text=Netflix+Stock" alt="Netflix Stock Profit Analysis" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">>
+                            <img src="https://placehold.co/600x400/0B0C10/E0C097?text=Netflix+Stock" alt="Netflix Stock Profit Analysis" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy">
                         </div>
                           <div class="p-6 text-primary-text dark:text-dark-primary-text">
                             <h3 class="text-xl font-semibold mb-2 font-heading text-accent dark:text-dark-accent">Netflix Stock Profit Analysis</h3>
