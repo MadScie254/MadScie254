@@ -45,6 +45,126 @@
   box-shadow: 0 0 0 4px rgba(108,92,231,0.12);
 }
 </style>
+
+<!-- Mobile-First CSS Structure (like about.html) -->
+<style>
+/* Base body styles */
+body {
+  font-family: 'Inter', 'IBM Plex Sans', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Font utility classes */
+.font-heading { font-family: 'Satoshi', 'Space Grotesk', 'Neue Montreal', sans-serif; }
+.font-body { font-family: 'Inter', 'IBM Plex Sans', sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', 'Source Code Pro', monospace; }
+
+/* Mobile-first responsive breakpoints */
+/* Mobile: ≤640px, Tablet: 641px-1024px, Desktop: ≥1025px */
+
+/* Container optimizations for all devices */
+.mobile-container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 641px) {
+    .mobile-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .mobile-container {
+        max-width: 1200px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+/* Typography scaling for mobile */
+@media (max-width: 640px) {
+    .mobile-text-scale h1 { font-size: 2rem; line-height: 1.2; }
+    .mobile-text-scale h2 { font-size: 1.5rem; line-height: 1.3; }
+    .mobile-text-scale h3 { font-size: 1.25rem; line-height: 1.4; }
+    .mobile-text-scale p { font-size: 0.95rem; line-height: 1.6; }
+    .mobile-text-scale .text-lg { font-size: 1rem; }
+    .mobile-text-scale .text-xl { font-size: 1.125rem; }
+    .mobile-text-scale .text-2xl { font-size: 1.5rem; }
+    .mobile-text-scale .text-3xl { font-size: 1.75rem; }
+    .mobile-text-scale .text-4xl { font-size: 2rem; }
+}
+
+/* Mobile grid optimizations */
+@media (max-width: 640px) {
+    .mobile-grid-1 { grid-template-columns: 1fr; }
+    .mobile-stack > * { margin-bottom: 1.5rem; }
+    .mobile-stack > *:last-child { margin-bottom: 0; }
+    .mobile-spacing { gap: 1rem; }
+    .mobile-section-padding { padding: 2rem 0; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .tablet-grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .tablet-spacing { gap: 1.5rem; }
+    .tablet-section-padding { padding: 3rem 0; }
+}
+
+/* Touch optimization */
+@media (max-width: 1024px) {
+    .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem;
+    }
+    
+    .touch-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease;
+    }
+}
+
+/* Navigation mobile enhancements */
+@media (max-width: 640px) {
+    .mobile-nav {
+        padding: 0.5rem 1rem;
+    }
+    
+    .mobile-nav-item {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Card optimizations */
+@media (max-width: 640px) {
+    .mobile-card {
+        padding: 1rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 641px) {
+    .mobile-card {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+}
+</style>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <title>Daniel Wanjala - Data Scientist / ML Engineer</title>
@@ -2914,6 +3034,7 @@
             /* Ensure focus state is visible */
             @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-whatsapp-green;
         }
+        }
          #floating-whatsapp:hover {
              transform: scale(1.1);
          }
@@ -3147,79 +3268,28 @@
     </script>
 </head>
 <body class="font-body bg-primary-bg text-primary-text dark:bg-dark-primary-bg dark:text-dark-primary-text min-h-screen relative overflow-x-hidden transition-colors duration-300">
-<!-- Critical Mobile Loading Script -->
+<!-- Simple Mobile Viewport Script -->
 <script>
-        (function() {
-            'use strict';
-            
-            // Immediate mobile fixes
-            function criticalMobileFixes() {
-                const html = document.documentElement;
-                const body = document.body;
-                
-                // Force visibility immediately
-                html.style.backgroundColor = '#F7F7F7';
-                html.style.color = '#4A4A4A';
-                body.style.backgroundColor = '#F7F7F7';
-                body.style.color = '#4A4A4A';
-                body.style.minHeight = '100vh';
-                body.style.fontFamily = 'Inter, system-ui, sans-serif';
-                body.style.display = 'block';
-                body.style.opacity = '1';
-                
-                // Check for dark mode
-                if (html.classList.contains('dark')) {
-                    html.style.backgroundColor = '#0B0C10';
-                    html.style.color = '#C5C6C7';
-                    body.style.backgroundColor = '#0B0C10';
-                    body.style.color = '#C5C6C7';
-                }
-                
-                // Mobile viewport fix
-                const viewport = document.querySelector('meta[name="viewport"]');
-                if (viewport) {
-                    viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes';
-                }
-                
-                // Prevent iOS zoom on inputs
-                if (window.innerWidth <= 768) {
-                    const style = document.createElement('style');
-                    style.textContent = `
-                        input, textarea, select { font-size: 16px !important; }
-                        body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-                        * { box-sizing: border-box; }
-                        .hidden { display: none !important; }
-                        main { display: block !important; min-height: 100vh !important; }
-                        section { display: block !important; width: 100% !important; }
-                        header { display: block !important; }
-                    `;
-                    document.head.appendChild(style);
-                }
-            }
-            
-            // Emergency fallback
-            function emergencyFallback() {
-                setTimeout(() => {
-                    const main = document.querySelector('main');
-                    if (!main || main.children.length === 0) {
-                        document.body.innerHTML = `
-                            <div style="min-height: 100vh; background: #F7F7F7; color: #4A4A4A; font-family: Arial, sans-serif; padding: 2rem; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                                <h1 style="font-size: 2rem; margin-bottom: 1rem; color: #6C5CE7;">Daniel Wanjala</h1>
-                                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Data Scientist & ML Engineer</p>
-                                <p style="margin-bottom: 2rem;">Content is loading... Please wait.</p>
-                                <button onclick="location.reload()" style="background: #6C5CE7; color: white; padding: 0.75rem 2rem; border: none; border-radius: 0.5rem; font-size: 1rem; cursor: pointer;">Refresh Page</button>
-                            </div>
-                        `;
-                    }
-                }, 2000);
-            }
-            
-            // Execute immediately
-            criticalMobileFixes();
-            emergencyFallback();
-            
-        })();
-    </script>
+    (function() {
+        'use strict';
+        
+        // Simple mobile viewport optimization (no style forcing)
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport && window.innerWidth <= 768) {
+            viewport.content = 'width=device-width, initial-scale=1.0, user-scalable=yes';
+        }
+        
+        // Prevent iOS zoom on inputs only
+        if (window.innerWidth <= 768) {
+            const style = document.createElement('style');
+            style.textContent = `
+                input, textarea, select { font-size: 16px !important; }
+                body { -webkit-text-size-adjust: 100%; }
+            `;
+            document.head.appendChild(style);
+        }
+    })();
+</script>
 <div id="preloader">
 <div class="preloader-pulse"></div>
 </div>
@@ -3266,7 +3336,7 @@
 <i aria-hidden="true" class="h-5 w-5" data-lucide="moon" id="theme-icon-moon"></i>
 </button>
 <!-- MOBILE MENU BUTTON -->
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button md:hidden" id="mobile-menu-button">
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button touch-target md:hidden" id="mobile-menu-button">
 <i aria-hidden="true" class="h-6 w-6" data-lucide="menu" id="menu-icon-open"></i>
 <i aria-hidden="true" class="h-6 w-6 hidden" data-lucide="x" id="menu-icon-close"></i>
 </button>
@@ -3284,21 +3354,21 @@
 <i aria-hidden="true" class="h-5 w-5" data-lucide="x"></i>
 </button>
 </div>
-<div class="mobile-nav-container" role="menu">
-<a class="mobile-nav-link" data-section="hero" href="#hero" role="menuitem">Home</a>
-<a class="mobile-nav-link" data-section="about" href="#about" role="menuitem">About</a>
-<a class="mobile-nav-link" data-section="skills" href="#skills" role="menuitem">Skills</a>
-<a class="mobile-nav-link" data-section="education" href="#education" role="menuitem">Education</a>
-<a class="mobile-nav-link" data-section="projects" href="#projects" role="menuitem">Projects</a>
-<a class="mobile-nav-link" data-section="essays" href="#essays" role="menuitem">Essays</a>
-<a class="mobile-nav-link" data-section="publications" href="#publications" role="menuitem">Publications</a>
-<a class="mobile-nav-link" data-section="contact" href="#contact" role="menuitem">Contact</a>
+<div class="mobile-nav-container mobile-nav" role="menu">
+<a class="mobile-nav-link mobile-nav-item touch-target" data-section="hero" href="#hero" role="menuitem">Home</a>
+<a class="mobile-nav-link mobile-nav-item touch-target" data-section="about" href="#about" role="menuitem">About</a>
+<a class="mobile-nav-link mobile-nav-item touch-target" data-section="skills" href="#skills" role="menuitem">Skills</a>
+<a class="mobile-nav-link mobile-nav-item touch-target" data-section="education" href="#education" role="menuitem">Education</a>
+<a class="mobile-nav-link mobile-nav-item touch-target" data-section="projects" href="#projects" role="menuitem">Projects</a>
+<a class="mobile-nav-link mobile-nav-item touch-target" data-section="essays" href="#essays" role="menuitem">Essays</a>
+<a class="mobile-nav-link mobile-nav-item touch-target" data-section="publications" href="#publications" role="menuitem">Publications</a>
+<a class="mobile-nav-link mobile-nav-item touch-target" data-section="contact" href="#contact" role="menuitem">Contact</a>
 </div>
 </nav>
 
 <div id="main-content-container">
 <main>
-<section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-4 pt-16 md:pt-20 lg:pt-16" id="hero">
+<section class="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden mobile-section-padding" id="hero">
 <!-- Add animated wave background -->
 <div class="wave-background absolute inset-0 z-0">
 <canvas class="absolute inset-0 w-full h-full opacity-30 dark:opacity-20" id="waveCanvas"></canvas>
@@ -3307,7 +3377,7 @@
 <svg aria-hidden="true" class="absolute bottom-0 left-0 w-full h-32 text-secondary-bg/30 dark:text-dark-secondary-bg/30 z-0 opacity-50 transition-colors duration-300" preserveaspectratio="none" viewbox="0 0 1440 320">
 <path d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,186.7C672,192,768,160,864,133.3C960,107,1056,85,1152,96C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="currentColor" fill-opacity="1"></path>
 </svg>
-<div class="relative z-10 reveal-hidden">
+<div class="mobile-container relative z-10 reveal-hidden mobile-text-scale">
 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-primary-text dark:text-dark-primary-text font-heading leading-tight tracking-tight">
                         I build data systems that <br class="hidden md:block"/>
 <span class="relative inline-block h-[1.2em] overflow-hidden align-bottom" id="rotating-word-container">
@@ -3318,7 +3388,7 @@
                         Machine learning meets real-world outcomes. From predictive insights to automated solutions. Based in Nairobi, Kenya.
                     </p>
 <div class="flex flex-col sm:flex-row justify-center gap-4">
-<a class="interactive-element group relative inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary text-white dark:text-jet-black font-semibold rounded-lg shadow-lg hover:shadow-accent/30 dark:hover:shadow-dark-accent/30 transition-all duration-300 ease-out overflow-hidden transform hover:-translate-y-1 hover:scale-103 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent dark:focus:ring-dark-accent" href="#projects">
+<a class="interactive-element group relative inline-flex items-center justify-center touch-button bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary text-white dark:text-jet-black font-semibold rounded-lg shadow-lg hover:shadow-accent/30 dark:hover:shadow-dark-accent/30 transition-all duration-300 ease-out overflow-hidden transform hover:-translate-y-1 hover:scale-103 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent dark:focus:ring-dark-accent" href="#projects">
                             View My Work
                             <i aria-hidden="true" class="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" data-lucide="arrow-right"></i>
 </a>
@@ -3666,10 +3736,11 @@
 </a>
 </div>
 </section>
-<section class="min-h-screen w-full py-20 px-4 md:px-8 lg:px-16 bg-primary-bg dark:bg-dark-primary-bg reveal-hidden pt-20" id="projects">
+<section class="min-h-screen w-full mobile-section-padding bg-primary-bg dark:bg-dark-primary-bg reveal-hidden" id="projects">
+<div class="mobile-container mobile-text-scale">
 <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent font-heading tracking-tight reveal-hidden">Projects: Work That Talks Back</h2>
-<div class="columns-1 md:columns-2 lg:columns-3 gap-6 max-w-7xl mx-auto" style="perspective: 1500px;">
-<article aria-haspopup="dialog" class="project-card interactive-element relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-glass-light dark:bg-glass-dark backdrop-blur-lg border border-secondary-text/10 dark:border-dark-secondary-text/20 group break-inside-avoid mb-6 reveal-hidden" data-project-id="1" role="button" tabindex="0">
+<div class="columns-1 md:columns-2 lg:columns-3 mobile-spacing tablet-spacing max-w-7xl mx-auto" style="perspective: 1500px;">
+<article aria-haspopup="dialog" class="project-card mobile-card interactive-element relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-glass-light dark:bg-glass-dark backdrop-blur-lg border border-secondary-text/10 dark:border-dark-secondary-text/20 group break-inside-avoid mb-6 reveal-hidden" data-project-id="1" role="button" tabindex="0">
 <div aria-hidden="true" class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-blue-500 to-blue-400 z-10"></div>
 <div class="relative h-48 w-full">
 <img alt="GDP Growth Prediction Model" class="project-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500" loading="lazy" src="https://placehold.co/600x400/0B0C10/6C5CE7?text=GDP+Model"/>
@@ -3890,12 +3961,13 @@
 </a>
 </div>
 </section>
-<section class="min-h-screen w-full py-20 px-4 md:px-8 lg:px-16 bg-primary-bg dark:bg-dark-primary-bg reveal-hidden pt-20" id="wireframes">
+<section class="min-h-screen w-full mobile-section-padding bg-primary-bg dark:bg-dark-primary-bg reveal-hidden" id="wireframes">
+<div class="mobile-container mobile-text-scale">
 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-accent to-accent-secondary dark:from-dark-accent dark:to-dark-accent-secondary bg-clip-text text-transparent font-heading tracking-tight reveal-hidden">Mobile Experience</h2>
 <!-- Mobile Wireframes Grid - Enhanced Responsive -->
-<div class="space-y-8 max-w-6xl mx-auto md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8 md:space-y-0">
+<div class="mobile-stack mobile-spacing md:grid md:grid-cols-2 lg:grid-cols-3 tablet-spacing md:space-y-0 max-w-6xl mx-auto">
 <!-- Navigation Wireframe -->
-<div class="wireframe-card bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-6 border border-accent/20 dark:border-dark-accent/20 shadow-lg group hover:border-accent dark:hover:border-dark-accent transition-all duration-300 reveal-hidden">
+<div class="wireframe-card mobile-card bg-glass-light dark:bg-glass-dark backdrop-blur-lg rounded-xl p-6 border border-accent/20 dark:border-dark-accent/20 shadow-lg group hover:border-accent dark:hover:border-dark-accent transition-all duration-300 reveal-hidden">
 <div class="flex items-center gap-4 mb-6">
 <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-accent/10 dark:bg-dark-accent/10">
 <i class="w-6 h-6 text-accent dark:text-dark-accent" data-lucide="smartphone"></i>
