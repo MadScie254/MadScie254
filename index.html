@@ -140,6 +140,7 @@
                 display: block !important;
                 width: 100% !important;
                 background: rgba(247, 247, 247, 0.9) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
                 backdrop-filter: blur(10px) !important;
                 border: 1px solid rgba(108, 92, 231, 0.2) !important;
             }
@@ -768,10 +769,12 @@
             
             /* Optimize backdrop blur for mobile */
             .backdrop-blur-lg {
+                -webkit-backdrop-filter: blur(8px) !important;
                 backdrop-filter: blur(8px) !important;
             }
             
             .backdrop-blur-md {
+                -webkit-backdrop-filter: blur(4px) !important;
                 backdrop-filter: blur(4px) !important;
             }
         }
@@ -860,8 +863,8 @@
             width: 280px;
             height: 100vh;
             background: rgba(247, 247, 247, 0.95);
-            backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
             border-left: 1px solid rgba(74, 74, 74, 0.1);
             z-index: 9999;
             transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2121,7 +2124,7 @@
                 <i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i>
             </button>
         </div>
-        <div class="mobile-nav-container">
+        <div class="mobile-nav-container" role="menu">
             <a href="#hero" data-section="hero" class="mobile-nav-link" role="menuitem">Home</a>
             <a href="#about" data-section="about" class="mobile-nav-link" role="menuitem">About</a>
             <a href="#skills" data-section="skills" class="mobile-nav-link" role="menuitem">Skills</a>
@@ -2956,7 +2959,6 @@
                                 </button>
                             </div>
                             <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="social-card interactive-element flex items-center p-4 bg-glass-light dark:bg-glass-dark backdrop-blur-sm border border-secondary-text/10 dark:border-dark-secondary-text/20 rounded-lg text-primary-text dark:text-dark-primary-text hover:bg-accent/10 dark:hover:bg-dark-accent/10 hover:border-accent dark:hover:border-dark-accent transition-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transition-delay: 0.3s;">
-n-all duration-300 group hover:-translate-y-0.5 hover:shadow-lg" style="transition-delay: 0.3s;">
                                 <i data-lucide="message-circle" class="social-icon w-6 h-6 mr-4 text-accent dark:text-dark-accent transition-transform" aria-hidden="true"></i>
                                 <span class="font-medium font-body">WhatsApp</span>
                                 <i data-lucide="arrow-right" class="ml-auto h-5 w-5 text-secondary-text dark:text-dark-secondary-text group-hover:text-accent dark:group-hover:text-dark-accent group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
