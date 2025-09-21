@@ -9,7 +9,7 @@
   ║  Every widget, API call, and visual element has been carefully crafted to create    ║
   ║  the most immersive GitHub profile experience possible using only frontend tech.    ║
   ║                                                                                      ║
-  ║  Built with: Markdown, HTML, SVG, CSS, and a dangerous amount of caffeine ☕       ║
+  ║  Built with: Markdown, HTML, SVG, CSS, and a dangerous HUGE amount of caffeine ☕       ║
   ╚══════════════════════════════════════════════════════════════════════════════════════╝
 -->
 
