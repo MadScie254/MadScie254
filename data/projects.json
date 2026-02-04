@@ -3,18 +3,20 @@
     {
       "id": 1,
       "name": "InvestWise Predictor",
-      "description": "Intelligent online tool utilizing neural networks to predict investment opportunities across Kenya's regions",
+      "description": "Intelligent online tool utilizing neural networks to predict investment opportunities across Kenya's regions. Analyzes economic data, infrastructure, and market trends to recommend optimal investment locations.",
       "techStack": ["Python", "Django", "React", "TensorFlow", "PostgreSQL", "Redis"],
       "github": "https://github.com/MadScie254/InvestWise-Predictor",
       "demo": null,
       "category": "FinTech & ML",
       "featured": true,
-      "year": "2024"
+      "year": "2024",
+      "status": "Life Project",
+      "impact": "Helping investors make data-driven regional investment decisions"
     },
     {
       "id": 2,
       "name": "AI-Driven Plant Disease Detection",
-      "description": "Advanced plant disease detection system using image processing and machine learning",
+      "description": "Advanced plant disease detection system using image processing and machine learning for early disease identification in crops",
       "techStack": ["Python", "Neural Networks", "Computer Vision", "TensorFlow"],
       "github": "https://github.com/MadScie254/Capstone-Lazarus",
       "demo": null,
@@ -24,13 +26,59 @@
     },
     {
       "id": 3,
+      "name": "Electricity Theft Detection Framework",
+      "description": "Machine learning framework for detecting electricity theft in Kenya's power grid through smart meter analytics. Active Master's thesis research.",
+      "techStack": ["Python", "Machine Learning", "Anomaly Detection", "Smart Grid Analytics"],
+      "github": null,
+      "demo": null,
+      "category": "Energy & ML Research",
+      "featured": true,
+      "year": "2024-Present",
+      "status": "Active Thesis",
+      "focusAreas": ["Pattern recognition in consumption data", "Real-time fraud detection", "Grid loss optimization"]
+    },
+    {
+      "id": 4,
       "name": "GDP Growth Prediction Model",
-      "description": "ML model predicting annual GDP growth using economic indicators",
-      "techStack": ["Python", "Statistical Analysis", "ML Algorithms"],
+      "description": "ML model predicting annual GDP growth using economic indicators and time series analysis",
+      "techStack": ["Python", "Statistical Analysis", "ML Algorithms", "Pandas"],
       "github": "https://github.com/MadScie254/Phase-3-Project-Modelling",
       "demo": null,
       "category": "Economics & Forecasting",
       "featured": true,
+      "year": "2023"
+    },
+    {
+      "id": 5,
+      "name": "Healthcare Analytics Dashboard",
+      "description": "Comprehensive dashboard for patient data visualization and predictive analytics at Kingdom Hospital",
+      "techStack": ["Python", "Frappe", "PostgreSQL", "Data Visualization"],
+      "github": null,
+      "demo": null,
+      "category": "Healthcare & Data",
+      "featured": false,
+      "year": "2023"
+    },
+    {
+      "id": 6,
+      "name": "Movie Recommendation System",
+      "description": "Collaborative filtering recommendation engine using movie ratings data",
+      "techStack": ["Python", "Scikit-learn", "Pandas", "NumPy"],
+      "github": "https://github.com/MadScie254/Phase-4-Project-Recommendation-Systems",
+      "demo": null,
+      "category": "Recommendation Systems",
+      "featured": false,
+      "year": "2023"
+    },
+    {
+      "id": 7,
+      "name": "Time Series Analysis Suite",
+      "description": "Comprehensive time series forecasting toolkit for economic and business data",
+      "techStack": ["Python", "ARIMA", "Prophet", "Statsmodels"],
+      "github": "https://github.com/MadScie254/Phase-4-Project-Time-Series",
+      "demo": null,
+      "category": "Forecasting",
+      "featured": false,
       "year": "2023"
     }
   ]
