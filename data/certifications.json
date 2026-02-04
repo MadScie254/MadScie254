@@ -1,0 +1,28 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "issuer": "HackerRank",
+      "name": "Software Engineer Role Certification",
+      "date": "June 2024",
+      "credentialID": "0A531F3CF6CB",
+      "url": "https://www.hackerrank.com/certificates/0A531F3CF6CB"
+    },
+    {
+      "id": 2,
+      "issuer": "Coursera",
+      "name": "Machine Learning Specialization",
+      "date": "2023",
+      "credentialID": "ML2023",
+      "url": null
+    },
+    {
+      "id": 3,
+      "issuer": "DataCamp",
+      "name": "Data Scientist with Python",
+      "date": "2023",
+      "credentialID": "DC2023",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+/* ==========================================
+   COMPONENT-SPECIFIC STYLES
+   ========================================== */
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: var(--z-tooltip);
+  opacity: 0;
+  transform: translateX(400px);
+  transition: all var(--transition-base);
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.notification-success {
+  border-left: 4px solid #10b981;
+}
+
+.notification-error {
+  border-left: 4px solid #ef4444;
+}
+
+.notification .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--surface-2);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all var(--transition-base);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--shadow);
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: white;
+}
+
+.badge-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}

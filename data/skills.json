@@ -1,0 +1,28 @@
+{
+  "skills": {
+    "programming": [
+      { "name": "Python", "level": 95 },
+      { "name": "SQL", "level": 90 },
+      { "name": "JavaScript", "level": 85 },
+      { "name": "R", "level": 80 }
+    ],
+    "ml": [
+      { "name": "Predictive Modeling", "level": 95 },
+      { "name": "Neural Networks", "level": 90 },
+      { "name": "Deep Learning", "level": 88 },
+      { "name": "TensorFlow", "level": 92 },
+      { "name": "Scikit-learn", "level": 95 },
+      { "name": "Computer Vision", "level": 85 }
+    ],
+    "tools": [
+      "Tableau",
+      "Docker",
+      "Git",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Jupyter",
+      "VS Code"
+    ]
+  }
+}

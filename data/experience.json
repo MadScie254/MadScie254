@@ -1,0 +1,30 @@
+{
+  "experience": [
+    {
+      "id": 1,
+      "company": "Kingdom Hospital",
+      "role": "Senior IT Manager and Data Scientist (Volunteer)",
+      "period": "January 2023 - Present",
+      "location": "Webuye, Kenya",
+      "achievements": [
+        "Championed data-driven decisions, boosting efficiency and patient care",
+        "Led IT interns team - maintained network security and data integrity",
+        "Developed predictive analytics models - reduced patient waiting times by 35%",
+        "Automated hospital management with Frappe-based solutions",
+        "Implemented disaster recovery and cybersecurity compliance"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Danco Analytics",
+      "role": "Machine Learning Specialist",
+      "period": "June 2024 - Present",
+      "location": "Nairobi County, Kenya",
+      "achievements": [
+        "Developing ML solutions for business optimization",
+        "Working with advanced neural networks and deep learning models",
+        "Implementing predictive analytics for client projects"
+      ]
+    }
+  ]
+}
