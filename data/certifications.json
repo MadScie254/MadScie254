@@ -10,18 +10,82 @@
     },
     {
       "id": 2,
-      "issuer": "Coursera",
-      "name": "Machine Learning Specialization",
-      "date": "2023",
-      "credentialID": "ML2023",
-      "url": null
+      "issuer": "HackerRank",
+      "name": "Problem Solving (Intermediate)",
+      "date": "November 2023",
+      "credentialID": "9D0D1B09D24E",
+      "url": "https://www.hackerrank.com/certificates/9D0D1B09D24E"
     },
     {
       "id": 3,
-      "issuer": "DataCamp",
-      "name": "Data Scientist with Python",
-      "date": "2023",
-      "credentialID": "DC2023",
+      "issuer": "HackerRank",
+      "name": "Problem Solving (Basic)",
+      "date": "October 2023",
+      "credentialID": "E2D78956C647",
+      "url": "https://www.hackerrank.com/certificates/E2D78956C647"
+    },
+    {
+      "id": 4,
+      "issuer": "HackerRank",
+      "name": "Python (Basic)",
+      "date": "October 2023",
+      "credentialID": "E883F6B460CF",
+      "url": "https://www.hackerrank.com/certificates/E883F6B460CF"
+    },
+    {
+      "id": 5,
+      "issuer": "LinkedIn Learning",
+      "name": "A Day In The Life of a Data Scientist",
+      "date": "April 2024",
+      "credentialID": null,
+      "url": null
+    },
+    {
+      "id": 6,
+      "issuer": "LinkedIn Learning",
+      "name": "The Non-Technical Skills of Effective Data Scientists",
+      "date": "April 2024",
+      "credentialID": null,
+      "url": null
+    },
+    {
+      "id": 7,
+      "issuer": "LinkedIn Learning",
+      "name": "Supply Chain Foundations: Analytics",
+      "date": "March 2024",
+      "credentialID": null,
+      "url": null
+    },
+    {
+      "id": 8,
+      "issuer": "Udemy",
+      "name": "Angular Programming",
+      "date": "June 2023",
+      "credentialID": "UC-bl22bace-c883-4146-90d9-7e93b5de4cea",
+      "url": null
+    },
+    {
+      "id": 9,
+      "issuer": "Udemy",
+      "name": "JavaScript",
+      "date": "June 2023",
+      "credentialID": "UC-e55aa1de-67d0-4dfe-a859-4d75632lb65d",
+      "url": null
+    },
+    {
+      "id": 10,
+      "issuer": "Udemy",
+      "name": "Python for Data Science",
+      "date": "January 2023",
+      "credentialID": "UC-b80a1f38-abee-4e1b-9a3c-b803fa7c22eb",
+      "url": null
+    },
+    {
+      "id": 11,
+      "issuer": "Udemy",
+      "name": "Practical Password Cracking",
+      "date": "July 2020",
+      "credentialID": "UC-96f1dc40-a050-46eb-9d24-e6eecd694d79",
       "url": null
     }
   ]
