@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Daniel Wanjala - Machine Learning, Data Science, and AI Solutions">
+    <meta name="author" content="Daniel Wanjala">
+    <title>Projects | Daniel Wanjala</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Daniel Wanjala</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Projects</h1>
+                <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    A showcase of my work in machine learning, data science, and AI
+                </p>
+            </div>
+        </section>
+
+        <!-- Filter Tabs -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-tabs" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="featured">Featured</button>
+                    <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-section">
+            <div class="container">
+                <div class="projects-grid">
+                    
+                    <!-- InvestWise Predictor -->
+                    <div class="project-card featured" data-aos="fade-up" data-category="featured ml">
+                        <div class="project-badge">Life Project</div>
+                        <div class="project-image">
+                            <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">InvestWise Predictor</h3>
+                            <p class="project-category">FinTech & Machine Learning</p>
+                            <p class="project-description">
+                                Data-driven investment decision support platform utilizing neural-network models for investment 
+                                predictions across Kenya's 47 counties. Features a user-friendly web interface, continuous 
+                                improvement pipeline, and security-focused architecture. Analyzes economic indicators, 
+                                infrastructure data, and market trends to recommend optimal investment locations.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MadScie254/InvestWise-Predictor" target="_blank" class="btn btn-outline">
+                                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    View Code
+                                </a>
+                            </div>
+                            <p class="project-origin">Developed at Moringa School</p>
+                        </div>
+                    </div>
+
+                    <!-- Electricity Theft Detection -->
+                    <div class="project-card featured" data-aos="fade-up" data-aos-delay="100" data-category="featured research ml">
+                        <div class="project-badge research">Active Thesis</div>
+                        <div class="project-image">
+                            <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Electricity Theft Detection Framework</h3>
+                            <p class="project-category">Research & Anomaly Detection</p>
+                            <p class="project-description">
+                                A Hybrid Ensemble-Based Machine Learning Framework for Electricity Theft Detection in Smart Grids 
+                                Under Severe Class Imbalance. This thesis research addresses real-world SGCC dataset challenges 
+                                with advanced ensemble methods, optimizing for AUC and F1 metrics while handling extreme class 
+                                imbalance ratios.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Ensemble Methods</span>
+                                <span class="tech-tag">SMOTE</span>
+                                <span class="tech-tag">XGBoost</span>
+                                <span class="tech-tag">SGCC Dataset</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric-small">
+                                    <span class="value">92%</span>
+                                    <span class="label">Target Detection</span>
+                                </div>
+                                <div class="metric-small">
+                                    <span class="value">0.85</span>
+                                    <span class="label">AUC Goal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plant Disease Detection -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-category="featured ml">
+                        <div class="project-image">
+                            <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI-Driven Plant Disease Detection</h3>
+                            <p class="project-category">Agriculture & Computer Vision</p>
+                            <p class="project-description">
+                                Advanced plant disease detection system using image processing and machine learning for early 
+                                disease identification in crops. Helps farmers identify plant diseases early, enabling timely 
+                                intervention and reducing crop losses.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Neural Networks</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MadScie254/Capstone-Lazarus" target="_blank" class="btn btn-outline">
+                                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GDP Growth Prediction -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-category="ml">
+                        <div class="project-image">
+                            <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">GDP Growth Prediction Model</h3>
+                            <p class="project-category">Economics & Forecasting</p>
+                            <p class="project-description">
+                                Machine learning model predicting annual GDP growth using economic indicators and statistical 
+                                analysis. Analyzes historical economic data, inflation rates, trade balances, and other 
+                                macroeconomic factors to forecast economic performance.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Statistical Analysis</span>
+                                <span class="tech-tag">Time Series</span>
+                                <span class="tech-tag">Pandas</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MadScie254/Phase-3-Project-Modelling" target="_blank" class="btn btn-outline">
+                                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Healthcare Analytics -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400" data-category="ml">
+                        <div class="project-image">
+                            <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Healthcare Analytics Dashboard</h3>
+                            <p class="project-category">Healthcare & Data Visualization</p>
+                            <p class="project-description">
+                                Comprehensive dashboard for patient data visualization and predictive analytics at Kingdom Hospital. 
+                                Reduced patient waiting times by 35% through data-driven scheduling optimization and resource 
+                                allocation improvements.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Frappe</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Data Visualization</span>
+                            </div>
+                            <div class="project-impact">
+                                <span class="impact-label">Impact:</span>
+                                <span class="impact-value">35% reduction in patient waiting times</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Movie Recommendation -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="500" data-category="ml">
+                        <div class="project-image">
+                            <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Movie Recommendation System</h3>
+                            <p class="project-category">Recommendation Systems</p>
+                            <p class="project-description">
+                                Collaborative filtering recommendation engine using movie ratings data. Implements user-based 
+                                and item-based collaborative filtering algorithms to suggest movies based on viewing patterns 
+                                and user preferences.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">NumPy</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MadScie254/Phase-4-Project-Recommendation-Systems" target="_blank" class="btn btn-outline">
+                                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Time Series -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="600" data-category="ml">
+                        <div class="project-image">
+                            <svg class="project-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Time Series Analysis Suite</h3>
+                            <p class="project-category">Forecasting & Analytics</p>
+                            <p class="project-description">
+                                Comprehensive time series forecasting toolkit for economic and business data. Implements 
+                                ARIMA, Prophet, and other statistical models for trend analysis, seasonality detection, 
+                                and future value predictions.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">ARIMA</span>
+                                <span class="tech-tag">Prophet</span>
+                                <span class="tech-tag">Statsmodels</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/MadScie254/Phase-4-Project-Time-Series" target="_blank" class="btn btn-outline">
+                                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2>Interested in Collaboration?</h2>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Daniel Wanjala</h3>
+                    <p>Data Scientist & ML Engineer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Daniel Wanjala. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script>
+        AOS.init({ duration: 800, offset: 100, once: true });
+        
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
