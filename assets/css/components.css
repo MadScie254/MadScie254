@@ -80,3 +80,219 @@
   border: 2px solid var(--primary);
   color: var(--primary);
 }
+
+/* ==========================================
+   ABOUT PREVIEW SECTION
+   ========================================== */
+
+.about-preview {
+  padding: 5rem 0;
+  background: var(--surface);
+}
+
+.about-preview-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-preview-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about-preview-content p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.about-preview-content .btn {
+  margin-top: 1rem;
+}
+
+.about-preview-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--background);
+  border-radius: var(--radius-md);
+  transition: var(--transition-base);
+}
+
+.highlight-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.highlight-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.highlight-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.highlight-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==========================================
+   PROJECT CARD ENHANCEMENTS
+   ========================================== */
+
+.project-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+.project-badge.research {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.project-card {
+  position: relative;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition-base);
+  border: 1px solid var(--border);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px var(--shadow);
+  border-color: var(--primary);
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.project-content {
+  text-align: center;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-tag {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  background: var(--surface-2);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================
+   TECH STACK SECTION
+   ========================================== */
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  transition: var(--transition-base);
+  border: 1px solid var(--border);
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.tech-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--primary);
+}
+
+.tech-item span {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 992px) {
+  .about-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .about-preview-highlights {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .highlight-card {
+    flex: 1 1 calc(50% - 0.75rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-preview-highlights {
+    flex-direction: column;
+  }
+  
+  .highlight-card {
+    flex: 1 1 100%;
+  }
+  
+  .highlight-card:hover {
+    transform: translateY(-3px);
+  }
+}
