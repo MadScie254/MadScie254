@@ -1,19 +1,19 @@
 // ==========================================
-// DATA.JS - Daniel Wanjala's Complete Portfolio Data
+// DATA.JS - Joel Ongango's Complete Portfolio Data
 // ==========================================
 
 const personalInfo = {
-  name: "Daniel Wanjala",
-  title: "Data Scientist & ML Engineer",
+  name: "Joel Ong'ango",
+  title: "Full Stack Engineer",
   location: "Kenya",
-  email: "dmwanjala254@gmail.com",
-  phone: "+254 742 007 277",
-  linkedin: "https://linkedin.com/in/daniel-wanjala-912b8b17b",
-  github: "https://github.com/MadScie254",
-  alternateEmail: "danieleinstein1998@gmail.com",
-  tagline: "Transforming complex data into actionable insights through machine learning, predictive analytics, and innovative AI solutions.",
-  bio: "Passionate Data Scientist pursuing a Master's in Data Science & Machine Learning at Cooperative University of Kenya. Creator of InvestWise Predictor and researcher in electricity theft detection using hybrid ensemble ML frameworks. Currently mastering anomaly detection and building production-grade ML systems.",
-  workstation: "HP ZBook 15 G5 — 16 GB RAM, 512 GB SSD, NVIDIA Quadro P2000 GPU"
+  email: "ongangojoel@gmail.com",
+  phone: "+254 112 200 125",
+  linkedin: "https://www.linkedin.com/in/joel-oduor-592399248/",
+  github: "https://github.com/Mrjayj123",
+  alternateEmail: "qualityprolificarticles@gmail.com",
+  tagline: "Building scalable solutions and transforming basic applications into fully fledged full stack applications.",
+  bio: "Passionate Full stack engineer working at Tabisun Suppliers Creator of M&C Loan tracking app. Currently mastering adatabase intergraions and more backend applications.",
+  workstation: "Dell Latitude 5480 — 16 GB RAM, 256 GB SSD, NVIDIA RTX 9050 GPU"
 };
 
 // ==========================================
@@ -21,79 +21,43 @@ const personalInfo = {
 // ==========================================
 const projects = [
   {
-    name: "InvestWise Predictor",
-    description: "Life project: Data-driven investment decision support and prediction platform utilizing neural-network models for investment predictions across Kenya's regions. Features user-friendly web UI, continuous improvement pipeline, and security-focused architecture.",
-    techStack: ["Python", "Django", "React", "TensorFlow", "PostgreSQL", "Redis"],
-    github: "https://github.com/MadScie254/InvestWise-Predictor",
+    name: "M&C Loan Tracker",
+    description: "Modern finance application tracking loan applications for users..",
+    techStack: ["Python", "Django", "React", "PostgreSQL", "Redis"],
+    github: "https://github.com/Mrjayj123/mnc",
     demo: null,
-    category: "FinTech & ML",
+    category: "FinTech",
     featured: true,
     origin: "Developed at Moringa School"
   },
   {
-    name: "Electricity Theft Detection Framework",
-    description: "Active research/thesis: A Hybrid Ensemble-Based Machine Learning Framework for Electricity Theft Detection in Smart Grids Under Severe Class Imbalance. Addresses real-world SGCC dataset challenges with advanced ensemble methods.",
-    techStack: ["Python", "Ensemble Methods", "Class Imbalance Strategies", "SGCC Dataset", "AUC/F1 Optimization"],
-    github: null,
+    name: "Readerz",
+    description: "A reading app with a public, no-login feed and a personalized experience for logged-in users.",
+    techStack: ["Python", "React", "SQLAlchemy backend"],
+    github: "https://github.com/Mrjayj123/readerz",
     demo: null,
-    category: "Research & Anomaly Detection",
+    category: "Education and Lifestyle",
     featured: true,
-    status: "Active Thesis Research"
+    status: "Active Testing"
   },
   {
-    name: "AI-Driven Plant Disease Detection",
-    description: "Advanced plant disease detection system using image processing and machine learning for agricultural applications.",
-    techStack: ["Python", "Neural Networks", "Computer Vision", "TensorFlow"],
-    github: "https://github.com/MadScie254/Capstone-Lazarus",
+    name: "Clean Cutz",
+    description: "Clean Cutz is a high-performance, browser-based video editing interface designed with a modern glassmorphic aesthetic. It allows you to browse cinematic footage via the Pexels API and perform precise virtual cuts using Media Fragment technology",
+    github: "https://github.com/Mrjayj123/CleanCutz",
     demo: null,
-    category: "Agriculture & AI",
-    featured: true
+    category: "Software and Editing",
+    featured: true 
   },
-  {
-    name: "GDP Growth Prediction Model",
-    description: "ML model predicting annual GDP growth using economic indicators and statistical analysis.",
-    techStack: ["Python", "Statistical Analysis", "ML Algorithms", "Economic Modeling"],
-    github: "https://github.com/MadScie254/Phase-3-Project-Modelling",
-    demo: null,
-    category: "Economics & Forecasting",
-    featured: false
-  },
-  {
-    name: "Stress Prediction from Wearables",
-    description: "EDA and predictive modeling on wearables dataset (HR, TEMP, accelerometer X/Y/Z) for stress classification.",
-    techStack: ["Python", "Pandas", "Scikit-learn", "Signal Processing"],
-    github: null,
-    demo: null,
-    category: "Healthcare & ML",
-    featured: false
-  },
-  {
-    name: "Kenya's GDP Forecasting Tool",
-    description: "Time-series analysis tool for GDP trend prediction using historical economic data.",
-    techStack: ["Python", "Time Series Analysis", "Economic Modeling"],
-    github: "https://github.com/MadScie254/GDP-Forecast-Sample",
-    demo: null,
-    category: "Economics & Analytics",
-    featured: false
-  },
-  {
-    name: "Netflix Stock Profit Analysis",
-    description: "Historical stock performance analysis to identify profit trends and investment patterns.",
-    techStack: ["Python", "Financial Analysis", "Data Visualization"],
-    github: "https://github.com/MadScie254/Netflix-Analysis",
-    demo: null,
-    category: "Finance & Analytics",
-    featured: false
-  }
-];
+]
+  
 
 // ==========================================
 // EXPERIENCE
 // ==========================================
 const experience = [
   {
-    company: "Danco Analytics",
-    role: "Machine Learning Specialist",
+    company: "Tabisun Suppliers",
+    role: "Backend Developer",
     period: "June 2024 - Present",
     location: "Nairobi County, Kenya",
     achievements: [
@@ -104,16 +68,32 @@ const experience = [
     ]
   },
   {
-    company: "Kingdom Hospital",
+    company: "Freelance Writer",
     role: "Senior IT Manager and Data Scientist (Volunteer)",
-    period: "January 2023 - Present",
-    location: "Webuye, Kenya",
+    period: "April 2022 - Present",
+    location: "Remote",
     achievements: [
-      "Championed data-driven decisions, boosting efficiency and patient care",
-      "Led IT interns team - maintained network security and data integrity",
-      "Developed predictive analytics models - reduced patient waiting times by 35%",
-      "Automated hospital management with Frappe-based solutions",
-      "Implemented disaster recovery and cybersecurity compliance"
+      "worked as a freelance writer for B2B/B2C companies",
+      "Wrote about various topics from marketing to health and lifestyle",
+      "Focused on SEO writing meaning driving traffic to  websites",
+    ]
+  },
+   {
+    company: "Call Center International ",
+    role: "Customer Service Executive",
+    period: "Aug 2025 - Feb 2026",
+    location: "Nairobi, Kenya",
+    achievements: [
+      "Assist customers from Metro by T-Mobile with plan changes, making online purchases and troubleshooting any issues that they may encounter",
+    ]
+  },
+  {
+    company: "Absa Bank Kenya ",
+    role: "Financial Service Advisor",
+    period: "May 2024 - May 2025",
+    location: "Nairobi, Kenya",
+    achievements: [
+      "Assisted clients to make financial decisions including taking insurances, unsecured loans and buying homes through mortgages",
     ]
   }
 ];
@@ -123,35 +103,27 @@ const experience = [
 // ==========================================
 const education = [
   {
-    institution: "Cooperative University of Kenya",
-    degree: "Master of Science in Data Science and Machine Learning",
-    period: "2024 - Present",
-    location: "Kenya",
-    status: "Pursuing",
-    focus: "Anomaly Detection, Ensemble Methods, Smart Grid Analytics"
-  },
-  {
     institution: "Moringa School",
-    degree: "Certificate in Data Science and Machine Learning",
-    period: "April 2023 - December 2023",
+    degree: "Certificate in Software Engineering",
+    period: "Mar 2026 - November 2026",
     location: "Kenya",
     activities: "Coder Space, Telegram ML Group, Documentation, Analytical Skills",
     skills: "+14 technical skills acquired",
-    project: "InvestWise Predictor (Life Project)"
+    project: "M&C Loan Tracker"
   },
   {
-    institution: "Zetech University",
-    degree: "Bachelor of Applied Science in Information Technology",
-    period: "May 2019 - November 2022",
+    institution: "Jomo Kenyatta Universsity Of Agriculture and Technology",
+    degree: "Bachelor of Science Supply Chain and Logistics",
+    period: "Sep 2020 - December 2023",
     location: "Kenya",
-    activities: "Rugby, Data Science, Documentation",
+    activities: "Chess, Debate, Music, Coding",
     skills: "+20 technical skills listed"
   },
   {
-    institution: "St Anthony's Boys Kitale",
+    institution: "Maranda High School",
     degree: "Kenya Certificate of Secondary Education (KCSE)",
-    period: "2015 - 2018",
-    location: "Kitale, Kenya",
+    period: "2016 - 2019",
+    location: "Bondo, Kenya",
     type: "High School"
   }
 ];
@@ -195,11 +167,9 @@ const skills = {
     { name: "Tableau", icon: "bar-chart" }
   ],
   other: [
-    "Data Engineering",
+    "Backend Engineering",
     "ETL Pipelines",
-    "MLOps",
-    "Model Deployment",
-    "Model Monitoring",
+    "Rapid Testing",
     "Documentation",
     "Project Leadership"
   ]
@@ -208,85 +178,6 @@ const skills = {
 // ==========================================
 // CERTIFICATIONS (with Credential IDs)
 // ==========================================
-const certifications = [
-  {
-    issuer: "HackerRank",
-    name: "Software Engineer Role Certification",
-    date: "June 2024",
-    credentialID: "0A531F3CF6CB",
-    url: "https://www.hackerrank.com/certificates/0A531F3CF6CB"
-  },
-  {
-    issuer: "HackerRank",
-    name: "Problem Solving (Intermediate)",
-    date: "November 2023",
-    credentialID: "9D0D1B09D24E",
-    url: "https://www.hackerrank.com/certificates/9D0D1B09D24E"
-  },
-  {
-    issuer: "HackerRank",
-    name: "Problem Solving (Basic)",
-    date: "October 2023",
-    credentialID: "E2D78956C647",
-    url: "https://www.hackerrank.com/certificates/E2D78956C647"
-  },
-  {
-    issuer: "HackerRank",
-    name: "Python (Basic)",
-    date: "October 2023",
-    credentialID: "E883F6B460CF",
-    url: "https://www.hackerrank.com/certificates/E883F6B460CF"
-  },
-  {
-    issuer: "LinkedIn Learning",
-    name: "A Day In The Life of a Data Scientist",
-    date: "April 2024",
-    credentialID: null,
-    url: null
-  },
-  {
-    issuer: "LinkedIn Learning",
-    name: "The Non-Technical Skills of Effective Data Scientists",
-    date: "April 2024",
-    credentialID: null,
-    url: null
-  },
-  {
-    issuer: "LinkedIn Learning",
-    name: "Supply Chain Foundations: Analytics",
-    date: "March 2024",
-    credentialID: null,
-    url: null
-  },
-  {
-    issuer: "Udemy",
-    name: "Angular Programming",
-    date: "June 2023",
-    credentialID: "UC-bl22bace-c883-4146-90d9-7e93b5de4cea",
-    url: null
-  },
-  {
-    issuer: "Udemy",
-    name: "JavaScript",
-    date: "June 2023",
-    credentialID: "UC-e55aa1de-67d0-4dfe-a859-4d75632lb65d",
-    url: null
-  },
-  {
-    issuer: "Udemy",
-    name: "Python for Data Science",
-    date: "January 2023",
-    credentialID: "UC-b80a1f38-abee-4e1b-9a3c-b803fa7c22eb",
-    url: null
-  },
-  {
-    issuer: "Udemy",
-    name: "Practical Password Cracking",
-    date: "July 2020",
-    credentialID: "UC-96f1dc40-a050-46eb-9d24-e6eecd694d79",
-    url: null
-  }
-];
 
 // ==========================================
 // RESEARCH & PUBLICATIONS
@@ -304,21 +195,18 @@ const research = [
 // ACHIEVEMENTS & RECOGNITIONS
 // ==========================================
 const achievements = [
-  "Built InvestWise Predictor - ambitious life project bridging ML and investment decisions",
-  "Multiple platform certifications (HackerRank, Udemy, LinkedIn Learning)",
-  "Successfully completed Moringa School Data Science & ML certificate",
-  "Accepted into Master's program in Data Science & ML at Cooperative University",
-  "Active GitHub presence (@MadScie254) with portfolio of production projects",
-  "Research focus on anomaly detection and electricity theft in smart grids",
-  "Experience with large-scale datasets (SGCC, Kaggle competitions)"
+  "Built M&C Loan Tracker - ambitious project bridging traditional loan bookeeping with modern finance",
+  "Continous platform engagement(Leetcode, coderbyte)",
+  "Successfully completed Moringa School Full Stack Software Development",
+  "Active GitHub presence (@Mrjayj123) with portfolio of production projects",
 ];
 
 // ==========================================
 // STATS (for animated counters)
 // ==========================================
 const stats = {
-  yearsExperience: 5,
-  projectsCompleted: 15,
-  certifications: 11,
-  technologies: 20
+  yearsExperience: 1,
+  projectsCompleted: 3,
+  certifications: 2,
+  technologies: 10
 };

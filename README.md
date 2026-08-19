@@ -1,26 +1,26 @@
 <!-- Animated Header -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Daniel%20Mwanjala&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Data%20Scientist%20%7C%20ML%20Engineer%20%7C%20Tech%20Leader&descAlignY=52&descSize=18" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Joel%20Ongango&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Fullstack%20Engineer%20Tech%20Leader&descAlignY=52&descSize=18" width="100%"/>
 </div>
 
 <!-- Typing Animation -->
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&random=false&width=600&lines=Transforming+Data+into+Intelligent+Solutions;Building+Neural+Networks+%26+Deep+Learning+Models;5%2B+Years+of+Data+Science+Experience;MSc+Data+Science+Candidate;Open+to+Collaboration+%26+Opportunities" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6366F1&center=true&vCenter=true&random=false&width=600&lines=Building+Real+Scalable+Solutions;2%2B+Years+of+Software+Development+Experience;Open+to+Collaboration+%26+Opportunities" alt="Typing SVG" />
   </a>
 </p>
 
 <!-- Social Badges -->
 <p align="center">
-  <a href="https://linkedin.com/in/danielmwanjala"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://linkedin.com/in/joel-oduor-592399248"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="mailto:dmwanjala254@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://madscie254.github.io/MadScie254/"><img src="https://img.shields.io/badge/Portfolio-6366F1?style=for-the-badge&logo=Google-Chrome&logoColor=white" alt="Portfolio"/></a>
-  <a href="https://github.com/MadScie254"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="https://Mrjayj123.github.io/Mrjayj123/"><img src="https://img.shields.io/badge/Portfolio-6366F1?style=for-the-badge&logo=Google-Chrome&logoColor=white" alt="Portfolio"/></a>
+  <a href="https://github.com/Mrjayj123"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=MadScie254&color=6366f1&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
-  <img src="https://img.shields.io/github/followers/MadScie254?style=for-the-badge&color=6366f1&labelColor=1e1b4b" alt="Followers"/>
+  <img src="https://komarev.com/ghpvc/?username=Madscie254&color=6366f1&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
+  <img src="https://img.shields.io/github/followers/Mrjayj123?style=for-the-badge&color=6366f1&labelColor=1e1b4b" alt="Followers"/>
   <img src="https://img.shields.io/badge/Focus-Machine%20Learning-6366f1?style=for-the-badge" alt="Focus"/>
 </p>
 
@@ -30,29 +30,26 @@
 ## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> About Me
 
 ```python
-class DataScientist:
+class SoftwareEngineer:
     def __init__(self):
-        self.name = "Daniel Mwanjala"
-        self.role = "Senior IT Manager & Data Scientist"
-        self.location = "Ruiru, Kiambu, Kenya 🇰🇪"
-        self.education = "MSc Data Science (In Progress)"
+        self.name = "Joel Ongango"
+        self.role = "Full stack Developer"
+        self.location = "Nairobi, Kenya 🇰🇪"
+        self.education = "Full stack software Engineering (In Progress)"
         
     def get_skills(self):
         return {
-            "languages": ["Python", "SQL", "R", "JavaScript"],
-            "ml_frameworks": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras"],
-            "deep_learning": ["CNNs", "RNNs", "LSTMs", "Transformers"],
-            "visualization": ["Tableau", "Matplotlib", "Seaborn", "Plotly"],
+            "languages": ["Python", "SQL", "React", "JavaScript"],
             "tools": ["Git", "Docker", "AWS", "Jupyter", "VS Code"],
-            "databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis"]
+            "databases": ["PostgreSQL", "Mongo", "SQLAlchemy", "MySQL", "Redis"]
         }
     
     def get_current_focus(self):
         return [
-            "🔬 Researching Advanced Neural Network Architectures",
-            "🌱 Building AI Solutions for Agriculture",
-            "📈 Economic Forecasting Models for Kenya",
-            "🏥 Healthcare Analytics & Predictive Modeling"
+            "🔬 Researching constant updates and useful designs",
+            "🌱 Building Scalable Solutions across all industries",
+            "📈 User friendly and real time applications",
+            "🏥 Supply Can Logistics and Finance"
         ]
 
 me = DataScientist()
@@ -62,14 +59,12 @@ me = DataScientist()
 
 ### 🎯 Quick Facts
 
-- 🔭 Currently working at **Kingdom Hospital** as Senior IT Manager & Data Scientist
-- 🌱 Pursuing **Master's in Data Science**
-- 🏆 **Prime Code Champ Winner** - National Coding Competition
+- 🔭 Currently working at **Tabisun Suppliers** as a Backend Engineer
 - 💡 Passionate about **AI for Social Good**
-- 📊 Built **15+ production ML models**
-- 🤝 Open to collaborations on **Data Science & ML projects**
-- 📫 Reach me: **dmwanjala254@gmail.com**
-- 📱 Phone: **+254 742 007 277**
+- 📊 Built **3+ production Software Apps**
+- 🤝 Open to collaborations on **Full stack engineer**
+- 📫 Reach me: **ongangojoel@gmail.com**
+- 📱 Phone: **+254 112 200 212577**
 
 ---
 
@@ -77,7 +72,7 @@ me = DataScientist()
 ## 🛠️ Tech Stack & Tools
 
 <details open>
-<summary><b>🐍 Languages & Frameworks</b></summary>
+<summary><b>🐍 Languages and Frameworks</b></summary>
 <br>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn,r,js,ts,react" />
@@ -85,7 +80,7 @@ me = DataScientist()
 </details>
 
 <details open>
-<summary><b>📊 Data Science & ML</b></summary>
+<summary><b>📊 Software Engineering</b></summary>
 <br>
 <p align="center">
   <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
@@ -214,25 +209,25 @@ timeline
 ## 🤝 Let's Connect!
 
 <p align="center">
-  <i>I'm always interested in collaborating on innovative data science projects, especially those that can make a positive impact on society.</i>
+  <i>I'm always interested in collaborating and working on innovative  projects, especially those that can make a positive impact on society.</i>
 </p>
 
 <p align="center">
-  <a href="https://madscie254.github.io/MadScie254/">
+  <a href="https://mrjayj123.github.io/Mrjayj123/">
     <img src="https://img.shields.io/badge/🌐_Visit_My_Portfolio-6366F1?style=for-the-badge" alt="Portfolio"/>
   </a>
-  <a href="https://calendly.com/dmwanjala254">
+  <a href="https://calendly.com/ongangojoel">
     <img src="https://img.shields.io/badge/📅_Schedule_a_Call-06B6D4?style=for-the-badge" alt="Calendar"/>
   </a>
-  <a href="mailto:dmwanjala254@gmail.com">
+  <a href="mailto:ongangojoel@gmail.com">
     <img src="https://img.shields.io/badge/📧_Send_Email-EA4335?style=for-the-badge" alt="Email"/>
   </a>
 </p>
 
 <p align="center">
-  <b>📍 Location:</b> Ruiru, Kiambu, Kenya<br>
-  <b>📱 Phone:</b> +254 742 007 277<br>
-  <b>✉️ Email:</b> dmwanjala254@gmail.com
+  <b>📍 Location:</b> Nairobi, Kenya<br>
+  <b>📱 Phone:</b> +254 112 200 125<br>
+  <b>✉️ Email:</b> ongangojoel@gmail.com
 </p>
 
 ---
@@ -248,7 +243,7 @@ timeline
 </div>
 
 <p align="center">
-  <i>⭐️ From <a href="https://github.com/MadScie254">MadScie254</a> with 💜</i>
+  <i>⭐️ From <a href="https://github.com/Mrjayj123">Mrjayj123</a> with 💜</i>
 </p>
 import reactDom from 'eslint-plugin-react-dom'
 

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
 
-    // Get form data
+    // Get form dataa
     const formData = {
       from_name: this.querySelector('[name="name"]').value,
       from_email: this.querySelector('[name="email"]').value,
