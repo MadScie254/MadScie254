@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Matatu Run</title>
+<style>
+  :root { --bg:#0f1115; --fg:#f2efe6; --accent:#ffcc00; --muted:#9aa0a6; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--fg);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  main { max-width:900px; margin:0 auto; padding:16px; }
+  h1 { margin:8px 0 4px; font-size:clamp(22px,5vw,34px); letter-spacing:1px; }
+  h1 span { color:var(--accent); }
+  p.sub { margin:0 0 12px; color:var(--muted); font-size:14px; }
+  canvas { width:100%; height:auto; display:block; border-radius:10px;
+    background:#1b1f27; touch-action:manipulation; cursor:pointer; }
+  .hud { display:flex; justify-content:space-between; margin-top:10px; font-size:14px; color:var(--muted); }
+  .hud b { color:var(--fg); }
+  footer { margin-top:16px; font-size:12px; color:var(--muted); }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>MATATU <span>RUN</span></h1>
+  <p class="sub">Space / ↑ / tap to jump. Dodge potholes and kanjo. Pick up abiria for KSh 50 each.</p>
+  <canvas id="c" width="900" height="360" aria-label="Matatu Run game"></canvas>
+  <div class="hud">
+    <div>Fare: <b id="fare">KSh 0</b></div>
+    <div>Distance: <b id="dist">0 km</b></div>
+    <div>Best: <b id="best">KSh 0</b></div>
+  </div>
+  <footer>A tiny streak-saver built on a Wednesday night in Nairobi. <a href="../index.html">← back to portfolio</a></footer>
+</main>
+<script>
+(() => {
+  const cv = document.getElementById('c');
+  const ctx = cv.getContext('2d');
+  const W = cv.width, H = cv.height, GROUND = H - 70;
+  const $fare = document.getElementById('fare');
+  const $dist = document.getElementById('dist');
+  const $best = document.getElementById('best');
+
+  const store = {
+    get(k){ try { return Number(localStorage.getItem(k)) || 0; } catch { return 0; } },
+    set(k,v){ try { localStorage.setItem(k, String(v)); } catch {} }
+  };
+  let best = store.get('matatu-best');
+  $best.textContent = 'KSh ' + best;
+
+  const SHOUTS = ['Tao tao!', 'Fiti!', 'Shika mbele!', 'Sawa sawa!', 'Hapo sawa!', 'Mbogi!'];
+  const CRASH = ['Umechomeka!', 'Kanjo wamekushika!', 'Pothole ya Mombasa Road!', 'Rada imeisha!'];
+
+  let state, bus, obstacles, riders, popups, speed, fare, dist, spawnT, riderT, t, skyline;
+
+  function reset() {
+    state = 'ready';
+    bus = { x: 110, y: GROUND, vy: 0, w: 120, h: 54, onGround: true, wheel: 0 };
+    obstacles = []; riders = []; popups = [];
+    speed = 6; fare = 0; dist = 0; spawnT = 60; riderT = 120; t = 0;
+    skyline = Array.from({length: 14}, (_, i) => ({ x: i * 75, w: 40 + Math.random()*40, h: 40 + Math.random()*110 }));
+  }
+
+  function jump() {
+    if (state === 'ready') { state = 'run'; }
+    if (state === 'over') { reset(); state = 'run'; return; }
+    if (bus.onGround) { bus.vy = -13.5; bus.onGround = false; }
+  }
+
+  addEventListener('keydown', e => {
+    if (e.code === 'Space' || e.code === 'ArrowUp') { e.preventDefault(); jump(); }
+  });
+  cv.addEventListener('pointerdown', e => { e.preventDefault(); jump(); });
+
+  function spawnObstacle() {
+    const r = Math.random();
+    if (r < 0.45) obstacles.push({ type: 'pothole', x: W + 20, w: 60 + Math.random()*30, h: 14 });
+    else if (r < 0.8) obstacles.push({ type: 'boda', x: W + 20, w: 56, h: 40 });
+    else obstacles.push({ type: 'kanjo', x: W + 20, w: 34, h: 70 });
+  }
+
+  function hit(a, b) {
+    return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+  }
+
+  function update() {
+    t++;
+    if (state !== 'run') return;
+    speed = 6 + Math.min(9, dist / 900);
+    dist += speed;
+
+    bus.vy += 0.7; bus.y += bus.vy;
+    if (bus.y >= GROUND) { bus.y = GROUND; bus.vy = 0; bus.onGround = true; }
+    bus.wheel += speed * 0.08;
+
+    for (const s of skyline) { s.x -= speed * 0.2; if (s.x + s.w < 0) { s.x += 14 * 75; s.h = 40 + Math.random()*110; } }
+
+    if (--spawnT <= 0) { spawnObstacle(); spawnT = Math.max(38, 95 - speed * 4) + Math.random() * 50; }
+    if (--riderT <= 0) { riders.push({ x: W + 20, y: GROUND - 40 - Math.random() * 90, w: 22, h: 36 }); riderT = 110 + Math.random() * 120; }
+
+    const box = { x: bus.x + 8, y: bus.y - bus.h, w: bus.w - 16, h: bus.h };
+
+    for (const o of obstacles) {
+      o.x -= speed;
+      const ob = o.type === 'pothole'
+        ? { x: o.x + 10, y: GROUND - 4, w: o.w - 20, h: 10 }
+        : { x: o.x, y: GROUND - o.h, w: o.w, h: o.h };
+      if (o.type === 'pothole' ? (bus.onGround && hit(box, { ...ob, y: GROUND - 6 })) : hit(box, ob)) gameOver();
+    }
+    obstacles = obstacles.filter(o => o.x + o.w > -20);
+
+    for (const r of riders) {
+      r.x -= speed;
+      if (!r.taken && hit(box, r)) {
+        r.taken = true; fare += 50;
+        popups.push({ x: r.x, y: r.y, text: '+50 ' + SHOUTS[Math.floor(Math.random()*SHOUTS.length)], life: 50 });
+      }
+    }
+    riders = riders.filter(r => r.x > -30 && !r.taken);
+    popups.forEach(p => { p.y -= 1; p.life--; });
+    popups = popups.filter(p => p.life > 0);
+
+    $fare.textContent = 'KSh ' + fare;
+    $dist.textContent = (dist / 6000).toFixed(2) + ' km';
+  }
+
+  function gameOver() {
+    if (state === 'over') return;
+    state = 'over';
+    gameOver.msg = CRASH[Math.floor(Math.random() * CRASH.length)];
+    if (fare > best) { best = fare; store.set('matatu-best', best); $best.textContent = 'KSh ' + best; }
+  }
+
+  function drawBus() {
+    const { x, y, w, h } = bus;
+    const top = y - h;
+    // body
+    ctx.fillStyle = '#e63946'; roundRect(x, top, w, h - 10, 10); ctx.fill();
+    // graffiti stripes
+    const cols = ['#ffcc00', '#2ec4b6', '#9b5de5'];
+    cols.forEach((c, i) => { ctx.fillStyle = c; ctx.fillRect(x + 6, top + 28 + i * 5, w - 12, 3); });
+    // windows
+    ctx.fillStyle = '#a8dadc';
+    for (let i = 0; i < 4; i++) { roundRect(x + 10 + i * 24, top + 7, 18, 16, 3); ctx.fill(); }
+    ctx.fillStyle = '#ffd166'; roundRect(x + w - 16, top + 7, 10, 16, 3); ctx.fill();
+    // name on side
+    ctx.fillStyle = '#fff'; ctx.font = 'bold 9px monospace'; ctx.fillText('MADSCIE 254', x + 12, top + 50);
+    // roof rack + speaker
+    ctx.fillStyle = '#333'; ctx.fillRect(x + 14, top - 5, w - 30, 4);
+    // wheels
+    [x + 24, x + w - 26].forEach(wx => {
+      ctx.fillStyle = '#111'; ctx.beginPath(); ctx.arc(wx, y - 6, 11, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = '#bbb'; ctx.lineWidth = 2; ctx.beginPath();
+      ctx.moveTo(wx, y - 6); ctx.lineTo(wx + Math.cos(bus.wheel) * 8, y - 6 + Math.sin(bus.wheel) * 8); ctx.stroke();
+    });
+    // bass waves when running
+    if (state === 'run' && t % 20 < 10) {
+      ctx.strokeStyle = 'rgba(255,204,0,.6)'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(x - 4, top + 20, 8, Math.PI * 0.6, Math.PI * 1.4); ctx.stroke();
+      ctx.beginPath(); ctx.arc(x - 4, top + 20, 14, Math.PI * 0.6, Math.PI * 1.4); ctx.stroke();
+    }
+  }
+
+  function drawObstacle(o) {
+    if (o.type === 'pothole') {
+      ctx.fillStyle = '#05070a'; ctx.beginPath();
+      ctx.ellipse(o.x + o.w / 2, GROUND + 2, o.w / 2, 7, 0, 0, Math.PI * 2); ctx.fill();
+    } else if (o.type === 'boda') {
+      const by = GROUND;
+      ctx.fillStyle = '#111';
+      ctx.beginPath(); ctx.arc(o.x + 10, by - 8, 8, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(o.x + 46, by - 8, 8, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#457b9d'; ctx.fillRect(o.x + 10, by - 22, 36, 8);
+      ctx.fillStyle = '#2a9d8f'; ctx.fillRect(o.x + 22, by - 40, 10, 18);
+      ctx.fillStyle = '#f4a261'; ctx.beginPath(); ctx.arc(o.x + 27, by - 44, 6, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#e63946'; ctx.fillRect(o.x + 21, by - 50, 12, 4);
+    } else {
+      const ky = GROUND - o.h;
+      ctx.fillStyle = '#1d3557'; ctx.fillRect(o.x + 6, ky + 18, 22, 40);
+      ctx.fillStyle = '#c6a15b'; ctx.beginPath(); ctx.arc(o.x + 17, ky + 12, 9, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#111'; ctx.fillRect(o.x + 7, ky + 1, 20, 5);
+      ctx.fillStyle = '#ffcc00'; ctx.fillRect(o.x + 6, ky + 30, 22, 3);
+      ctx.fillStyle = '#1d3557'; ctx.fillRect(o.x + 8, ky + 58, 7, 12); ctx.fillRect(o.x + 19, ky + 58, 7, 12);
+    }
+  }
+
+  function drawRider(r) {
+    ctx.fillStyle = '#ffcc00'; ctx.beginPath(); ctx.arc(r.x + 11, r.y + 7, 7, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#2ec4b6'; roundRect(r.x + 3, r.y + 15, 16, 20, 4); ctx.fill();
+    ctx.fillStyle = '#fff'; ctx.font = 'bold 10px monospace'; ctx.fillText('50', r.x + 4, r.y - 3);
+  }
+
+  function roundRect(x, y, w, h, r) {
+    ctx.beginPath(); ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+  }
+
+  function centerText(lines) {
+    ctx.fillStyle = 'rgba(15,17,21,.72)'; ctx.fillRect(0, 0, W, H);
+    ctx.textAlign = 'center';
+    lines.forEach(([txt, size, color], i) => {
+      ctx.fillStyle = color; ctx.font = `bold ${size}px monospace`;
+      ctx.fillText(txt, W / 2, H / 2 - 30 + i * 34);
+    });
+    ctx.textAlign = 'left';
+  }
+
+  function draw() {
+    // sky
+    const g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, '#2b1d4a'); g.addColorStop(1, '#e76f51');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    // skyline
+    ctx.fillStyle = '#1a1530';
+    for (const s of skyline) ctx.fillRect(s.x, GROUND - s.h, s.w, s.h);
+    ctx.fillStyle = 'rgba(255,209,102,.5)';
+    for (const s of skyline) for (let yy = GROUND - s.h + 8; yy < GROUND - 8; yy += 14) ctx.fillRect(s.x + 6, yy, 4, 5);
+    // road
+    ctx.fillStyle = '#2d2d2d'; ctx.fillRect(0, GROUND, W, H - GROUND);
+    ctx.fillStyle = '#ffcc00';
+    const off = (dist * 1) % 80;
+    for (let x = -off; x < W; x += 80) ctx.fillRect(x, GROUND + 34, 40, 4);
+
+    obstacles.forEach(drawObstacle);
+    riders.forEach(drawRider);
+    drawBus();
+
+    ctx.font = 'bold 14px monospace';
+    popups.forEach(p => { ctx.fillStyle = `rgba(255,204,0,${p.life / 50})`; ctx.fillText(p.text, p.x, p.y); });
+
+    if (state === 'ready') centerText([['MATATU RUN', 40, '#ffcc00'], ['Tap or press Space to start', 16, '#f2efe6'], ['Route 254: CBD → Mbagathi', 13, '#9aa0a6']]);
+    if (state === 'over') centerText([[gameOver.msg, 30, '#e63946'], [`You collected KSh ${fare}`, 18, '#f2efe6'], ['Tap or Space to go again', 14, '#9aa0a6']]);
+  }
+
+  function loop() { update(); draw(); requestAnimationFrame(loop); }
+  reset(); loop();
+})();
+</script>
+</body>
+</html>
